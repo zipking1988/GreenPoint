@@ -6,6 +6,10 @@ A responsive React/Vite presentation prototype for phone-first per-plant weed ma
 
 With Node.js 22 or newer, run `npm ci`, then `npm run dev -- --host 0.0.0.0 --port 4173 --strictPort`. Production build: `npm run build`. Packaging checks: `npm run test:sites`. Dependency check: `npm audit`.
 
+## Vercel deployment
+
+Use `landing` as the Vercel project's Root Directory and `main` as its production branch. `vercel.json` installs with `npm ci`, runs the existing build, and publishes `dist/client`. The additional Sites worker output remains available for a separate Sites handoff.
+
 ## What works
 
 - Same-scene simulated tracking explanation with finite playback, pause, replay, scrubbing and reduced-motion support.
