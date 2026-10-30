@@ -60,7 +60,9 @@ State: dark brand theme, illustrative Kashiwa / East plot session, GP-007 select
 - Dialog Escape/focus restoration; phone drawer Shift+Tab wraps and Escape restores Sessions; reduced-motion styles remove motion without hiding content.
 - Model credentials and tab access code are not present in browser markup. The API health response returns configuration booleans only.
 
-Console: development QA exposed the stale-dialog lifecycle issue and one transient Fast Refresh drawer ref error; the final clean-load phone drawer test passed. Release browser console is checked again after deployment. This report does not describe old development logs as a clean production run.
+Production verification: Vercel deployment `dpl_3VGVswPHws6reLCUMouduii5NMAG` for commit `40c2801` reached READY at the public `/dashboard` URL. A fresh production browser tab had no warning/error console entries and no broken images. Search, manual classification, derived counts, reset, MP4 playback and image/video resources passed. The video supports HTTP range requests (206). The health endpoint returned `configured: false`; Analyze returned an explicit 503 `not_configured`, without simulated model results. A final correction suppresses a stale saved-decision message after resetting the sample.
+
+Development QA exposed the stale-dialog lifecycle issue and one transient Fast Refresh drawer ref error; the final clean-load phone drawer test passed. Historical development logs are not presented as a clean production run.
 
 Automated checks: 13 analysis tests and four Sites packaging tests passed; production build passed. Live Meta execution remains unverified because server credentials are absent. That is a functional integration concern, separate from rendered visual acceptance.
 
