@@ -18,7 +18,7 @@ GreenPoint is an early research and hackathon prototype.
 | Plant tracking and classification pipeline | Proposed; not validated |
 | Public-data evaluation and real-field trials | Planned |
 
-This repository currently contains the project README. The landing source has not yet been published here.
+The landing source is available in [`landing/`](landing/). It demonstrates the product concept; it does not process uploaded videos.
 
 ## The experience
 
@@ -60,11 +60,11 @@ GreenPoint has not published measured classification accuracy, tracking performa
 
 The landing prototype uses **React 19, Vite 6 and CSS**, with self-hosted Sora, Source Sans 3 and IBM Plex Mono fonts, Phosphor icons and Pretext text measurement.
 
-Once the landing source is available, run these commands from the project root:
+With Node.js 22 or newer installed, run these commands from the project root:
 
 ```bash
 cd landing
-npm install
+npm ci
 npm run dev -- --host 0.0.0.0 --port 4173 --strictPort
 ```
 
@@ -79,11 +79,10 @@ The build prepares the frontend and Sites-compatible worker package. No model AP
 
 ## Next milestones
 
-1. Publish the landing source.
-2. Connect a real video-processing path and make failures visible.
-3. Evaluate segmentation, identity linking and classification separately on appropriately licensed data.
-4. Test representative field videos and uncertainty handling with growers.
-5. Establish the mapping and calibration requirements before claiming geographic coordinates.
+1. Connect a real video-processing path and make failures visible.
+2. Evaluate segmentation, identity linking and classification separately on appropriately licensed data.
+3. Test representative field videos and uncertainty handling with growers.
+4. Establish the mapping and calibration requirements before claiming geographic coordinates.
 
 ## Background
 

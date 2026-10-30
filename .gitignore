@@ -1,0 +1,13 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+.npmrc
+**/node_modules/
+**/dist/
+**/.vite/
+
+# Keep generated source artwork and local QA captures in the workspace.
+landing/design/*
+!landing/design/selected-dark-reference.png
+!landing/design/research-brief.md
