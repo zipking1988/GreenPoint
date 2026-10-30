@@ -89,13 +89,13 @@ function TrackingExperience({ playRequest, reducedMotion }) {
 
   return <section id="approach" className="tracking section-wrap" aria-labelledby="tracking-title">
     <div className="section-heading tracking-heading">
-      <h2 id="tracking-title">Count the plant.<br /><span>Not every frame.</span></h2>
+      <h2 id="tracking-title" tabIndex={-1}>Count the plant.<br /><span>Not every frame.</span></h2>
       <MeasuredCopy className="section-copy">A moving camera sees the same plant again and again. Linking those views is what turns a video into an inventory.</MeasuredCopy>
     </div>
     <div className="tracking-toolbar"><span className="technical-label">SIMULATED TRACKING EXPLANATION</span><span className="technical-label">ONE SCENE / THREE OBSERVATIONS</span></div>
     <div className="tracking-workspace">
       <div className="observation-strip">
-        {frames.map((frame, i) => <button key={frame} className={`observation ${stage === i ? 'is-active' : ''}`} aria-label={`View observation ${i + 1}, frame ${frame}`} aria-pressed={stage === i} onClick={() => { setPlaying(false); setProgress(i * 42); }}>
+        {frames.map((frame, i) => <button key={frame} className={`observation ${stage === i ? 'is-active' : ''}`} aria-label={`View observation ${i + 1}, frame ${frame}`} aria-pressed={stage === i} onFocus={() => setPlaying(false)} onClick={() => { setPlaying(false); setProgress(i * 42); }}>
           <div className="observation-image"><img src={asset('tracking-plant')} alt={`Illustrative repeated view ${i + 1} of the same broadleaf plant.`} loading="lazy" style={{ left: `${-13 - i * 7}%`, top: `${-17 + i * 2}%` }} /><span className="observation-id"><Crosshair aria-hidden="true" />GP-007</span></div>
           <span className="observation-caption"><span>FRAME {frame}</span><span>{i === stage ? 'Selected view' : 'View observation'}<ArrowUpRight aria-hidden="true" /></span></span>
         </button>)}
@@ -182,6 +182,7 @@ export function App() {
   const systemReducedMotion = useReducedMotion();
   const [motionReduced, setMotionReduced] = useState(false);
   const reducedMotion = systemReducedMotion || motionReduced;
+  const menuToggle = useRef(null);
   const mapDialog = useRef(null);
 
   useEffect(() => {
@@ -209,7 +210,12 @@ export function App() {
 
   useEffect(() => {
     if (!menuOpen) return;
-    const closeOnEscape = event => { if (event.key === 'Escape') setMenuOpen(false); };
+    const closeOnEscape = event => {
+      if (event.key === 'Escape') {
+        setMenuOpen(false);
+        menuToggle.current?.focus();
+      }
+    };
     document.addEventListener('keydown', closeOnEscape);
     return () => document.removeEventListener('keydown', closeOnEscape);
   }, [menuOpen]);
@@ -225,13 +231,14 @@ export function App() {
 
   function explore() {
     document.getElementById('approach').scrollIntoView({ behavior: reducedMotion ? 'instant' : 'smooth' });
+    document.getElementById('tracking-title').focus({ preventScroll: true });
     setPlayRequest(value => value + 1);
   }
   const navigation = [['approach', 'The approach'], ['field-atlas', 'Field atlas'], ['research', 'Research']];
 
   return <>
     <a className="skip-link" href="#main-content">Skip to content</a>
-    <header className="masthead"><div className="header-inner"><a href="#top" aria-label="GreenPoint home"><Brand /></a><span className="prototype-label">Research prototype</span><nav className="desktop-nav" aria-label="Main navigation">{navigation.map(([id, text]) => <a key={id} href={`#${id}`} aria-current={activeSection === id ? 'location' : undefined}>{text}</a>)}<a href="/dashboard" className="dashboard-link">Open workspace<ArrowUpRight size={15} /></a></nav><button className="icon-button mobile-menu-button" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={menuOpen} aria-controls="mobile-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <List />}</button></div>{menuOpen && <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation">{navigation.map(([id, text]) => <a key={id} href={`#${id}`} onClick={() => setMenuOpen(false)}>{text}<ArrowRight /></a>)}<a href="/dashboard">Open workspace<ArrowUpRight /></a><span>Research prototype</span></nav>}</header>
+    <header className="masthead"><div className="header-inner"><a href="#top" aria-label="GreenPoint home"><Brand /></a><span className="prototype-label">Research prototype</span><nav className="desktop-nav" aria-label="Main navigation">{navigation.map(([id, text]) => <a key={id} href={`#${id}`} aria-current={activeSection === id ? 'location' : undefined}>{text}</a>)}<a href="/dashboard" className="dashboard-link">Open workspace<ArrowUpRight size={15} /></a></nav><button ref={menuToggle} className="icon-button mobile-menu-button" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={menuOpen} aria-controls="mobile-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <List />}</button></div>{menuOpen && <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation">{navigation.map(([id, text]) => <a key={id} href={`#${id}`} onClick={() => setMenuOpen(false)}>{text}<ArrowRight /></a>)}<a href="/dashboard">Open workspace<ArrowUpRight /></a><span>Research prototype</span></nav>}</header>
     <main id="main-content">
       <section id="top" className="hero" aria-labelledby="hero-title"><img className="hero-image" src={asset('vision-field')} alt="Illustrative young crop rows on dark soil, with individual crop and weed leaves highlighted." width="1495" height="1052" fetchPriority="high" /><div className="hero-content section-wrap"><div className="hero-copy"><p className="hero-kicker">A NEW VIEW OF SMALLER FIELDS</p><h1 id="hero-title">See the field.<br /><span>Plant by plant.</span></h1><MeasuredCopy className="hero-description">A phone-first approach to turning a field walk into a reviewable weed map.</MeasuredCopy><button className="primary-button" onClick={explore}>Explore the walkthrough<ArrowRight aria-hidden="true" /></button></div><div className="hero-legend"><Legend vertical /></div><span className="hero-specimen"><Crosshair aria-hidden="true" /><span>GP-007<span>One plant. One identity.</span></span></span><span className="hero-disclosure">Illustrative concept · not live analysis</span></div></section>
       <div className="hero-bottom section-wrap"><span>PHONE VIDEO</span><span className="hero-path">Individual plants<ArrowRight aria-hidden="true" />Persistent identity<ArrowRight aria-hidden="true" />Field map</span><a href="#approach" aria-label="Explore the approach"><ArrowRight /></a></div>

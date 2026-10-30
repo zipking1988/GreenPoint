@@ -8,6 +8,8 @@ With Node.js 22 or newer, run `npm ci`, then `npm run dev -- --host 0.0.0.0 --po
 
 ## Vercel deployment
 
+Public production site: [GreenPoint](https://greenpoint-vert.vercel.app/).
+
 Use `landing` as the Vercel project's Root Directory and `main` as its production branch. `vercel.json` installs with `npm ci`, runs the existing build, and publishes `dist/client`. The additional Sites worker output remains available for a separate Sites handoff.
 
 The `api/` directory contains Node functions for Vercel. Local Vite uses the same handler. The Sites static worker is preserved but does not run the new Node inference API.

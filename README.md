@@ -2,6 +2,8 @@
 
 **See the field. Plant by plant.**
 
+[Open the live GreenPoint landing](https://greenpoint-vert.vercel.app/)
+
 A phone-first approach to turning a field walk into a reviewable, per-plant weed map.
 
 GreenPoint is designed for Japanese growers and field-service teams managing scattered plots. The idea is simple: record an ordinary phone video, link repeated views of each plant, and give a person a clearer inventory to review.
