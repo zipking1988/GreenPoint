@@ -25,6 +25,19 @@ typography:
     fontFamily: IBM Plex Mono
     fontSize: 0.6875rem
     fontFeature: tnum
+  dashboardDisplay:
+    fontFamily: Sora Variable
+    fontWeight: 540
+    fontSize: 3rem
+    lineHeight: 1.12
+  dashboardBody:
+    fontFamily: Source Sans 3 Variable
+    fontSize: 1rem
+    lineHeight: 1.5
+  dashboardUI:
+    fontFamily: Source Sans 3 Variable
+    fontSize: 0.8125rem
+    lineHeight: 1.4
 spacing:
   unit: 4px
   section: clamp(3.25rem, 6vw, 6.5rem)
@@ -70,5 +83,17 @@ Sticky navigation uses section anchors and current-section indication. Buttons a
 
 - User choice: original option2; retain entire-field map and its copy from option1.
 - User scope: richer judge-facing content, premium responsive presentation, meaningful motion, direct implementation.
-- Implementation: preserve existing React/Vite/Sites-ready runtime; no auth, paid AI calls, deployment, automatic spraying, or fabricated measured results.
+- Implementation: preserve existing React/Vite/Sites-ready runtime. The 2026-10-31 dashboard request adds a Vercel Node API and production deployment; automatic spraying and fabricated measured results remain excluded.
 - Semantic crop/weed masks alone do not provide plant-instance identity ground truth. Evaluation copy must preserve this distinction.
+
+## Dashboard extension / Operate
+
+The dashboard follows selected direction A in `design/selected-dashboard-reference.png`. Existing local font files and SIL OFL licenses remain the typography source. The field canvas is the visual anchor, session navigation is secondary, and the inspection panel connects every decision to an actual source crop. The first screen uses layout and thin separators rather than a KPI card wall. Source artwork is an ImageGen panorama, explicitly illustrative.
+
+Desktop: icon rail, session sidebar, central video/inventory, and a persistent evidence inspector. At tablet width, the inspector follows the inventory and uses a horizontal specimen treatment. At phone width, session navigation becomes a drawer, navigation moves to the bottom, the inventory drops long observations from its columns, and the full observation remains in inspection. Portrait uploads retain their native ratio in a bounded media frame; image, boxes and masks share its bounds.
+
+Display is geometric and restrained. Body explanations use the dashboard body token; compact UI uses the UI token, with smaller mono reserved for frame times, IDs and provenance. Brand-derived secondary surface tones are intentional rather than new semantic colors. Primary actions use solid lime; crop, weed and uncertain always have text as well as color. At most six large, selected-first boxes appear at once; the full inventory remains accessible below.
+
+Motion is functional: a short inspector arrival, a finite dialog entrance and responsive control feedback. A real analysis shows progress and a cancellable spinner. Reduced-motion removes transforms and loops while leaving numeric progress and all controls available. There is no autoplay, scroll hijacking or endless decorative motion.
+
+States are part of the interface: local preview, missing model connection, invalid video, extraction progress, analysis progress/cancel, partial output, no plants, filtered-empty, human-reviewed and export. Sample changes persist in versioned local storage; user videos and live sessions remain in tab memory. Connection status describes configuration; only a successful run is evidence of provider operation.

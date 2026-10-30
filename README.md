@@ -14,11 +14,13 @@ GreenPoint is an early research and hackathon prototype.
 | --- | --- |
 | Interactive landing page | Implemented in the local development workspace |
 | Illustrative field atlas and sample CSV | Implemented |
-| Video upload and live model inference | Planned |
-| Plant tracking and classification pipeline | Proposed; not validated |
+| Field-analysis dashboard | Implemented, with local video previews, evidence review and CSV export |
+| Video upload | Local decoding and up to 12 sampled frames per clip implemented |
+| Live model inference | Server integration implemented; deployment credentials not configured |
+| Plant tracking and classification pipeline | Conservative candidate linking and Meta API transport implemented; real-provider and field validation pending |
 | Public-data evaluation and real-field trials | Planned |
 
-The landing source is available in [`landing/`](landing/). It demonstrates the product concept; it does not process uploaded videos.
+The source is available in [`landing/`](landing/). `/` introduces the product and `/dashboard` opens the field workspace. The deployed workspace currently uses clearly marked illustrative sample records; uploaded videos can be previewed locally. Live analysis requires server credentials.
 
 ## The experience
 
@@ -44,15 +46,15 @@ Phone video
     → Plant inventory and field map
 ```
 
-The proposed architecture explores SAM 3.1 for segmentation, custom motion-aware tracking for identity linking, and Muse Spark for visual classification. These integrations are not connected to the current landing page.
+The dashboard integrates SAM 3.1 segmentation and Muse Spark visual classification through a server-only Meta API adapter. Its conservative geometric tracker proposes identities only between closely spaced, unambiguous observations. Sparse views remain separate candidates. Transport and failure paths are covered by tests; real-provider execution and field performance are not yet validated.
 
 The intended output is a reviewable information layer. Spraying hardware integration and treatment execution are outside the current prototype.
 
 ## What the demo data means
 
-All current field artwork is AI-generated illustration. It is not Japanese field footage, WeedMap imagery or measured model output.
+All current field artwork is AI-generated illustration. It is not Japanese field footage, WeedMap imagery or measured model output. The dashboard sample uses an eight-second static illustration preview with 12 hand-authored records.
 
-The downloadable CSV contains four illustrative records. Coordinates are relative to the example image, not GPS positions or a surveyed field map. The records are not a count of every plant shown.
+The landing CSV contains four illustrative records; dashboard exports contain the current session's records, original model label, effective classification, review status and provenance. Coordinates are relative to source frames, not GPS positions or a surveyed field map. The example records are not a count of every plant shown.
 
 GreenPoint has not published measured classification accuracy, tracking performance, time savings or pesticide reductions.
 
@@ -73,14 +75,15 @@ Open the local preview at `http://localhost:4173/`.
 ```bash
 npm run build
 npm run test:sites
+npm run test:analysis
 ```
 
 The build prepares the frontend and Sites-compatible worker package. No model API key is required for the presentation prototype.
 
 ## Next milestones
 
-1. Connect a real video-processing path and make failures visible.
-2. Evaluate segmentation, identity linking and classification separately on appropriately licensed data.
+1. Configure server-only `MODEL_API_KEY` and `ANALYSIS_ACCESS_TOKEN` on Vercel, redeploy, then verify a real field clip end to end. See [connection setup](landing/README.md#connect-live-analysis).
+2. Evaluate segmentation, candidate identity linking and classification separately on appropriately licensed data.
 3. Test representative field videos and uncertainty handling with growers.
 4. Establish the mapping and calibration requirements before claiming geographic coordinates.
 
