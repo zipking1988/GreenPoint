@@ -1,5 +1,5 @@
 export const LABELS = {
-  crop: { text: 'Crop', short: 'Crop', color: '#d3fa79', action: 'Keep crop' },
+  crop: { text: 'Crop', short: 'Crop', color: '#afc3a4', action: 'Keep crop' },
   weed: { text: 'Weed', short: 'Weed', color: '#ef987f', action: 'Mark as weed' },
   uncertain: { text: 'Needs review', short: 'Review', color: '#edcc79', action: 'Keep for review' },
 };

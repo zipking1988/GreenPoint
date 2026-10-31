@@ -87,4 +87,28 @@ Review found and fixed JPEG size inflation caused by re-encoding a valid low-qua
 
 Checks: nine MCP tests, 13 existing analysis tests and four Sites tests passed; production build and dependency audit passed. MCP tests use the official client over actual HTTP and a controlled fake model upstream. Real Meta inference, physical devices, browser-session synchronization, world coordinates and hardware actions remain outside the verified result. See `landing/docs/MCP.md` for the implemented contract.
 
+## Approved charcoal / sage refinement, 2026-10-31
+
+Source visual truth: the three current production captures in `reviews/color-audit-2026-10-31/` in the original project workspace, plus the user's explicit approval of charcoal UI surfaces, reduced decorative lime and sage crop data. Original layout, typography, photography and workflows remain the source; the old broad green surface treatment is intentionally superseded. Shared palette: `landing/src/palette.css`.
+
+This color-only release was isolated from concurrent, uncommitted functional changes in the primary checkout. Final screenshots and checks use a separate worktree based on `f39ec2f`, served on loopback port 4187. No concurrent review-queue, video-limit or copy changes are part of this patch.
+
+| Evidence | Normalization | Result |
+| --- | --- | --- |
+| `landing/design/color-refinement/landing-hero-comparison.webp` | 1280 × 720 source and implementation, CSS 1280 × 720, DPR 1; arranged together without scaling | Hero imagery and lime phrase/CTA retained; neutral chrome and sage crop legend |
+| `landing/design/color-refinement/landing-explanation-comparison.webp` | Same viewport, #approach aligned at y=110, first observation selected; combined input | Same geometry/wrapping; explanatory headline and ID are now white |
+| `landing/design/color-refinement/dashboard-comparison.webp` | Same viewport, default illustrative sample, GP-007 unreviewed, All 12, no keyboard focus; combined input | Charcoal canvas/sidebar/inspector and muted subtitle; unchanged source crop and regions |
+| `landing/design/color-refinement/crop-overlay-comparison.webp` | Unscaled 626 × 232 source-image regions arranged together | Sage crop boundaries/labels agree; coral weed and amber review retained; dark outline supports boundaries over foliage |
+| `landing/design/color-refinement/05-dashboard-mobile.webp`, `06-landing-mobile.webp`, `07-connections-mobile.webp` | 375 × 812 CSS/pixels, DPR 1 | No horizontal page/panel overflow; navigation and fixed dialog controls remain usable |
+
+Five required fidelity surfaces: fonts are the same self-hosted Sora, Source Sans 3 and IBM Plex Mono with verified loaded font faces; type sizes, wrapping and weights match the original states. Spacing, grid dimensions and photo bounds match the paired captures. Colors follow the approved shared roles, including dialogs and loading/error states. All raster assets and image crops are preserved without recoloring or redrawing. Copy, counts, provenance and functional behavior match the committed base.
+
+Verification history: a shared-checkout capture included concurrent copy/review changes and was rejected as a comparison target. The initial isolated development preview also blocked symlinked font assets; those captures were rejected. The preview was allowed to serve only its exact bundled font directories, then recaptured with both font checks true. This preview setup is not committed. The final combined and focused comparisons were reviewed again with matching font, pointer and data states; no actionable P0/P1/P2 differences remain outside the approved color changes.
+
+Browser checks: Crop 7 / Weed 3 / Review 2 filters retain their rows and now use sage/coral/amber selected fills; All 12 remains lime. The category selectors were given sufficient specificity to override the generic active filter rule. Mobile landing navigation opens the workspace; Connections → Robots & agents completes the actual public MCP test (3 tools / 12 illustrative records). Desktop and phone capture widths are unchanged and the clean isolated preview has no warning/error console entries.
+
+Contrast checks: normal text/canvas 16.36:1; muted text/surface 7.64:1; dim text/surface 5.90:1; crop text/surface 8.81:1; explicit control boundaries 3.08–3.43:1 against adjacent surfaces. These sampled pairs do not constitute a full accessibility certification. Category words/symbols remain alongside color.
+
+Independent source review found no remaining issues in CSS validity, variable inheritance, selected-filter specificity or agreement between mask and CSS crop colors. Production build plus 13 analysis, nine MCP and four Sites tests passed in the isolated worktree. Real model inference and hardware validation remain unverified as before.
+
 final result: passed

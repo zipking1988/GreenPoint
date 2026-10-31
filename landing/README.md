@@ -1,6 +1,6 @@
 # GreenPoint landing
 
-A responsive React/Vite landing page and field-analysis workspace for phone-first per-plant weed mapping. The selected art direction is dark forest, pale lime and botanical computer vision.
+A responsive React/Vite landing page and field-analysis workspace for phone-first per-plant weed mapping. The selected art direction uses charcoal surfaces, pale lime brand accents, sage crop data and botanical computer-vision imagery.
 
 ## Local preview
 

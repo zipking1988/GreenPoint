@@ -2,7 +2,7 @@
 
 ## GreenPoint visual decisions
 
-- Current choice is original option2, superseding option3: dark forest, pale lime, white geometric display, precise computer-vision photography. Refer to DESIGN.md.
+- Current composition is original option2, superseding option3: geometric display and precise computer-vision photography. The user-approved charcoal/sage refinement below governs current colors; pale lime remains the brand accent. Refer to DESIGN.md.
 - Retain the first design’s entire-field map with “Every plant has a place.” and “Turn a simple phone video into a field map.”
 - Current visual reference is `design/selected-dark-reference.png`. The earlier cream/Japanese editorial mock remains historical only.
 - User asked for richer content and award-quality polish to impress judges. Prioritize a clear narrative, a finite interactive identity explanation, the complete map, sourced context, honest readiness, and responsive accessibility.
@@ -10,6 +10,11 @@
 - All current field artwork is AI-generated illustration. Live model processing, measured accuracy and pesticide savings are not implemented. Never present illustrative records or public policy targets as GreenPoint results.
 
 Run the local server yourself and open the preview in the browser available to this environment. Do not give the user server-start instructions when you can run it.
+
+## Approved color refinement / 2026-10-31
+
+- User approved the color-audit recommendation: reduce broad green UI surfaces and decorative lime across landing + dashboard. Use the charcoal/sage roles in `src/palette.css`; keep the hero phrase, brand, primary actions and current interaction lime. This supersedes the old mock colors while preserving their layout, typography and photography.
+- Crop is sage #afc3a4 in both CSS and `LABELS.crop.color` (decoded masks). Weed coral and Review amber retain their labels and symbols. Never reuse brand lime as the generic crop-data token. Dialogs and loading/error states use the shared palette too.
 
 ## Field intelligence dashboard
 

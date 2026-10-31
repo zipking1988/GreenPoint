@@ -3,12 +3,13 @@ name: GreenPoint Plant Intelligence
 description: Phone-first agricultural perception, expressed as a judge-facing research prototype.
 colors:
   primary: '#d3fa79'
-  background: '#06150f'
-  surface: '#0c2118'
-  surfaceActive: '#142d20'
-  text: '#f3f6f0'
-  muted: '#a7b9ad'
-  border: '#385043'
+  background: '#111513'
+  surface: '#1a201c'
+  surfaceActive: '#252d28'
+  text: '#f1f2ed'
+  muted: '#abb2ab'
+  border: '#364039'
+  crop: '#afc3a4'
   weed: '#ef987f'
   review: '#edcc79'
 typography:
@@ -59,7 +60,7 @@ A landing page for international hackathon judges and Japanese agricultural oper
 
 ## Selected direction
 
-The user explicitly changed from option 3 to original option 2, the dark forest/lime computer-vision direction, then asked for richer content and premium motion. Preserve the entire-field map requested from option 1. Warm cream/terracotta and watercolor process illustrations are superseded.
+The user explicitly changed from option 3 to original option 2, the dark forest/lime computer-vision direction, then asked for richer content and premium motion. Preserve the entire-field map requested from option 1. Warm cream/terracotta and watercolor process illustrations are superseded. The user-approved 2026-10-31 color refinement retains that composition and imagery while replacing large green UI surfaces with charcoal; the shared palette below now governs colors.
 
 Visual truth: `design/selected-dark-reference.png`, evolved from the selected original option 2. Its generated repeated Plant007 labels are illustrative, not valid tracking evidence; the implementation uses repeated crops of the same underlying image to explain identity instead.
 
@@ -97,3 +98,13 @@ Display is geometric and restrained. Body explanations use the dashboard body to
 Motion is functional: a short inspector arrival, a finite dialog entrance and responsive control feedback. A real analysis shows progress and a cancellable spinner. Reduced-motion removes transforms and loops while leaving numeric progress and all controls available. There is no autoplay, scroll hijacking or endless decorative motion.
 
 States are part of the interface: local preview, missing model connection, invalid video, extraction progress, analysis progress/cancel, partial output, no plants, filtered-empty, human-reviewed and export. Sample changes persist in versioned local storage; user videos and live sessions remain in tab memory. Connection status describes configuration; only a successful run is evidence of provider operation.
+
+## Color refinement / 2026-10-31
+
+The user approved reducing the overall green cast after a screenshot-based audit of the landing and dashboard. Preserve layout, type scale, photographs, data, motion and workflows. The original generated references remain layout/image baselines; their broad green surface treatment is intentionally superseded by this decision.
+
+`src/palette.css` owns the shared color roles for both routes, native dialogs, loading and error states. Canvas is #111513, surface #1a201c, sidebar #161b18 and active surface #252d28. White #f1f2ed, muted #abb2ab and dim #929d95 carry ordinary content. Large landing section headings, plant IDs and dashboard subtitles no longer use decorative lime. The landing hero's lime phrase and brand marks remain.
+
+Lime #d3fa79 identifies primary actions and current interaction. Crop data uses sage #afc3a4, weed remains coral #ef987f and uncertainty remains amber #edcc79. `LABELS.crop.color` mirrors the crop token so decoded masks and CSS labels share the same semantic color. Crop/weed/review filters use their category colors when selected; All plants retains lime. Dark outlines help boxes remain visible over plant imagery. Category words and symbols remain present.
+
+Controls use #606e63 for explicit borders; quiet structural rules use #364039. A rule separating ordinary rows is not a control boundary. No asset has been recolored.
