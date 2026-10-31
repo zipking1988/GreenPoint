@@ -8,13 +8,14 @@ import { ArrowCounterClockwise } from '@phosphor-icons/react/dist/csr/ArrowCount
 import { PlugsConnected } from '@phosphor-icons/react/dist/csr/PlugsConnected';
 import { probeMcp } from './mcp-client.js';
 
-export function Connections({ provider, accessCode, setAccessCode, onCheck, onDone }) {
-  const [tab, setTab] = useState('models');
+export function Connections({ provider, accessCode, setAccessCode, onCheck, onDone, initialTab = 'models' }) {
+  const [tab, setTab] = useState(initialTab);
   const [copied, setCopied] = useState(false);
   const [test, setTest] = useState({ phase: 'idle' });
   const request = useRef(null);
   const endpoint = `${window.location.origin}/api/mcp`;
-  const modelStatus = model => !provider.checked ? 'Checking…' : provider.error ? 'Check failed' : !provider.configured ? 'Not configured' : provider.verified.includes(model) ? 'Verified in this tab' : 'Configured · not verified';
+  const isVerified = model => provider.checked && !provider.error && provider.configured && (provider.verified ?? []).includes(model);
+  const modelStatus = model => !provider.checked ? 'Checking…' : provider.error ? 'Check failed' : !provider.configured ? 'Not configured' : isVerified(model) ? 'Verified in this tab' : 'Configured · not verified';
   useEffect(() => () => request.current?.abort(), []);
   function moveTab(event) {
     const choices = ['models', 'robots'];
@@ -42,8 +43,8 @@ export function Connections({ provider, accessCode, setAccessCode, onCheck, onDo
     <div className="gp-connection-tabs" role="tablist" aria-label="Connection type">{[['models', 'Analysis models'], ['robots', 'Robots & agents']].map(([value, label]) => <button key={value} id={`gp-tab-${value}`} role="tab" aria-selected={tab === value} aria-controls={`gp-panel-${value}`} tabIndex={tab === value ? 0 : -1} onKeyDown={moveTab} onClick={() => setTab(value)}>{label}</button>)}</div>
     {tab === 'models' ? <section id="gp-panel-models" role="tabpanel" aria-labelledby="gp-tab-models">
       <p className="gp-dialog-intro">Live analysis uses SAM 3.1 to locate plants and Muse Spark to suggest labels. Your judgment remains the final step.</p>
-      <div className="gp-provider-row"><span><Crosshair size={21} /><b>SAM 3.1</b><small>Plant segmentation</small></span><span className={provider.verified.includes('sam-3.1') ? 'gp-connected' : 'gp-disconnected'}>{modelStatus('sam-3.1')}</span></div>
-      <div className="gp-provider-row"><span><Leaf size={21} /><b>Muse Spark 1.3</b><small>Visual classification</small></span><span className={provider.verified.includes('muse-spark-1.3') ? 'gp-connected' : 'gp-disconnected'}>{modelStatus('muse-spark-1.3')}</span></div>
+      <div className="gp-provider-row"><span><Crosshair size={21} /><b>SAM 3.1</b><small>Plant segmentation</small></span><span className={isVerified('sam-3.1') ? 'gp-connected' : 'gp-disconnected'}>{modelStatus('sam-3.1')}</span></div>
+      <div className="gp-provider-row"><span><Leaf size={21} /><b>Muse Spark 1.3</b><small>Visual classification</small></span><span className={isVerified('muse-spark-1.3') ? 'gp-connected' : 'gp-disconnected'}>{modelStatus('muse-spark-1.3')}</span></div>
       {provider.configured ? <><p className="gp-connection-note">The server has configuration. Credentials and models are verified only after successful analysis. Checking the connection does not call a model.</p><label className="gp-access-label">Analysis access code<input type="password" autoComplete="off" value={accessCode} onChange={e => setAccessCode(e.target.value)} placeholder="Enter the workspace access code" /><small>Kept in memory for this tab. Never saved in your browser.</small></label></> : <p className="gp-connection-note">{provider.error ? 'Connection check failed. Retry; the configuration status is unknown.' : provider.checked ? 'This deployment is in sample mode. The workspace owner needs to configure the model service before live analysis is available.' : 'Checking the server configuration…'}</p>}
     </section> : <section id="gp-panel-robots" role="tabpanel" aria-labelledby="gp-tab-robots" className="gp-mcp-panel">
       <p className="gp-dialog-intro">Give your robot’s agent a field view.<br />Connect through MCP to inspect plants from camera snapshots.</p>

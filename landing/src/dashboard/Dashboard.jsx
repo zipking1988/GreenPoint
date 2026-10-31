@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'react';
 import { Leaf } from '@phosphor-icons/react/dist/csr/Leaf';
 import { SquaresFour } from '@phosphor-icons/react/dist/csr/SquaresFour';
 import { MapTrifold } from '@phosphor-icons/react/dist/csr/MapTrifold';
@@ -29,9 +29,11 @@ import { SlidersHorizontal } from '@phosphor-icons/react/dist/csr/SlidersHorizon
 import { MeasuredCopy } from '../MeasuredCopy.jsx';
 import { LABELS, canExportSession, createId, csvText, downloadFile, frameTimecode, matchesPlant, nextReview, restoreSampleEdit, reviewDecision, reviewQueue, reviewStatus, sampleSession, summary, timecode } from './data.js';
 import { requestAnalysis } from './analysis-client.js';
+import { checkModelConfiguration, initialModelConnection, modelConnectionReducer } from './model-connection.js';
 import { cropPlant, MAX_ANALYSIS_SECONDS, readVideo, validateVideo } from './video.js';
 import { linkDetections } from './tracker.js';
 import { Connections } from './Connections.jsx';
+import { Modal } from './Modal.jsx';
 import './dashboard.css';
 
 const CROPS = ['Maize', 'Lettuce', 'Soybean', 'Sugar beet', 'Rice', 'Wheat'];
@@ -51,26 +53,6 @@ function IconButton({ label, children, className = '', ...props }) {
 
 function Label({ value, reviewed = false }) {
   return <span className={`gp-label gp-${value}`}><span className="gp-category-mark" />{LABELS[value].text}{reviewed && <Check size={12} aria-label="Reviewed" />}</span>;
-}
-
-function Modal({ title, children, onClose, wide = false }) {
-  const ref = useRef(null);
-  const closeRef = useRef(onClose);
-  closeRef.current = onClose;
-  useEffect(() => {
-    const dialog = ref.current;
-    const before = document.activeElement;
-    dialog.showModal();
-    // StrictMode mounts effects twice. A queued close event from its cleanup
-    // must not dismiss the dialog that the second setup has already reopened.
-    const close = () => { if (!dialog.open) closeRef.current(); };
-    dialog.addEventListener('close', close);
-    return () => { dialog.removeEventListener('close', close); dialog.close(); before?.focus(); };
-  }, []);
-  return <dialog ref={ref} className={`gp-dialog ${wide ? 'gp-dialog-wide' : ''}`} aria-labelledby="gp-dialog-title" onClick={e => { if (e.target === ref.current) onClose(); }}>
-    <div className="gp-dialog-heading"><h2 id="gp-dialog-title">{title}</h2><IconButton label="Close dialog" onClick={onClose}><X /></IconButton></div>
-    {children}
-  </dialog>;
 }
 
 function PlantCrop({ image, box, alt, className = '' }) {
@@ -220,7 +202,7 @@ function Inventory({ session, selected, onSelect, filter, setFilter, view, setVi
   </section>;
 }
 
-export default function Dashboard() {
+export default function Dashboard({ onMap, uploadRequest = 0, connection: sharedConnection, dispatchConnection: sharedDispatch, abortRef: sharedAbortRef, setAccessCode: externalSetAccessCode }) {
   const [sessions, setSessions] = useState(() => [makeSample()]);
   const [activeId, setActiveId] = useState('sample-east-plot');
   const session = sessions.find(s => s.id === activeId) ?? sessions[0];
@@ -235,8 +217,10 @@ export default function Dashboard() {
   const [masks, setMasks] = useState(false);
   const [modal, setModal] = useState(null);
   const [sidebar, setSidebar] = useState(false);
-  const [provider, setProvider] = useState({ configured: false, checked: false, error: false, verified: [] });
-  const [accessCode, setAccessCode] = useState('');
+  const [localConnection, localDispatch] = useReducer(modelConnectionReducer, initialModelConnection);
+  const provider = sharedConnection ?? localConnection;
+  const dispatchConnection = sharedDispatch ?? localDispatch;
+  const accessCode = provider.accessCode;
   const [notice, setNotice] = useState('');
   const [pendingExport, setPendingExport] = useState(null);
   const [uploadError, setUploadError] = useState('');
@@ -248,28 +232,26 @@ export default function Dashboard() {
   const [reading, setReading] = useState(false);
   const [progress, setProgress] = useState({ phase: 0, value: 0, detail: '' });
   const uploadInput = useRef(null);
-  const abortRef = useRef(null);
+  const localAbortRef = useRef(null);
+  const abortRef = sharedAbortRef ?? localAbortRef;
   const urls = useRef(new Set());
   const inventoryRef = useRef(null);
   const sidebarRef = useRef(null);
   const stats = summary(session.plants);
   const selected = session.plants.find(p => p.id === selectedId);
   const pendingExportCurrent = pendingExport && sessions.some(item => item === pendingExport.session);
+  const setAccessCode = externalSetAccessCode ?? (value => {
+    if (value !== accessCode) abortRef.current?.abort();
+    dispatchConnection({ type: 'access-code', value });
+  });
 
-  const checkConnection = useCallback(async () => {
-    try {
-      const response = await fetch('/api/health', { signal: AbortSignal.timeout(8000) });
-      if (!response.ok) throw new Error('Health check failed');
-      const body = await response.json();
-      if (typeof body.configured !== 'boolean') throw new Error('Invalid health response');
-      setProvider(previous => ({ ...previous, configured: body.configured, checked: true, error: false, verified: body.configured ? previous.verified : [] }));
-    } catch { setProvider(previous => ({ ...previous, configured: false, checked: true, error: true, verified: [] })); }
-  }, []);
+  const checkConnection = useCallback(() => checkModelConfiguration(dispatchConnection), [dispatchConnection]);
+  const hasSharedConnection = Boolean(sharedConnection);
   useEffect(() => {
-    document.title = 'Field intelligence · GreenPoint';
-    checkConnection();
+    if (!hasSharedConnection) { document.title = 'Field intelligence · GreenPoint'; checkConnection(); }
     return () => { abortRef.current?.abort(); urls.current.forEach(url => URL.revokeObjectURL(url)); };
-  }, [checkConnection]);
+  }, [abortRef, checkConnection, hasSharedConnection]);
+  useEffect(() => { if (uploadRequest > 0) { setModal('upload'); setUploadError(''); } }, [uploadRequest]);
   useEffect(() => {
     if (!notice) return;
     const timeout = setTimeout(() => setNotice(''), 6000);
@@ -446,6 +428,7 @@ export default function Dashboard() {
       setActiveId(target.id); setActiveFrame(0); setFilter('all'); setSearch(''); setQueueMode(false);
     }
     target = { ...target, runId: createId(), lastError: null };
+    const connectionRevision = provider.revision;
     const controller = new AbortController(); abortRef.current = controller;
     setWorking(true); setSelectedId(null); setNotice('');
     const tracks = [];
@@ -460,6 +443,7 @@ export default function Dashboard() {
         analysisLog.push({ stage, index, elapsed_ms: Math.round(performance.now() - requestStarted), candidates: result.detections?.length ?? result.plants?.length ?? 0, status: 'completed' });
         return result;
       } catch (error) {
+        if (['access_required', 'provider_auth', 'not_configured'].includes(error.code)) dispatchConnection({ type: 'authentication-failed', revision: connectionRevision });
         analysisLog.push({ stage, index, elapsed_ms: Math.round(performance.now() - requestStarted), status: error.name === 'AbortError' ? 'canceled' : 'failed', error_code: error.name === 'AbortError' ? 'canceled' : error.code || 'connection_error' });
         throw error;
       }
@@ -468,7 +452,7 @@ export default function Dashboard() {
       for (let i = 0; i < target.frames.length; i++) {
         setProgress({ phase: 1, value: Math.round(i / target.frames.length * 65), detail: `SAM 3.1 · frame ${i + 1} of ${target.frames.length}` });
         const data = await trackedRequest('segment', i + 1, { action: 'segment', image: target.frames[i].image, width: target.width, height: target.height });
-        setProvider(previous => ({ ...previous, verified: [...new Set([...previous.verified, 'sam-3.1'])] }));
+        dispatchConnection({ type: 'verified', model: 'sam-3.1', revision: connectionRevision });
         limited ||= data.limited;
         linkDetections(tracks, data.detections, i, target.frames[i].time);
         completedFrames++;
@@ -482,7 +466,7 @@ export default function Dashboard() {
         const plants = await Promise.all(batch.map(async plant => ({ id: plant.id, image: await cropPlant(target.frames[plant.bestFrame].image, plant.box) })));
         setProgress({ phase: 3, value: 70 + Math.round(i / tracks.length * 29), detail: `Muse Spark · reviewing plants ${i + 1}–${Math.min(i + 8, tracks.length)} of ${tracks.length}` });
         const data = await trackedRequest('classify', i / 8 + 1, { action: 'classify', crop: target.crop, plants });
-        setProvider(previous => ({ ...previous, verified: [...new Set([...previous.verified, 'muse-spark-1.3'])] }));
+        dispatchConnection({ type: 'verified', model: 'muse-spark-1.3', revision: connectionRevision });
         data.plants.forEach(result => { const plant = tracks.find(p => p.id === result.id); if (plant) Object.assign(plant, { label: result.label, originalLabel: result.originalLabel, confidence: result.confidence, reasoning: result.reasoning, source: 'sam-3.1 + muse-spark-1.3' }); });
       }
       const next = { ...target, plants: tracks, mode: limited ? 'partial' : 'live', limited, completedFrames, analysisLog, dirty: true, elapsed: Math.round((performance.now() - started) / 1000) };
@@ -513,7 +497,7 @@ export default function Dashboard() {
 
   return <div className="gp-dashboard">
     <a className="gp-skip" href="#gp-main">Skip to analysis</a>
-    <nav className="gp-rail" aria-label="Workspace navigation"><a href="/" className="gp-rail-brand" aria-label="GreenPoint home"><Leaf weight="fill" /></a><div className="gp-rail-main"><IconButton label="Field sessions" className={!queueMode && view === 'table' && filter === 'all' ? 'gp-rail-active' : ''} onClick={() => { setView('table'); setFilter('all'); setQueueMode(false); if (window.innerWidth < 801) setSidebar(true); }}><SquaresFour /><span className="gp-rail-label">Sessions</span></IconButton><IconButton label="Frame atlas" className={!queueMode && view === 'atlas' ? 'gp-rail-active' : ''} onClick={() => openInventory('all', 'atlas')}><MapTrifold /><span className="gp-rail-label">Atlas</span></IconButton><IconButton label="Review queue" className={queueMode ? 'gp-rail-active' : ''} onClick={() => openInventory('all', 'table', true)}><CheckSquare /><span className="gp-rail-label">Review</span>{stats.pending + stats.deferred > 0 && <span className="gp-rail-count">{stats.pending + stats.deferred}</span>}</IconButton></div><div className="gp-rail-bottom"><IconButton label="Connection settings" onClick={() => setModal('connection')}><GearSix /></IconButton><IconButton label="About GreenPoint" onClick={() => setModal('about')}><Question /></IconButton></div></nav>
+    <nav className="gp-rail" aria-label="Workspace navigation"><a href="/" className="gp-rail-brand" aria-label="GreenPoint home"><Leaf weight="fill" /></a><div className="gp-rail-main">{onMap && <IconButton label="Back to field map" onClick={onMap} disabled={working || reading}><MapTrifold /><span className="gp-rail-label">Field</span></IconButton>}<IconButton label="Field sessions" className={!queueMode && view === 'table' && filter === 'all' ? 'gp-rail-active' : ''} onClick={() => { setView('table'); setFilter('all'); setQueueMode(false); if (window.innerWidth < 801) setSidebar(true); }}><SquaresFour /><span className="gp-rail-label">Sessions</span></IconButton><IconButton label="Frame atlas" className={!queueMode && view === 'atlas' ? 'gp-rail-active' : ''} onClick={() => openInventory('all', 'atlas')}><MapTrifold /><span className="gp-rail-label">Atlas</span></IconButton><IconButton label="Review queue" className={queueMode ? 'gp-rail-active' : ''} onClick={() => openInventory('all', 'table', true)}><CheckSquare /><span className="gp-rail-label">Review</span>{stats.pending + stats.deferred > 0 && <span className="gp-rail-count">{stats.pending + stats.deferred}</span>}</IconButton></div><div className="gp-rail-bottom"><IconButton label="Connection settings" onClick={() => setModal('connection')}><GearSix /></IconButton><IconButton label="About GreenPoint" onClick={() => setModal('about')}><Question /></IconButton></div></nav>
     {sidebar && <button className="gp-sidebar-scrim" aria-label="Close field sessions" onClick={() => setSidebar(false)} />}
     <aside ref={sidebarRef} className={`gp-sessions ${sidebar ? 'gp-sessions-open' : ''}`} aria-label="Field sessions" role={sidebar ? 'dialog' : undefined} aria-modal={sidebar ? true : undefined}><a className="gp-brand" href="/">Green<span>Point</span><span className="gp-brand-dot" /></a><div className="gp-session-head"><span className="gp-section-label">WORKSPACE</span><h2>Field sessions</h2><p>A clearer view of every field.</p><button className="gp-new-session" onClick={openUpload} disabled={working || reading}><Plus size={17} />New session</button></div><div className="gp-sessions-list"><div className="gp-recent-label">RECENT SESSIONS<span>{sessions.length.toString().padStart(2, '0')}</span></div>{sessions.map(s => <button type="button" key={s.id} className={`gp-session-item ${session.id === s.id ? 'gp-session-active' : ''}`} aria-pressed={session.id === s.id} onClick={() => selectSession(s.id)} disabled={working || reading}><img src={s.image} alt="" /><span><b>{s.name}</b><span>{s.mode === 'sample' ? 'Illustrative sample' : s.mode === 'local' ? 'Local preview' : s.mode === 'partial' ? 'Partial analysis' : 'Analyzed'}<span className="gp-session-dot">·</span>{timecode(s.duration)}</span></span><CaretRight size={14} /></button>)}</div><div className="gp-session-bottom"><button className="gp-upload-card" onClick={openUpload} disabled={working || reading}><UploadSimple size={25} /><strong>Start with a field walk.</strong><span>Upload a short phone video.</span><span className="gp-upload-card-action">Upload video<ArrowUpRight size={16} /></span></button><button className="gp-connection-status" onClick={() => setModal('connection')}><span className={provider.configured ? 'gp-dot-on' : ''} />{provider.configured ? 'Analysis configured' : provider.error ? 'Connection check failed' : provider.checked ? 'Sample workspace' : 'Checking connection…'}<ArrowUpRight size={12} /></button><a className="gp-project-link" href="/">Explore GreenPoint<ArrowUpRight size={13} /></a></div></aside>
     <main id="gp-main" className="gp-main">

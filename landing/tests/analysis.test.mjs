@@ -4,6 +4,7 @@ import { Readable } from 'node:stream';
 import { EventEmitter } from 'node:events';
 import { ApiError, analyze, handleApi, responseEvents, segmentationResult, validateClassifications, validatePayload } from '../lib/meta-api.js';
 import { requestAnalysis } from '../src/dashboard/analysis-client.js';
+import { checkModelConfiguration, initialModelConnection, modelConnectionReducer } from '../src/dashboard/model-connection.js';
 import { canExportSession, createId, csvText, nextReview, restoreSampleEdit, reviewDecision, reviewQueue, reviewStatus, sampleSession, summary } from '../src/dashboard/data.js';
 import { MAX_ANALYSIS_SECONDS, sampleTimes, validateVideo } from '../src/dashboard/video.js';
 import { linkDetections } from '../src/dashboard/tracker.js';
@@ -51,6 +52,48 @@ test('analysis response parsing preserves provider errors and malformed-response
   await assert.rejects(requestAnalysis(segment, 'test-code', undefined, invalid), /analysis server did not respond/);
   const limited = async () => ({ ok: false, json: async () => ({ error: 'Please retry later.', code: 'provider_rate_limit' }) });
   await assert.rejects(requestAnalysis(segment, 'test-code', undefined, limited), error => error.message === 'Please retry later.' && error.code === 'provider_rate_limit');
+});
+
+test('model verification follows the current credentials and ignores stale replies', () => {
+  let state = initialModelConnection;
+  const apply = action => { state = modelConnectionReducer(state, action); };
+  apply({ type: 'configuration', configured: true, error: false });
+  apply({ type: 'access-code', value: 'first-code' });
+  const oldRevision = state.revision;
+  apply({ type: 'verified', model: 'sam-3.1', revision: oldRevision });
+  apply({ type: 'verified', model: 'muse-spark-1.3', revision: oldRevision });
+  assert.deepEqual(state.verified, ['sam-3.1', 'muse-spark-1.3']);
+
+  apply({ type: 'access-code', value: 'new-code' });
+  assert.deepEqual(state.verified, []);
+  const newRevision = state.revision;
+  apply({ type: 'verified', model: 'sam-3.1', revision: oldRevision });
+  assert.deepEqual(state.verified, []);
+  apply({ type: 'verified', model: 'sam-3.1', revision: newRevision });
+  apply({ type: 'authentication-failed', revision: oldRevision });
+  assert.deepEqual(state.verified, ['sam-3.1'], 'An old request cannot invalidate a new credential.');
+
+  apply({ type: 'authentication-failed', revision: newRevision });
+  assert.deepEqual(state.verified, []);
+  apply({ type: 'verified', model: 'muse-spark-1.3', revision: newRevision });
+  assert.deepEqual(state.verified, [], 'A late success cannot undo an authentication failure.');
+});
+
+test('configuration checks do not verify models and failures invalidate previous verification', async () => {
+  let state = initialModelConnection;
+  const dispatch = action => { state = modelConnectionReducer(state, action); };
+  await checkModelConfiguration(dispatch, async url => {
+    assert.equal(url, '/api/health');
+    return { ok: true, json: async () => ({ configured: true }) };
+  });
+  assert.deepEqual(state.verified, []);
+  dispatch({ type: 'verified', model: 'sam-3.1', revision: state.revision });
+  const oldRevision = state.revision;
+  await checkModelConfiguration(dispatch, async () => { throw new Error('offline'); });
+  assert.equal(state.error, true);
+  assert.deepEqual(state.verified, []);
+  dispatch({ type: 'verified', model: 'sam-3.1', revision: oldRevision });
+  assert.deepEqual(state.verified, []);
 });
 
 async function api(path, { method = 'POST', body, headers = {} } = {}, config = env, fetcher) {

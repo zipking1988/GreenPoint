@@ -108,7 +108,7 @@ export function csvText(session) {
   };
   const rows = [['plant_id', 'label', 'original_label', 'reviewed', 'model_confidence_uncalibrated', 'source', 'best_frame', 'time_s', 'x_normalized', 'y_normalized', 'width_normalized', 'height_normalized', 'reasoning', 'session_id', 'run_id', 'session_mode', 'review_status', 'model_ids', 'elapsed_s', 'completed_frames', 'analysis_log', 'record_type']];
   const log = session.analysisLog?.length ? JSON.stringify(session.analysisLog) : '';
-  session.plants.forEach(p => rows.push([p.id, p.label, p.originalLabel, reviewStatus(p) === 'confirmed', p.confidence ?? '', p.source ?? '', p.bestFrame, p.observations?.find(o => o.frame === p.bestFrame)?.time ?? 0, ...p.box, p.reasoning, session.id, session.runId ?? '', session.mode, reviewStatus(p), p.source === 'illustrative' ? '' : (p.source ?? ''), session.elapsed ?? '', session.completedFrames ?? '', log, 'plant']));
+  session.plants.forEach(p => rows.push([p.id, p.label, p.originalLabel, reviewStatus(p) === 'confirmed', p.confidence ?? '', p.source ?? '', p.bestFrame, p.observations?.find(o => o.frame === p.bestFrame)?.time ?? 0, ...p.box, p.reasoning, session.id, session.runId ?? '', session.mode, reviewStatus(p), ['illustrative', 'illustrative-map'].includes(p.source) ? '' : (p.source ?? ''), session.elapsed ?? '', session.completedFrames ?? '', log, 'plant']));
   if (!session.plants.length && canExportSession(session)) {
     rows.push([...Array(13).fill(''), session.id, session.runId, session.mode, '', '', session.elapsed ?? '', session.completedFrames ?? '', log, 'run_summary']);
   }
