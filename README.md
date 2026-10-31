@@ -1,12 +1,12 @@
 # GreenPoint
 
-**See what grows. Plant by plant.**
+**Every plant deserves an agent.**
 
 [Open the live GreenPoint landing](https://greenpoint-vert.vercel.app/)
 
-A phone-first prototype for turning a short garden video into a reviewable list of plant candidates, with image evidence and human decisions.
+GreenPoint explores what happens when plants have AI agents: observations become context, context becomes a question, and people help decide what care makes sense.
 
-The current product hypothesis is everyday vegetable gardeners, including older growers and the people who help them. Start with an ordinary phone video, inspect the source behind a suggestion, then keep, mark or defer a plant. Recognition cannot remove weeds or solve physical strain by itself; usability and actual benefit still need testing with gardeners.
+The landing’s fictional tomato, Milo, demonstrates this idea through a clearly labeled scripted request, three imagined soil-check scenarios and an exportable in-page journal. It does not call an LLM, read sensors or operate equipment. Real plant-agent reasoning and persistent memory are future work. The existing phone-video perception workspace supplies a separate foundation for reviewable plant evidence.
 
 ## Project status
 
@@ -14,7 +14,8 @@ GreenPoint is an early research and hackathon prototype.
 
 | Area | Status |
 | --- | --- |
-| Garden landing and illustrative review example | Implemented, with source-linked evidence and an actual sample CSV |
+| Plant-agent landing and Milo concept | Implemented scripted scenarios, evidence disclosure and JSON journal export; no LLM or sensors |
+| Persistent plant agents and tools | Planned; not implemented or validated |
 | Illustrative field-map workspace | Implemented as a separate sample |
 | Field-analysis dashboard | Implemented, with local video previews, evidence review and CSV export |
 | Video upload | Local preview up to two minutes; analysis accepts clips up to six seconds and 12 sampled frames |
@@ -23,19 +24,15 @@ GreenPoint is an early research and hackathon prototype.
 | Generic robot/agent MCP | Stateless Streamable HTTP, public discovery/sample tools and token-protected single-frame perception implemented; hardware and real-provider validation pending |
 | Public-data evaluation and real-field trials | Planned |
 
-The source is available in [`landing/`](landing/). `/` introduces the product; its primary upload action opens `/dashboard?view=video&upload=1`. `/dashboard?view=video` opens video review, while `/dashboard` retains the illustrative field map. Sample records are clearly labeled; uploaded videos can be previewed locally. Live analysis requires server credentials.
+The source is available in [`landing/`](landing/). `/` introduces the product; its primary action explores Milo and its secondary action opens the perception workspace. `/dashboard?view=video` opens video review, while `/dashboard` retains the illustrative field map. Sample records are clearly labeled; uploaded videos can be previewed locally. Live analysis requires server credentials.
 
 ## The experience
 
-The landing page introduces the product through an interactive garden example:
+The landing introduces a plant-originated request: “Could you check my soil?” Visitors can inspect the authored evidence, select an imagined soil scenario, see a follow-up and export a journal that explicitly labels the simulation. The record separates fictional identity, generated image, scripted request and visitor-selected context. All branches keep human follow-up pending.
 
-- **One plant, the evidence, your decision:** GP-007 connects a source rectangle to a crop of the same image.
-- **Review before action:** keep and weed decisions are confirmed; deciding later is deferred. The original uncertain suggestion stays visible.
-- **Take the record with you:** an actual sample CSV exports illustrative provenance, original suggestion, human decision and normalized image coordinates.
-- **Start with your video:** upload actions enter the six-second analysis workflow directly. Longer videos up to two minutes are preview-only.
-- **Understand the limits:** prototype details describe current behavior, pending validation and how sampled frames are sent for configured live analysis.
+Milo’s memory is page-local and bounded to the latest30scenario entries, with the total count disclosed. Leaving resets it; exporting preserves a JSON copy. It is independent of dashboard sessions, CSV review and MCP.
 
-The interface supports desktop and mobile layouts, keyboard controls, finite animation and reduced motion. The video workspace retains playback controls.
+The interface supports desktop/mobile, keyboard controls, finite animation and reduced motion. The original botanical hero is retained. The existing video workspace and its playback controls remain available through the perception links.
 
 ## Proposed pipeline
 
@@ -57,7 +54,7 @@ The current output is a frame-based, reviewable information layer. A geographic 
 
 All current field artwork is AI-generated illustration. It is not Japanese field footage, WeedMap imagery or measured model output. The dashboard sample uses an eight-second static illustration preview with 12 hand-authored records.
 
-The landing CSV contains one illustrative garden record; dashboard exports contain the current session and run IDs, each candidate's source, original model label, effective classification and review status. Landing, video and map examples have separate identity/decision scopes. Coordinates are relative to source frames, not GPS positions or a surveyed field map. Example records are not a count of every plant shown.
+The landing JSON journal contains the explicitly fictional Milo scenario history; dashboard CSV exports contain the current session and run IDs, each candidate's source, original model label, effective classification and review status. Landing, video and map examples have separate identity/decision scopes. Coordinates are relative to source frames, not GPS positions or a surveyed field map. Example records are not a count of every plant shown.
 
 GreenPoint has not published measured classification accuracy, tracking performance, time savings or pesticide reductions.
 

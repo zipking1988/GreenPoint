@@ -1,6 +1,6 @@
 ---
-name: GreenPoint Plant Intelligence
-description: Phone-first agricultural perception, expressed as a judge-facing research prototype.
+name: GreenPoint Plant Agents
+description: Botanical plant agents, expressed through evidence, memory and requests for care.
 colors:
   primary: '#d3fa79'
   background: '#111513'
@@ -56,15 +56,17 @@ shadows:
 
 ## Product and audience
 
-A landing page for international hackathon judges and everyday vegetable gardeners, including older growers and family helpers. The visitor should remember: a short phone video can lead to source-linked plant candidates, with the person making the final decision. The sample is illustrative; model integration exists but real-provider and field validation are pending.
+A landing for plant owners, curious builders and hackathon judges. Memorable thing: a plant agent asks for information it lacks and shows the source behind that request. User explicitly pivoted from weed review to “let plants use AI” and delegated design/build/review/release. The existing perception workspace remains the technical foundation.
 
 ## Current landing direction / 2026-10-31
 
-The user approved a hybrid of garden concepts 1 and 2, then specifically retained the original botanical hero image and composition. `public/assets/vision-field.webp` therefore remains the hero. The garden hybrid in `design/garden-concepts/04-hybrid-human-evidence.png` supplies the evidence section, review controls and simple three-step narrative. This supersedes the old landing's Japan-specific problem section, tracking presentation and field-atlas promise; the map-led dashboard retains its own approved direction.
+Selected visual is `design/plant-agent/selected.webp`, The Living Network, chosen by the agent from three independent concepts under explicit delegation. Keep the original botanical `vision-field.webp` and composition as the user’s asset override. Lead with “Every plant. An AI of its own.” then the interactive Milo tomato concept. One primary action enters the concept; perception is secondary.
 
-Lead with “See what grows. Plant by plant.” and a primary short-video upload action. Offer an immediate illustrative review example as the secondary action. Its source selection, evidence crop and GP-007 label refer to the same image rectangle. Keep the uncertain original suggestion visible after a human decision. Confirming and deferring have distinct feedback; CSV export preserves both meanings. Readiness is visible before entering the workspace.
+Milo’s image is generated artwork. Its request and journal use transparent scripted scenarios and in-page state. No model or sensor assesses Milo; persistent profiles, actual LLM requests and tools are planned. Native evidence disclosure, scenario form, readable follow-up, keyboard journal and JSON export form one complete frontend journey. Current/future labels must be visible.
 
-Use Sora and Source Sans 3 at the existing sizes and shared color tokens. IBM Plex Mono is limited to source identifiers. Desktop evidence is a broad photograph with a compact panel and functional connector; tablet and mobile place the panel below or beside the source without a decorative connector. Native scrolling, focus-visible outlines, touch targets and reduced-motion behavior take priority over cinematic effects. Existing Pretext measurement keeps copy responsive.
+Sora/Source Sans3 and shared charcoal/sage/lime remain authoritative. One request panel is justified by its interaction; avoid decorative card grids. Desktop uses a full4:5portrait beside a request; tablet/mobile deliberately place them in document flow. Hero request becomes in-flow on narrow screens. No endless motion; source images stay readable.
+
+## Previous directions (historical)
 
 ## Selected direction
 

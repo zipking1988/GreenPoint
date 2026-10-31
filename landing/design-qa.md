@@ -1,3 +1,48 @@
+# Plant-agent landing QA — 31 October 2026
+
+final result: passed
+
+No actionable P0/P1/P2 issues remain in the implemented landing. Independent read-only code review against2aea8c2 found no actionable findings. This acceptance covers a scripted frontend concept; real LLM plant agents, sensors, long-term memory and plant-health results are not accepted as implemented.
+
+## Visual truth and evidence
+
+- Selected source: `design/plant-agent/selected.webp`, raw `selected.png`,946×1663. First displayed concept/The Living Network selected by agent under user's explicit delegation; three independent concepts were shown and a local comparison board captured in `qa/design-board.png`. User override preserves exact original `public/assets/vision-field.webp` in place of the concept's regenerated hero.
+- Implementation: `http://127.0.0.1:4189/`, captured in `design/plant-agent/qa/desktop-final.png`,1440×6199; `mobile-final.png`,375×8770. CSS widths match screenshot widths, density1.
+- Combined full/above-fold comparison: `qa/source-comparison-final.webp`, source scaled equally to720px and implementation1440×2460 region scaled to720px, side by side. No image squashing; unequal natural heights padded. Focused combined comparison: `qa/milo-comparison.webp`, source946×700 and implementation1440×1100 regions at matching content scale. Both were opened and inspected.
+- Focused browser evidence: `qa/milo-desktop.png`, `mobile-faq.png`, `320-overflow-before.png`, `320-overflow-fixed.png`. Initial state: soil unknown, no recorded scenarios, first loop step, evidence/FAQ closed.
+- Full-page capture correction: shots made while scrolled can paint sticky navigation or focused skip links inside the full-page image. Final captures start atscrollY0 with skip link confirmed offscreen. Native viewport images establish actual fixed-element behavior.
+
+## Five required fidelity surfaces
+
+- Typography: self-hosted Sora display, Source Sans3 body, IBM Plex Mono identifiers. Heading scale/weight match selected direction; main body18–21px, source captions smaller. Native text remains readable before Pretext font-ready/ResizeObserver measurement. Mobile request wraps without clipping.
+- Layout/rhythm: fullbleed hero, single request invitation, full4:5Milo portrait beside one interactive request surface. Mobile moves request into flow and follows portrait with panel. A working form/journal extends the generated mock deliberately; later editorial sections have distinct jobs.
+- Colors: shared charcoal/sage retained, lime actions/current step, muted source text. No changes to crop/weed semantic colors in workspace. Phosphor icons stay consistent. Focus/selection controls visible.
+- Images: original botanical raster untouched; Milo generated separately from selected reference,1122×1402WebP. All3page images resolve in browser. Hero request has no misleading plant connector or tracking identity. The mock's invented diagnosis and tiny soil/leaf tiles are replaced by the actual full generated source, explicit unknown information and an image link. This is an intentional truthfulness adjustment.
+- Copy/content: concept, simulation provenance, missing measurements and current/future status are explicit. Related research is linked without novelty/endorsement/impact claims. Existing video workflow limits and separate MCP remain accurate. No automatic watering, active sensors or genuine LLM request is implied by the demo.
+
+## Fix history
+
+1. P2:320pxloop grid used min-content tracks and “Remember” extended page to329px. Fixed with minmax(0,1fr), min-width0 and mobile labels spanning a row. Removed redundant mobile arrows. Before/after screenshots saved; all320/375/768/1024/1280/1440 measurements now equal viewport width.
+2. Submission feedback was distant from the form. Added inline scenario confirmation and an anchor to the updated request; requests remain pending. Reset returns focus to a visible select.
+3. Mobile menu-to-Milo navigation waits one frame for menu close before measuring scroll. Verified menu closes, heading receives focus and remains visible below the header.
+4. Recompared final source/implementation and phone detail after fixes. No remaining P0/P1/P2 drift. Source extensions and omitted fictional diagnostics are intentional, documented above.
+
+## Functional verification
+
+- Required selection prevents empty submit. All dry/damp/unknown scenarios update the request and preserve a pending human follow-up. Evidence opens and focuses native summary; original source link points to the same Milo raster.
+- Actual JSON downloaded/opened:3events in dry/damp/unknown order, visitor_selected_simulation provenance, generated image/fictional identity, model_called:false, sensor_readings:false, treatment_authorized:false.
+-31actual form submissions retain latest30events (scenario2..31), total31 disclosed and exported. Focusable journal scrolls with keyboardEnd. Reset clears scenarios and exports a fresh session UUID with no prior events.
+- All4loop controls operate by keyboardEnter with one pressed; mobile menuEscape restores toggle focus. Native FAQ expands readably. Page reduced-motion toggle disables animations and native anchor smoothing; system preference also respected.
+-51tests passed:47existing analysis/map/MCP/Sites plus4new provenance/branch tests. New helper tests repeated after final source updates. Production build and Sites packaging pass. No console warnings/errors in tested flow.
+
+## Limits and follow-up
+
+No real device/iOS Safari run or formal screen-reader audit. Real-provider credentials remain unavailable. Plant-agent reasoning and persistent care memory require future implementation and validation. Monid has no active API key; Higgsfield workspace access returned an auth hint, so full scroll-world film generation was not performed or billed. Native scrolling and still-based finite motion ship instead.
+
+---
+
+## Previous landing QA (historical)
+
 # Landing depth QA — 31 October 2026
 
 final result: passed
