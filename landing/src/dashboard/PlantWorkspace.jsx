@@ -176,13 +176,17 @@ export default function PlantWorkspace({ active = true, onVideo, onMap, provider
         <nav className="pw-sections" aria-label="Plant record sections">{['request', 'journal', 'evidence'].map(value => <button key={value} aria-label={value === 'request' ? 'Overview' : value === 'journal' ? `Journal (${plant.events.length} ${plant.events.length === 1 ? 'entry' : 'entries'})` : 'Evidence'} aria-pressed={section === value} className={section === value ? 'is-selected' : ''} onClick={() => setSection(value)}>{value === 'request' ? 'Overview' : value === 'journal' ? 'Journal' : 'Evidence'}{value === 'journal' && plant.total > 0 && <span>{plant.events.length}</span>}</button>)}<span>This tab only{dirty ? ' · not exported' : ''}</span></nav>
         {notice && <div className="pw-notice" role="status"><Check size={18} /><span>{notice}</span><button aria-label="Dismiss notification" onClick={() => setNotice('')}><X size={18} /></button></div>}
         {exportRevision != null && <div className="pw-export-notice"><p role="status">{exportRevision === workspace.revision ? 'Download started. Check that your JSON file was saved.' : 'Your journal changed after this download. Export again to keep the latest records.'}</p>{exportRevision === workspace.revision && <button className="pw-text" onClick={() => { setWorkspace(current => confirmWorkspaceExport(current, exportRevision)); setExportRevision(null); setNotice('Export confirmed. New observations will need a new export.'); }}><Check size={17} />I saved the file</button>}<button className="pw-dismiss" aria-label="Dismiss export confirmation" onClick={() => setExportRevision(null)}><X size={18} /></button></div>}
-        {section === 'request' && <>
+        <div hidden={section !== 'request'}>
           <div className="pw-request-layout"><div className="pw-source-column"><SourcePhoto plant={plant} /><button className="pw-source-details" onClick={() => setSection('evidence')}>View evidence & provenance<ArrowUpRight size={17} /></button></div>
             <section className="pw-request" aria-labelledby="pw-request-title"><div className="pw-request-meta"><span>{demo ? 'A QUESTION FROM MILO' : 'YOUR PLANT RECORD'}</span><Leaf size={19} aria-hidden="true" /></div><p className="pw-request-status">{demo ? 'Scripted response · no model calls' : 'Human observations · no AI assessment'}</p><div className="pw-request-copy" key={`${plant.id}-${plant.total}`}><h2 id="pw-request-title">{request.title}</h2><MeasuredCopy>{request.body}</MeasuredCopy></div><div className="pw-context"><Drop size={20} aria-hidden="true" /><span>Soil</span><strong>{soilText[plant.events.at(-1)?.soil] || 'Not checked'}{demo && plant.total ? ' · imagined' : ''}</strong></div>
-              <ObservationForm key={plant.id} plant={plant} onRecord={observation => { setNotice(''); setWorkspace(current => recordObservation(current, plant.id, observation)); }} />
+              {/* Keep one form per plant mounted so inspecting evidence or another
+                  plant cannot discard an observation that has not been submitted. */}
+              {workspace.plants.map(item => <div key={item.id} hidden={item.id !== plant.id}>
+                <ObservationForm plant={item} onRecord={observation => { setNotice(''); setWorkspace(current => recordObservation(current, item.id, observation)); }} />
+              </div>)}
             </section></div>
           <div className="pw-latest"><Journal plant={plant} preview /><button className="pw-text" onClick={() => setSection('journal')}>View journal<ArrowUpRight size={17} /></button></div>
-        </>}
+        </div>
         {section === 'journal' && <Journal plant={plant} onObserve={() => setSection('request')} />}
         {section === 'evidence' && <Evidence plant={plant} onVideo={onVideo} />}
         <footer className="pw-footer"><span>{demo ? 'Milo is fictional. Your scenario entries are simulations.' : 'Your notes and photo stay in this tab until exported.'}</span><span>No treatment is automated.</span></footer>
