@@ -1,5 +1,7 @@
 # GreenPoint — Project Profile
 
+> **定位更新 / 2026-10-31：** 当前 landing 聚焦普通家庭菜园种植者，包括年长使用者及帮助他们的家人；主流程为短片、植物候选与图像证据、人工确认或暂缓、可追溯导出。这个用户定位仍需访谈验证。本文下方以日本农业组织、减农药 KPI 和硬件竞品为主的内容保留为早期商业探索，不是当前已验证的客户、需求或产品成果。最新能力边界以 README 和实际界面为准。
+
 > 田間の短い動画から、画像の根拠付きで人が確認できる植物候補リストを作る。
 > A reviewable plant candidate list with evidence from a short field video.
 
