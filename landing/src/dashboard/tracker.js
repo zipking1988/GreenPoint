@@ -26,7 +26,7 @@ export function linkDetections(tracks, detections, frame, time) {
       used.add(match.id); match.observations.push(observation);
       if (detection.box[2] * detection.box[3] > match.box[2] * match.box[3]) { match.box = detection.box; match.bestFrame = frame; match.mask = detection.mask; }
     } else {
-      tracks.push({ id: `GP-${String(nextId++).padStart(3, '0')}`, label: 'uncertain', originalLabel: null, confidence: null, box: detection.box, mask: detection.mask, observations: [observation], bestFrame: frame, reviewed: false, source: 'sam-3.1', reasoning: 'Detected by SAM. Classification is pending human review.' });
+      tracks.push({ id: `GP-${String(nextId++).padStart(3, '0')}`, label: 'uncertain', originalLabel: null, confidence: null, box: detection.box, mask: detection.mask, observations: [observation], bestFrame: frame, reviewed: false, reviewStatus: 'pending', source: 'sam-3.1', reasoning: 'Detected by SAM. Classification is pending human review.' });
     }
   }
   return tracks;

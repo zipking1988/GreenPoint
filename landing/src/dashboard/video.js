@@ -1,4 +1,18 @@
 const MAX_VIDEO = 150 * 1024 * 1024;
+export const MAX_PREVIEW_SECONDS = 120;
+export const MAX_ANALYSIS_SECONDS = 6;
+
+// Long clips are previewed across their duration, but only short clips can be
+// analyzed. The fixed interval keeps consecutive observations within the
+// tracker's conservative association window.
+export function sampleTimes(duration) {
+  if (!Number.isFinite(duration) || duration <= 0 || duration > MAX_PREVIEW_SECONDS) throw new Error('Choose a field clip up to two minutes long.');
+  const count = Math.max(1, Math.min(12, Math.ceil(duration * 2)));
+  const last = Math.max(0, duration - 0.05);
+  return Array.from({ length: count }, (_, i) => duration <= MAX_ANALYSIS_SECONDS
+    ? Math.min(last, i * 0.5)
+    : count === 1 ? 0 : i / (count - 1) * last);
+}
 
 export function validateVideo(file) {
   if (!file || !/\.(mp4|mov|webm|m4v)$/i.test(file.name)) throw new Error('Choose an MP4, MOV, M4V or WebM video.');
@@ -28,21 +42,20 @@ export async function readVideo(file, url, signal, onProgress) {
   video.preload = 'auto'; video.muted = true; video.playsInline = true;
   try {
     await waitEvent(video, 'loadeddata', signal, () => { video.src = url; video.load(); });
-    if (!Number.isFinite(video.duration) || video.duration <= 0 || video.duration > 120) throw new Error('Choose a field clip up to two minutes long.');
+    const times = sampleTimes(video.duration);
     const scale = Math.min(1, 960 / Math.max(video.videoWidth, video.videoHeight));
     const canvas = document.createElement('canvas');
     canvas.width = Math.max(32, Math.round(video.videoWidth * scale));
     canvas.height = Math.max(32, Math.round(video.videoHeight * scale));
     const context = canvas.getContext('2d');
-    const count = Math.max(1, Math.min(12, Math.ceil(video.duration * 2)));
     const frames = [];
-    for (let i = 0; i < count; i++) {
+    for (let i = 0; i < times.length; i++) {
       signal?.throwIfAborted();
-      const time = count === 1 ? 0 : Math.min(video.duration - 0.05, i / (count - 1) * (video.duration - 0.05));
+      const time = times[i];
       if (Math.abs(video.currentTime - time) > 0.005) await waitEvent(video, 'seeked', signal, () => { video.currentTime = time; });
       context.drawImage(video, 0, 0, canvas.width, canvas.height);
       frames.push({ time, image: canvas.toDataURL('image/jpeg', 0.78) });
-      onProgress?.((i + 1) / count);
+      onProgress?.((i + 1) / times.length);
     }
     return { frames, width: canvas.width, height: canvas.height, duration: video.duration };
   } finally {

@@ -1,0 +1,20 @@
+/* Shared color roles for the landing, workspace, dialogs and loading states. */
+:root {
+  --color-canvas: #111513;
+  --color-surface: #1a201c;
+  --color-sidebar: #161b18;
+  --color-rail: #0e1210;
+  --color-surface-active: #252d28;
+  --color-line: #364039;
+  --color-control-line: #606e63;
+  --color-text: #f1f2ed;
+  --color-muted: #abb2ab;
+  --color-dim: #929d95;
+  --color-lime: #d3fa79;
+  --color-crop: #afc3a4;
+  --color-weed: #ef987f;
+  --color-review: #edcc79;
+  background: var(--color-canvas);
+  color: var(--color-text);
+  color-scheme: dark;
+}

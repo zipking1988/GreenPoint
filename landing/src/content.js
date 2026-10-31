@@ -7,7 +7,7 @@ export const samplePlants = [
 
 export const pipeline = [
   { verb: 'Segment', name: 'SAM 3.1', short: 'Find individual plants in video frames.', detail: 'Short concept prompts produce boxes and masks for each frame. Image-based segmentation is the proposed approach for dense plant scenes.', output: 'Plant masks + observations', url: 'https://dev.meta.ai/docs/overview', link: 'Meta Model API' },
-  { verb: 'Link', name: 'Custom tracking', short: 'Connect repeated views of the same plant.', detail: 'Camera-motion compensation predicts where a plant will appear next. Matching and track lifecycle rules turn repeated detections into one identity.', output: 'One identity across frames', url: null, link: null },
+  { verb: 'Link', name: 'Conservative matching', short: 'Propose links between nearby observations.', detail: 'A geometric baseline compares nearby boxes in consecutive sampled frames. Ambiguous or distant views remain separate candidates; camera-motion compensation and tracking performance are not yet validated.', output: 'Candidate links across frames', url: null, link: null },
   { verb: 'Review', name: 'Muse Spark', short: 'Suggest crop, weed, or human review.', detail: 'A representative plant view and crop context inform the proposed classification step. Ambiguous plants remain uncertain; model confidence never replaces a person’s judgment.', output: 'A reviewable plant inventory', url: 'https://dev.meta.ai/docs/models', link: 'Meta model documentation' },
 ];
 
@@ -18,8 +18,8 @@ export const evaluation = [
 ];
 
 export const faqs = [
-  { q: 'Is the walkthrough running live AI?', a: 'This website is an interactive concept, with AI-generated field illustrations and a simulated tracking sequence. The proposed model pipeline is not connected to the website. Evaluation results will be reported separately when measured.' },
-  { q: 'What makes the tracking step different?', a: 'A moving camera can see the same plant in many frames. The planned tracker compensates for camera movement and associates plant observations across frames, so a repeated view does not become a new plant. The interactive example explains that idea; it is not a benchmark result.' },
+  { q: 'Is the walkthrough running live AI?', a: 'The landing walkthrough uses AI-generated illustrations and a simulated tracking sequence. The dashboard has a server integration for live analysis when its owner configures model access; real-provider and field validation are still pending.' },
+  { q: 'How are repeated views linked?', a: 'The dashboard proposes links when consecutive sampled observations have similar position and size. Uncertain matches stay separate. Camera movement, duplicate candidates and incorrect merges need field validation; the interactive example is not a benchmark result.' },
   { q: 'Can this map control a sprayer?', a: 'No. This prototype explores the perception and review layer. It does not operate machinery or prescribe chemicals. Image-relative and path-relative locations come first; usable geographic coordinates require calibration and location data.' },
   { q: 'What data will be used for validation?', a: 'The evaluation plan includes WeedMap and AgML agricultural datasets, subject to their licenses. Sliding-window sequences can test tracking under known camera motion. Synthetic sequences will be labeled, and instance-level reference identities are needed to measure deduplication. Real-field testing is a separate next step.' },
   { q: 'Will it recognize my crop or every weed?', a: 'That needs field validation for the crop, growing stage, lighting, and camera angle. The intended labels are crop, weed, and needs review. Species-level identification, disease diagnosis, and guaranteed whole-field coverage are outside the prototype.' },

@@ -4,7 +4,7 @@
 
 [Open the live GreenPoint landing](https://greenpoint-vert.vercel.app/)
 
-A phone-first approach to turning a field walk into a reviewable, per-plant weed map.
+A phone-first approach to turning a field walk into a reviewable inventory of plant candidates.
 
 GreenPoint is designed for Japanese growers and field-service teams managing scattered plots. The idea is simple: record an ordinary phone video, link repeated views of each plant, and give a person a clearer inventory to review.
 
@@ -17,7 +17,7 @@ GreenPoint is an early research and hackathon prototype.
 | Interactive landing page | Implemented in the local development workspace |
 | Illustrative field atlas and sample CSV | Implemented |
 | Field-analysis dashboard | Implemented, with local video previews, evidence review and CSV export |
-| Video upload | Local decoding and up to 12 sampled frames per clip implemented |
+| Video upload | Local preview up to two minutes; analysis accepts clips up to six seconds and 12 sampled frames |
 | Live model inference | Server integration implemented; deployment credentials not configured |
 | Plant tracking and classification pipeline | Conservative candidate linking and Meta API transport implemented; real-provider and field validation pending |
 | Generic robot/agent MCP | Stateless Streamable HTTP, public discovery/sample tools and token-protected single-frame perception implemented; hardware and real-provider validation pending |
@@ -46,18 +46,18 @@ Phone video
     → Link observations across frames
     → Classify: crop / weed / needs review
     → Human review
-    → Plant inventory and field map
+    → Reviewable plant candidate inventory
 ```
 
 The dashboard integrates SAM 3.1 segmentation and Muse Spark visual classification through a server-only Meta API adapter. Its conservative geometric tracker proposes identities only between closely spaced, unambiguous observations. Sparse views remain separate candidates. Transport and failure paths are covered by tests; real-provider execution and field performance are not yet validated.
 
-The intended output is a reviewable information layer. Spraying hardware integration and treatment execution are outside the current prototype.
+The current output is a frame-based, reviewable information layer. A geographic field map is a future goal. Spraying hardware integration and treatment execution are outside the current prototype.
 
 ## What the demo data means
 
 All current field artwork is AI-generated illustration. It is not Japanese field footage, WeedMap imagery or measured model output. The dashboard sample uses an eight-second static illustration preview with 12 hand-authored records.
 
-The landing CSV contains four illustrative records; dashboard exports contain the current session's records, original model label, effective classification, review status and provenance. Coordinates are relative to source frames, not GPS positions or a surveyed field map. The example records are not a count of every plant shown.
+The landing CSV contains four illustrative records; dashboard exports contain the current session and run IDs, each candidate's source, original model label, effective classification and review status. Coordinates are relative to source frames, not GPS positions or a surveyed field map. The example records are not a count of every plant shown.
 
 GreenPoint has not published measured classification accuracy, tracking performance, time savings or pesticide reductions.
 

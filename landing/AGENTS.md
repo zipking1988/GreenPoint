@@ -2,7 +2,7 @@
 
 ## GreenPoint visual decisions
 
-- Current choice is original option2, superseding option3: dark forest, pale lime, white geometric display, precise computer-vision photography. Refer to DESIGN.md.
+- Current composition is original option2, superseding option3: geometric display and precise computer-vision photography. The user-approved charcoal/sage refinement below governs current colors; pale lime remains the brand accent. Refer to DESIGN.md.
 - Retain the first design’s entire-field map with “Every plant has a place.” and “Turn a simple phone video into a field map.”
 - Current visual reference is `design/selected-dark-reference.png`. The earlier cream/Japanese editorial mock remains historical only.
 - User asked for richer content and award-quality polish to impress judges. Prioritize a clear narrative, a finite interactive identity explanation, the complete map, sourced context, honest readiness, and responsive accessibility.
@@ -11,15 +11,21 @@
 
 Run the local server yourself and open the preview in the browser available to this environment. Do not give the user server-start instructions when you can run it.
 
+## Approved color refinement / 2026-10-31
+
+- User approved the color-audit recommendation: reduce broad green UI surfaces and decorative lime across landing + dashboard. Use the charcoal/sage roles in `src/palette.css`; keep the hero phrase, brand, primary actions and current interaction lime. This supersedes the old mock colors while preserving their layout, typography and photography.
+- Crop is sage #afc3a4 in both CSS and `LABELS.crop.color` (decoded masks). Weed coral and Review amber retain their labels and symbols. Never reuse brand lime as the generic crop-data token. Dialogs and loading/error states use the shared palette too.
+
 ## Field intelligence dashboard
 
 - User delegated dashboard strategy, design selection, implementation, review fixes, main push and Vercel production deployment on 2026-10-31. This supersedes the earlier landing-only/no-deployment scope.
 - `/dashboard` and `/app` are the operational workspace. `/` remains the product narrative with a workspace link.
 - Selected dashboard direction: `design/selected-dashboard-reference.png`, agent-selected under the user's explicit delegation. Preserve the existing dark forest/lime brand. Its invented dates, confidence scores and 36-plant totals are source shortcomings, not product data.
 - Current sample is an eight-second static video of AI-generated artwork, with 12 hand-authored example records (7 crop, 3 weed, 2 uncertain). Never describe it as live inference, real footage, measured accuracy or validated tracking.
-- User videos stay local in the current tab. Up to 12 JPEG snapshots across a clip are sent only after the operator starts live analysis. Video/frames are not persisted to a database.
+- User videos stay local in the current tab. Clips up to 120 seconds can be previewed; only clips up to six seconds can be analyzed, using up to 12 JPEG snapshots at 0.5-second intervals after the operator starts live analysis. Video/frames are not persisted to a database.
 - Model access needs server-only `MODEL_API_KEY` and `ANALYSIS_ACCESS_TOKEN`. The access code lives only in tab memory. Never expose either server value in a client bundle or health endpoint.
 - Tracking is a conservative geometric baseline; sparse/ambiguous samples remain separate candidates. Image coordinates are not GPS. Human decisions remain distinct from original model labels, and reruns preserve old sessions.
+- Review states are pending, confirmed, or deferred; the Review queue contains all unconfirmed plants. Export per-plant provenance and run identity, and warn before leaving unsaved local analysis results.
 - User chose generic MCP for different devices' upper-level agents on 2026-10-31. `/api/mcp` provides public capabilities/sample tools and separate `MCP_ACCESS_TOKEN`-protected single-frame perception. Never describe it as tested ROS/PX4 hardware integration, a real-time control loop, geographic mapping, or a source of browser-local human decisions. Preserve stateless per-request transport and mandatory review flags. Run `npm run test:mcp` after changes.
 - Verify with `npm run test:analysis`, `npm run build`, `npm run test:sites`, and the in-app browser. Keep the Sites package intact; the new Node API is deployed to Vercel.
 

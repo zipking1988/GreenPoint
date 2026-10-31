@@ -1,6 +1,6 @@
 # GreenPoint landing
 
-A responsive React/Vite landing page and field-analysis workspace for phone-first per-plant weed mapping. The selected art direction is dark forest, pale lime and botanical computer vision.
+A responsive React/Vite landing page and field-analysis workspace for a phone-first plant candidate inventory. The selected art direction uses charcoal surfaces, pale lime brand accents, sage crop data and botanical computer-vision imagery.
 
 ## Local preview
 
@@ -18,7 +18,9 @@ The `api/` directory contains Node functions for Vercel. Local Vite uses the sam
 
 Set `MODEL_API_KEY` and `ANALYSIS_ACCESS_TOKEN` as server-only Vercel environment variables, then redeploy. For local development, copy `.env.example` to `.env`, supply the values and restart Vite. Do not use `VITE_` prefixes. In the workspace's Connection settings, enter the analysis access code. It stays in memory for that tab.
 
-The API uses Meta's fixed `sam-3.1` Responses endpoint and `muse-spark-1.3` Chat Completions endpoint. The original video remains local; up to 12 JPEG snapshots across the clip are segmented and cropped plants are classified. Each request is capped, authenticated and cancellable. Clips are limited to 150 MB and two minutes. The live candidate inventory is capped at 96 with explicit partial-coverage messaging. Sparse frames are not silently deduplicated.
+The API uses Meta's fixed `sam-3.1` Responses endpoint and `muse-spark-1.3` Chat Completions endpoint. The original video remains local. Clips up to 150 MB and two minutes can be previewed; analysis requires a clip of at most six seconds, sampled every 0.5 seconds up to 12 JPEG snapshots. Crop images are classified only after the operator starts analysis. Requests are bounded, authenticated and cancellable. The live candidate inventory is capped at 96 with explicit partial-coverage messaging. Ambiguous observations are not silently deduplicated.
+
+Analysis results stay in the current tab. After exporting CSV, check that the file was saved and confirm it in the workspace; until then the browser warns before leaving. Changes made after an export need a new export.
 
 Live execution has not been validated against a paid Meta account in this development session because no provider credential is configured. Tests verify the transport, authentication, official SAM grammar, output validation and failure paths with mocked upstream responses. No mock response is used by the production inference endpoint.
 
@@ -27,7 +29,7 @@ Live execution has not been validated against a paid Meta account in this develo
 - Same-scene simulated tracking explanation with finite playback, pause, replay, scrubbing and reduced-motion support.
 - Complete field atlas with four labeled illustrative samples, review filtering, inspection and an actual sample CSV download.
 - Pipeline tabs, native FAQ, mobile navigation and full-map modal.
-- Dashboard video playback, local video extraction, frame selection, selected-plant evidence, classification filters/search, frame atlas, human review and actual CSV export.
+- Dashboard video playback, local video extraction, frame selection, selected-plant evidence, classification filters/search, frame atlas, pending/confirmed/deferred human review and CSV export with per-plant provenance.
 - Server inference integration with explicit missing-configuration, provider error, cancellation and partial-output handling. Reruns keep previous sessions and human decisions.
 - Generic robot/agent MCP integration at `/api/mcp`: public capability discovery and illustrative sample reads, plus authenticated single-frame analysis. The connection dialog includes an actual protocol test. See the [MCP integration guide](docs/MCP.md) and `npm run robot:sample`.
 

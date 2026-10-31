@@ -1,8 +1,58 @@
 export const LABELS = {
-  crop: { text: 'Crop', short: 'Crop', color: '#d3fa79', action: 'Keep crop' },
+  crop: { text: 'Crop', short: 'Crop', color: '#afc3a4', action: 'Keep crop' },
   weed: { text: 'Weed', short: 'Weed', color: '#ef987f', action: 'Mark as weed' },
-  uncertain: { text: 'Needs review', short: 'Review', color: '#edcc79', action: 'Keep for review' },
+  uncertain: { text: 'Needs review', short: 'Uncertain', color: '#edcc79', action: 'Keep for review' },
 };
+
+export const REVIEW_STATUSES = ['pending', 'confirmed', 'deferred'];
+
+// randomUUID requires a secure context, while getRandomValues also works for
+// the HTTP LAN preview used on phones.
+export function createId(source = globalThis.crypto) {
+  if (typeof source?.randomUUID === 'function') return source.randomUUID();
+  if (typeof source?.getRandomValues !== 'function') throw new Error('This browser cannot generate a unique session ID.');
+  const bytes = source.getRandomValues(new Uint8Array(16));
+  bytes[6] = (bytes[6] & 0x0f) | 0x40;
+  bytes[8] = (bytes[8] & 0x3f) | 0x80;
+  const hex = [...bytes].map(byte => byte.toString(16).padStart(2, '0')).join('');
+  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
+}
+
+export function reviewStatus(plant) {
+  if (REVIEW_STATUSES.includes(plant.reviewStatus)) return plant.reviewStatus;
+  return plant.reviewed ? (plant.label === 'uncertain' ? 'deferred' : 'confirmed') : 'pending';
+}
+
+export function restoreSampleEdit(plant, edit) {
+  if (!edit || !LABELS[edit.label]) return plant;
+  if (!REVIEW_STATUSES.includes(edit.reviewStatus) && typeof edit.reviewed !== 'boolean') return plant;
+  const status = reviewStatus(edit);
+  return { ...plant, label: edit.label, reviewStatus: status, reviewed: status === 'confirmed' };
+}
+
+export function reviewDecision(plant, label) {
+  const status = label === 'uncertain' ? 'deferred' : 'confirmed';
+  return { ...plant, label, reviewStatus: status, reviewed: status === 'confirmed' };
+}
+
+export function matchesPlant(plant, filter = 'all', search = '') {
+  return (filter === 'all' || plant.label === filter)
+    && `${plant.id} ${LABELS[plant.label].text} ${plant.reasoning}`.toLowerCase().includes(search.toLowerCase());
+}
+
+export function reviewQueue(plants, filter = 'all', search = '') {
+  const rank = p => reviewStatus(p) === 'deferred' ? 2 : p.label === 'uncertain' ? 0 : 1;
+  return plants.filter(p => reviewStatus(p) !== 'confirmed' && matchesPlant(p, filter, search))
+    .sort((a, b) => rank(a) - rank(b));
+}
+
+export function nextReview(plants, selectedId, filter = 'all', search = '', direction = 1) {
+  const queue = reviewQueue(plants, filter, search);
+  if (!queue.length) return null;
+  const index = queue.findIndex(p => p.id === selectedId);
+  if (index === -1) return direction < 0 ? queue.at(-1) : queue[0];
+  return queue[(index + (direction < 0 ? -1 : 1) + queue.length) % queue.length];
+}
 
 // These hand-authored records explain the review UI. They are neither model
 // output nor a count of every plant in the AI-generated scene.
@@ -29,7 +79,7 @@ export function sampleSession() {
     frames: Array.from({ length: 8 }, (_, i) => ({ time: i, image: '/assets/dashboard-field.webp' })),
     plants: specimens.map(([label, box, reasoning], i) => ({
       id: `GP-${String(i + 1).padStart(3, '0')}`, label, originalLabel: label, box,
-      confidence: null, reasoning, reviewed: false, source: 'illustrative',
+      confidence: null, reasoning, reviewed: false, reviewStatus: 'pending', source: 'illustrative',
       observations: [{ time: 0, frame: 0, box }], bestFrame: 0,
     })),
     coverage: 'Illustrative scene · not a field measurement',
@@ -38,7 +88,16 @@ export function sampleSession() {
 }
 
 export function summary(plants) {
-  return plants.reduce((stats, plant) => { stats[plant.label]++; stats.reviewed += Number(plant.reviewed); return stats; }, { crop: 0, weed: 0, uncertain: 0, reviewed: 0 });
+  return plants.reduce((stats, plant) => {
+    const status = reviewStatus(plant);
+    stats[plant.label]++; stats.reviewed += Number(status === 'confirmed');
+    stats.pending += Number(status === 'pending'); stats.deferred += Number(status === 'deferred');
+    return stats;
+  }, { crop: 0, weed: 0, uncertain: 0, reviewed: 0, pending: 0, deferred: 0 });
+}
+
+export function canExportSession(session) {
+  return session.plants.length > 0 || Boolean(session.runId && ['live', 'partial'].includes(session.mode));
 }
 
 export function csvText(session) {
@@ -47,8 +106,12 @@ export function csvText(session) {
     if (/^[=+\-@\t\r]/.test(text)) text = `'${text}`;
     return `"${text.replaceAll('"', '""')}"`;
   };
-  const rows = [['plant_id', 'label', 'original_label', 'reviewed', 'model_confidence_uncalibrated', 'source', 'best_frame', 'time_s', 'x_normalized', 'y_normalized', 'width_normalized', 'height_normalized', 'reasoning']];
-  session.plants.forEach(p => rows.push([p.id, p.label, p.originalLabel, p.reviewed, p.confidence ?? '', session.mode, p.bestFrame, p.observations?.find(o => o.frame === p.bestFrame)?.time ?? 0, ...p.box, p.reasoning]));
+  const rows = [['plant_id', 'label', 'original_label', 'reviewed', 'model_confidence_uncalibrated', 'source', 'best_frame', 'time_s', 'x_normalized', 'y_normalized', 'width_normalized', 'height_normalized', 'reasoning', 'session_id', 'run_id', 'session_mode', 'review_status', 'model_ids', 'elapsed_s', 'completed_frames', 'analysis_log', 'record_type']];
+  const log = session.analysisLog?.length ? JSON.stringify(session.analysisLog) : '';
+  session.plants.forEach(p => rows.push([p.id, p.label, p.originalLabel, reviewStatus(p) === 'confirmed', p.confidence ?? '', p.source ?? '', p.bestFrame, p.observations?.find(o => o.frame === p.bestFrame)?.time ?? 0, ...p.box, p.reasoning, session.id, session.runId ?? '', session.mode, reviewStatus(p), p.source === 'illustrative' ? '' : (p.source ?? ''), session.elapsed ?? '', session.completedFrames ?? '', log, 'plant']));
+  if (!session.plants.length && canExportSession(session)) {
+    rows.push([...Array(13).fill(''), session.id, session.runId, session.mode, '', '', session.elapsed ?? '', session.completedFrames ?? '', log, 'run_summary']);
+  }
   return '\uFEFF' + rows.map(row => row.map(safe).join(',')).join('\r\n');
 }
 
@@ -62,4 +125,9 @@ export function downloadFile(content, name, type) {
 
 export function timecode(seconds = 0) {
   return `${String(Math.floor(seconds / 60)).padStart(2, '0')}:${String(Math.floor(seconds % 60)).padStart(2, '0')}`;
+}
+
+export function frameTimecode(seconds = 0) {
+  const tenths = Math.max(0, Math.round(seconds * 10));
+  return `${String(Math.floor(tenths / 600)).padStart(2, '0')}:${String(Math.floor(tenths % 600 / 10)).padStart(2, '0')}.${tenths % 10}`;
 }
