@@ -13,6 +13,7 @@ import { List } from '@phosphor-icons/react/dist/csr/List';
 import { X } from '@phosphor-icons/react/dist/csr/X';
 import { Plus } from '@phosphor-icons/react/dist/csr/Plus';
 import { MeasuredCopy } from './MeasuredCopy.jsx';
+import { createId } from './dashboard/data.js';
 import { SCENARIOS, journalExport, requestForScenario, scenarioEvent } from './plantAgentDemo.js';
 import './styles.css';
 import './plant-agent.css';
@@ -20,7 +21,7 @@ import './plant-agent.css';
 const PERCEPTION = '/dashboard?view=video';
 function Brand() { return <span className="brand">Green<span>Point</span></span>; }
 function External({ href, children }) { return <a className="pa-source-link" href={href} target="_blank" rel="noreferrer">{children}<ArrowUpRight aria-hidden="true" /></a>; }
-function freshDemo() { return { id: crypto.randomUUID(), events: [], total: 0 }; }
+function freshDemo() { return { id: createId(), events: [], total: 0 }; }
 
 function PlantDemo({ reduced }) {
   const [demo, setDemo] = useState(freshDemo);
