@@ -13,7 +13,8 @@
     "robot:sample": "node scripts/robot-client.mjs sample",
     "robot:analyze": "node scripts/robot-client.mjs analyze",
     "test:map": "node --test tests/map.test.mjs",
-    "test:plant-agent": "node --test tests/plant-agent.test.mjs"
+    "test:plant-agent": "node --test tests/plant-agent.test.mjs",
+    "test:workspace": "node --test tests/plant-workspace.test.mjs"
   },
   "dependencies": {
     "@chenglou/pretext": "^1.0.0",

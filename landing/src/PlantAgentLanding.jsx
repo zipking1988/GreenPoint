@@ -122,13 +122,14 @@ export function PlantAgentLanding() {
         <a href="#top" aria-label="GreenPoint home"><Brand /></a><span className="pa-header-label">An interface for the living world.</span>
         <nav aria-label="Main navigation" className="pa-desktop-nav">
           {nav.map(([id, name]) => <a key={id} href={`#${id}`}>{name}</a>)}
-          <a className="pa-nav-action" href="#meet-milo" onClick={meetMilo}>Meet Milo<ArrowUpRight aria-hidden="true" /></a>
+          <a className="pa-nav-action" href="/dashboard">Open workspace<ArrowUpRight aria-hidden="true" /></a>
         </nav>
         <button ref={menuToggle} className="pa-menu-button" aria-label={menu ? 'Close navigation' : 'Open navigation'} aria-expanded={menu} aria-controls="pa-mobile-nav" onClick={() => setMenu(value => !value)}>{menu ? <X aria-hidden="true" /> : <List aria-hidden="true" />}</button>
       </div>
       {menu && <nav className="pa-mobile-nav pa-wrap" id="pa-mobile-nav" aria-label="Mobile navigation">
         {nav.map(([id, name]) => <a key={id} href={`#${id}`} onClick={() => setMenu(false)}>{name}<ArrowRight aria-hidden="true" /></a>)}
         <a href="#meet-milo" onClick={meetMilo}>Meet Milo<ArrowUpRight aria-hidden="true" /></a>
+        <a href="/dashboard">Open workspace<ArrowUpRight aria-hidden="true" /></a>
       </nav>}
     </header>
 

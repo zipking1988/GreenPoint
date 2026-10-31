@@ -1,3 +1,63 @@
+# Plant workspace design QA — 31 October 2026
+
+final result: passed
+
+Source visual truth: `design/plant-workspace/selected.webp` (variant A, agent-selected under explicit delegation, not user-rated). Render: local `/dashboard`. Authoritative token/photo overrides: DESIGN.md and exact `public/assets/plant-agent-milo.webp`. The generated source incorrectly recreates Milo and invents a date; neither is implemented.
+
+## Comparison evidence
+
+- Desktop source:1505×1045; implementation1440×1000 CSS/pixels, DPR1. Normalize both to900×625 in `design/plant-workspace/qa/desktop-comparison.webp`, source left/render right. Full-view and focused request comparison (`request-comparison.webp`) opened together for visual judgment.
+- Render desktop: `qa/desktop-final.webp`, initial Milo/zeroentries/Overview. No fake timestamps, inferred health, measured metrics or default soil reading.
+- Mobile:375×844 CSS/DPR1, explicit browser clip `qa/mobile-final.webp`; per-viewport adaptation from the accepted desktop target and documented responsive spec, not a claim that a separate mobile mock was supplied. Source/first-pass versus final comparison is historical; use the explicitclip as final geometry evidence. Some fullPage/native captures resized painted content during capture, so those are not used for pixel-level mobile acceptance.
+- Additional captures: `qa/viewport-1024.png`, tablet at1024×900;768×1024 and320×740 DOM/layout checked. Initial768 screenshot had a focused skiplink painted at scroll offset; not used for fidelity acceptance. No horizontal overflow at320/375/768/1024/1440 in plant workspace.
+- Focused request view checks headings, disclosure, soil radios, labels, textarea and action at readable scale. State evidence: `qa/manual-journal.png`. Live browser photo input, empty photo, unreadable photo and connections also inspected.
+
+## Comparison history and fixes
+
+1. [P2] Phone first pass placed record action at1188px. Photo and repeated navigation came before the task. Fixed: request/form before compact source, tools at bottom, reduced duplicate chrome. Post-fix first soil choices585px at375width.
+2. [P2] Interim record action at802px was partly covered by bottom navigation. Fixed: optional phone note expansion; no input removed. Final action724–774px, navigation starts783px at375×844. Verified in `qa/mobile-final.webp`. Expanded note remains scrollable and keyboard accessible.
+3. [P2] Desktop photo and heading spacing pushed the journal too far down relative to source. Fixed: compact identity row, portrait/form43/57 proportion and24px main spacing. Final desktop comparison retains full source/photo, all primary controls and journal heading within1000px.
+4. [P3] Utility section count read as Journal1. Fixed: explicit accessible name with entry count, singular/plural, leaving visible count compact.
+
+## Required fidelity surfaces
+
+- Fonts/typography: loaded Sora Variable for headings and Source Sans3 Variable for body, confirmed computed families; IBM Plex Mono limited to concise provenance/time. Body17px/1.5, utility16px, compact labels14px. No font fallback detected in captured request. Heading hierarchy and long-word wrapping preserve layout.
+- Spacing/layout: source/sidebar/main anatomy retained; sidebar208px per DESIGN extension rather than generated272px. Exact 4:5 portrait corrects mock’s approximate aspect. Primary action50px; soil targets48px desktop,75px+phone; tools44px+. Phone note is optional expandable, with no fixed overlay covering initial action.
+- Colors/tokens: shared charcoal/sage/lime, no new palette. Primary and selection lime; neutral surfaces/crop sage. Clear2px palette focus ring and visible selected radio. No gradients/glows/shadows substituting hierarchy.
+- Image quality: exact existing Milo raster with intrinsicdimensions1122×1402, no CSS/SVG approximation. User photo test resized to960×1200, encodedJPEG and exported, source explicitly supplied/notanalyzed. No-photo state uses a library icon and real empty-state label, not fabricated imagery.
+- Copy/content: generated fabricated observations/date removed. Overview replaces Request for real manual profiles. Scripted-demo/imagined context and manual-record/noAI labels remain visible. Actual notes render as text; `<script>` test text did not execute. “Not checked” remains unknown.
+- Icons: existing Phosphor family, native radio inputs, consistent16–21px utilitysize; controls named and keyboard reachable. Focus and visited source-link colors mapped to palette.
+
+## Interactions verified
+
+- Scripted damp/unknown scenarios update same Milo request/journal; numbered live feedback.
+- Personal profile withname/type/location/photo, unknown observation and note; image upload decoding/scaling; unreadable JPEG error retains text; profile withoutphoto still usable.
+- Per-plant records isolated; journal/evidence/overview switch, source details, exportbutton.
+- Actual JSON downloaded and opened from Downloads. Checked schema/session/revision, sources, identities, both plants, original notes and reducedphoto. model_called/sensor_readings/treatment_authorized allfalse. Exact saved confirmation tested; later edits restore dirty state; stale confirmation cannot clear it.
+- Reload attempt retained unsaved state; browser dialog API did not expose a modal, so cross-browser beforeunload presentation remains unverified. Listener and revision logic reviewed/tested; no claim of guaranteed mobile browser prompts.
+- Native keyboard radio Space/ArrowRight, Tab to action, Enter submit;2pxlime focus confirmed. Add modal Escape closes and restores Connections/opener focus. Required radio group/visible fieldlabels retained.
+- Browser back returns from map to plants without losing records. Video/map/plant switches preserve all selected session records. Existing mobile video navigation checked, compact ≤360px home icon removed to keep actiontargets.
+- Connection check reports models notconfigured and makes no paid call. Existing analysis/map/MCP/Sites/landing/workspace suites59passed. Build passed before final releasecheck. Browser console error log empty.
+
+## Independent review correction
+
+The sole read-only reviewer reproduced oneP2: browser history could hide a still-open native dialog and leave the visible view inert. Fix: propagate each workspace’s active state, immediately omit inactive dialogs, clear transient modal state on deactivation, and cancel/clean pending upload reading without removing completed sessions. Parent browser reproduced map -> plants -> Addplant -> Back after the fix: openDialogs0 and Zoomin worked. Video upload modal -> Back also leaves zero open dialogs. Created LifecycleQA with one observation after HMR, switched to map and back, and confirmed its selected identity/entry remained. The same reviewer independently repeated both history/modal cases and confirmed the P2 resolved with no new actionable findings.
+
+## Accepted differences / limits
+
+Source photo/copy/date corrections, exact DESIGNfonts/palette,208pxsidebar, horizontal desktop choices and mobile note expansion are intentional functional overrides. No P0/P1/P2 visual findings remain. No measured usability study or award claim. Reduced-motion CSS present, but browser has no media-emulation capability; runtime OS preference test is not claimed. Real model integration/LLMplantcare/persistent memory remain unvalidated or future work. Vercelproduction verification follows code review and is recorded in release notes.
+
+## Implementation checklist
+
+- [x] Source/render opened and compared together; five required surfaces checked.
+- [x] Fix responsive task placement and action obstruction, recapture same state.
+- [x] Test manual/demo source boundaries, actual export, error recovery and keyboard flow.
+- [x] Preserve video, field map, MCP and Sites contracts.
+- [x] Independent release review and fixes (2 rounds,1P2fixed).
+- Preview/production verification is the release step after this reviewed commit.
+
+---
+
 # Plant story refinement QA — 31 October 2026
 
 final result: passed

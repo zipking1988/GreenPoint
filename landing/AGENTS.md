@@ -72,3 +72,12 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Mobile places the request and scenario input before a compact plant portrait. The native radio group is an imagined soil check; a submit updates the same fictional plant's scripted request and journal. Preserve HTTP-compatible session IDs, reset behavior, the 30-entry retention limit and honest exports.
 - The perception lab is explicitly separate and secondary. Do not imply that its video upload creates Milo, a persistent agent, or a validated care recommendation. Real model credentials and acceptance remain unavailable; visual refinement does not complete the AI validation gate.
 - Motion is finite and progressive, with visible content when IntersectionObserver is unavailable and full reduced-motion support. Keep native scrolling and source-linked accessible controls.
+
+## Plant workspace / 2026-10-31
+
+- User delegated a dashboard redesign matching the plant-agent story, including agent selection, code review/fixes, main push and Vercel production. Default `/dashboard` and `/app` now open the plant workspace. `?view=map` preserves the illustrative field map; `?view=video` preserves perception and `upload=1`. This supersedes earlier map-default instructions.
+- Selected source is `design/plant-workspace/selected.webp`, Living dossier (A), agent-selected from three independent concepts. Keep existing Sora/Source Sans3, shared palette and exact Milo raster. Ignore the mock’s fabricated date and recreated portrait.
+- Milo is a fictional scripted demo; soil checks and notes are imagined scenarios. New personal plants are manual, human-assigned records, not inferred identities or model care. No model/sensor/treatment is called by this workspace.
+- Profiles, resized optional photos and latest30 observations per plant live only in the current tab, capped at12plants. JSON exports carry full provenance and reduced photos; original files are not retained. Require exact revision save confirmation before clearing dirty status and warn before leaving unexported records.
+- Internal workspace switches keep all plant, video and map state mounted. Photo validation accepts JPEG/PNG/WebP≤8MB and exports a copy bounded to1200px. User photos are supplied evidence, not verified images.
+- Mobile prioritizes request/form before compact photo; persistent bottom tools, visible mode labels,44px controls and native scroll. Motion is finite and honors reduced motion. Run test:workspace plus existing regression tests/build and browser QA.

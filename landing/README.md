@@ -1,10 +1,10 @@
 # GreenPoint landing
 
-A responsive React/Vite landing page for everyday vegetable gardeners and a phone-video review workspace. The selected art direction uses charcoal surfaces, pale lime brand accents, sage crop data and botanical computer-vision imagery. The original botanical hero is retained at the user's request.
+A React/Vite plant-agent concept, plant observation workspace and phone-video perception lab. The selected art direction uses charcoal surfaces, pale lime brand accents, sage crop data and botanical computer-vision imagery. The original botanical hero is retained at the user's request.
 
 ## Local preview
 
-With Node.js 22 or newer, run `npm ci`, then `npm run dev -- --host 0.0.0.0 --port 4173 --strictPort`. Open `/dashboard` for the workspace and `/` for the landing. Production build: `npm run build`. Map checks: `npm run test:map`. Analysis checks: `npm run test:analysis`. MCP checks: `npm run test:mcp`. Packaging checks: `npm run test:sites`.
+With Node.js 22 or newer, run `npm ci`, then `npm run dev -- --host 0.0.0.0 --port 4173 --strictPort`. Open `/dashboard` for the workspace and `/` for the landing. Production build: `npm run build`. Map checks: `npm run test:map`. Analysis checks: `npm run test:analysis`. MCP checks: `npm run test:mcp`. Plant workspace checks: `npm run test:workspace`. Packaging checks: `npm run test:sites`.
 
 ## Vercel deployment
 
@@ -24,9 +24,17 @@ Analysis results stay in the current tab. After exporting CSV, check that the fi
 
 Live execution has not been validated against a paid Meta account in this development session because no provider credential is configured. Tests verify the transport, authentication, official SAM grammar, output validation and failure paths with mocked upstream responses. No mock response is used by the production inference endpoint.
 
+## Plant workspace
+
+`/dashboard` and `/app` open a plant dossier. Milo is a fictional scripted example; its observations are simulations. Add a personal plant with a name, optional type/location/photo, then record soil context and notes. Personal profiles are human-assigned manual records with no AI assessment. Evidence provenance stays visible.
+
+Everything remains in the current tab: up to12plants and the latest30 observations per plant (total count disclosed). Photos accept JPEG/PNG/WebP up to8MB and become JPEG copies with longest edge≤1200px. Export JSON to keep profiles, source details, reduced photos, notes and timestamps. Confirm the saved download to clear the leave-page warning; later changes require another export. No database, persistent agent, model reasoning or sensor connection has been added.
+
+Video and map switches preserve all mounted state. Explicit `/dashboard?view=video` and `?view=video&upload=1` keep the existing workflow.
+
 ## Field-map workspace
 
-`/dashboard` and `/app` now open the approved map-led workspace. Select an illustrative weed region, follow the source connector to the same-image crop, choose Crop / Weed / Keep for review, then Save & next. Pan, wheel/pinch zoom, keyboard arrows and +/- and Fit field operate in local image coordinates. Evidence selection and its connector follow the map; small screens reveal the evidence below the map with the same plant ID. Coverage distinguishes unobserved space from weed-free land.
+`/dashboard?view=map` opens the preserved map-led workspace. `/dashboard` and `/app` open the plant workspace. Select an illustrative weed region, follow the source connector to the same-image crop, choose Crop / Weed / Keep for review, then Save & next. Pan, wheel/pinch zoom, keyboard arrows and +/- and Fit field operate in local image coordinates. Evidence selection and its connector follow the map; small screens reveal the evidence below the map with the same plant ID. Coverage distinguishes unobserved space from weed-free land.
 
 The map has 12 separate, hand-authored examples over `/assets/survey-field.webp`, with its own versioned browser review storage. The Review queue supports reset and CSV export. Its illustrative region signals are static examples, not recomputed weed-density measurements. The map and the original video sample are separate coordinate/identity namespaces. MCP's public sample remains the original video sample and does not return these browser-local map decisions.
 
@@ -43,7 +51,7 @@ Use **Video** or **Upload footage** to open the existing video workspace; sessio
 
 ## Prototype boundaries
 
-The deployed workspace opens in an illustrative map sample. The separate video sample contains 12 hand-authored records over an eight-second static preview of AI-generated imagery; neither sample is live model output. Classification accuracy and tracking performance remain unvalidated. CSV locations are normalized source-frame coordinates, not GPS. No spraying or chemical prescription is performed.
+The deployed workspace opens with fictional Milo. Its responses are scripted; personal profiles are manual journals. The separate video sample contains 12 hand-authored records over an eight-second static preview of AI-generated imagery; neither sample is live model output. Classification accuracy and tracking performance remain unvalidated. CSV locations are normalized source-frame coordinates, not GPS. No spraying or chemical prescription is performed.
 
 ## Project files
 

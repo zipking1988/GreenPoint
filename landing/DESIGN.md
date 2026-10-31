@@ -135,3 +135,13 @@ Evolve the approved garden hybrid rather than replace it. The botanical hero rem
 Use an editorial split photograph/research layout, a single interactive workflow panel and ruled text sections. Retain Sora, Source Sans 3 and IBM Plex Mono for data. No decorative feature cards or invented success metrics. Existing `MeasuredCopy` uses Pretext prepare/layout after font readiness. Workflow copy enters over 250ms, 5px and partial opacity; all content remains readable without animation and respects system/page reduced motion.
 
 The existing three garden concepts and selected 1+2 hybrid remain the design exploration. This pass extends that selected direction; it does not restart a three-option redesign. The older-grower image belongs below the original botanical hero. Paid scroll-world video production is omitted because it would add rendering cost and delay the accessible upload/review flow. Native scrolling is preserved.
+
+## Plant workspace extension / 31 October 2026
+
+Default workspace is a plant dossier, selected by the agent under explicit delegation from three independent visual concepts. Source: `design/plant-workspace/selected.webp`. Prior map-first instructions are superseded only for default entry; field map and video lab remain secondary tools.
+
+Operate mode: named plant, explicit demo/manual mode, source portrait beside the current request and observation form, ruled journal, evidence provenance. Reuse authoritative shared palette and self-hosted fonts. Ignore generated mock dates, claims about visible symptoms and recreated artwork; use the exact original Milo photo illustration.
+
+Desktop uses208px sidebar and fluid content. At1440px, portrait/form split is roughly43/57. Utility text remains16px, with smaller data captions. Mobile has a horizontally scrolling plant selector, bottom Video/Map/Connections tools and request/form ahead of a compact source photograph. No chat facade, KPI wall, fake model confidence or action buttons implying automated care.
+
+Primary motion: request update arrives6px over420ms with easing from the existing system; controls respond150ms; surrounding source remains still. Reduced motion removes entrances. Pretext reserves body-copy height after fonts and on resize without hiding native text.

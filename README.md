@@ -15,6 +15,7 @@ GreenPoint is an early research and hackathon prototype.
 | Area | Status |
 | --- | --- |
 | Plant-agent landing and Milo concept | Implemented scripted scenarios, evidence disclosure and JSON journal export; no LLM or sensors |
+| Plant workspace | Implemented tab-local personal profiles, optional resized photo, observations, provenance and JSON export; manual records, no AI assessment |
 | Persistent plant agents and tools | Planned; not implemented or validated |
 | Illustrative field-map workspace | Implemented as a separate sample |
 | Field-analysis dashboard | Implemented, with local video previews, evidence review and CSV export |
@@ -24,7 +25,7 @@ GreenPoint is an early research and hackathon prototype.
 | Generic robot/agent MCP | Stateless Streamable HTTP, public discovery/sample tools and token-protected single-frame perception implemented; hardware and real-provider validation pending |
 | Public-data evaluation and real-field trials | Planned |
 
-The source is available in [`landing/`](landing/). `/` introduces the product; its primary action explores Milo and its secondary action explains the agent idea. The separate perception lab is linked from its own section. `/dashboard?view=video` opens video review, while `/dashboard` retains the illustrative field map. Sample records are clearly labeled; uploaded videos can be previewed locally. Live analysis requires server credentials.
+The source is available in [`landing/`](landing/). `/` introduces the product; its primary action explores Milo and its secondary action explains the agent idea. The separate perception lab is linked from its own section. `/dashboard?view=video` opens video review, while `/dashboard` and `/app` open the plant workspace. The illustrative field map remains at `/dashboard?view=map`. Sample records are clearly labeled; uploaded videos can be previewed locally. Live analysis requires server credentials.
 
 ## The experience
 
