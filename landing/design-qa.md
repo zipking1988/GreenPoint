@@ -1,57 +1,47 @@
-# GreenPoint map dashboard — design QA
+# GreenPoint garden landing — design QA
 
-Date: 2026-10-31
+Date: 2026-10-31 JST. Surface: `/`, with upload entry into `/dashboard?view=video&upload=1`.
 
-Source visual truth: `design/selected-field-map-reference.png` — the user-approved hybrid with an explicit GP-007 source connector.
-Implementation: `/dashboard` and `/app`, local browser preview at `http://127.0.0.1:4191/dashboard`.
+## Source and comparison conditions
 
-## Comparison conditions
+- Source visual truth: `design/garden-concepts/04-hybrid-human-evidence.png` (1015 × 1549 pixels), approved by the user, followed by the explicit instruction to preserve the existing botanical hero image and composition. The latter takes precedence over the mock's human hero.
+- Preserved hero reference: `/private/tmp/greenpoint-landing-redesign/current-landing.png`, 1280 × 720 browser pixels. Final hero: `design/garden-qa/hero-final-1280.png`, extracted from a browser full-page capture at 1280 × 720 CSS viewport, scrollY 0. No stretching or density correction. `hero-comparison-final.webp` places both at the same scale in one comparison input.
+- Final desktop implementation: `design/garden-qa/desktop-final.png`, 1440 × 3261 pixels, browser-rendered at 1440 × 1024 CSS viewport. Captures use density 1 CSS pixel per image pixel.
+- Full-page paired input: `design/garden-qa/full-comparison-final.webp`. Each page is scaled to the same 600px width with its natural aspect ratio; differing heights reflect the retained hero and added problem/readiness explanations.
+- Focused evidence input: `design/garden-qa/evidence-comparison-final.webp`. Source section (1015px wide) and browser section (1440px wide) are normalized to the same 1015px width, without changing aspect ratios. Original source and implementation crops were inspected together.
+- Responsive evidence: `final-375.png` (375 × 3792), `final-768.png` (768 × 3238), `final-1024.png` (1024 × 3234); additional DOM overflow checks at 320 and 1440 CSS pixels. Confirmed/export state: `confirmed-1280-final.png`. Mobile upload preview: `upload-preview-mobile.png`.
+- State: illustrative GP-007, uncertain original suggestion, pending human review for visual comparison; confirmed/deferred/reset/export states checked separately. Source and crop use the same raster and normalized rectangle.
+- Committed comparison evidence: `design/garden-release-hero.webp`, `design/garden-release-evidence.webp`, `design/garden-release-full.webp`, and `design/garden-release-mobile.webp`. Raw per-viewport captures remain local design artifacts.
 
-- Source: 1487 × 1058 pixels. Desktop implementation: 1487 × 1058 CSS and screenshot pixels, no density normalization or image stretching.
-- State: Weed cover layer, B4 selected, GP-007 uncertain and unreviewed, evidence open, map fitted, no notification.
-- Full-view paired input: `design/map-dashboard/comparison-final.webp` (source left, implementation right).
-- Focused evidence comparison: `design/map-dashboard/evidence-comparison.webp` (400 × 846 regions paired at equal scale).
-- Responsive evidence: `mobile-map-final.webp`, `mobile-evidence-final.webp` at 375 × 812; `tablet-final.webp` at 834 × 1194 CSS pixels; `laptop-final.webp` at 1280 × 720. Full tablet page is intentionally scrollable.
+## Findings and iteration history
 
-## Findings and comparison history
-
-1. Initial paired comparison (`comparison-first.webp`) found P2 drift: the field occupied too little of the map image, the zone title used decorative coral instead of white, and the evidence controls/captions had a smaller type scale than the visual. Reframed the generated raster without warping it, restored the white heading/coral status dot, and increased decision/caption typography. Tightened the evidence paragraph spacing so the action aligns with the intended rhythm.
-2. Interaction pass found P1: inherited pressed-state transforms moved positioned map labels away from the pointer. Preserved marker-specific transforms while pressed. Retest: a single pointer click on Not observed opens its explanation; hotspot and plant buttons select correctly.
-3. Responsive pass found P2: at 1280 × 720, Save & next extended beyond the inspector scrollport (button bottom 710.8, panel bottom 668). The short-screen treatment reduces photo aspect, spacing and secondary metadata. Post-fix: button bottom 607.8, panel bottom 668; it is fully visible. Evidence: `laptop-before.webp` and `laptop-final.webp`.
-4. Final paired comparison inspected full view and evidence detail. No actionable P0/P1/P2 visual findings remain.
+1. [P2, fixed] Mobile navigation button did not reach the right edge; a legacy pseudo-element still said “Video to field map.” Initial evidence: `mobile-v1.png`. Added automatic left margin to the menu button, removed the old pseudo-content, and restored the short-video → evidence → decision row. Post-fix: `mobile-final.png` and `final-375.png`, with scrollWidth equal to viewport width.
+2. [P2, fixed] Evidence headline and decision typography were smaller than the approved composition. Comparison: `evidence-comparison-v1.webp`. Increased headline scale/weight, status typography and decision type to 20px on desktop. Final evidence comparison preserves the broad photo, compact panel and readable actions.
+3. [P2, fixed] Independent code review found that the absolutely positioned panel overlapped the footnote after confirmation at 1280px. Replaced absolute positioning with an overlapping grid area that contributes its full height to layout. At <=1050px, source and panel stack, with a two-column panel until the phone breakpoint. At 1280px in confirmed/export state, panel bottom is 20px above the footnote. Final evidence: `confirmed-1280-final.png`; independent recheck reports no remaining actionable issues at 1280, 1024, 768 and 390px.
+4. Final combined-input comparison found no actionable P0/P1/P2 differences. Remaining differences are the approved original hero, regenerated unannotated illustration, functional rectangular source annotation, same-source caption and explicit interactive/readiness copy. These are intentional product constraints.
 
 ## Required fidelity surfaces
 
-- **Fonts and typography:** self-hosted Sora Variable and Source Sans 3 Variable load successfully (both document.fonts checks true). Sora supplies the field title and plant ID; readable body and native decision controls use Source Sans 3. Controls remain legible and do not truncate across checked widths.
-- **Spacing and layout:** 76px desktop rail, 150px header, dominant 983 × 848 map stage and 400px evidence drawer at source viewport. No horizontal overflow. Phone evidence stacks below the map and is revealed after hotspot selection; Save remains above the fixed bottom navigation (button bottom 673.3, nav top 748).
-- **Colors and tokens:** shared charcoal/sage roles preserved. Coral indicates illustrative weed signals, amber uncertainty, gray hatch unobserved space, and lime selection/primary action. Crop and weed decisions retain their category colors.
-- **Image quality and assets:** generated natural field raster is stored in `public/assets/survey-field.webp`. The evidence is an actual crop of that same raster, rather than a separately generated plant photo. The map and evidence share the same image URL and GP-007 source box. Phosphor supplies icons. Canvas polygons, hatch and connector represent functional coordinate overlays, not replacements for image assets.
-- **Copy:** field, zone, plant ID, decisions and primary action follow the selected visual. The illustrative/unreferenced status is explicit. Copy does not invent GPS, acreage, measured cover, confidence, live device status or navigation. Added same-source caption and retained original video/MCP boundaries.
+- Fonts and typography: self-hosted Sora Variable for display, Source Sans 3 Variable for body/controls, IBM Plex Mono only for source identifiers. Pretext `prepare`/`layout` remains gated by fonts and ResizeObserver. Native text remains visible. Desktop decisions are 20px with >=48px height; phone decisions are 18px with >=52px height. Headings wrap without truncation.
+- Spacing and layout rhythm: original botanical hero and full-width imagery retained. Intro, evidence, steps, prototype details and closing each have one job. Thin rules and whitespace group content. Expanded evidence contributes to layout instead of covering later content. No horizontal overflow at 320/375/768/1024/1440px.
+- Colors and tokens: existing charcoal canvas, lime primary action, sage crop, coral weed and amber uncertainty retained. Category words and icon cues remain present. Focus outlines and selected decision outlines are visible.
+- Image quality: `vision-field.webp` is unchanged. `garden-evidence.webp` is a generated 1920 × 850 illustration, not footage or provider output. Canvas crops the same source rectangle; the functional connector follows responsive geometry. Photographs were not substituted with CSS/SVG drawings. Phosphor provides UI icons. The connector hides where source/panel stack.
+- Copy/content: ordinary vegetable gardens replace the Japan-only field-service story. “Upload a short video” is the primary action; an immediate illustrative example remains available. Six-second analysis and pending live-provider validation are visible. No accuracy, labour-saving, herbicide-saving, geographic-coordinate, unique-identity or award guarantee is claimed.
 
 ## Functional browser checks
 
-- Zoom, fit and pointer drag update the source-selection geometry and connector endpoints.
-- Zone C2 selects GP-002; map, connector and evidence share that ID.
-- Evidence layer exposes selectable plant records. Coverage retains the selected source link.
-- Close evidence expands the map; selecting Field restores the initial inspection.
-- Native radio choice → Save & next updates the review queue. A saved GP-002 Weed decision survives reload; reset restores the original records.
-- Not observed explains that missing evidence is not weed-free land. Dialog close/Escape and focus behavior use the native dialog.
-- MCP browser test actually initializes/discovers/calls the endpoint: 3 tools, 12 illustrative records. The isolated development port required an exact temporary MCP_ALLOWED_ORIGINS entry; production origin policy was not changed.
-- Upload footage opens the original video flow. Existing sample MP4 was decoded into 12 local snapshots, opened as a local session, and remained present after switching map → video → map. No paid model request was made.
-- Browser console checked after the final flow: no warnings or errors.
-- Regression checks: 8 map + 13 analysis + 9 MCP + 4 Sites = 34 passed. Production build passes.
+- Mobile navigation opens, closes with Escape and returns focus to its button. Keyboard Tab reaches the visible skip link. Anchor navigation and prototype details work.
+- Keep confirms crop; decide later defers; original model suggestion remains uncertain. Reset restores pending. The weed action uses the same inspected decision mechanism.
+- Actual CSV was downloaded and opened with a CSV reader: GP-007, illustrative provenance, original uncertain label, human crop decision, confirmed state, and the exact normalized source rectangle were present. Download controls reset after a new decision.
+- Primary upload action opens the video workspace and native upload dialog directly. A six-second synthetic test clip was decoded locally to 12 frames at 0.5-second intervals and opened as a local preview. It was not represented as field-validation footage.
+- With missing model configuration, Analyze opens Connections; it does not populate detections or show model success. Existing sample/map workflow remains available. No paid provider calls were made.
+- Reduced-motion control sets the document motion state to reduced and computed hero animation to none. Browser warning/error logs were empty after the final flow.
+- Final production build passes. Existing regression suites: analysis 26, map 8, MCP 9, Sites 4; 47 tests passed. MCP tests required local loopback access outside the filesystem sandbox; their first EPERM run was an environment restriction, followed by a passing authorized run.
 
-## Intentional differences / follow-up polish
+## Scope and follow-up
 
-The generated reference's right-hand close-up is illustrative and cannot establish an exact pixel match to the map. The implementation uses one coherent raster and a real crop, so vegetation details and the connector angle differ. This is necessary for truthful source linkage. Region IDs and signals remain hand-authored examples. Real aerial georeferencing and physical drone/device integration are outside this visual release. Browser-emulated phone layout was checked; physical-device pinch behavior remains a field-validation item.
+The product hypothesis and UI flow can be demonstrated. Real-provider/field validation and usability testing with gardeners remain pending. This QA pass does not establish model quality or consumer demand. Previous map visual QA is preserved at `docs/map-design-qa-2026-10-31.md`.
 
-## Implementation checklist
-
-- [x] Approved visual saved in the project.
-- [x] Functional coordinate overlays and same-image evidence.
-- [x] Review, persistence, reset and export.
-- [x] Existing video and generic MCP preserved.
-- [x] Responsive captures, paired comparisons and fixes completed.
-- [x] Required regression checks and build passed.
+Implementation checklist: original hero retained; upload entry linked; evidence and human decisions functional; responsive/keyboard/motion checks complete; code-review overlap fixed and rechecked; build/regressions passed.
 
 final result: passed

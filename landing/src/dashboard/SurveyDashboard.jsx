@@ -586,8 +586,15 @@ function FieldDashboard({ onVideo, provider, accessCode, setAccessCode, checkCon
 }
 
 export default function SurveyDashboard() {
-  const [workspace, setWorkspace] = useState('map');
-  const [videoOpened, setVideoOpened] = useState(false);
+  const [entry] = useState(() => {
+    const parameters = new URLSearchParams(window.location.search);
+    return { video: parameters.get('view') === 'video', upload: parameters.get('view') === 'video' && parameters.get('upload') === '1' };
+  });
+  const [workspace, setWorkspace] = useState(entry.video ? 'video' : 'map');
+  const [videoOpened, setVideoOpened] = useState(entry.video);
+  useEffect(() => {
+    document.title = workspace === 'video' ? 'Garden review · GreenPoint' : 'Field map · GreenPoint';
+  }, [workspace]);
   const [connection, dispatchConnection] = useReducer(modelConnectionReducer, initialModelConnection);
   const accessCodeRef = useRef('');
   const abortRef = useRef(null);
@@ -599,10 +606,10 @@ export default function SurveyDashboard() {
   }, []);
   const checkConnection = useCallback(() => checkModelConfiguration(dispatchConnection), []);
   useEffect(() => { checkConnection(); }, [checkConnection]);
-  const [uploadRequest, setUploadRequest] = useState(0);
+  const [uploadRequest, setUploadRequest] = useState(entry.upload ? 1 : 0);
   function openVideo(upload) {
     window.scrollTo({ top: 0, behavior: 'instant' });
-    document.title = 'Field intelligence · GreenPoint';
+    document.title = 'Garden review · GreenPoint';
     setVideoOpened(true);
     setWorkspace('video');
     if (upload) setUploadRequest((value) => value + 1);

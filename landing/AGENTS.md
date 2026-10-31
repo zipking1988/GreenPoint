@@ -41,3 +41,11 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Default workspace is an illustrative whole-field map with coral weed zones, amber uncertain zones, and gray hatched unobserved areas. Never equate unobserved with weed-free.
 - Source selection, evidence crop and connector must share the same image and plant ID. Connector follows pan, zoom, resize and selection; hide it when the source is outside the map.
 - Map sample decisions use separate versioned browser storage. Existing video sessions and MCP perception remain available. User footage does not become a geographic map without georeferencing. No invented GPS, metric area, measured weed coverage, navigation or hardware actions.
+
+## Approved garden landing / 2026-10-31
+
+- The user selected a mix of garden concepts 1 and 2, approved the hybrid, then explicitly asked to retain the existing `vision-field.webp` hero image and composition. This latest instruction supersedes the hybrid's older-woman hero. Preserve the original botanical hero; use the source-linked evidence section from `design/garden-concepts/04-hybrid-human-evidence.png` below it.
+- Landing audience is everyday vegetable gardeners, including older growers and family helpers, without a Japan-only or drone-only framing. “See what grows. Plant by plant.” leads to short-video upload. Do not promise physical labour reduction or imply validated consumer demand.
+- The primary landing action opens `/dashboard?view=video&upload=1`. `/dashboard?view=video` opens video review; the default `/dashboard` map remains available. The user explicitly delegated implementation, review fixes, main push and Vercel production deployment for this work.
+- Landing GP-007 is its own illustrative example over `garden-evidence.webp`. Its evidence crop must come from the same raster and rectangle shown in the source image. Model suggestion stays uncertain while human choices are confirmed crop/weed or deferred. It does not alter dashboard/MCP decisions. Its export labels illustrative provenance and normalized image coordinates.
+- Keep the shared charcoal/sage tokens, geometric Sora display, Source Sans 3 body, and purposeful finite motion with reduced-motion support. Preserve native scrolling and readable 44px-or-larger controls. Live-model validation remains pending while server credentials are unavailable.

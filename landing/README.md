@@ -1,6 +1,6 @@
 # GreenPoint landing
 
-A responsive React/Vite landing page and field-analysis workspace with an illustrative field map and a phone-first plant candidate inventory. The selected art direction uses charcoal surfaces, pale lime brand accents, sage crop data and botanical computer-vision imagery.
+A responsive React/Vite landing page for everyday vegetable gardeners and a phone-video review workspace. The selected art direction uses charcoal surfaces, pale lime brand accents, sage crop data and botanical computer-vision imagery. The original botanical hero is retained at the user's request.
 
 ## Local preview
 
@@ -34,9 +34,9 @@ Use **Video** or **Upload footage** to open the existing video workspace; sessio
 
 ## What works
 
-- Same-scene simulated tracking explanation with finite playback, pause, replay, scrubbing and reduced-motion support.
-- Complete field atlas with four labeled illustrative samples, review filtering, inspection and an actual sample CSV download.
-- Pipeline tabs, native FAQ, mobile navigation and full-map modal.
+- Landing upload actions open the video workspace and its upload dialog directly at `/dashboard?view=video&upload=1`; `/dashboard?view=video` opens video review without the dialog.
+- An interactive garden example links one selected source rectangle to a crop of that same raster. Keep, weed and defer choices have distinct feedback and a real illustrative CSV export. Original model suggestion remains uncertain after human decisions. Landing decisions are page-local and separate from dashboard/MCP records.
+- Native prototype details, mobile navigation, keyboard focus and reduced-motion controls.
 - Dashboard video playback, local video extraction, frame selection, selected-plant evidence, classification filters/search, frame atlas, pending/confirmed/deferred human review and CSV export with per-plant provenance.
 - Server inference integration with explicit missing-configuration, provider error, cancellation and partial-output handling. Reruns keep previous sessions and human decisions.
 - Generic robot/agent MCP integration at `/api/mcp`: public capability discovery and illustrative sample reads, plus authenticated single-frame analysis. The connection dialog includes an actual protocol test. See the [MCP integration guide](docs/MCP.md) and `npm run robot:sample`.
@@ -47,12 +47,14 @@ The deployed workspace opens in an illustrative map sample. The separate video s
 
 ## Project files
 
-`DESIGN.md` records the selected system. `design/research-brief.md` records sources and evidence limits. `design-qa.md` records final browser verification and visual comparison. Source: `src/App.jsx`, `src/content.js`, `src/MeasuredCopy.jsx`, `src/styles.css`.
+`DESIGN.md` records the selected system. `design/research-brief.md` records sources and evidence limits. `design-qa.md` records final browser verification and visual comparison. Landing source: `src/App.jsx`, `src/MeasuredCopy.jsx`, `src/styles.css`, `src/garden.css`.
 
 ## Asset provenance
 
 Assets were produced using the built-in ImageGen tool. Original generations are retained in the development workspace at `design/source-assets`; the repository contains the WebP versions used by the page. Visual prompts: documentary Japanese farm walk; plant-level segmentation close-up; full top-down vegetable plot with crop/weed/review highlights; and dark corn-seedling computer-vision hero. These are illustrative brand/concept assets, not benchmark inputs. Self-hosted Sora, Source Sans3 and IBM Plex Mono use their bundled SIL Open Font Licenses. Icons: Phosphor, MIT. Pretext: MIT.
 
 The map raster is generated natural overhead field artwork. Every evidence view is a pixel crop of that same raster; no separate photograph is substituted. The approved source visual is `design/selected-field-map-reference.png`.
+
+The garden landing's `garden-evidence.webp` is a separate generated vegetable-bed illustration. GP-007 and its source rectangle are hand-authored example data. Its close-up is drawn directly from the same image pixels. It is not footage, a model result, or an example of verified classification accuracy. The unused generated human hero remains a local design artifact; the shipped hero is the original botanical artwork.
 
 Dashboard source: `src/dashboard/`. Meta SAM parsing uses `@meta-sam/parser` 0.1.0 from [meta-models/meta-sam](https://github.com/meta-models/meta-sam), under its SAM License. A copy is served at `/licenses/meta-sam.txt`. The dashboard panorama is a separate generated asset; the sample video is a static H.264 encoding of that illustration. See the repository-root `design-qa.md` for dashboard verification.

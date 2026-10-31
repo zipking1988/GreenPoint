@@ -56,7 +56,15 @@ shadows:
 
 ## Product and audience
 
-A landing page for international hackathon judges and Japanese agricultural operators managing scattered small fields. The visitor should remember: repeated views become one reviewable plant identity, then a field inventory. This is a presentation prototype, not a deployed agricultural model pipeline.
+A landing page for international hackathon judges and everyday vegetable gardeners, including older growers and family helpers. The visitor should remember: a short phone video can lead to source-linked plant candidates, with the person making the final decision. The sample is illustrative; model integration exists but real-provider and field validation are pending.
+
+## Current landing direction / 2026-10-31
+
+The user approved a hybrid of garden concepts 1 and 2, then specifically retained the original botanical hero image and composition. `public/assets/vision-field.webp` therefore remains the hero. The garden hybrid in `design/garden-concepts/04-hybrid-human-evidence.png` supplies the evidence section, review controls and simple three-step narrative. This supersedes the old landing's Japan-specific problem section, tracking presentation and field-atlas promise; the map-led dashboard retains its own approved direction.
+
+Lead with “See what grows. Plant by plant.” and a primary short-video upload action. Offer an immediate illustrative review example as the secondary action. Its source selection, evidence crop and GP-007 label refer to the same image rectangle. Keep the uncertain original suggestion visible after a human decision. Confirming and deferring have distinct feedback; CSV export preserves both meanings. Readiness is visible before entering the workspace.
+
+Use Sora and Source Sans 3 at the existing sizes and shared color tokens. IBM Plex Mono is limited to source identifiers. Desktop evidence is a broad photograph with a compact panel and functional connector; tablet and mobile place the panel below or beside the source without a decorative connector. Native scrolling, focus-visible outlines, touch targets and reduced-motion behavior take priority over cinematic effects. Existing Pretext measurement keeps copy responsive.
 
 ## Selected direction
 
