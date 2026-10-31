@@ -124,3 +124,12 @@ The user selected the first map composition plus the third concept’s evidence 
 Field zones and source boxes are functional image-coordinate geometry over a generated raster, rather than an image of the interface. A selected source box, connector and evidence label share the same plant ID. The evidence is cropped from the same raster. Pan/zoom/resize update the link; an offscreen source or scrolled-away photo hides it. Small screens stack evidence below the map, retain matching IDs, and reveal the panel after selection. Native radios and Save & next keep draft choices separate from saved human review.
 
 Illustrative zone signals are hand-authored, not calculated weed cover. Unknown areas are gray hatched and explicitly not weed-free. No metric scale, latitude/longitude, accuracy number, connected-device count or navigation action is invented. Video sessions and MCP perception keep their existing independent workflows and coordinate semantics.
+
+
+## Landing depth extension — 31 October 2026
+
+Evolve the approved garden hybrid rather than replace it. The botanical hero remains unchanged. The information sequence is: sourced need → source-linked decision example → four-stage video workflow → competitor focus → error boundaries → available/pending evidence → practical FAQs → upload.
+
+Use an editorial split photograph/research layout, a single interactive workflow panel and ruled text sections. Retain Sora, Source Sans 3 and IBM Plex Mono for data. No decorative feature cards or invented success metrics. Existing `MeasuredCopy` uses Pretext prepare/layout after font readiness. Workflow copy enters over 250ms, 5px and partial opacity; all content remains readable without animation and respects system/page reduced motion.
+
+The existing three garden concepts and selected 1+2 hybrid remain the design exploration. This pass extends that selected direction; it does not restart a three-option redesign. The older-grower image belongs below the original botanical hero. Paid scroll-world video production is omitted because it would add rendering cost and delay the accessible upload/review flow. Native scrolling is preserved.

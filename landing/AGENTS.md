@@ -49,3 +49,10 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - The primary landing action opens `/dashboard?view=video&upload=1`. `/dashboard?view=video` opens video review; the default `/dashboard` map remains available. The user explicitly delegated implementation, review fixes, main push and Vercel production deployment for this work.
 - Landing GP-007 is its own illustrative example over `garden-evidence.webp`. Its evidence crop must come from the same raster and rectangle shown in the source image. Model suggestion stays uncertain while human choices are confirmed crop/weed or deferred. It does not alter dashboard/MCP decisions. Its export labels illustrative provenance and normalized image coordinates.
 - Keep the shared charcoal/sage tokens, geometric Sora display, Source Sans 3 body, and purposeful finite motion with reduced-motion support. Preserve native scrolling and readable 44px-or-larger controls. Live-model validation remains pending while server credentials are unavailable.
+
+## Enriched garden narrative / 2026-10-31
+
+- User asked for more substantive landing information and delegated selection, implementation, code review, fixes, main push and Vercel deployment. Preserve the approved botanical hero and evidence interaction.
+- Below the hero, explain the ordinary gardener's problem with linked Thrive/RHS sources; include a four-stage, user-controlled video workflow, fair competitor context, error boundaries, readiness and practical FAQs. No autoplay or scroll interception.
+- Research sources inform a hypothesis; they are not endorsements, customer interviews or proof of demand. Older growers are an intended audience, not a validated demographic. Do not present the generated grower illustration as a customer.
+- Workflow illustrations must be labeled, make no API calls and keep image-relative overlays aligned with the uncropped source. Upload creates local preview; configured analysis starts only on explicit action.

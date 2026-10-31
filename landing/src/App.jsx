@@ -10,7 +10,7 @@ import { Prohibit } from '@phosphor-icons/react/dist/csr/Prohibit';
 import { WarningCircle } from '@phosphor-icons/react/dist/csr/WarningCircle';
 import { List } from '@phosphor-icons/react/dist/csr/List';
 import { X } from '@phosphor-icons/react/dist/csr/X';
-import { Plus } from '@phosphor-icons/react/dist/csr/Plus';
+import { GardenNeed, VideoJourney, GardenDifference, GardenBoundaries, GardenReadiness } from './GardenStory.jsx';
 import { MeasuredCopy } from './MeasuredCopy.jsx';
 import './styles.css';
 import './garden.css';
@@ -142,7 +142,7 @@ export function App() {
     const observer = new IntersectionObserver(entries => {
       for (const entry of entries) if (entry.isIntersecting) setActiveSection(entry.target.id);
     }, { rootMargin: '-15% 0px -50% 0px' });
-    ['top', 'garden-example', 'how-it-works', 'prototype'].forEach(id => observer.observe(document.getElementById(id)));
+    ['top', 'why-garden', 'garden-example', 'how-it-works', 'prototype'].forEach(id => observer.observe(document.getElementById(id)));
     return () => observer.disconnect();
   }, []);
   useEffect(() => {
@@ -158,21 +158,19 @@ export function App() {
     title.focus({ preventScroll: true });
     history.replaceState(null, '', '#garden-example');
   }
-  const navigation = [['how-it-works', 'How it works'], ['prototype', 'The prototype']];
+  const navigation = [['why-garden', 'The need'], ['how-it-works', 'How it works'], ['prototype', 'The prototype']];
   return <div className="garden-landing">
     <a className="skip-link" href="#main-content">Skip to content</a>
     <header className="masthead"><div className="header-inner"><a href="#top" aria-label="GreenPoint home"><Brand /></a><span className="prototype-label">Research prototype</span><nav className="desktop-nav" aria-label="Main navigation">{navigation.map(([id, label]) => <a href={`#${id}`} key={id} aria-current={activeSection === id ? 'location' : undefined}>{label}</a>)}<a href={VIDEO_URL} className="dashboard-link">Upload video<ArrowUpRight size={16} /></a></nav><button ref={menuToggle} className="icon-button mobile-menu-button" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={menuOpen} aria-controls="mobile-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <List />}</button></div>{menuOpen && <nav className="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation">{navigation.map(([id, label]) => <a href={`#${id}`} key={id} onClick={() => setMenuOpen(false)}>{label}<ArrowRight /></a>)}<a href={VIDEO_URL}>Upload a short video<ArrowUpRight /></a></nav>}</header>
     <main id="main-content">
       <section id="top" className="hero" aria-labelledby="hero-title"><img className="hero-image" src="/assets/vision-field.webp" alt="Illustrative young crop rows on dark soil, with individual crop and weed leaves highlighted." width="1495" height="1052" fetchPriority="high" /><div className="hero-content section-wrap"><div className="hero-copy"><p className="hero-kicker">A CLOSER LOOK BEFORE YOU PULL</p><h1 id="hero-title">See what grows.<br /><span>Plant by plant.</span></h1><MeasuredCopy className="hero-description">A short phone video. A closer look at the plants in your garden. You decide what stays.</MeasuredCopy><div className="garden-hero-actions"><a className="primary-button" href={VIDEO_URL}>Upload a short video<ArrowRight aria-hidden="true" /></a><a className="text-link garden-example-link" href="#garden-example" onClick={explore}>Explore the sample<ArrowRight aria-hidden="true" /></a></div><p className="garden-hero-readiness">Up to 6 seconds · Live model validation pending</p></div><div className="hero-legend"><Legend /></div><span className="hero-specimen"><Crosshair aria-hidden="true" /><span>GP-007<span>Illustrative candidate.</span></span></span><span className="hero-disclosure">Illustrative concept · not live analysis</span></div></section>
       <div className="hero-bottom section-wrap"><span>YOUR PHONE. YOUR GARDEN.</span><span className="hero-path">Short video<ArrowRight aria-hidden="true" />Plant evidence<ArrowRight aria-hidden="true" />Your decision</span><a href="#garden-example" aria-label="Explore the plant evidence" onClick={explore}><ArrowRight /></a></div>
-      <section className="garden-intro section-wrap" aria-labelledby="garden-intro-title"><h2 id="garden-intro-title">A little clarity.<br /><span>Before you pull.</span></h2><div><MeasuredCopy>You put care into growing it. Deciding what to remove deserves care, too. GreenPoint explores a way to review plants in a small vegetable garden, with the original image close at hand.</MeasuredCopy><p>For everyday gardeners, including older growers and the people who help them.</p></div></section>
+      <GardenNeed />
       <EvidenceExperience />
-      <section className="garden-steps section-wrap" id="how-it-works" aria-labelledby="steps-title"><h2 id="steps-title">Your judgment stays<br className="mobile-only" /> at the center.</h2><ol>{[
-        ['A short clip', 'Up to six seconds of phone video. Start with a steady view of your vegetable bed.'],
-        ['A closer look', 'Review the source image behind each plant suggestion. Unclear plants stay open for review.'],
-        ['Your decision', 'Keep, mark, or decide later. Export a record with the image source and your decision.'],
-      ].map(([title, body], i) => <li key={title}><span className="garden-step-number">0{i + 1}</span><div><h3>{title}</h3><MeasuredCopy>{body}</MeasuredCopy></div></li>)}</ol><p className="garden-steps-note"><Leaf aria-hidden="true" />Try the review flow in the sample now. Your own footage needs configured model access.</p></section>
-      <section id="prototype" className="garden-prototype section-wrap" aria-labelledby="prototype-title"><div className="garden-prototype-heading"><span className="technical-label">BEHIND THE PROTOTYPE</span><h2 id="prototype-title">AI suggests. People decide.<br /><span>Evidence stays.</span></h2></div><details className="garden-prototype-details"><summary>What works today, and what comes next<Plus aria-hidden="true" /></summary><div className="garden-prototype-body"><div><h3>Available to explore</h3><p>The illustrative sample includes source inspection, human decisions and CSV export. The workspace accepts local video previews up to two minutes; live analysis is limited to six seconds.</p><a className="source-link" href="/dashboard?view=video">Open video workspace<ArrowUpRight /></a></div><div><h3>Ready for validation</h3><p>The model integration connects segmentation, conservative matching and classification to human review. Real-provider and field validation are pending. Ambiguous matches can remain separate candidates.</p></div><div><h3>What your video does</h3><p>Preview stays in this tab. When you start configured live analysis, sampled frames are sent through the server to the model provider. This prototype does not prescribe chemicals or operate equipment.</p></div><div><h3>Why this direction</h3><p>Garden accessibility guidance and plant identification advice informed this prototype. Testing with gardeners is the next step; no accuracy, labour-saving or pesticide-saving results are claimed.</p><a className="source-link" href="https://www.thrive.org.uk/get-gardening/weeding-the-garden" target="_blank" rel="noreferrer">Thrive: weeding the garden<ArrowUpRight /></a><a className="source-link" href="https://www.rhs.org.uk/weeds/identify-common-weeds" target="_blank" rel="noreferrer">RHS: identifying common weeds<ArrowUpRight /></a></div></div></details></section>
+      <VideoJourney />
+      <GardenDifference />
+      <GardenBoundaries />
+      <GardenReadiness />
       <section className="garden-closing section-wrap" aria-labelledby="closing-title"><h2 id="closing-title">Your garden. <span>Your call.</span></h2><a href={VIDEO_URL} className="primary-button">Upload a short video<ArrowRight aria-hidden="true" /></a></section>
     </main>
     <footer className="footer section-wrap"><div className="footer-top"><a href="#top" aria-label="GreenPoint back to top"><Brand /></a><a href="/dashboard?view=video" className="text-link">Open workspace<ArrowUpRight aria-hidden="true" /></a></div><div className="footer-bottom"><span>© 2026 GreenPoint · Independent research prototype</span><button className="motion-toggle" aria-label="Reduce page motion" aria-pressed={reducedMotion} disabled={systemReducedMotion} onClick={() => setMotionReduced(value => !value)}>Motion {reducedMotion ? 'reduced' : 'on'}</button><span>Illustrative visuals · Human judgment</span></div></footer>

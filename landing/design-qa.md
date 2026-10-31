@@ -1,3 +1,46 @@
+# Landing depth QA — 31 October 2026
+
+final result: passed
+
+No actionable P0/P1/P2 visual issues remain. Independent read-only code review found no actionable issues against372d99f. This acceptance covers the implemented interface; real-provider and gardener validation remain pending.
+
+## Sources and comparison evidence
+
+- Visual truth: selected `design/garden-concepts/04-hybrid-human-evidence.png`, with the user override to preserve `public/assets/vision-field.webp` as the hero. New content extends this direction using the plan in `docs/garden-landing-depth-2026-10-31.md`; new sections are intentional additions rather than pixel-matched legacy sections.
+- Production baseline: `design/garden-depth/before-hero-default.png`,2267×1344; `before-full-default.png`,2267×3483. Implementation: `http://127.0.0.1:4189/`, `after-hero-default.png`,2267×1344; `after-full-default.png`,2267×7133.
+- Full combined comparison: `design/garden-depth/full-comparison.webp`, two equally scaled600px columns, initial sample pending, stage01, FAQs closed. Focused combined comparison: `hero-comparison.webp`,2267×976 regions scaled equally to1000×431. Both combined images were opened and visually inspected. No preservation mismatch beyond the intentional new navigation link.
+- Browser captures: `desktop-1440.png`,1440×6867; `mobile-375.png`,375×9886; focused `need-1440.png`, `evidence-deferred-1440.png`, `mobile-faq-open.png`. Screenshots use density1 at matching CSS width. Full-page screenshots can reflow svh, so stable native viewport captures establish hero fidelity. An earlier cross-viewport comparison was discarded and replaced with the matching2267px pair.
+
+## Required fidelity surfaces
+
+- Fonts/typography: computed Sora Variable headings, Source Sans3 Variable body, IBM Plex Mono data. Long copy wraps without clipping; native paragraphs remain readable before Pretext measurement.
+- Rhythm/layout: original hero composition retained. Repeated introduction consolidated into the sourced need section. Split photography/research, single workflow panel and ruled editorial sections each have a distinct purpose.
+- Colors/tokens: shared charcoal/sage, lime for action/current selection and amber for uncertainty. No changes to crop/weed data tokens.
+- Images: same botanical hero and GP-007 raster/crop. New older-grower artwork is explicitly labeled AI-generated/non-customer. Source overlays use normalized coordinates against the full uncropped raster; all loaded images resolve.
+- Copy/content: source links support research claims; competitor strengths acknowledged; no invented outcomes, endorsements or validated demand. Upload/local preview, six-second analysis/two-minute preview and missing model access are explicit.
+
+## Fix/comparison history
+
+1. Initial pipeline image cropped at a different aspect ratio from its normalized box (P2). Fixed to1920:850 at all breakpoints. Post-fix segmentation measurements at320/768/1024/1280/1440 match x.32/y.265/w.25/h.46 within pixel rounding.
+2. Initial hierarchy repeated two introductions. Consolidated into the research section. Post-fix desktop/mobile captures show hero → need → evidence clearly.
+3. Compared stable same-size hero pair and full-page initial states. New content is intentional; no remaining P0/P1/P2 drift.
+
+## Functional evidence
+
+- Four workflow stages switch; Enter updates the pressed state/live panel. Illustration makes no model calls. FAQ opens natively and answers remain readable at375px.
+- Existing example: deferred message preserves original Needs review. Actual CSV downloaded/opened using csv.DictReader: uncertain original, crop human decision, confirmed status, illustrative provenance and normalized coordinates correct.
+- Primary action opens video upload. Synthetic6s fixture (sample artwork, not field evidence) produces12frames0.0..5.5s, zero fabricated candidates. Analyze opens Not configured. No paid model call.
+- No horizontal overflow at320/375/768/1024/1280/1440. Existing menu/skip link/reduced-motion mechanisms retained; new workflow respects system and page motion settings. Temporary viewport reset before handoff.
+- Console: no errors/warnings in tested flow.47existing analysis/map/MCP/Sites tests pass. Production build and Sites packaging pass.
+
+## Remaining validation
+
+No formal accessibility audit or gardener usability study. Real-model secrets unavailable; real-video inference remains unaccepted. Deployment verification follows local acceptance.
+
+---
+
+## Previous release QA (historical)
+
 # GreenPoint garden landing — design QA
 
 Date: 2026-10-31 JST. Surface: `/`, with upload entry into `/dashboard?view=video&upload=1`.
