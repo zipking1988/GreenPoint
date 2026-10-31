@@ -20,6 +20,7 @@ GreenPoint is an early research and hackathon prototype.
 | Video upload | Local decoding and up to 12 sampled frames per clip implemented |
 | Live model inference | Server integration implemented; deployment credentials not configured |
 | Plant tracking and classification pipeline | Conservative candidate linking and Meta API transport implemented; real-provider and field validation pending |
+| Generic robot/agent MCP | Stateless Streamable HTTP, public discovery/sample tools and token-protected single-frame perception implemented; hardware and real-provider validation pending |
 | Public-data evaluation and real-field trials | Planned |
 
 The source is available in [`landing/`](landing/). `/` introduces the product and `/dashboard` opens the field workspace. The deployed workspace currently uses clearly marked illustrative sample records; uploaded videos can be previewed locally. Live analysis requires server credentials.
@@ -78,9 +79,12 @@ Open the local preview at `http://localhost:4173/`.
 npm run build
 npm run test:sites
 npm run test:analysis
+npm run test:mcp
 ```
 
 The build prepares the frontend and Sites-compatible worker package. No model API key is required for the presentation prototype.
+
+Robot and drone agents can use the [MCP endpoint and integration guide](landing/docs/MCP.md). This is frame-level perception with image-space coordinates, not flight control or physical actuation.
 
 ## Next milestones
 

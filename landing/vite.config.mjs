@@ -1,6 +1,7 @@
 import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
 import { handleApi } from './lib/meta-api.js';
+import { handleMcp } from './lib/mcp-server.js';
 
 export default defineConfig(({ mode }) => ({
   build: {
@@ -22,7 +23,8 @@ export default defineConfig(({ mode }) => ({
       const env = { ...loadEnv(mode, process.cwd(), ''), ...process.env };
       server.middlewares.use('/api', (req, res) => {
         req.url = `/api${req.url}`;
-        handleApi(req, res, env);
+        const handler = new URL(req.url, 'http://localhost').pathname === '/api/mcp' ? handleMcp : handleApi;
+        handler(req, res, env);
       });
     },
   }],

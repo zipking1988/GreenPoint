@@ -29,6 +29,7 @@ Live execution has not been validated against a paid Meta account in this develo
 - Pipeline tabs, native FAQ, mobile navigation and full-map modal.
 - Dashboard video playback, local video extraction, frame selection, selected-plant evidence, classification filters/search, frame atlas, human review and actual CSV export.
 - Server inference integration with explicit missing-configuration, provider error, cancellation and partial-output handling. Reruns keep previous sessions and human decisions.
+- Generic robot/agent MCP integration at `/api/mcp`: public capability discovery and illustrative sample reads, plus authenticated single-frame analysis. The connection dialog includes an actual protocol test. See the [MCP integration guide](docs/MCP.md) and `npm run robot:sample`.
 
 ## Prototype boundaries
 

@@ -77,4 +77,14 @@ Automated checks: 13 analysis tests and four Sites packaging tests passed; produ
 
 Follow-up polish: a dedicated mobile mock could guide later field testing, but no actionable P0/P1/P2 design mismatch remains in the accepted dashboard scope.
 
+## Generic MCP extension, 2026-10-31
+
+The existing Connection settings dialog now has Analysis models and Robots & agents tabs. The dashboard canvas, visual assets, tokens and sample records are unchanged. The new panel exposes the actual MCP endpoint and an initialization/discovery/sample-call diagnostic. It reports three tools and 12 illustrative records after a real local request; it does not claim that a successful public diagnostic means live models are connected.
+
+Desktop (1280 × 720) and phone (375 × 812) were inspected in the in-app browser. Dialog headings and Done stay visible while the body scrolls; the public endpoint and diagnostic precede the tool details. Phone page and panel widths had no horizontal overflow. Arrow-key tab changes and Escape focus restoration passed. A fresh local load had no warning/error console entries. Captures: `/Users/zip/.gstack/projects/zipking1988-GreenPoint/designs/mcp-20261031/local-desktop.png` and `local-mobile.png`. The copy action received the browser Clipboard API success response, but the automation's separate virtual clipboard did not expose that value, so actual paste was not verified.
+
+Review found and fixed JPEG size inflation caused by re-encoding a valid low-quality frame at higher quality. The final implementation fully decodes to validate, then preserves original normalized JPEG bytes. A deterministic textured 1280 × 1280 regression reproduces the old boundary and verifies the fix. Independent security and client/API reviewers reported no remaining findings.
+
+Checks: nine MCP tests, 13 existing analysis tests and four Sites tests passed; production build and dependency audit passed. MCP tests use the official client over actual HTTP and a controlled fake model upstream. Real Meta inference, physical devices, browser-session synchronization, world coordinates and hardware actions remain outside the verified result. See `landing/docs/MCP.md` for the implemented contract.
+
 final result: passed
