@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import './palette.css';
 
-const Dashboard = lazy(() => import('./dashboard/Dashboard.jsx'));
+const Dashboard = lazy(() => import('./dashboard/SurveyDashboard.jsx'));
 const Landing = lazy(() => import('./App.jsx').then(module => ({ default: module.App })));
 const isDashboard = /^\/(dashboard|app)\/?$/.test(location.pathname);
 

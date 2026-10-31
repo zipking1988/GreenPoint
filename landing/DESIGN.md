@@ -108,3 +108,11 @@ The user approved reducing the overall green cast after a screenshot-based audit
 Lime #d3fa79 identifies primary actions and current interaction. Crop data uses sage #afc3a4, weed remains coral #ef987f and uncertainty remains amber #edcc79. `LABELS.crop.color` mirrors the crop token so decoded masks and CSS labels share the same semantic color. Crop/weed/review filters use their category colors when selected; All plants retains lime. Dark outlines help boxes remain visible over plant imagery. Category words and symbols remain present.
 
 Controls use #606e63 for explicit borders; quiet structural rules use #364039. A rule separating ordinary rows is not a control boundary. No asset has been recolored.
+
+## Map-led workspace / 2026-10-31
+
+The user selected the first map composition plus the third concept’s evidence workflow, then approved an explicit GP-007 source connector. `design/selected-field-map-reference.png` is the current layout truth. Default `/dashboard` and `/app` use a narrow icon rail, compact field header, dominant photographic map, and contextual evidence drawer. Keep the approved charcoal/sage palette.
+
+Field zones and source boxes are functional image-coordinate geometry over a generated raster, rather than an image of the interface. A selected source box, connector and evidence label share the same plant ID. The evidence is cropped from the same raster. Pan/zoom/resize update the link; an offscreen source or scrolled-away photo hides it. Small screens stack evidence below the map, retain matching IDs, and reveal the panel after selection. Native radios and Save & next keep draft choices separate from saved human review.
+
+Illustrative zone signals are hand-authored, not calculated weed cover. Unknown areas are gray hatched and explicitly not weed-free. No metric scale, latitude/longitude, accuracy number, connected-device count or navigation action is invented. Video sessions and MCP perception keep their existing independent workflows and coordinate semantics.

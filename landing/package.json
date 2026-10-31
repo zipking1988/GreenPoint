@@ -11,7 +11,8 @@
     "test:analysis": "node --test tests/analysis.test.mjs",
     "test:mcp": "node --test tests/mcp.test.mjs",
     "robot:sample": "node scripts/robot-client.mjs sample",
-    "robot:analyze": "node scripts/robot-client.mjs analyze"
+    "robot:analyze": "node scripts/robot-client.mjs analyze",
+    "test:map": "node --test tests/map.test.mjs"
   },
   "dependencies": {
     "@chenglou/pretext": "^1.0.0",

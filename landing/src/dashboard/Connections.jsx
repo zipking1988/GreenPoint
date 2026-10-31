@@ -8,8 +8,8 @@ import { ArrowCounterClockwise } from '@phosphor-icons/react/dist/csr/ArrowCount
 import { PlugsConnected } from '@phosphor-icons/react/dist/csr/PlugsConnected';
 import { probeMcp } from './mcp-client.js';
 
-export function Connections({ provider, accessCode, setAccessCode, onCheck, onDone }) {
-  const [tab, setTab] = useState('models');
+export function Connections({ provider, accessCode, setAccessCode, onCheck, onDone, initialTab = 'models' }) {
+  const [tab, setTab] = useState(initialTab);
   const [copied, setCopied] = useState(false);
   const [test, setTest] = useState({ phase: 'idle' });
   const request = useRef(null);

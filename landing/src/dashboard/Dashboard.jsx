@@ -31,6 +31,7 @@ import { LABELS, csvText, downloadFile, sampleSession, summary, timecode } from 
 import { cropPlant, readVideo, validateVideo } from './video.js';
 import { linkDetections } from './tracker.js';
 import { Connections } from './Connections.jsx';
+import { Modal } from './Modal.jsx';
 import './dashboard.css';
 
 const CROPS = ['Maize', 'Lettuce', 'Soybean', 'Sugar beet', 'Rice', 'Wheat'];
@@ -53,26 +54,6 @@ function IconButton({ label, children, className = '', ...props }) {
 
 function Label({ value, reviewed = false }) {
   return <span className={`gp-label gp-${value}`}><span className="gp-category-mark" />{LABELS[value].text}{reviewed && <Check size={12} aria-label="Reviewed" />}</span>;
-}
-
-function Modal({ title, children, onClose, wide = false }) {
-  const ref = useRef(null);
-  const closeRef = useRef(onClose);
-  closeRef.current = onClose;
-  useEffect(() => {
-    const dialog = ref.current;
-    const before = document.activeElement;
-    dialog.showModal();
-    // StrictMode mounts effects twice. A queued close event from its cleanup
-    // must not dismiss the dialog that the second setup has already reopened.
-    const close = () => { if (!dialog.open) closeRef.current(); };
-    dialog.addEventListener('close', close);
-    return () => { dialog.removeEventListener('close', close); dialog.close(); before?.focus(); };
-  }, []);
-  return <dialog ref={ref} className={`gp-dialog ${wide ? 'gp-dialog-wide' : ''}`} aria-labelledby="gp-dialog-title" onClick={e => { if (e.target === ref.current) onClose(); }}>
-    <div className="gp-dialog-heading"><h2 id="gp-dialog-title">{title}</h2><IconButton label="Close dialog" onClick={onClose}><X /></IconButton></div>
-    {children}
-  </dialog>;
 }
 
 function PlantCrop({ image, box, alt, className = '' }) {
@@ -215,7 +196,7 @@ function Inventory({ session, selected, onSelect, filter, setFilter, view, setVi
   </section>;
 }
 
-export default function Dashboard() {
+export default function Dashboard({ onMap, uploadRequest = 0, accessCode: externalAccessCode, setAccessCode: externalSetAccessCode }) {
   const [sessions, setSessions] = useState(() => [makeSample()]);
   const [activeId, setActiveId] = useState('sample-east-plot');
   const session = sessions.find(s => s.id === activeId) ?? sessions[0];
@@ -229,7 +210,10 @@ export default function Dashboard() {
   const [modal, setModal] = useState(null);
   const [sidebar, setSidebar] = useState(false);
   const [provider, setProvider] = useState({ configured: false, checked: false });
-  const [accessCode, setAccessCode] = useState('');
+  const [localAccessCode, setLocalAccessCode] = useState('');
+  const accessCode = externalAccessCode ?? localAccessCode;
+  const setAccessCode = externalSetAccessCode ?? setLocalAccessCode;
+  useEffect(() => { if (uploadRequest > 0) { setModal('upload'); setUploadError(''); } }, [uploadRequest]);
   const [notice, setNotice] = useState('');
   const [uploadError, setUploadError] = useState('');
   const [uploadName, setUploadName] = useState('');
@@ -421,7 +405,7 @@ export default function Dashboard() {
 
   return <div className="gp-dashboard">
     <a className="gp-skip" href="#gp-main">Skip to analysis</a>
-    <nav className="gp-rail" aria-label="Workspace navigation"><a href="/" className="gp-rail-brand" aria-label="GreenPoint home"><Leaf weight="fill" /></a><div className="gp-rail-main"><IconButton label="Field sessions" className={view === 'table' && filter === 'all' ? 'gp-rail-active' : ''} onClick={() => { setView('table'); setFilter('all'); if (window.innerWidth < 801) setSidebar(true); }}><SquaresFour /><span className="gp-rail-label">Sessions</span></IconButton><IconButton label="Frame atlas" className={view === 'atlas' ? 'gp-rail-active' : ''} onClick={() => openInventory('all', 'atlas')}><MapTrifold /><span className="gp-rail-label">Atlas</span></IconButton><IconButton label="Review queue" className={filter === 'uncertain' ? 'gp-rail-active' : ''} onClick={() => openInventory('uncertain')}><CheckSquare /><span className="gp-rail-label">Review</span>{stats.uncertain > 0 && <span className="gp-rail-count">{stats.uncertain}</span>}</IconButton></div><div className="gp-rail-bottom"><IconButton label="Connection settings" onClick={() => setModal('connection')}><GearSix /></IconButton><IconButton label="About GreenPoint" onClick={() => setModal('about')}><Question /></IconButton></div></nav>
+    <nav className="gp-rail" aria-label="Workspace navigation"><a href="/" className="gp-rail-brand" aria-label="GreenPoint home"><Leaf weight="fill" /></a><div className="gp-rail-main">{onMap && <IconButton label="Back to field map" onClick={onMap} disabled={working || reading}><MapTrifold /><span className="gp-rail-label">Field</span></IconButton>}<IconButton label="Field sessions" className={view === 'table' && filter === 'all' ? 'gp-rail-active' : ''} onClick={() => { setView('table'); setFilter('all'); if (window.innerWidth < 801) setSidebar(true); }}><SquaresFour /><span className="gp-rail-label">Sessions</span></IconButton><IconButton label="Frame atlas" className={view === 'atlas' ? 'gp-rail-active' : ''} onClick={() => openInventory('all', 'atlas')}><MapTrifold /><span className="gp-rail-label">Atlas</span></IconButton><IconButton label="Review queue" className={filter === 'uncertain' ? 'gp-rail-active' : ''} onClick={() => openInventory('uncertain')}><CheckSquare /><span className="gp-rail-label">Review</span>{stats.uncertain > 0 && <span className="gp-rail-count">{stats.uncertain}</span>}</IconButton></div><div className="gp-rail-bottom"><IconButton label="Connection settings" onClick={() => setModal('connection')}><GearSix /></IconButton><IconButton label="About GreenPoint" onClick={() => setModal('about')}><Question /></IconButton></div></nav>
     {sidebar && <button className="gp-sidebar-scrim" aria-label="Close field sessions" onClick={() => setSidebar(false)} />}
     <aside ref={sidebarRef} className={`gp-sessions ${sidebar ? 'gp-sessions-open' : ''}`} aria-label="Field sessions" role={sidebar ? 'dialog' : undefined} aria-modal={sidebar ? true : undefined}><a className="gp-brand" href="/">Green<span>Point</span><span className="gp-brand-dot" /></a><div className="gp-session-head"><span className="gp-section-label">WORKSPACE</span><h2>Field sessions</h2><p>A clearer view of every field.</p><button className="gp-new-session" onClick={openUpload} disabled={working || reading}><Plus size={17} />New session</button></div><div className="gp-sessions-list"><div className="gp-recent-label">RECENT SESSIONS<span>{sessions.length.toString().padStart(2, '0')}</span></div>{sessions.map(s => <button type="button" key={s.id} className={`gp-session-item ${session.id === s.id ? 'gp-session-active' : ''}`} aria-pressed={session.id === s.id} onClick={() => selectSession(s.id)} disabled={working || reading}><img src={s.image} alt="" /><span><b>{s.name}</b><span>{s.mode === 'sample' ? 'Illustrative sample' : s.mode === 'local' ? 'Local preview' : s.mode === 'partial' ? 'Partial analysis' : 'Analyzed'}<span className="gp-session-dot">·</span>{timecode(s.duration)}</span></span><CaretRight size={14} /></button>)}</div><div className="gp-session-bottom"><button className="gp-upload-card" onClick={openUpload} disabled={working || reading}><UploadSimple size={25} /><strong>Start with a field walk.</strong><span>Upload a short phone video.</span><span className="gp-upload-card-action">Upload video<ArrowUpRight size={16} /></span></button><button className="gp-connection-status" onClick={() => setModal('connection')}><span className={provider.configured ? 'gp-dot-on' : ''} />{provider.configured ? 'Analysis configured' : provider.checked ? 'Sample workspace' : 'Checking connection…'}<ArrowUpRight size={12} /></button><a className="gp-project-link" href="/">Explore GreenPoint<ArrowUpRight size={13} /></a></div></aside>
     <main id="gp-main" className="gp-main">
