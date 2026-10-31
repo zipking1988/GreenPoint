@@ -65,3 +65,10 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Landing journal is local to this page, capped at30scenario entries with the total/retained count disclosed, reset creates a new session ID, and JSON export preserves identity/provenance/non-actuation flags. Keyboard users must be able to focus and scroll the journal.
 - Existing perception remains at `/dashboard?view=video`; agent concept is primary, perception is secondary. Real-provider validation, persistent plant profiles, LLM plant-care requests and tools are future work, not implemented agents. State current versus planned explicitly.
 - Native scroll and reduced motion remain required. Monid has no active key and Higgsfield workspace probe returns an auth hint; no paid cinematic render or full scroll-world film is shipped.
+
+## Plant story refinement / 2026-10-31
+
+- After the landing/hackathon audit, the user delegated refinement toward award-quality presentation. Keep the selected Living Network art direction and exact botanical hero. Prioritize a specific care task, one coherent Milo story, clear provenance, and fast mobile participation.
+- Mobile places the request and scenario input before a compact plant portrait. The native radio group is an imagined soil check; a submit updates the same fictional plant's scripted request and journal. Preserve HTTP-compatible session IDs, reset behavior, the 30-entry retention limit and honest exports.
+- The perception lab is explicitly separate and secondary. Do not imply that its video upload creates Milo, a persistent agent, or a validated care recommendation. Real model credentials and acceptance remain unavailable; visual refinement does not complete the AI validation gate.
+- Motion is finite and progressive, with visible content when IntersectionObserver is unavailable and full reduced-motion support. Keep native scrolling and source-linked accessible controls.

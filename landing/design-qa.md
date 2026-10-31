@@ -1,3 +1,41 @@
+# Plant story refinement QA — 31 October 2026
+
+final result: passed
+
+Visual/interaction acceptance only. Real-model and plant-agent acceptance remain pending. Independent read-only review against366f43c found no actionable introduced defects; six targeted checks passed. This is separate from the still-unaccepted real-model gate.
+
+## Source and comparison
+
+- Existing selected Living Network source: `design/plant-agent/selected.webp`,946×1663. Exact botanical raster retained under the user's earlier override. User authorized the audit's task-first/mobile refinements; `docs/plant-story-refinement.md` records intentional differences.
+- Latest native implementation: `design/plant-agent/refinement/qa/desktop-hero.png` and `desktop-story.png`,1440×1000; full page1440×7665. Initial unknown soil, empty scenario history, closed evidence, reduced motion for stable captures. Screenshots use CSS width/density1.
+- Combined hero comparison: selected source946×650 region and implementation1440×1000, equally resized to720px columns without distortion. Different natural heights and the new invitation/copy placement are explicit. This compares visual direction, not pixel identity.
+- Combined phone comparison: prior audit375×844 entry and final375×844 entry, same unknown-soil state. Both the combined hero and mobile images were opened and inspected. Focused native phone/story screenshots make labels and controls readable.
+
+## Required surfaces
+
+- **Typography:** Sora display, Source Sans3 body, Plex Mono helpers retained. Body18–21px in the task; mobile questions wrap naturally. Shorter headings and clearer action labels; tiny eyebrow text remains secondary, with normal-size adjacent explanations.
+- **Layout/rhythm:** original fullbleed botanical world, one primary action, asymmetrical editorial sections and source-led story. Open rules replace a nested panel. Mobile places conversation before the portrait; first choice≈714px, submit bottom≈827px at375×844.
+- **Color/tokens:** unchanged shared charcoal/sage/lime; lime is action/current loop, sage is context, amber labels the concept/future status. Selected radio choices have both border/text treatment and a real Phosphor check icon. No crop/weed token changes.
+- **Image quality:** original1495×1052hero,1122×1402Milo and1920×850garden source reused without raster substitution or fake source crops. Portrait stays uncropped; source and generated/fictional status remain visible. No custom icon or decorative SVG approximations.
+- **Copy/content:** a specific care-context question replaces vague value copy. The same fictional Milo stays attached to scenario/journal/export. Lab is explicitly separate; no implied Milo creation, provider validation, long-term memory or sensor readings. Model roles are explained inside a native disclosure.
+
+## Fix loop
+
+1. P2: navigating to Milo put the chapter kicker behind the sticky header. Added28px target scroll margin, recaptured at375×844 and1440×1000. Kicker is visible and the submit still fits in the phone viewport.
+2. P2: narrow radio choices initially used color without a visible checkmark. Kept the Phosphor check at the top corner on narrow screens; browser confirmed display:block/opacity1 on the selected item. Captured `mobile-damp-final.png`.
+3. Repeated identical submissions needed distinct assistive feedback. The live status now includes the entry number; actual consecutive submissions announce entry1 then entry2.
+4. Post-fix comparison and focused native images show no remaining actionable visual P0/P1/P2. These fixes do not count real AI inference as completed.
+
+## Functional coverage and limits
+
+Required radio validation, keyboard selection, all three branches, actual JSON export, reset/focus, menuEscape, loopEnter, FAQ, reduced motion and video workspace navigation were exercised in the browser. Export opened with correct ordering and simulation/non-actuation flags. No horizontal overflow at320/375/768/1024/1440. Final regression:52/52 tests pass, including analysis, map, MCP, Sites and plant-story helpers. Production build and Sites packaging pass. Independent release review found no actionable issues, including shared ID/re-export and log-retention checks.
+
+No formal screen-reader/contrast/zoom audit or iOS hardware test. Model credentials remain unavailable. The honest prototype labels are required, and should be updated only after actual validation.
+
+---
+
+## Previous plant-agent QA (historical)
+
 # Plant-agent landing QA — 31 October 2026
 
 final result: passed

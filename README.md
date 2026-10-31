@@ -24,13 +24,15 @@ GreenPoint is an early research and hackathon prototype.
 | Generic robot/agent MCP | Stateless Streamable HTTP, public discovery/sample tools and token-protected single-frame perception implemented; hardware and real-provider validation pending |
 | Public-data evaluation and real-field trials | Planned |
 
-The source is available in [`landing/`](landing/). `/` introduces the product; its primary action explores Milo and its secondary action opens the perception workspace. `/dashboard?view=video` opens video review, while `/dashboard` retains the illustrative field map. Sample records are clearly labeled; uploaded videos can be previewed locally. Live analysis requires server credentials.
+The source is available in [`landing/`](landing/). `/` introduces the product; its primary action explores Milo and its secondary action explains the agent idea. The separate perception lab is linked from its own section. `/dashboard?view=video` opens video review, while `/dashboard` retains the illustrative field map. Sample records are clearly labeled; uploaded videos can be previewed locally. Live analysis requires server credentials.
 
 ## The experience
 
 The landing introduces a plant-originated request: “Could you check my soil?” Visitors can inspect the authored evidence, select an imagined soil scenario, see a follow-up and export a journal that explicitly labels the simulation. The record separates fictional identity, generated image, scripted request and visitor-selected context. All branches keep human follow-up pending.
 
-Milo’s memory is page-local and bounded to the latest30scenario entries, with the total count disclosed. Leaving resets it; exporting preserves a JSON copy. It is independent of dashboard sessions, CSV review and MCP.
+Milo’s memory is page-local and bounded to the latest 30 scenario entries, with the total count disclosed. Leaving resets it; exporting preserves a JSON copy. It is independent of dashboard sessions, CSV review and MCP.
+
+The landing frames a specific care task: a photograph shows one part of the situation, while a person supplies context. On phones, Milo’s request and native soil-scenario choices appear before the compact portrait. A repeated submission updates an entry count so both visible and assistive feedback remain clear. The same fictional plant identity stays attached to the story and export; this does not establish real tracking or persistent agent identity.
 
 The interface supports desktop/mobile, keyboard controls, finite animation and reduced motion. The original botanical hero is retained. The existing video workspace and its playback controls remain available through the perception links.
 
@@ -77,6 +79,8 @@ npm run build
 npm run test:sites
 npm run test:analysis
 npm run test:mcp
+npm run test:map
+npm run test:plant-agent
 ```
 
 The build prepares the frontend and Sites-compatible worker package. No model API key is required for the presentation prototype.

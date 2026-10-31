@@ -1,4 +1,10 @@
+import { createId } from './shared/id.js';
+
 // A deterministic concept. No model or sensor inference occurs here.
+export function createDemo(source) {
+  return { id: createId(source), events: [], total: 0 };
+}
+
 export const SCENARIOS = [
   { value: 'dry', label: 'Imagine the soil feels dry' },
   { value: 'damp', label: 'Imagine the soil feels damp' },

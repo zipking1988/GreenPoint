@@ -1,6 +1,20 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { SCENARIOS, requestForScenario, scenarioEvent, journalExport } from '../src/plantAgentDemo.js';
+import { createDemo, SCENARIOS, requestForScenario, scenarioEvent, journalExport } from '../src/plantAgentDemo.js';
+
+test('initial and reset stories work over HTTP and receive separate empty sessions', () => {
+  let seed = 0;
+  const lanCrypto = { getRandomValues(bytes) { bytes.fill(++seed); return bytes; } };
+  const initial = createDemo(lanCrypto);
+  initial.events.push(scenarioEvent('damp', 1, 'first'));
+  initial.total = 1;
+  const reset = createDemo(lanCrypto);
+  assert.match(initial.id, /^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/);
+  assert.notEqual(initial.id, reset.id);
+  assert.deepEqual(reset.events, []);
+  assert.equal(reset.total, 0);
+  assert.equal(journalExport(reset, 'now').session_id, reset.id);
+});
 
 test('all scenarios keep human follow-up pending rather than authorize care', () => {
   for (const value of [undefined, ...SCENARIOS.map(item => item.value)]) {
