@@ -1,7 +1,5 @@
 # GreenPoint — Project Profile
 
-> **定位更新 / 2026-10-31：** 当前方向是“让植物用上 AI”：每株植物拥有观察、记忆、提出照料请求并接收人类反馈的代理。Landing 的 Milo 为明确标注的脚本交互概念，没有实际 LLM、传感器或长期记忆。现有短视频植物候选与人审工作区保留为独立的感知基础。此前家庭菜园、年长用户与日本农业商业分析均保留为历史探索，不代表已验证需求或成果。最新能力边界以 README 和实际界面为准。
-
 > 田間の短い動画から、画像の根拠付きで人が確認できる植物候補リストを作る。
 > A reviewable plant candidate list with evidence from a short field video.
 

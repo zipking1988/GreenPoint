@@ -15,8 +15,6 @@ import { DownloadSimple } from '@phosphor-icons/react/dist/csr/DownloadSimple';
 import { ArrowCounterClockwise } from '@phosphor-icons/react/dist/csr/ArrowCounterClockwise';
 import { Modal } from './Modal.jsx';
 import { Connections } from './Connections.jsx';
-import PlantWorkspace from './PlantWorkspace.jsx';
-import { workspaceView } from './plant-workspace.js';
 import { FieldMap } from './FieldMap.jsx';
 import { LABELS, csvText, downloadFile } from './data.js';
 import { checkModelConfiguration, initialModelConnection, modelConnectionReducer } from './model-connection.js';
@@ -255,7 +253,7 @@ function EvidenceConnector({ rootRef, sourceRef, photoRef, revision, selected })
   return <canvas className="sf-evidence-connector" ref={canvas} aria-hidden="true" />;
 }
 
-function FieldDashboard({ active = true, onVideo, onPlants, provider, accessCode, setAccessCode, checkConnection }) {
+function FieldDashboard({ active, onVideo, provider, accessCode, setAccessCode, checkConnection }) {
   const [plants, setPlants] = useState(() => {
     try {
       return restoreSurvey(localStorage);
@@ -266,9 +264,6 @@ function FieldDashboard({ active = true, onVideo, onPlants, provider, accessCode
   const [selectedId, setSelectedId] = useState('GP-007');
   const [layer, setLayer] = useState('weed');
   const [modal, setModal] = useState(null);
-  useEffect(() => {
-    if (!active) setModal(null);
-  }, [active]);
   const [notice, setNotice] = useState('');
   const [revision, setRevision] = useState(0);
   const [focusHeading, setFocusHeading] = useState(false);
@@ -279,8 +274,8 @@ function FieldDashboard({ active = true, onVideo, onPlants, provider, accessCode
   const selected = plants.find((plant) => plant.id === selectedId);
   const geometry = useCallback(() => setRevision((value) => value + 1), []);
   useEffect(() => {
-    document.title = 'Field map · GreenPoint';
-  }, []);
+    if (!active) setModal(null);
+  }, [active]);
   useEffect(() => {
     if (!notice) return;
     const timer = setTimeout(() => setNotice(''), 6500);
@@ -371,9 +366,6 @@ function FieldDashboard({ active = true, onVideo, onPlants, provider, accessCode
           <Leaf size={25} weight="fill" />
         </a>
         <div className="sf-rail-main">
-          <button type="button" aria-label="Plant workspace" onClick={onPlants}>
-            <Leaf size={25} /><span>Plants</span>
-          </button>
           <button
             type="button"
             className="sf-rail-active"
@@ -596,19 +588,18 @@ function FieldDashboard({ active = true, onVideo, onPlants, provider, accessCode
 export default function SurveyDashboard() {
   const [entry] = useState(() => {
     const parameters = new URLSearchParams(window.location.search);
-    return { view: workspaceView(window.location.search), upload: parameters.get('view') === 'video' && parameters.get('upload') === '1' };
+    const view = parameters.get('view') === 'video' ? 'video' : 'map';
+    return { view, upload: view === 'video' && parameters.get('upload') === '1' };
   });
   const [workspace, setWorkspace] = useState(entry.view);
   const [videoOpened, setVideoOpened] = useState(entry.view === 'video');
-  const [mapOpened, setMapOpened] = useState(entry.view === 'map');
   useEffect(() => {
-    document.title = workspace === 'video' ? 'Garden review · GreenPoint' : workspace === 'map' ? 'Field map · GreenPoint' : 'Plant workspace · GreenPoint';
+    document.title = workspace === 'video' ? 'Field intelligence · GreenPoint' : 'Field map · GreenPoint';
   }, [workspace]);
   useEffect(() => {
     const restore = () => {
-      const view = workspaceView(window.location.search);
+      const view = new URLSearchParams(window.location.search).get('view') === 'video' ? 'video' : 'map';
       if (view === 'video') setVideoOpened(true);
-      if (view === 'map') setMapOpened(true);
       document.querySelectorAll('.gp-video-stage video').forEach(video => video.pause());
       setWorkspace(view);
     };
@@ -629,12 +620,11 @@ export default function SurveyDashboard() {
   const [uploadRequest, setUploadRequest] = useState(entry.upload ? 1 : 0);
   function navigate(view) {
     if (view === 'video') setVideoOpened(true);
-    if (view === 'map') setMapOpened(true);
     document.querySelectorAll('.gp-video-stage video').forEach(video => video.pause());
     setWorkspace(view);
     const url = new URL(window.location.href);
     url.searchParams.delete('upload');
-    if (view === 'plants') url.searchParams.delete('view');
+    if (view === 'map') url.searchParams.delete('view');
     else url.searchParams.set('view', view);
     if (url.href !== window.location.href) window.history.pushState(null, '', url);
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -645,12 +635,9 @@ export default function SurveyDashboard() {
   }
   return (
     <>
-      <div hidden={workspace !== 'plants'}>
-        <PlantWorkspace active={workspace === 'plants'} onVideo={openVideo} onMap={() => navigate('map')} provider={connection} setAccessCode={setAccessCode} onCheck={checkConnection} />
+      <div hidden={workspace !== 'map'}>
+        <FieldDashboard active={workspace === 'map'} onVideo={openVideo} provider={connection} accessCode={connection.accessCode} setAccessCode={setAccessCode} checkConnection={checkConnection} />
       </div>
-      {mapOpened && <div hidden={workspace !== 'map'}>
-        <FieldDashboard active={workspace === 'map'} onPlants={() => navigate('plants')} onVideo={openVideo} provider={connection} accessCode={connection.accessCode} setAccessCode={setAccessCode} checkConnection={checkConnection} />
-      </div>}
       {videoOpened && (
         <div hidden={workspace !== 'video'}>
           <Suspense
@@ -667,7 +654,6 @@ export default function SurveyDashboard() {
               abortRef={abortRef}
               setAccessCode={setAccessCode}
               onMap={() => navigate('map')}
-              onPlants={() => navigate('plants')}
               uploadRequest={uploadRequest}
             />
           </Suspense>

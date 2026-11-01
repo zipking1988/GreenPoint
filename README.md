@@ -1,12 +1,14 @@
 # GreenPoint
 
-**Every plant deserves an agent.**
+**See the field. Plant by plant.**
 
 [Open the live GreenPoint landing](https://greenpoint-vert.vercel.app/)
 
-GreenPoint explores what happens when plants have AI agents: observations become context, context becomes a question, and people help decide what care makes sense.
+A phone-first approach to turning a field walk into a reviewable inventory of plant candidates.
 
-The landing’s fictional tomato, Milo, demonstrates this idea through a clearly labeled scripted request, three imagined soil-check scenarios and an exportable in-page journal. It does not call an LLM, read sensors or operate equipment. Real plant-agent reasoning and persistent memory are future work. The existing phone-video perception workspace supplies a separate foundation for reviewable plant evidence.
+The farmer-focused experience was restored on 2026-11-01 using release `409e71d` as the visual and product reference. `/dashboard` opens the field map, and `/dashboard?view=video` opens field-video review. See the [restoration checks](landing/docs/farmer-restoration-2026-11-01.md).
+
+GreenPoint is designed for Japanese growers and field-service teams managing scattered plots. The idea is simple: record an ordinary phone video, link repeated views of each plant, and give a person a clearer inventory to review.
 
 ## Project status
 
@@ -14,10 +16,8 @@ GreenPoint is an early research and hackathon prototype.
 
 | Area | Status |
 | --- | --- |
-| Plant-agent landing and Milo concept | Implemented scripted scenarios, evidence disclosure and JSON journal export; no LLM or sensors |
-| Plant workspace | Implemented tab-local personal profiles, optional resized photo, observations, provenance and JSON export; manual records, no AI assessment |
-| Persistent plant agents and tools | Planned; not implemented or validated |
-| Illustrative field-map workspace | Implemented as a separate sample |
+| Interactive landing page | Implemented in the local development workspace |
+| Illustrative field atlas and sample CSV | Implemented |
 | Field-analysis dashboard | Implemented, with local video previews, evidence review and CSV export |
 | Video upload | Local preview up to two minutes; analysis accepts clips up to six seconds and 12 sampled frames |
 | Live model inference | Server integration implemented; deployment credentials not configured |
@@ -25,17 +25,19 @@ GreenPoint is an early research and hackathon prototype.
 | Generic robot/agent MCP | Stateless Streamable HTTP, public discovery/sample tools and token-protected single-frame perception implemented; hardware and real-provider validation pending |
 | Public-data evaluation and real-field trials | Planned |
 
-The source is available in [`landing/`](landing/). `/` introduces the product; its primary action explores Milo and its secondary action explains the agent idea. The separate perception lab is linked from its own section. `/dashboard?view=video` opens video review, while `/dashboard` and `/app` open the plant workspace. The illustrative field map remains at `/dashboard?view=map`. Sample records are clearly labeled; uploaded videos can be previewed locally. Live analysis requires server credentials.
+The source is available in [`landing/`](landing/). `/` introduces the product and `/dashboard` opens the field workspace. The deployed workspace currently uses clearly marked illustrative sample records; uploaded videos can be previewed locally. Live analysis requires server credentials.
 
 ## The experience
 
-The landing introduces a plant-originated request: “Could you check my soil?” Visitors can inspect the authored evidence, select an imagined soil scenario, see a follow-up and export a journal that explicitly labels the simulation. The record separates fictional identity, generated image, scripted request and visitor-selected context. All branches keep human follow-up pending.
+The landing page introduces the product through a working interactive walkthrough:
 
-Milo’s memory is page-local and bounded to the latest 30 scenario entries, with the total count disclosed. Leaving resets it; exporting preserves a JSON copy. It is independent of dashboard sessions, CSV review and MCP.
+- **One plant, one identity:** three simulated observations explain why repeated video frames should not become duplicate plant records.
+- **Every plant has a place:** a complete field atlas lets visitors inspect four illustrative crop, weed and review samples.
+- **Review before action:** ambiguous plants stay visible for human judgment.
+- **Take the data with you:** a sample CSV exports labels and normalized image coordinates.
+- **Explore the reasoning:** pipeline tabs, research notes and FAQs explain the proposed system and its limits.
 
-The landing frames a specific care task: a photograph shows one part of the situation, while a person supplies context. On phones, Milo’s request and native soil-scenario choices appear before the compact portrait. A repeated submission updates an entry count so both visible and assistive feedback remain clear. The same fictional plant identity stays attached to the story and export; this does not establish real tracking or persistent agent identity.
-
-The interface supports desktop/mobile, keyboard controls, finite animation and reduced motion. The original botanical hero is retained. The existing video workspace and its playback controls remain available through the perception links.
+The interface supports desktop and mobile layouts, keyboard controls, finite animation, playback controls and reduced motion.
 
 ## Proposed pipeline
 
@@ -57,7 +59,7 @@ The current output is a frame-based, reviewable information layer. A geographic 
 
 All current field artwork is AI-generated illustration. It is not Japanese field footage, WeedMap imagery or measured model output. The dashboard sample uses an eight-second static illustration preview with 12 hand-authored records.
 
-The landing JSON journal contains the explicitly fictional Milo scenario history; dashboard CSV exports contain the current session and run IDs, each candidate's source, original model label, effective classification and review status. Landing, video and map examples have separate identity/decision scopes. Coordinates are relative to source frames, not GPS positions or a surveyed field map. Example records are not a count of every plant shown.
+The landing CSV contains four illustrative records; dashboard exports contain the current session and run IDs, each candidate's source, original model label, effective classification and review status. Coordinates are relative to source frames, not GPS positions or a surveyed field map. The example records are not a count of every plant shown.
 
 GreenPoint has not published measured classification accuracy, tracking performance, time savings or pesticide reductions.
 
@@ -80,8 +82,6 @@ npm run build
 npm run test:sites
 npm run test:analysis
 npm run test:mcp
-npm run test:map
-npm run test:plant-agent
 ```
 
 The build prepares the frontend and Sites-compatible worker package. No model API key is required for the presentation prototype.
@@ -92,7 +92,7 @@ Robot and drone agents can use the [MCP endpoint and integration guide](landing/
 
 1. Configure server-only `MODEL_API_KEY` and `ANALYSIS_ACCESS_TOKEN` on Vercel, redeploy, then verify a real field clip end to end. See [connection setup](landing/README.md#connect-live-analysis).
 2. Evaluate segmentation, candidate identity linking and classification separately on appropriately licensed data.
-3. Test representative garden videos and uncertainty handling with gardeners, including older growers and family helpers.
+3. Test representative field videos and uncertainty handling with growers.
 4. Establish the mapping and calibration requirements before claiming geographic coordinates.
 
 ## Background
@@ -100,7 +100,6 @@ Robot and drone agents can use the [MCP endpoint and integration guide](landing/
 - [SAM model documentation](https://dev.meta.ai/docs/overview)
 - [Meta model catalog](https://dev.meta.ai/docs/models)
 - [WeedMap research paper](https://arxiv.org/abs/1808.00100)
-- [Thrive: weeding the garden](https://www.thrive.org.uk/get-gardening/weeding-the-garden)
-- [RHS: identifying common weeds](https://www.rhs.org.uk/weeds/identify-common-weeds)
+- [Japan’s MIDORI Strategy](https://www.maff.go.jp/e/policies/env/env_policy/midori.html)
 
-These sources provide technical and gardening context; they do not establish GreenPoint’s performance or validate consumer demand. Earlier Japan-specific business hypotheses in `profile.md` are retained as historical exploration.
+These sources provide technical and policy context; they do not establish GreenPoint’s performance.

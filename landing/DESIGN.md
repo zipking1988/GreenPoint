@@ -1,6 +1,6 @@
 ---
-name: GreenPoint Plant Agents
-description: Botanical plant agents, expressed through evidence, memory and requests for care.
+name: GreenPoint Plant Intelligence
+description: Phone-first agricultural perception, expressed as a judge-facing research prototype.
 colors:
   primary: '#d3fa79'
   background: '#111513'
@@ -56,17 +56,7 @@ shadows:
 
 ## Product and audience
 
-A landing for plant owners, curious builders and hackathon judges. Memorable thing: a plant agent asks for information it lacks and shows the source behind that request. User explicitly pivoted from weed review to “let plants use AI” and delegated design/build/review/release. The existing perception workspace remains the technical foundation.
-
-## Current landing direction / 2026-10-31
-
-Selected visual is `design/plant-agent/selected.webp`, The Living Network, chosen by the agent from three independent concepts under explicit delegation. Keep the original botanical `vision-field.webp` and composition as the user’s asset override. Lead with “Every plant. An AI of its own.” then the interactive Milo tomato concept. One primary action enters the concept; perception is secondary.
-
-Milo’s image is generated artwork. Its request and journal use transparent scripted scenarios and in-page state. No model or sensor assesses Milo; persistent profiles, actual LLM requests and tools are planned. Native evidence disclosure, scenario form, readable follow-up, keyboard journal and JSON export form one complete frontend journey. Current/future labels must be visible.
-
-Sora/Source Sans3 and shared charcoal/sage/lime remain authoritative. One request panel is justified by its interaction; avoid decorative card grids. Desktop uses a full4:5portrait beside a request; tablet/mobile deliberately place them in document flow. Hero request becomes in-flow on narrow screens. No endless motion; source images stay readable.
-
-## Previous directions (historical)
+A landing page for international hackathon judges and Japanese agricultural operators managing scattered small fields. The visitor should remember: repeated views become one reviewable plant identity, then a field inventory. This is a presentation prototype, not a deployed agricultural model pipeline.
 
 ## Selected direction
 
@@ -126,22 +116,3 @@ The user selected the first map composition plus the third concept’s evidence 
 Field zones and source boxes are functional image-coordinate geometry over a generated raster, rather than an image of the interface. A selected source box, connector and evidence label share the same plant ID. The evidence is cropped from the same raster. Pan/zoom/resize update the link; an offscreen source or scrolled-away photo hides it. Small screens stack evidence below the map, retain matching IDs, and reveal the panel after selection. Native radios and Save & next keep draft choices separate from saved human review.
 
 Illustrative zone signals are hand-authored, not calculated weed cover. Unknown areas are gray hatched and explicitly not weed-free. No metric scale, latitude/longitude, accuracy number, connected-device count or navigation action is invented. Video sessions and MCP perception keep their existing independent workflows and coordinate semantics.
-
-
-## Landing depth extension — 31 October 2026
-
-Evolve the approved garden hybrid rather than replace it. The botanical hero remains unchanged. The information sequence is: sourced need → source-linked decision example → four-stage video workflow → competitor focus → error boundaries → available/pending evidence → practical FAQs → upload.
-
-Use an editorial split photograph/research layout, a single interactive workflow panel and ruled text sections. Retain Sora, Source Sans 3 and IBM Plex Mono for data. No decorative feature cards or invented success metrics. Existing `MeasuredCopy` uses Pretext prepare/layout after font readiness. Workflow copy enters over 250ms, 5px and partial opacity; all content remains readable without animation and respects system/page reduced motion.
-
-The existing three garden concepts and selected 1+2 hybrid remain the design exploration. This pass extends that selected direction; it does not restart a three-option redesign. The older-grower image belongs below the original botanical hero. Paid scroll-world video production is omitted because it would add rendering cost and delay the accessible upload/review flow. Native scrolling is preserved.
-
-## Plant workspace extension / 31 October 2026
-
-Default workspace is a plant dossier, selected by the agent under explicit delegation from three independent visual concepts. Source: `design/plant-workspace/selected.webp`. Prior map-first instructions are superseded only for default entry; field map and video lab remain secondary tools.
-
-Operate mode: named plant, explicit demo/manual mode, source portrait beside the current request and observation form, ruled journal, evidence provenance. Reuse authoritative shared palette and self-hosted fonts. Ignore generated mock dates, claims about visible symptoms and recreated artwork; use the exact original Milo photo illustration.
-
-Desktop uses208px sidebar and fluid content. At1440px, portrait/form split is roughly43/57. Utility text remains16px, with smaller data captions. Mobile has a horizontally scrolling plant selector, bottom Video/Map/Connections tools and request/form ahead of a compact source photograph. No chat facade, KPI wall, fake model confidence or action buttons implying automated care.
-
-Primary motion: request update arrives6px over420ms with easing from the existing system; controls respond150ms; surrounding source remains still. Reduced motion removes entrances. Pretext reserves body-copy height after fonts and on resize without hiding native text.

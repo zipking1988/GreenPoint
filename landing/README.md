@@ -1,10 +1,12 @@
 # GreenPoint landing
 
-A React/Vite plant-agent concept, plant observation workspace and phone-video perception lab. The selected art direction uses charcoal surfaces, pale lime brand accents, sage crop data and botanical computer-vision imagery. The original botanical hero is retained at the user's request.
+A responsive React/Vite landing page and field-analysis workspace with an illustrative field map and a phone-first plant candidate inventory. The selected art direction uses charcoal surfaces, pale lime brand accents, sage crop data and botanical computer-vision imagery.
+
+Restored to the farmer-focused direction on 2026-11-01. The reference is release `409e71d`, with browser-history navigation and hidden-dialog fixes retained. Direct links to `/dashboard?view=video` and `/app?view=video&upload=1` remain supported. Later garden/plant-agent explorations are recoverable through Git history.
 
 ## Local preview
 
-With Node.js 22 or newer, run `npm ci`, then `npm run dev -- --host 0.0.0.0 --port 4173 --strictPort`. Open `/dashboard` for the workspace and `/` for the landing. Production build: `npm run build`. Map checks: `npm run test:map`. Analysis checks: `npm run test:analysis`. MCP checks: `npm run test:mcp`. Plant workspace checks: `npm run test:workspace`. Packaging checks: `npm run test:sites`.
+With Node.js 22 or newer, run `npm ci`, then `npm run dev -- --host 0.0.0.0 --port 4173 --strictPort`. Open `/dashboard` for the workspace and `/` for the landing. Production build: `npm run build`. Map checks: `npm run test:map`. Analysis checks: `npm run test:analysis`. MCP checks: `npm run test:mcp`. Packaging checks: `npm run test:sites`.
 
 ## Vercel deployment
 
@@ -24,17 +26,9 @@ Analysis results stay in the current tab. After exporting CSV, check that the fi
 
 Live execution has not been validated against a paid Meta account in this development session because no provider credential is configured. Tests verify the transport, authentication, official SAM grammar, output validation and failure paths with mocked upstream responses. No mock response is used by the production inference endpoint.
 
-## Plant workspace
-
-`/dashboard` and `/app` open a plant dossier. Milo is a fictional scripted example; its observations are simulations. Add a personal plant with a name, optional type/location/photo, then record soil context and notes. Personal profiles are human-assigned manual records with no AI assessment. Evidence provenance stays visible.
-
-Everything remains in the current tab: up to12plants and the latest30 observations per plant (total count disclosed). Photos accept JPEG/PNG/WebP up to8MB and become JPEG copies with longest edge≤1200px. Export JSON to keep profiles, source details, reduced photos, notes and timestamps. Confirm the saved download to clear the leave-page warning; later changes require another export. No database, persistent agent, model reasoning or sensor connection has been added.
-
-Video and map switches preserve all mounted state. Explicit `/dashboard?view=video` and `?view=video&upload=1` keep the existing workflow.
-
 ## Field-map workspace
 
-`/dashboard?view=map` opens the preserved map-led workspace. `/dashboard` and `/app` open the plant workspace. Select an illustrative weed region, follow the source connector to the same-image crop, choose Crop / Weed / Keep for review, then Save & next. Pan, wheel/pinch zoom, keyboard arrows and +/- and Fit field operate in local image coordinates. Evidence selection and its connector follow the map; small screens reveal the evidence below the map with the same plant ID. Coverage distinguishes unobserved space from weed-free land.
+`/dashboard` and `/app` now open the approved map-led workspace. Select an illustrative weed region, follow the source connector to the same-image crop, choose Crop / Weed / Keep for review, then Save & next. Pan, wheel/pinch zoom, keyboard arrows and +/- and Fit field operate in local image coordinates. Evidence selection and its connector follow the map; small screens reveal the evidence below the map with the same plant ID. Coverage distinguishes unobserved space from weed-free land.
 
 The map has 12 separate, hand-authored examples over `/assets/survey-field.webp`, with its own versioned browser review storage. The Review queue supports reset and CSV export. Its illustrative region signals are static examples, not recomputed weed-density measurements. The map and the original video sample are separate coordinate/identity namespaces. MCP's public sample remains the original video sample and does not return these browser-local map decisions.
 
@@ -42,27 +36,25 @@ Use **Video** or **Upload footage** to open the existing video workspace; sessio
 
 ## What works
 
-- Landing upload actions open the video workspace and its upload dialog directly at `/dashboard?view=video&upload=1`; `/dashboard?view=video` opens video review without the dialog.
-- An interactive garden example links one selected source rectangle to a crop of that same raster. Keep, weed and defer choices have distinct feedback and a real illustrative CSV export. Original model suggestion remains uncertain after human decisions. Landing decisions are page-local and separate from dashboard/MCP records.
-- Native prototype details, mobile navigation, keyboard focus and reduced-motion controls.
+- Same-scene simulated tracking explanation with finite playback, pause, replay, scrubbing and reduced-motion support.
+- Complete field atlas with four labeled illustrative samples, review filtering, inspection and an actual sample CSV download.
+- Pipeline tabs, native FAQ, mobile navigation and full-map modal.
 - Dashboard video playback, local video extraction, frame selection, selected-plant evidence, classification filters/search, frame atlas, pending/confirmed/deferred human review and CSV export with per-plant provenance.
 - Server inference integration with explicit missing-configuration, provider error, cancellation and partial-output handling. Reruns keep previous sessions and human decisions.
 - Generic robot/agent MCP integration at `/api/mcp`: public capability discovery and illustrative sample reads, plus authenticated single-frame analysis. The connection dialog includes an actual protocol test. See the [MCP integration guide](docs/MCP.md) and `npm run robot:sample`.
 
 ## Prototype boundaries
 
-The deployed workspace opens with fictional Milo. Its responses are scripted; personal profiles are manual journals. The separate video sample contains 12 hand-authored records over an eight-second static preview of AI-generated imagery; neither sample is live model output. Classification accuracy and tracking performance remain unvalidated. CSV locations are normalized source-frame coordinates, not GPS. No spraying or chemical prescription is performed.
+The deployed workspace opens in an illustrative map sample. The separate video sample contains 12 hand-authored records over an eight-second static preview of AI-generated imagery; neither sample is live model output. Classification accuracy and tracking performance remain unvalidated. CSV locations are normalized source-frame coordinates, not GPS. No spraying or chemical prescription is performed.
 
 ## Project files
 
-`DESIGN.md` records the selected system. `design/research-brief.md` records sources and evidence limits. `design-qa.md` records final browser verification and visual comparison. Landing source: `src/App.jsx`, `src/MeasuredCopy.jsx`, `src/styles.css`, `src/garden.css`.
+`DESIGN.md` records the selected system. `design/research-brief.md` records sources and evidence limits. `design-qa.md` records final browser verification and visual comparison. Source: `src/App.jsx`, `src/content.js`, `src/MeasuredCopy.jsx`, `src/styles.css`.
 
 ## Asset provenance
 
 Assets were produced using the built-in ImageGen tool. Original generations are retained in the development workspace at `design/source-assets`; the repository contains the WebP versions used by the page. Visual prompts: documentary Japanese farm walk; plant-level segmentation close-up; full top-down vegetable plot with crop/weed/review highlights; and dark corn-seedling computer-vision hero. These are illustrative brand/concept assets, not benchmark inputs. Self-hosted Sora, Source Sans3 and IBM Plex Mono use their bundled SIL Open Font Licenses. Icons: Phosphor, MIT. Pretext: MIT.
 
 The map raster is generated natural overhead field artwork. Every evidence view is a pixel crop of that same raster; no separate photograph is substituted. The approved source visual is `design/selected-field-map-reference.png`.
-
-The garden landing's `garden-evidence.webp` is a separate generated vegetable-bed illustration. GP-007 and its source rectangle are hand-authored example data. Its close-up is drawn directly from the same image pixels. It is not footage, a model result, or an example of verified classification accuracy. The unused generated human hero remains a local design artifact; the shipped hero is the original botanical artwork.
 
 Dashboard source: `src/dashboard/`. Meta SAM parsing uses `@meta-sam/parser` 0.1.0 from [meta-models/meta-sam](https://github.com/meta-models/meta-sam), under its SAM License. A copy is served at `/licenses/meta-sam.txt`. The dashboard panorama is a separate generated asset; the sample video is a static H.264 encoding of that illustration. See the repository-root `design-qa.md` for dashboard verification.

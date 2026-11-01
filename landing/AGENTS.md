@@ -1,5 +1,12 @@
 # Prototype Instructions
 
+## Farmer version restored / 2026-11-01
+
+- The user explicitly asked to restore yesterday's original farmer-focused product. Release `409e71d` is the reference before the garden and plant-agent pivots. This supersedes those later product directions.
+- Restore the "See the field. Plant by plant." landing, farmer/field-walk narrative, tracking explanation, entire-field atlas and the approved map/evidence dashboard. Default `/dashboard` and `/app` open the field map; `?view=video` opens field video review and `upload=1` opens its upload dialog.
+- Preserve charcoal/sage roles, the map-to-evidence connector, honest illustrative provenance, separate human decisions, existing analysis safeguards and generic MCP perception. Keep browser history navigation and close dialogs when their workspace becomes hidden.
+- Later plant-agent designs remain in Git history as prior explorations, not the current product. Do not reintroduce Milo, plant voices, imagined soil checks or the plant journal as the landing/default workspace unless the user asks again.
+
 ## GreenPoint visual decisions
 
 - Current composition is original option2, superseding option3: geometric display and precise computer-vision photography. The user-approved charcoal/sage refinement below governs current colors; pale lime remains the brand accent. Refer to DESIGN.md.
@@ -41,43 +48,3 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Default workspace is an illustrative whole-field map with coral weed zones, amber uncertain zones, and gray hatched unobserved areas. Never equate unobserved with weed-free.
 - Source selection, evidence crop and connector must share the same image and plant ID. Connector follows pan, zoom, resize and selection; hide it when the source is outside the map.
 - Map sample decisions use separate versioned browser storage. Existing video sessions and MCP perception remain available. User footage does not become a geographic map without georeferencing. No invented GPS, metric area, measured weed coverage, navigation or hardware actions.
-
-## Approved garden landing / 2026-10-31
-
-- The user selected a mix of garden concepts 1 and 2, approved the hybrid, then explicitly asked to retain the existing `vision-field.webp` hero image and composition. This latest instruction supersedes the hybrid's older-woman hero. Preserve the original botanical hero; use the source-linked evidence section from `design/garden-concepts/04-hybrid-human-evidence.png` below it.
-- Landing audience is everyday vegetable gardeners, including older growers and family helpers, without a Japan-only or drone-only framing. “See what grows. Plant by plant.” leads to short-video upload. Do not promise physical labour reduction or imply validated consumer demand.
-- The primary landing action opens `/dashboard?view=video&upload=1`. `/dashboard?view=video` opens video review; the default `/dashboard` map remains available. The user explicitly delegated implementation, review fixes, main push and Vercel production deployment for this work.
-- Landing GP-007 is its own illustrative example over `garden-evidence.webp`. Its evidence crop must come from the same raster and rectangle shown in the source image. Model suggestion stays uncertain while human choices are confirmed crop/weed or deferred. It does not alter dashboard/MCP decisions. Its export labels illustrative provenance and normalized image coordinates.
-- Keep the shared charcoal/sage tokens, geometric Sora display, Source Sans 3 body, and purposeful finite motion with reduced-motion support. Preserve native scrolling and readable 44px-or-larger controls. Live-model validation remains pending while server credentials are unavailable.
-
-## Enriched garden narrative / 2026-10-31
-
-- User asked for more substantive landing information and delegated selection, implementation, code review, fixes, main push and Vercel deployment. Preserve the approved botanical hero and evidence interaction.
-- Below the hero, explain the ordinary gardener's problem with linked Thrive/RHS sources; include a four-stage, user-controlled video workflow, fair competitor context, error boundaries, readiness and practical FAQs. No autoplay or scroll interception.
-- Research sources inform a hypothesis; they are not endorsements, customer interviews or proof of demand. Older growers are an intended audience, not a validated demographic. Do not present the generated grower illustration as a customer.
-- Workflow illustrations must be labeled, make no API calls and keep image-relative overlays aligned with the uncropped source. Upload creates local preview; configured analysis starts only on explicit action.
-
-## Plant-agent landing pivot / 2026-10-31
-
-- User explicitly changed the product narrative to “let plants use LLMs”: every plant has an agent that observes, remembers context, asks for care and receives human feedback. User authorized redesign, agent-selected direction, code review/fixes, main push and Vercel production deployment without further preference questions. This supersedes prior garden/older-grower positioning, landing GP-007 interaction and upload-as-primary requirements. Preserve the original botanical hero raster and dashboard behavior.
-- Selected visual: `design/plant-agent/selected.webp` (The Living Network, first displayed concept, selected under delegation). Reuse charcoal/sage/lime, Sora/Source Sans3 and Phosphor. The photograph in the concept is superseded by the exact retained `vision-field.webp`; new Milo portrait is an explicitly generated illustration.
-- Milo is a fictional tomato. Its voice, request branches and memory journal are a scripted interactive concept, with no model/sensor calls. Label scenarios as visitor-selected simulation in UI/export, never real plant observations. All branches retain a human follow-up request; no watering/equipment actions.
-- Landing journal is local to this page, capped at30scenario entries with the total/retained count disclosed, reset creates a new session ID, and JSON export preserves identity/provenance/non-actuation flags. Keyboard users must be able to focus and scroll the journal.
-- Existing perception remains at `/dashboard?view=video`; agent concept is primary, perception is secondary. Real-provider validation, persistent plant profiles, LLM plant-care requests and tools are future work, not implemented agents. State current versus planned explicitly.
-- Native scroll and reduced motion remain required. Monid has no active key and Higgsfield workspace probe returns an auth hint; no paid cinematic render or full scroll-world film is shipped.
-
-## Plant story refinement / 2026-10-31
-
-- After the landing/hackathon audit, the user delegated refinement toward award-quality presentation. Keep the selected Living Network art direction and exact botanical hero. Prioritize a specific care task, one coherent Milo story, clear provenance, and fast mobile participation.
-- Mobile places the request and scenario input before a compact plant portrait. The native radio group is an imagined soil check; a submit updates the same fictional plant's scripted request and journal. Preserve HTTP-compatible session IDs, reset behavior, the 30-entry retention limit and honest exports.
-- The perception lab is explicitly separate and secondary. Do not imply that its video upload creates Milo, a persistent agent, or a validated care recommendation. Real model credentials and acceptance remain unavailable; visual refinement does not complete the AI validation gate.
-- Motion is finite and progressive, with visible content when IntersectionObserver is unavailable and full reduced-motion support. Keep native scrolling and source-linked accessible controls.
-
-## Plant workspace / 2026-10-31
-
-- User delegated a dashboard redesign matching the plant-agent story, including agent selection, code review/fixes, main push and Vercel production. Default `/dashboard` and `/app` now open the plant workspace. `?view=map` preserves the illustrative field map; `?view=video` preserves perception and `upload=1`. This supersedes earlier map-default instructions.
-- Selected source is `design/plant-workspace/selected.webp`, Living dossier (A), agent-selected from three independent concepts. Keep existing Sora/Source Sans3, shared palette and exact Milo raster. Ignore the mock’s fabricated date and recreated portrait.
-- Milo is a fictional scripted demo; soil checks and notes are imagined scenarios. New personal plants are manual, human-assigned records, not inferred identities or model care. No model/sensor/treatment is called by this workspace.
-- Profiles, resized optional photos and latest30 observations per plant live only in the current tab, capped at12plants. JSON exports carry full provenance and reduced photos; original files are not retained. Require exact revision save confirmation before clearing dirty status and warn before leaving unexported records.
-- Internal workspace switches keep all plant, video and map state mounted. Photo validation accepts JPEG/PNG/WebP≤8MB and exports a copy bounded to1200px. User photos are supplied evidence, not verified images.
-- Mobile prioritizes request/form before compact photo; persistent bottom tools, visible mode labels,44px controls and native scroll. Motion is finite and honors reduced motion. Run test:workspace plus existing regression tests/build and browser QA.
