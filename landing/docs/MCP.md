@@ -86,7 +86,7 @@ The JPEG must be orientation-normalized, no larger than approximately 750 KB, an
 - A classification failure returns `isError: true`, `status: "partial"` and the detections already obtained. Unclassified plants retain `original_label: null`; do not treat partial output as a completed inventory. After a connection loss, retry is a new billable request, not an exactly-once operation.
 - The service persists no images, results or device sessions. Authorized calls transmit the frame and plant crops to Meta. Your agent must store results if needed. Browser-local review decisions are not synchronized to MCP.
 
-Live analysis has not been exercised with a real Meta account or physical device because provider credentials are absent. Automated tests cover the full MCP transport with the official client and a controlled fake model upstream, image decoding/cropping, authentication, partial results and cancellation. This does not establish field performance.
+The same server-side analysis implementation passed a first real Meta single-frame check on public PhenoBench data on 2026-11-03; see the [validation record](meta-live-validation-2026-11-03.md). No physical device has been tested. Automated tests cover the full MCP transport with the official client and a controlled fake model upstream, image decoding/cropping, authentication, partial results and cancellation. These checks do not establish field performance.
 
 ## Deployment and checks
 

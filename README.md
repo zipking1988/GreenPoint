@@ -20,10 +20,10 @@ GreenPoint is an early research and hackathon prototype.
 | Illustrative field atlas and sample CSV | Implemented |
 | Field-analysis dashboard | Implemented, with local video previews, evidence review and CSV export |
 | Video upload | Local preview up to two minutes; analysis accepts clips up to six seconds and 12 sampled frames |
-| Live model inference | Server integration implemented; deployment credentials not configured |
-| Plant tracking and classification pipeline | Conservative candidate linking and Meta API transport implemented; real-provider and field validation pending |
-| Generic robot/agent MCP | Stateless Streamable HTTP, public discovery/sample tools and token-protected single-frame perception implemented; hardware and real-provider validation pending |
-| Public-data evaluation and real-field trials | Planned |
+| Live model inference | Real SAM 3.1 and Muse Spark single-frame smoke check passed on 2026-11-03; private server credentials required |
+| Plant tracking and classification pipeline | Conservative candidate linking implemented; field accuracy and movement tracking remain unvalidated |
+| Generic robot/agent MCP | Stateless Streamable HTTP, public discovery/sample tools and token-protected single-frame perception implemented; physical hardware validation pending |
+| Public-data evaluation and real-field trials | First public-data integration check complete; held-out evaluation and field trials pending |
 
 The source is available in [`landing/`](landing/). `/` introduces the product and `/dashboard` opens the field workspace. The deployed workspace currently uses clearly marked illustrative sample records; uploaded videos can be previewed locally. Live analysis requires server credentials.
 
@@ -51,7 +51,7 @@ Phone video
     → Reviewable plant candidate inventory
 ```
 
-The dashboard integrates SAM 3.1 segmentation and Muse Spark visual classification through a server-only Meta API adapter. Its conservative geometric tracker proposes identities only between closely spaced, unambiguous observations. Sparse views remain separate candidates. Transport and failure paths are covered by tests; real-provider execution and field performance are not yet validated.
+The dashboard integrates SAM 3.1 segmentation and Muse Spark visual classification through a server-only Meta API adapter. Its conservative geometric tracker proposes identities only between closely spaced, unambiguous observations. Sparse views remain separate candidates. A real Meta single-frame check on 2026-11-03 returned 12 candidates: 1 crop and 11 uncertain, in about 22 seconds. This establishes integration, not reliable weed identification or field performance. See the [validation record](landing/docs/meta-live-validation-2026-11-03.md).
 
 The current output is a frame-based, reviewable information layer. A geographic field map is a future goal. Spraying hardware integration and treatment execution are outside the current prototype.
 

@@ -24,7 +24,9 @@ The API uses Meta's fixed `sam-3.1` Responses endpoint and `muse-spark-1.3` Chat
 
 Analysis results stay in the current tab. After exporting CSV, check that the file was saved and confirm it in the workspace; until then the browser warns before leaving. Changes made after an export need a new export.
 
-Live execution has not been validated against a paid Meta account in this development session because no provider credential is configured. Tests verify the transport, authentication, official SAM grammar, output validation and failure paths with mocked upstream responses. No mock response is used by the production inference endpoint.
+Real-provider execution passed a first public-image integration check on 2026-11-03: SAM 3.1 and Muse Spark returned 12 candidates (1 crop, 11 uncertain) in about 22 seconds. This is not field accuracy or a successful weed-recognition benchmark. A real maize-canopy video also exercised upload and two sampled frames but returned no candidates. See the [validation record](docs/meta-live-validation-2026-11-03.md). Automated tests cover transport, authentication, SAM grammar, validation and failure paths using controlled upstream responses. The production inference endpoint uses no mock model output.
+
+For a reproducible first real-image check, `npm run meta:probe -- /absolute/path/to/field.png --crop "Sugar beet"` prepares local evidence without any API call. Live mode requires an explicit `--live` and a configured provider key. See the [Meta validation guide](docs/META-VALIDATION.md) for limits, saved evidence and the remaining video/deployment checks.
 
 ## Field-map workspace
 

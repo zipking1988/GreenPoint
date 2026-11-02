@@ -14,7 +14,7 @@
 - Current visual reference is `design/selected-dark-reference.png`. The earlier cream/Japanese editorial mock remains historical only.
 - User asked for richer content and award-quality polish to impress judges. Prioritize a clear narrative, a finite interactive identity explanation, the complete map, sourced context, honest readiness, and responsive accessibility.
 - Field-map markers must explain their category and plant ID without hover; keep labels readable and separated on mobile. This addresses the user’s GP-021 annotation.
-- All current field artwork is AI-generated illustration. Live model processing, measured accuracy and pesticide savings are not implemented. Never present illustrative records or public policy targets as GreenPoint results.
+- All current built-in field artwork is AI-generated illustration. Real Meta processing was first exercised on separate public test data on 2026-11-03; it is not a measured accuracy or pesticide-savings result. Never present illustrative records or public policy targets as GreenPoint results.
 
 Run the local server yourself and open the preview in the browser available to this environment. Do not give the user server-start instructions when you can run it.
 
@@ -48,3 +48,10 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Default workspace is an illustrative whole-field map with coral weed zones, amber uncertain zones, and gray hatched unobserved areas. Never equate unobserved with weed-free.
 - Source selection, evidence crop and connector must share the same image and plant ID. Connector follows pan, zoom, resize and selection; hide it when the source is outside the map.
 - Map sample decisions use separate versioned browser storage. Existing video sessions and MCP perception remain available. User footage does not become a geographic map without georeferencing. No invented GPS, metric area, measured weed coverage, navigation or hardware actions.
+
+## First real Meta integration check / 2026-11-03
+
+- A real PhenoBench sugar-beet RGB image ran through SAM 3.1 and Muse Spark 1.3: 12 candidates, 1 effective crop label and 11 uncertain, about 22 seconds, 3 provider requests. Preserve uncertainty; this is an integration check, not evidence of reliable weed recognition or held-out accuracy.
+- The real Pexels maize-canopy clip (Tom Fisk, video 13525083, 1-second excerpt) exercised browser upload and 2 sampled frames; it returned 0 candidates. Do not use that result as a weed-free claim or tracking validation.
+- Any clip made from the PhenoBench still must be identified as a still-photo pipeline check. It is not genuine camera motion or evidence of tracking performance.
+- `npm run meta:probe` defaults to local preflight without network access. Only explicit `--live` sends public RGB evidence to Meta. Ground-truth annotations stay separate. Run `npm run test:meta-probe` when changing the runner, and keep keys/tokens out of Git, screenshots and generated bundles.

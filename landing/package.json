@@ -10,6 +10,8 @@
     "test:sites": "node --test tests/sites-worker.test.mjs",
     "test:analysis": "node --test tests/analysis.test.mjs",
     "test:mcp": "node --test tests/mcp.test.mjs",
+    "test:meta-probe": "node --test tests/meta-probe.test.mjs",
+    "meta:probe": "node scripts/meta-probe.mjs",
     "robot:sample": "node scripts/robot-client.mjs sample",
     "robot:analyze": "node scripts/robot-client.mjs analyze",
     "test:map": "node --test tests/map.test.mjs"
