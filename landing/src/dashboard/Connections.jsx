@@ -58,7 +58,8 @@ export function Connections({ provider, accessCode, setAccessCode, onCheck, onDo
         <li><code>greenpoint_sample_inventory</code><span>Try 12 illustrative plant records.</span><small>Public</small></li>
         <li><code>greenpoint_analyze_frame</code><span>Submit one JPEG for candidate detection and review.</span><small>Token required</small></li>
       </ul>
-      <p className="gp-mcp-boundary">Live analysis requires a separate owner-provisioned robot token{test.phase === 'success' ? test.live ? ' · server configured.' : ' · not connected yet.' : '.'} Results use image coordinates and require human review. Hardware adapters handle flight, navigation and actions.</p>
+      <p className="gp-mcp-boundary">Live analysis requires a separate owner-provisioned robot token{test.phase === 'success' ? test.live ? ' · server configured.' : ' · not connected yet.' : '.'} Results use image coordinates and require human review. Flight, navigation and physical actions remain outside this prototype.</p>
+      <a className="gp-mcp-guide" href="/assets/verified-run/agent-trace.json" target="_blank" rel="noreferrer">Recorded Muse → MCP evidence loop<ArrowUpRight size={16} /></a>
       <a className="gp-mcp-guide" href="https://github.com/zipking1988/GreenPoint/blob/main/landing/docs/MCP.md" target="_blank" rel="noreferrer">SDK example & integration guide<ArrowUpRight size={16} /></a>
     </section>}
     <div className="gp-dialog-actions">{tab === 'models' ? <button className="gp-text-button" onClick={onCheck}><ArrowCounterClockwise size={16} />Check connection</button> : <span className="gp-mcp-footer-note">Snapshots in. Evidence out.</span>}<button className="gp-button gp-button-primary" onClick={onDone}>Done<Check size={17} /></button></div>

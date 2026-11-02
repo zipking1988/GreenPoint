@@ -1,0 +1,106 @@
+{
+  "date": "2026-11-03",
+  "scope": "25 frozen PhenoBench images: 5 development, 20 official validation. Public dataset only; no farm-level generalization claim.",
+  "selected": "baseline",
+  "development": {
+    "baseline": {
+      "images": 5,
+      "ground_truth_plants": 56,
+      "ground_truth_weed": 16,
+      "ground_truth_crop": 40,
+      "detected_candidates": 37,
+      "weed_predictions": 0,
+      "weed_true_positives": 0,
+      "weed_precision": 0,
+      "weed_recall": 0,
+      "weed_f1": 0,
+      "crop_as_weed_rate": 0,
+      "uncertain_rate": 0.7837837837837838,
+      "detection_recall_iou50": 0.625,
+      "partial_images": 0,
+      "target_gates_passed": false
+    },
+    "context": {
+      "images": 5,
+      "ground_truth_plants": 56,
+      "ground_truth_weed": 16,
+      "ground_truth_crop": 40,
+      "detected_candidates": 37,
+      "weed_predictions": 0,
+      "weed_true_positives": 0,
+      "weed_precision": 0,
+      "weed_recall": 0,
+      "weed_f1": 0,
+      "crop_as_weed_rate": 0,
+      "uncertain_rate": 0.7027027027027027,
+      "detection_recall_iou50": 0.625,
+      "partial_images": 0,
+      "target_gates_passed": false
+    },
+    "reference": {
+      "images": 5,
+      "ground_truth_plants": 56,
+      "ground_truth_weed": 16,
+      "ground_truth_crop": 40,
+      "detected_candidates": 37,
+      "weed_predictions": 6,
+      "weed_true_positives": 2,
+      "weed_precision": 0.3333333333333333,
+      "weed_recall": 0.125,
+      "weed_f1": 0.18181818181818182,
+      "crop_as_weed_rate": 0.1,
+      "uncertain_rate": 0.5945945945945946,
+      "detection_recall_iou50": 0.625,
+      "partial_images": 1,
+      "target_gates_passed": false
+    }
+  },
+  "evaluation": {
+    "baseline": {
+      "images": 20,
+      "ground_truth_plants": 256,
+      "ground_truth_weed": 88,
+      "ground_truth_crop": 168,
+      "detected_candidates": 158,
+      "weed_predictions": 3,
+      "weed_true_positives": 3,
+      "weed_precision": 1,
+      "weed_recall": 0.03409090909090909,
+      "weed_f1": 0.06593406593406592,
+      "crop_as_weed_rate": 0,
+      "uncertain_rate": 0.5886075949367089,
+      "detection_recall_iou50": 0.578125,
+      "partial_images": 0,
+      "target_gates_passed": false
+    }
+  },
+  "targets": {
+    "weed_precision": 0.9,
+    "weed_recall": 0.6,
+    "crop_as_weed_rate_max": 0.05
+  },
+  "status": "Assisted-review prototype. Weed recognition target not met.",
+  "nativeVideo": {
+    "clips": 2,
+    "secondsPerClip": 4,
+    "candidates": 0,
+    "trackedIdentitiesValidated": false,
+    "source": "Bonn Sugar Beets 2016 / BoniRob RGB"
+  },
+  "costs": {
+    "currency": "USD",
+    "heldOrEstimated": 1.6149014999999989,
+    "reconciledBill": false,
+    "entries": 109,
+    "experimentLimit": 10
+  },
+  "limitations": [
+    "Only three positive weed predictions in evaluation; precision is not a robust generalization estimate.",
+    "Missed and uncertain plants stay in the recall denominator.",
+    "Axis-aligned boxes matched greedily one-to-one at IoU 0.5; partial border instances included.",
+    "UAV public images are not evidence of Japanese phone-camera or real-farmer performance.",
+    "No crop reference is enabled by default; development reference comparison increased crop-as-weed errors.",
+    "Native video completed with zero candidates; no successful movement identity validation is claimed.",
+    "No GPS, metric area, treatment, hardware actuation, time savings or pesticide reduction measured."
+  ]
+}

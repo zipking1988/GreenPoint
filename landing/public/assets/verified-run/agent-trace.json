@@ -1,0 +1,235 @@
+{
+  "model": "muse-spark-1.3",
+  "frame_id": "scout-1793638343217",
+  "decision": "human_review",
+  "reasoning": "Completed frame with 8 candidates including 5 uncertain low-confidence detections; confidence uncalibrated and human review required.",
+  "evidence_ids": [
+    "GP-001",
+    "GP-002",
+    "GP-003",
+    "GP-004",
+    "GP-005",
+    "GP-006",
+    "GP-007",
+    "GP-008"
+  ],
+  "requires_human_review": true,
+  "treatment_authorized": false,
+  "identity_scope": "this_response_only",
+  "trace": [
+    {
+      "type": "tool",
+      "name": "greenpoint_capabilities",
+      "arguments": {},
+      "result": {
+        "name": "GreenPoint",
+        "version": "1.0.0",
+        "transport": "streamable-http",
+        "stateless": true,
+        "tools": [
+          "greenpoint_capabilities",
+          "greenpoint_sample_inventory",
+          "greenpoint_analyze_frame"
+        ],
+        "public_tools": [
+          "greenpoint_capabilities",
+          "greenpoint_sample_inventory"
+        ],
+        "live_analysis_configured": true,
+        "analysis_authentication": "Authorization: Bearer <MCP_ACCESS_TOKEN>",
+        "authentication_mode": "owner_managed_token; no OAuth discovery",
+        "limits": {
+          "jpeg_bytes": 750000,
+          "frame_long_edge": 1280,
+          "plants_per_frame": 16,
+          "request_deadline_seconds": 110
+        },
+        "coordinate_system": "normalized_image_xywh",
+        "identity_scope": "one_frame_response",
+        "confidence_calibrated": false,
+        "requires_human_review": true,
+        "treatment_authorized": false,
+        "data_retention": "No images, results, or device sessions are persisted by this service.",
+        "model_processing": "Authorized live calls send the frame and cropped plant images to Meta.",
+        "unsupported": [
+          "flight_control",
+          "navigation",
+          "real_time_obstacle_avoidance",
+          "actuation",
+          "GPS_projection",
+          "cross_frame_tracking",
+          "browser_session_sync"
+        ]
+      }
+    },
+    {
+      "type": "tool",
+      "name": "greenpoint_analyze_frame",
+      "arguments": {
+        "frame_id": "scout-1793638343217"
+      },
+      "result": {
+        "schema_version": "1.0",
+        "mode": "live",
+        "status": "completed",
+        "frame_id": "scout-1793638343217",
+        "device_id": "muse-scouter-demo",
+        "captured_at": null,
+        "image": {
+          "width": 1024,
+          "height": 1024,
+          "coordinate_system": "normalized_image_xywh",
+          "origin": "top_left"
+        },
+        "coverage": "single_frame",
+        "identity_scope": "this_response_only",
+        "limited": false,
+        "candidate_count": 8,
+        "confidence_calibrated": false,
+        "requires_human_review": true,
+        "treatment_authorized": false,
+        "models": [
+          "sam-3.1",
+          "muse-spark-1.3"
+        ],
+        "plants": [
+          {
+            "id": "GP-001",
+            "box": [
+              0.72265625,
+              0.927734375,
+              0.02734375,
+              0.0244140625
+            ],
+            "detection_confidence": 0.719298243522644,
+            "label": "uncertain",
+            "original_label": "uncertain",
+            "confidence": 0.3,
+            "reviewed": false,
+            "requires_human_review": true,
+            "reasoning": "Tiny blurred thumbnail shows no clear leaf shape for identification."
+          },
+          {
+            "id": "GP-002",
+            "box": [
+              0.5908203125,
+              0.951171875,
+              0.0185546875,
+              0.03515625
+            ],
+            "detection_confidence": 0.6097560524940491,
+            "label": "uncertain",
+            "original_label": "uncertain",
+            "confidence": 0.32,
+            "reviewed": false,
+            "requires_human_review": true,
+            "reasoning": "Blurry pale seedling lacks distinct leaf margins and detail."
+          },
+          {
+            "id": "GP-003",
+            "box": [
+              0,
+              0.2138671875,
+              0.0908203125,
+              0.08984375
+            ],
+            "detection_confidence": 0.7299578189849854,
+            "label": "uncertain",
+            "original_label": "uncertain",
+            "confidence": 0.45,
+            "reviewed": false,
+            "requires_human_review": true,
+            "reasoning": "Very small seedling with rounded leaves is too indistinct to confirm as beet."
+          },
+          {
+            "id": "GP-004",
+            "box": [
+              0,
+              0.61328125,
+              0.091796875,
+              0.1279296875
+            ],
+            "detection_confidence": 0.8904109597206116,
+            "label": "uncertain",
+            "original_label": "uncertain",
+            "confidence": 0.4,
+            "reviewed": false,
+            "requires_human_review": true,
+            "reasoning": "Small crinkled leaves are poorly resolved and ambiguous for beet traits."
+          },
+          {
+            "id": "GP-005",
+            "box": [
+              0.50390625,
+              0.685546875,
+              0.162109375,
+              0.1806640625
+            ],
+            "detection_confidence": 0.941605806350708,
+            "label": "crop",
+            "original_label": "crop",
+            "confidence": 0.88,
+            "reviewed": false,
+            "requires_human_review": true,
+            "reasoning": "Rosette of broad glossy ovate leaves with pale midveins matches sugar beet."
+          },
+          {
+            "id": "GP-006",
+            "box": [
+              0,
+              0,
+              0.0361328125,
+              0.125
+            ],
+            "detection_confidence": 0.8012422323226929,
+            "label": "uncertain",
+            "original_label": "uncertain",
+            "confidence": 0.3,
+            "reviewed": false,
+            "requires_human_review": true,
+            "reasoning": "Extremely small dark seedling is occluded and indistinct."
+          },
+          {
+            "id": "GP-007",
+            "box": [
+              0,
+              0.3828125,
+              0.0869140625,
+              0.1689453125
+            ],
+            "detection_confidence": 0.8987342119216919,
+            "label": "uncertain",
+            "original_label": "crop",
+            "confidence": 0.72,
+            "reviewed": false,
+            "requires_human_review": true,
+            "reasoning": "Broad glossy green true leaves with entire margins are consistent with sugar beet."
+          },
+          {
+            "id": "GP-008",
+            "box": [
+              0,
+              0.8505859375,
+              0.1298828125,
+              0.1494140625
+            ],
+            "detection_confidence": 0.9101123809814453,
+            "label": "crop",
+            "original_label": "crop",
+            "confidence": 0.82,
+            "reviewed": false,
+            "requires_human_review": true,
+            "reasoning": "Cluster of dark green broad ovate leaves forming a rosette matches sugar beet."
+          }
+        ]
+      }
+    }
+  ],
+  "recorded_at": "2026-11-02T16:52:50.672Z",
+  "endpoint": "https://greenpoint-vert.vercel.app/api/mcp",
+  "source_image": {
+    "width": 1024,
+    "height": 1024
+  },
+  "integration_scope": "Recorded real Muse tool-calling demo against production MCP at commit 868c1ab; no physical device connected."
+}

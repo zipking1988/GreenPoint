@@ -92,7 +92,10 @@ export function FieldMap({
   onUnobserved,
   sourceRef,
   onGeometry,
+  sourceImage,
 }) {
+  const real = Boolean(sourceImage);
+  const zones = real ? [] : ZONES;
   const stage = useRef(null);
   const pointers = useRef(new Map());
   const gesture = useRef(null);
@@ -114,7 +117,7 @@ export function FieldMap({
   }, []);
   useLayoutEffect(() => {
     onGeometry();
-  }, [transform.x, transform.y, transform.scale, selected?.id, layer, onGeometry]);
+  }, [transform.x, transform.y, transform.scale, selected?.id, selected?.box.join(','), sourceImage, layer, onGeometry]);
   useEffect(() => {
     const element = stage.current;
     const wheel = (event) => {
@@ -156,7 +159,7 @@ export function FieldMap({
         ),
       );
     }
-  }, [selected?.id, image.width, image.height, size.width, size.height]);
+  }, [selected?.id, selected?.box.join(','), image.width, image.height, size.width, size.height]);
   function zoom(factor) {
     setView((current) =>
       zoomView(
@@ -249,11 +252,11 @@ export function FieldMap({
       (event.clientX - rect.left - current.x) / (image.width * current.scale),
       (event.clientY - rect.top - current.y) / (image.height * current.scale),
     ];
-    if (pointInPolygon(point, UNOBSERVED)) {
+    if (!real && pointInPolygon(point, UNOBSERVED)) {
       onUnobserved();
       return;
     }
-    const zone = ZONES.find((zone) => pointInPolygon(point, zone.polygon));
+    const zone = zones.find((zone) => pointInPolygon(point, zone.polygon));
     if (zone) onZone(zone.id);
   }
   function key(event) {
@@ -304,7 +307,7 @@ export function FieldMap({
       ref={stage}
       tabIndex={0}
       role="region"
-      aria-label="Illustrative field map. Drag to pan, plus or minus to zoom, Home to fit."
+      aria-label={`${real ? 'Source frame evidence map' : 'Illustrative field map'}. Drag to pan, plus or minus to zoom, Home to fit.`}
       onPointerDown={start}
       onPointerMove={move}
       onPointerUp={end}
@@ -320,8 +323,8 @@ export function FieldMap({
         }}
       >
         <img
-          src={SURVEY_IMAGE}
-          alt="Illustrative overhead vegetable plot with its complete field boundary and surrounding paths"
+          src={sourceImage ?? SURVEY_IMAGE}
+          alt={real ? 'Original source frame with observed plant candidates in image coordinates' : 'Illustrative overhead vegetable plot with its complete field boundary and surrounding paths'}
           draggable="false"
           onLoad={(event) =>
             setImage({
@@ -330,19 +333,19 @@ export function FieldMap({
             })
           }
         />
-        <Regions
+        {!real && <Regions
           image={image}
           scale={transform.scale}
           layer={layer}
           selectedZone={selected?.zone}
-        />
+        />}
       </div>
       <div className="sf-layers" role="group" aria-label="Map layer">
-        {[
+        {(real ? [['evidence', 'Plant evidence']] : [
           ['weed', 'Weed cover'],
           ['evidence', 'Evidence'],
           ['coverage', 'Coverage'],
-        ].map(([value, text]) => (
+        ]).map(([value, text]) => (
           <button
             type="button"
             key={value}
@@ -355,7 +358,7 @@ export function FieldMap({
         ))}
       </div>
       {layer !== 'coverage' &&
-        ZONES.map((zone) => (
+        zones.map((zone) => (
           <button
             type="button"
             key={zone.id}
@@ -372,7 +375,7 @@ export function FieldMap({
             </span>
           </button>
         ))}
-      {layer === 'evidence' &&
+      {(real || layer === 'evidence') &&
         plants.map((plant) => (
           <button
             type="button"
@@ -380,12 +383,16 @@ export function FieldMap({
             className={`sf-plant-marker sf-mark-${plant.label}`}
             style={point([plant.box[0] + plant.box[2] / 2, plant.box[1] + plant.box[3] / 2])}
             onClick={() => onSelect(plant.id)}
-            aria-label={`Inspect ${plant.id}`}
+            aria-label={`Inspect ${plant.id}: ${plant.label === 'uncertain' ? 'needs review' : plant.label}`}
             aria-pressed={selected?.id === plant.id}
           >
-            {plant.id}
+            {plant.id}{real && <small> · {plant.label === 'uncertain' ? '?' : plant.label}</small>}
           </button>
         ))}
+      {real && plants.map(plant => {
+        const box = projectBox(plant.box, transform, image);
+        return <div key={`box-${plant.id}`} className={`sf-candidate-outline sf-kind-${plant.label}`} style={{ left: box.x, top: box.y, width: box.width, height: box.height }} aria-hidden="true" />;
+      })}
       {sourceBox && sourceVisible && (
         <div
           className="sf-source-selection"
@@ -401,17 +408,17 @@ export function FieldMap({
           <span>{selected.id}</span>
         </div>
       )}
-      <button
+      {!real && <button
         type="button"
         className="sf-unobserved-label"
         style={point([0.84, 0.73])}
         onClick={onUnobserved}
       >
         Not observed
-      </button>
+      </button>}
       <div className="sf-map-bottom">
         <div className="sf-legend" aria-label="Map legend">
-          {layer === 'weed' && (
+          {!real && layer === 'weed' && (
             <div className="sf-legend-density">
               <b>Weed presence</b>
               <span>
@@ -426,14 +433,15 @@ export function FieldMap({
               </small>
             </div>
           )}
-          <div className="sf-legend-item">
+          {real && <div className="sf-legend-item">Source pixels · No GPS<br />Only candidates in this frame</div>}
+          {!real && <div className="sf-legend-item">
             <span className="sf-legend-review" />
             Needs review
-          </div>
-          <div className="sf-legend-item">
+          </div>}
+          {!real && <div className="sf-legend-item">
             <span className="sf-legend-unknown" />
             Not observed
-          </div>
+          </div>}
         </div>
         <div className="sf-map-controls">
           <button type="button" onClick={fit} aria-label="Fit entire field">

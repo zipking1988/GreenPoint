@@ -1,6 +1,21 @@
 const center = box => [box[0] + box[2] / 2, box[1] + box[3] / 2];
 const distance = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]);
 
+// Native IDs are scoped to one run, never carried to a second upload.
+export function nativeTracks(frames) {
+  const tracks = [], identities = new Map();
+  frames.forEach((frame, index) => frame.detections.forEach(detection => {
+    let track = identities.get(detection.providerObjectId);
+    if (!track) {
+      track = { id: `GP-${String(tracks.length + 1).padStart(3, '0')}`, providerObjectId: detection.providerObjectId, label: 'uncertain', originalLabel: null, confidence: null, box: detection.box, mask: detection.mask, observations: [], bestFrame: index, reviewed: false, reviewStatus: 'pending', source: 'sam-3.1', reasoning: 'Detected by SAM native video. Classification is pending review.' };
+      identities.set(detection.providerObjectId, track); tracks.push(track);
+    }
+    track.observations.push({ frame: index, time: frame.time, sourceFrameIndex: frame.frameIndex, box: detection.box, mask: detection.mask });
+    if (detection.box[2] * detection.box[3] > track.box[2] * track.box[3]) { track.box = detection.box; track.mask = detection.mask; track.bestFrame = index; }
+  }));
+  return tracks;
+}
+
 // A conservative geometric baseline, not validated tracking ground truth.
 // Never link across sparse samples or a likely cut. Ambiguous assignments
 // become new candidates rather than silently merging separate plants.

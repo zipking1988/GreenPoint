@@ -323,10 +323,10 @@ test('completed and interrupted runs with no candidates export a traceable summa
     assert.equal(canExportSession(session), true);
     const [header, row, ...extra] = csvText(session).replace(/^\uFEFF/, '').split('\r\n');
     assert.equal(extra.length, 0);
-    assert.match(header, /"analysis_log","record_type"$/);
+    assert.match(header, /"analysis_log","record_type","identity_method","provider_object_id","crop_reference","recorded_run","source_provenance"$/);
     assert.match(row, new RegExp(`^${'"",'.repeat(13)}"session-empty","run-empty","${mode}","","","4","${session.completedFrames}",`));
     assert.match(row, /""stage"":""segment""/);
-    assert.match(row, /,"run_summary"$/);
+    assert.match(row, /,"run_summary","","","","false",""$/);
     if (status === 'failed') assert.match(row, /provider_rate_limit/);
   }
 });

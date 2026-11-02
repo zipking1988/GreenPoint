@@ -1,5 +1,18 @@
 # Prototype Instructions
 
+## Evidence sprint approved / 2026-11-03
+
+- User approved the “Every recognition has evidence” sprint and delegated implementation, review fixes, GitHub main push, Vercel production deployment and verification. Preserve the farmer narrative and charcoal/sage design.
+- Default workspace may open a clearly labeled **Recorded real Meta run**, with its original source frames, timestamp, models, clip hash and attribution. No fresh inference occurs on page load. The illustrative whole-field layout remains explicitly selectable.
+- Real map and video review share sessions, plant selection and human decisions. Render only observations from the displayed source frame; never project a best-frame box or mask onto another frame. These are source-image coordinates, without GPS, metric area, weed-density estimates, treatment or navigation.
+- Native SAM video is an explicit opt-in. Its complete selected clip is sent to Meta only after disclosure and operator initiation. Enforce server bounds: H.264 MP4, 2 MB, 6 seconds, 1280 px per axis, 30 fps and one orientation-normalized video track. No silent fallback to frame sampling. The default sampled-frame mode keeps the original video local.
+- Optional crop references must be operator-confirmed and remain separate from model output and human review labels. Development found the reference strategy increased crop-as-weed errors, so baseline remains default. Mark reference comparisons experimental and do not claim improvement.
+- Benchmark selection is frozen before inference: 5 development / 20 evaluation PhenoBench images, seed 20261103, previous smoke image excluded. Ground truth stays out of model input; only the development reference may inform an experimental comparison. Include uncertain labels, missed plants and failed requests. Do not tune using evaluation labels.
+- Experiment budget is $10 total; stop new experiments at $8 and reserve $2 for regression. Use the shared sequential budget ledger; unknown billing retains its reservation. Report estimated usage as an estimate, never a reconciled bill.
+- Bonn footage is real BoniRob camera footage, not Japanese phone or drone footage. Its per-frame semantic annotation keys are not persistent tracking ground truth. Native identities are scoped to one clip; hardware and tracking accuracy remain unvalidated.
+- Muse scouter must actually request MCP evidence through bounded function calls. Its only next steps are human_review, request_closer_view or no_candidates. Never claim actual drone/robot actuation or farmer feedback that did not occur.
+- Release checks include test:evidence, existing analysis/MCP/map/probe/Sites checks, build, desktop/mobile browser review, real-provider flow and production authentication. Keep secrets out of Git and public artifacts.
+
 ## Farmer version restored / 2026-11-01
 
 - The user explicitly asked to restore yesterday's original farmer-focused product. Release `409e71d` is the reference before the garden and plant-agent pivots. This supersedes those later product directions.

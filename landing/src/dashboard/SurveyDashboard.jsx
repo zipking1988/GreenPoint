@@ -16,7 +16,10 @@ import { ArrowCounterClockwise } from '@phosphor-icons/react/dist/csr/ArrowCount
 import { Modal } from './Modal.jsx';
 import { Connections } from './Connections.jsx';
 import { FieldMap } from './FieldMap.jsx';
-import { LABELS, csvText, downloadFile } from './data.js';
+import { LABELS, csvText, downloadFile, reviewDecision, reviewStatus } from './data.js';
+import { useSessionStore } from './sessions.js';
+import { observedPlants } from './evidence.js';
+import { ValidationNote } from './ValidationNote.jsx';
 import { checkModelConfiguration, initialModelConnection, modelConnectionReducer } from './model-connection.js';
 import {
   REVIEW_STORAGE,
@@ -30,9 +33,9 @@ import './dashboard.css';
 import './survey-map.css';
 
 const VideoDashboard = lazy(() => import('./Dashboard.jsx'));
-const IMAGE_RATIO = 1355 / 1161;
-
-function SourceCrop({ plant, photoRef }) {
+function SourceCrop({ plant, photoRef, session, frame }) {
+  const image = session?.frames[frame]?.image ?? SURVEY_IMAGE;
+  const imageRatio = session ? session.width / session.height : 1355 / 1161;
   const [aspect, setAspect] = useState(1.35);
   useLayoutEffect(() => {
     const observer = new ResizeObserver(([entry]) => {
@@ -43,8 +46,8 @@ function SourceCrop({ plant, photoRef }) {
     return () => observer.disconnect();
   }, [photoRef]);
   const [x, y, w, h] = plant.box;
-  const cw = 0.18,
-    ch = (cw * IMAGE_RATIO) / aspect;
+  const cw = Math.min(1, aspect / imageRatio, Math.max(0.18, w * 1.35, h * 1.35 * aspect / imageRatio)),
+    ch = (cw * imageRatio) / aspect;
   const left = Math.max(0, Math.min(1 - cw, x + w / 2 - cw / 2)),
     top = Math.max(0, Math.min(1 - ch, y + h / 2 - ch / 2));
   return (
@@ -56,10 +59,11 @@ function SourceCrop({ plant, photoRef }) {
         data-source-box={plant.box.join(',')}
       >
         <img
-          src={SURVEY_IMAGE}
-          alt={`${plant.id}, cropped directly from the highlighted location in the illustrative field map`}
+          src={image}
+          alt={`${plant.id}, cropped directly from the highlighted location in the ${session ? 'source frame' : 'illustrative field map'}`}
           style={{
             width: `${100 / cw}%`,
+            height: `${100 / ch}%`,
             left: `${(-left / cw) * 100}%`,
             top: `${(-top / ch) * 100}%`,
           }}
@@ -78,12 +82,12 @@ function SourceCrop({ plant, photoRef }) {
           </span>
         </div>
       </div>
-      <figcaption>Illustrative evidence · Same source image</figcaption>
+      <figcaption>{session ? `Source frame ${frame + 1} · ${session.frames[frame].time.toFixed(2)}s` : 'Illustrative evidence'} · Same source image</figcaption>
     </figure>
   );
 }
 
-function EvidencePanel({ plant, onClose, onSave, onNext, photoRef, panelRef, focusHeading }) {
+function EvidencePanel({ plant, onClose, onSave, onNext, photoRef, panelRef, focusHeading, session, frame }) {
   const [draft, setDraft] = useState(plant.label);
   const heading = useRef(null);
   useEffect(() => {
@@ -93,16 +97,16 @@ function EvidencePanel({ plant, onClose, onSave, onNext, photoRef, panelRef, foc
   return (
     <aside className="sf-evidence" aria-label="Plant evidence and review" ref={panelRef}>
       <div className="sf-evidence-heading">
-        <span>{plant.zone} / SELECTED ZONE</span>
+        <span>{session ? 'SOURCE / PLANT EVIDENCE' : `${plant.zone} / SELECTED ZONE`}</span>
         <button type="button" aria-label="Close plant evidence" onClick={onClose}>
           <X size={20} />
         </button>
       </div>
-      <h2 className={`sf-zone-title sf-kind-${zone.kind}`}>
+      <h2 className={`sf-zone-title sf-kind-${zone?.kind ?? plant.label}`}>
         <span />
-        {zone.text}
+        {zone?.text ?? 'Every judgment has a frame.'}
       </h2>
-      <SourceCrop plant={plant} photoRef={photoRef} />
+      <SourceCrop plant={plant} photoRef={photoRef} session={session} frame={frame} />
       <div className="sf-specimen-heading">
         <h3 ref={heading} tabIndex={-1}>
           {plant.id}
@@ -114,6 +118,7 @@ function EvidencePanel({ plant, onClose, onSave, onNext, photoRef, panelRef, foc
         </span>
       </div>
       <p className="sf-reasoning">{plant.reasoning}</p>
+      {session && <details className="sf-model-evidence"><summary>Model: {plant.originalLabel ?? 'Not classified'} · Human {reviewStatus(plant)}</summary><span>{plant.confidence == null ? 'No confidence returned' : `${Math.round(plant.confidence * 100)}% model confidence · Uncalibrated`}</span><span>{session.cropReference ? `Crop reference: ${session.cropReference.plantId} · ${session.cropReference.confirmedBy}` : 'No crop reference supplied'}</span></details>}
       <form
         className="sf-decision-form"
         onSubmit={(event) => {
@@ -151,7 +156,7 @@ function EvidencePanel({ plant, onClose, onSave, onNext, photoRef, panelRef, foc
         </button>
       </form>
       <p className="sf-review-note">
-        {plant.reviewed
+        {session ? 'Decisions remain in this tab until exported · No hardware action' : plant.reviewed
           ? 'Human reviewed · Saved in this browser'
           : 'Example decisions / No hardware action'}
       </p>
@@ -253,25 +258,33 @@ function EvidenceConnector({ rootRef, sourceRef, photoRef, revision, selected })
   return <canvas className="sf-evidence-connector" ref={canvas} aria-hidden="true" />;
 }
 
-function FieldDashboard({ active, onVideo, provider, accessCode, setAccessCode, checkConnection }) {
-  const [plants, setPlants] = useState(() => {
+function FieldDashboard({ active, onVideo, provider, accessCode, setAccessCode, checkConnection, sessionStore }) {
+  const [examplePlants, setExamplePlants] = useState(() => {
     try {
       return restoreSurvey(localStorage);
     } catch {
       return surveyPlants();
     }
   });
-  const [selectedId, setSelectedId] = useState('GP-007');
+  const [exampleSelectedId, setExampleSelectedId] = useState('GP-007');
+  const currentSession = sessionStore.sessions.find(s => s.id === sessionStore.activeId);
+  const real = currentSession && currentSession.mode !== 'sample';
+  const frame = sessionStore.activeFrame;
+  const plants = real ? currentSession.plants : examplePlants;
+  const mapPlants = real ? observedPlants(currentSession, frame) : plants;
+  const selectedId = real ? sessionStore.selectedId : exampleSelectedId;
+  const setSelectedId = real ? sessionStore.setSelectedId : setExampleSelectedId;
   const [layer, setLayer] = useState('weed');
   const [modal, setModal] = useState(null);
   const [notice, setNotice] = useState('');
+  const [pendingExport, setPendingExport] = useState(null);
   const [revision, setRevision] = useState(0);
   const [focusHeading, setFocusHeading] = useState(false);
   const workspace = useRef(null),
     source = useRef(null),
     photo = useRef(null),
     panel = useRef(null);
-  const selected = plants.find((plant) => plant.id === selectedId);
+  const selected = mapPlants.find((plant) => plant.id === selectedId);
   const geometry = useCallback(() => setRevision((value) => value + 1), []);
   useEffect(() => {
     if (!active) setModal(null);
@@ -282,6 +295,10 @@ function FieldDashboard({ active, onVideo, provider, accessCode, setAccessCode, 
     return () => clearTimeout(timer);
   }, [notice]);
   function selectPlant(id, focus = false) {
+    if (real) {
+      const plant = plants.find(p => p.id === id);
+      if (plant && !plant.observations.some(o => o.frame === frame)) sessionStore.setActiveFrame(plant.bestFrame);
+    }
     setSelectedId(id);
     setFocusHeading(focus);
     if (layer === 'coverage') setLayer('evidence');
@@ -305,14 +322,24 @@ function FieldDashboard({ active, onVideo, provider, accessCode, setAccessCode, 
     );
   }
   function nextPlant(direction) {
+    if (!plants.length) return;
     const i = plants.findIndex((plant) => plant.id === selectedId);
     selectPlant(plants[(i + direction + plants.length) % plants.length].id);
   }
   function save(id, label) {
+    if (real) {
+      const next = plants.map(p => p.id === id ? reviewDecision(p, label) : p);
+      sessionStore.setSessions(items => items.map(s => s.id === currentSession.id ? { ...s, plants: next, dirty: true } : s));
+      const after = next.findIndex(p => p.id === id);
+      const successor = [...next.slice(after + 1), ...next.slice(0, after)].find(p => reviewStatus(p) !== 'confirmed');
+      if (successor) selectPlant(successor.id);
+      else setNotice('Review saved. Export CSV to keep your decisions.');
+      return;
+    }
     const next = plants.map((plant) =>
       plant.id === id ? { ...plant, label, reviewed: true } : plant,
     );
-    setPlants(next);
+    setExamplePlants(next);
     try {
       localStorage.setItem(
         REVIEW_STORAGE,
@@ -330,7 +357,7 @@ function FieldDashboard({ active, onVideo, provider, accessCode, setAccessCode, 
     else setNotice('All 12 example plants reviewed. Export your decisions from the Review queue.');
   }
   function reset() {
-    setPlants(surveyPlants());
+    setExamplePlants(surveyPlants());
     setSelectedId('GP-007');
     setLayer('weed');
     try {
@@ -342,13 +369,14 @@ function FieldDashboard({ active, onVideo, provider, accessCode, setAccessCode, 
   }
   function exportRecords() {
     downloadFile(
-      csvText({ id: 'illustrative-field-map', plants, mode: 'illustrative-map' }),
-      'greenpoint-illustrative-map-review.csv',
+      csvText(real ? currentSession : { id: 'illustrative-field-map', plants, mode: 'illustrative-map' }),
+      `greenpoint-${real ? currentSession.id : 'illustrative-map'}-review.csv`,
       'text/csv;charset=utf-8',
     );
     setNotice(
-      'Exported image-relative example records. This file contains no GPS or navigation instructions.',
+      'CSV download started. Keep the file before closing this tab. Coordinates refer to source pixels; no GPS.',
     );
+    if (real && currentSession.dirty) setPendingExport(currentSession);
   }
   function closeEvidence() {
     setSelectedId(null);
@@ -411,8 +439,8 @@ function FieldDashboard({ active, onVideo, provider, accessCode, setAccessCode, 
             <a href="/" className="sf-wordmark">
               Green<span>Point.</span>
             </a>
-            <h1>Kashiwa / East plot</h1>
-            <p>Illustrative survey</p>
+            <h1>{real ? currentSession.name : 'Kashiwa / East plot'}</h1>
+            <p>{real ? currentSession.provenance?.recorded ? 'Recorded real Meta run · Human review required' : `${currentSession.mode === 'partial' ? 'Partial analysis' : 'Source-frame review'} · Human review required` : 'Illustrative survey'}</p>
           </div>
           <button
             type="button"
@@ -424,6 +452,17 @@ function FieldDashboard({ active, onVideo, provider, accessCode, setAccessCode, 
             <span>Upload footage</span>
           </button>
         </header>
+        {real && <ValidationNote />}
+        <div className="sf-session-toolbar">
+          <label>Evidence source<select aria-label="Evidence source" value={sessionStore.activeId} onChange={event => { sessionStore.setActiveId(event.target.value); sessionStore.setActiveFrame(0); sessionStore.setSelectedId(null); setLayer('evidence'); }}>
+            {sessionStore.sessions.map(s => <option key={s.id} value={s.id}>{s.mode === 'sample' ? 'Illustrative field layout' : s.provenance?.recorded ? `Recorded · ${s.name}` : s.name}</option>)}
+          </select></label>
+          {real && <label>Source frame<select aria-label="Source frame" value={frame} onChange={event => { sessionStore.setActiveFrame(Number(event.target.value)); sessionStore.setSelectedId(null); }}>
+            {currentSession.frames.map((f, i) => <option key={i} value={i}>Frame {i + 1} · {f.time.toFixed(2)}s</option>)}
+          </select></label>}
+          {real && <span>{mapPlants.length} observed here · {plants.filter(p => reviewStatus(p) === 'confirmed').length}/{plants.length} reviewed</span>}
+        </div>
+        {real && !plants.length && <p className="sf-empty-evidence">{currentSession.mode === 'local' ? 'Local preview. Start analysis in Video to find candidates.' : 'No candidates returned. This does not establish weed-free ground. Try a closer, brighter view.'}</p>}
         {notice && (
           <div className="sf-notice" role="status">
             <span>{notice}</span>
@@ -432,11 +471,14 @@ function FieldDashboard({ active, onVideo, provider, accessCode, setAccessCode, 
             </button>
           </div>
         )}
+        {pendingExport && <div className="gp-validation-note"><span>{sessionStore.sessions.includes(pendingExport) ? 'Check that this CSV was saved before confirming.' : 'The session changed after export. Export it again to keep the latest decisions.'}</span>{sessionStore.sessions.includes(pendingExport) && <button type="button" className="gp-text-button" onClick={() => { sessionStore.setSessions(items => items.map(s => s === pendingExport ? { ...s, dirty: false } : s)); setPendingExport(null); }}>I saved the CSV</button>}<button type="button" className="gp-text-button" onClick={() => setPendingExport(null)}>Dismiss</button></div>}
         <div className={`sf-workspace ${!selected ? 'sf-workspace-expanded' : ''}`} ref={workspace}>
           <FieldMap
-            plants={plants}
+            key={real ? currentSession.id : 'illustrative'}
+            plants={mapPlants}
+            sourceImage={real ? currentSession.frames[frame]?.image : undefined}
             selected={selected}
-            layer={layer}
+            layer={real ? 'evidence' : layer}
             onLayer={setLayer}
             onSelect={selectPlant}
             onZone={selectZone}
@@ -446,7 +488,7 @@ function FieldDashboard({ active, onVideo, provider, accessCode, setAccessCode, 
           />
           {selected && (
             <EvidencePanel
-              key={`${selected.id}-${selected.label}-${selected.reviewed}`}
+              key={`${real ? currentSession.id : 'illustrative'}-${selected.id}-${selected.label}-${selected.reviewed}`}
               plant={selected}
               onClose={closeEvidence}
               onSave={save}
@@ -454,6 +496,8 @@ function FieldDashboard({ active, onVideo, provider, accessCode, setAccessCode, 
               photoRef={photo}
               panelRef={panel}
               focusHeading={focusHeading}
+              session={real ? currentSession : undefined}
+              frame={frame}
             />
           )}
           <EvidenceConnector
@@ -465,7 +509,8 @@ function FieldDashboard({ active, onVideo, provider, accessCode, setAccessCode, 
           />
         </div>
         <footer className="sf-footer">
-          <span>Illustrative map & annotations · Not georeferenced</span>
+          <span>{real ? `${currentSession.provenance?.recorded ? 'Recorded real Meta run' : 'Model evidence'} · Source image coordinates · Not georeferenced` : 'Illustrative map & annotations · Not georeferenced'}</span>
+          {real && currentSession.provenance?.sourceUrl && <a href={currentSession.provenance.sourceUrl} target="_blank" rel="noreferrer">Data source · CC BY-SA 4.0 ↗</a>}
           <button type="button" onClick={() => setModal('about')}>
             GPS unavailable
             <Question size={14} />
@@ -546,8 +591,8 @@ function FieldDashboard({ active, onVideo, provider, accessCode, setAccessCode, 
       {active && modal === 'review' && (
         <Modal title="Every decision keeps its source." wide onClose={() => setModal(null)}>
           <p className="gp-dialog-intro">
-            {plants.filter((plant) => plant.reviewed).length} of 12 example plants human reviewed.
-            Decisions stay in this browser.
+            {plants.filter((plant) => reviewStatus(plant) === 'confirmed').length} of {plants.length} {real ? 'candidate' : 'example'} plants human reviewed.
+            {real ? 'Decisions stay in this tab until exported.' : 'Decisions stay in this browser.'}
           </p>
           <div className="sf-review-list">
             {plants.map((plant) => (
@@ -563,17 +608,17 @@ function FieldDashboard({ active, onVideo, provider, accessCode, setAccessCode, 
                 <span>{plant.zone}</span>
                 <span className={`sf-kind-${plant.label}`}>{LABELS[plant.label].text}</span>
                 <span>
-                  {plant.reviewed ? <Check size={18} aria-label="Reviewed" /> : 'Pending'}
+                  {reviewStatus(plant) === 'confirmed' ? <Check size={18} aria-label="Reviewed" /> : reviewStatus(plant) === 'deferred' ? 'Deferred' : 'Pending'}
                 </span>
                 <ArrowRight size={17} />
               </button>
             ))}
           </div>
           <div className="gp-dialog-actions">
-            <button className="gp-text-button" onClick={reset}>
+            {!real && <button className="gp-text-button" onClick={reset}>
               <ArrowCounterClockwise size={16} />
               Reset example
-            </button>
+            </button>}
             <button className="gp-button gp-button-primary" onClick={exportRecords}>
               <DownloadSimple size={17} />
               Export CSV
@@ -586,6 +631,22 @@ function FieldDashboard({ active, onVideo, provider, accessCode, setAccessCode, 
 }
 
 export default function SurveyDashboard() {
+  const sessionStore = useSessionStore();
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch('/assets/verified-run/index.json', { signal: controller.signal }).then(response => {
+      if (!response.ok) throw new Error('Recorded run unavailable');
+      return response.json();
+    }).then(index => {
+      const recorded = index.sessions?.find(s => s.id === index.defaultId);
+      if (!recorded?.provenance?.recorded || !Array.isArray(recorded.plants) || !recorded.frames?.length) return;
+      const valid = index.sessions.filter(s => s.provenance?.recorded && Array.isArray(s.plants) && s.frames?.length);
+      sessionStore.setSessions(items => [...items, ...valid.filter(s => !items.some(item => item.id === s.id))]);
+      sessionStore.setActiveId(id => id === 'sample-east-plot' ? recorded.id : id);
+      sessionStore.setSelectedId(id => id === 'GP-007' ? recorded.plants[0]?.id ?? null : id);
+    }).catch(() => { /* The illustrative workspace remains available offline. */ });
+    return () => controller.abort();
+  }, []);
   const [entry] = useState(() => {
     const parameters = new URLSearchParams(window.location.search);
     const view = parameters.get('view') === 'video' ? 'video' : 'map';
@@ -636,7 +697,7 @@ export default function SurveyDashboard() {
   return (
     <>
       <div hidden={workspace !== 'map'}>
-        <FieldDashboard active={workspace === 'map'} onVideo={openVideo} provider={connection} accessCode={connection.accessCode} setAccessCode={setAccessCode} checkConnection={checkConnection} />
+        <FieldDashboard active={workspace === 'map'} sessionStore={sessionStore} onVideo={openVideo} provider={connection} accessCode={connection.accessCode} setAccessCode={setAccessCode} checkConnection={checkConnection} />
       </div>
       {videoOpened && (
         <div hidden={workspace !== 'video'}>
@@ -648,6 +709,7 @@ export default function SurveyDashboard() {
             }
           >
             <VideoDashboard
+              sessionStore={sessionStore}
               active={workspace === 'video'}
               connection={connection}
               dispatchConnection={dispatchConnection}

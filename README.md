@@ -19,13 +19,13 @@ GreenPoint is an early research and hackathon prototype.
 | Interactive landing page | Implemented in the local development workspace |
 | Illustrative field atlas and sample CSV | Implemented |
 | Field-analysis dashboard | Implemented, with local video previews, evidence review and CSV export |
-| Video upload | Local preview up to two minutes; analysis accepts clips up to six seconds and 12 sampled frames |
+| Video upload | Local preview up to two minutes; ≤6s/12 snapshots, or explicit native-video opt-in (H.264 ≤2 MB) |
 | Live model inference | Real SAM 3.1 and Muse Spark single-frame smoke check passed on 2026-11-03; private server credentials required |
-| Plant tracking and classification pipeline | Conservative candidate linking implemented; field accuracy and movement tracking remain unvalidated |
+| Plant tracking and classification pipeline | Sampled-frame matching and optional native video implemented; two real native clips returned zero candidates; movement identities unvalidated |
 | Generic robot/agent MCP | Stateless Streamable HTTP, public discovery/sample tools and token-protected single-frame perception implemented; physical hardware validation pending |
-| Public-data evaluation and real-field trials | First public-data integration check complete; held-out evaluation and field trials pending |
+| Public-data evaluation | Frozen 5 development / 20 validation images complete; weed-recall target failed; farmer trials pending |
 
-The source is available in [`landing/`](landing/). `/` introduces the product and `/dashboard` opens the field workspace. The deployed workspace currently uses clearly marked illustrative sample records; uploaded videos can be previewed locally. Live analysis requires server credentials.
+The source is available in [`landing/`](landing/). `/` introduces the product and `/dashboard` opens the field workspace. The workspace opens a labeled recorded real Meta run on public PhenoBench RGB imagery; illustrative layouts remain selectable; uploaded videos can be previewed locally. Live analysis requires server credentials.
 
 ## The experience
 
@@ -57,11 +57,11 @@ The current output is a frame-based, reviewable information layer. A geographic 
 
 ## What the demo data means
 
-All current field artwork is AI-generated illustration. It is not Japanese field footage, WeedMap imagery or measured model output. The dashboard sample uses an eight-second static illustration preview with 12 hand-authored records.
+Landing and illustrative sample artwork is AI-generated. Separately labeled recorded real runs use public PhenoBench imagery and Bonn Sugar Beets 2016 footage under CC BY-SA 4.0. The generated artwork is not field footage or measured model output. The illustrative dashboard sample uses an eight-second static illustration preview with 12 hand-authored records.
 
 The landing CSV contains four illustrative records; dashboard exports contain the current session and run IDs, each candidate's source, original model label, effective classification and review status. Coordinates are relative to source frames, not GPS positions or a surveyed field map. The example records are not a count of every plant shown.
 
-GreenPoint has not published measured classification accuracy, tracking performance, time savings or pesticide reductions.
+The small frozen public-data evaluation matched 3 of 88 annotated weeds (3.4% recall), with 3/3 weed predictions correct and 0/168 crops called weed. Only three positive predictions is insufficient evidence for reliable precision. Target gates failed. Tracking performance, farmer time savings and pesticide reductions have not been established. See [the complete result](https://greenpoint-vert.vercel.app/validation.html) and [demo script](landing/docs/DEMO.md).
 
 ## Development
 
@@ -82,6 +82,8 @@ npm run build
 npm run test:sites
 npm run test:analysis
 npm run test:mcp
+npm run test:map
+npm run test:evidence
 ```
 
 The build prepares the frontend and Sites-compatible worker package. No model API key is required for the presentation prototype.

@@ -14,7 +14,9 @@
     "meta:probe": "node scripts/meta-probe.mjs",
     "robot:sample": "node scripts/robot-client.mjs sample",
     "robot:analyze": "node scripts/robot-client.mjs analyze",
-    "test:map": "node --test tests/map.test.mjs"
+    "test:map": "node --test tests/map.test.mjs",
+    "test:evidence": "node --test tests/evidence.test.mjs",
+    "agent:scout": "node scripts/muse-agent.mjs"
   },
   "dependencies": {
     "@chenglou/pretext": "^1.0.0",

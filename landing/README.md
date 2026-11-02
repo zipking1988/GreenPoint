@@ -1,4 +1,4 @@
-# GreenPoint landing
+# GreenPoint / Evidence-first field review
 
 A responsive React/Vite landing page and field-analysis workspace with an illustrative field map and a phone-first plant candidate inventory. The selected art direction uses charcoal surfaces, pale lime brand accents, sage crop data and botanical computer-vision imagery.
 
@@ -6,7 +6,7 @@ Restored to the farmer-focused direction on 2026-11-01. The reference is release
 
 ## Local preview
 
-With Node.js 22 or newer, run `npm ci`, then `npm run dev -- --host 0.0.0.0 --port 4173 --strictPort`. Open `/dashboard` for the workspace and `/` for the landing. Production build: `npm run build`. Map checks: `npm run test:map`. Analysis checks: `npm run test:analysis`. MCP checks: `npm run test:mcp`. Packaging checks: `npm run test:sites`.
+With Node.js 22 or newer, run `npm ci`, then `npm run dev -- --host 0.0.0.0 --port 4173 --strictPort`. Open `/dashboard` for the workspace and `/` for the landing. Production build: `npm run build`. Evidence/media/agent/budget checks: `npm run test:evidence`. Map checks: `npm run test:map`. Analysis checks: `npm run test:analysis`. MCP checks: `npm run test:mcp`. Packaging checks: `npm run test:sites`.
 
 ## Vercel deployment
 
@@ -20,9 +20,11 @@ The `api/` directory contains Node functions for Vercel. Local Vite uses the sam
 
 Set `MODEL_API_KEY` and `ANALYSIS_ACCESS_TOKEN` as server-only Vercel environment variables, then redeploy. For local development, copy `.env.example` to `.env`, supply the values and restart Vite. Do not use `VITE_` prefixes. In the workspace's Connection settings, enter the analysis access code. It stays in memory for that tab.
 
-The API uses Meta's fixed `sam-3.1` Responses endpoint and `muse-spark-1.3` Chat Completions endpoint. The original video remains local. Clips up to 150 MB and two minutes can be previewed; analysis requires a clip of at most six seconds, sampled every 0.5 seconds up to 12 JPEG snapshots. Crop images are classified only after the operator starts analysis. Requests are bounded, authenticated and cancellable. The live candidate inventory is capped at 96 with explicit partial-coverage messaging. Ambiguous observations are not silently deduplicated.
+The API uses Meta's fixed `sam-3.1` Responses endpoint and `muse-spark-1.3` Chat Completions endpoint. Default analysis keeps the original video local. Clips up to 150 MB and two minutes can be previewed; analysis requires at most six seconds and twelve JPEG snapshots. An explicit native-video opt-in sends the complete selected H.264 MP4 to Meta: ≤2 MB, ≤6 seconds, ≤1280 pixels per axis and ≤30 fps. Server metadata checks precede provider calls; rejection never silently switches modes. Crop images are classified only after the operator starts analysis. Requests are bounded, authenticated and cancellable. The live candidate inventory is capped at 96 with explicit partial-coverage messaging. Ambiguous observations are not silently deduplicated.
 
 Analysis results stay in the current tab. After exporting CSV, check that the file was saved and confirm it in the workspace; until then the browser warns before leaving. Changes made after an export need a new export.
+
+The full sprint result is published at [/validation.html](https://greenpoint-vert.vercel.app/validation.html), with deterministic manifests, per-image outputs and scoring. Development rejected the reference strategy because it increased crop-as-weed errors; the optional comparison is clearly experimental. The [judge demo script](docs/DEMO.md) covers the recorded run, live inputs, MCP and limits.
 
 Real-provider execution passed a first public-image integration check on 2026-11-03: SAM 3.1 and Muse Spark returned 12 candidates (1 crop, 11 uncertain) in about 22 seconds. This is not field accuracy or a successful weed-recognition benchmark. A real maize-canopy video also exercised upload and two sampled frames but returned no candidates. See the [validation record](docs/meta-live-validation-2026-11-03.md). Automated tests cover transport, authentication, SAM grammar, validation and failure paths using controlled upstream responses. The production inference endpoint uses no mock model output.
 
@@ -32,7 +34,7 @@ For a reproducible first real-image check, `npm run meta:probe -- /absolute/path
 
 `/dashboard` and `/app` now open the approved map-led workspace. Select an illustrative weed region, follow the source connector to the same-image crop, choose Crop / Weed / Keep for review, then Save & next. Pan, wheel/pinch zoom, keyboard arrows and +/- and Fit field operate in local image coordinates. Evidence selection and its connector follow the map; small screens reveal the evidence below the map with the same plant ID. Coverage distinguishes unobserved space from weed-free land.
 
-The map has 12 separate, hand-authored examples over `/assets/survey-field.webp`, with its own versioned browser review storage. The Review queue supports reset and CSV export. Its illustrative region signals are static examples, not recomputed weed-density measurements. The map and the original video sample are separate coordinate/identity namespaces. MCP's public sample remains the original video sample and does not return these browser-local map decisions.
+The separately selectable illustrative map has 12 hand-authored examples over `/assets/survey-field.webp`, with its own versioned browser review storage. The Review queue supports reset and CSV export. Its illustrative region signals are static examples, not recomputed weed-density measurements. Real map and video views share one in-memory session, selection and review state. Each source frame displays only its own observations. Illustrative samples retain separate coordinate/identity namespaces. MCP's public sample remains the original video sample and does not return these browser-local map decisions.
 
 Use **Video** or **Upload footage** to open the existing video workspace; sessions remain in memory when switching back to the map. Footage without location metadata stays a source-frame review rather than being presented as a geographic map. A real drone map requires georeferencing, calibration and position-accuracy validation; the prototype provides no GPS, area measurement, navigation export or hardware command.
 
@@ -47,7 +49,7 @@ Use **Video** or **Upload footage** to open the existing video workspace; sessio
 
 ## Prototype boundaries
 
-The deployed workspace opens in an illustrative map sample. The separate video sample contains 12 hand-authored records over an eight-second static preview of AI-generated imagery; neither sample is live model output. Classification accuracy and tracking performance remain unvalidated. CSV locations are normalized source-frame coordinates, not GPS. No spraying or chemical prescription is performed.
+The deployed workspace opens a labeled recorded real Meta run on PhenoBench source imagery. Source frames, models, artifact timestamp and hashes are retained. No inference occurs on page load. A separate genuine Bonn video replay returned zero candidates; it is not successful movement-tracking evidence. The separate video sample contains 12 hand-authored records over an eight-second static preview of AI-generated imagery; neither sample is live model output. The frozen twenty-image evaluation found 3 of 88 annotated weeds; all three weed predictions matched, but the recall target failed. Movement tracking and farmer performance remain unvalidated. CSV locations are normalized source-frame coordinates, not GPS. No spraying or chemical prescription is performed.
 
 ## Project files
 
@@ -55,7 +57,7 @@ The deployed workspace opens in an illustrative map sample. The separate video s
 
 ## Asset provenance
 
-Assets were produced using the built-in ImageGen tool. Original generations are retained in the development workspace at `design/source-assets`; the repository contains the WebP versions used by the page. Visual prompts: documentary Japanese farm walk; plant-level segmentation close-up; full top-down vegetable plot with crop/weed/review highlights; and dark corn-seedling computer-vision hero. These are illustrative brand/concept assets, not benchmark inputs. Self-hosted Sora, Source Sans3 and IBM Plex Mono use their bundled SIL Open Font Licenses. Icons: Phosphor, MIT. Pretext: MIT.
+Illustrative brand assets were produced using ImageGen. The separately labeled real evidence assets use PhenoBench and Sugar Beets 2016 under CC BY-SA 4.0; see public/licenses/public-data.md and /validation.html. Original generations are retained in the development workspace at `design/source-assets`; the repository contains the WebP versions used by the page. Visual prompts: documentary Japanese farm walk; plant-level segmentation close-up; full top-down vegetable plot with crop/weed/review highlights; and dark corn-seedling computer-vision hero. These are illustrative brand/concept assets, not benchmark inputs. Self-hosted Sora, Source Sans3 and IBM Plex Mono use their bundled SIL Open Font Licenses. Icons: Phosphor, MIT. Pretext: MIT.
 
 The map raster is generated natural overhead field artwork. Every evidence view is a pixel crop of that same raster; no separate photograph is substituted. The approved source visual is `design/selected-field-map-reference.png`.
 

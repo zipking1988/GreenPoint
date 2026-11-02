@@ -1349,3 +1349,14 @@
     padding-top: 10px;
   }
 }
+.sf-dashboard .sf-session-toolbar { display:flex; gap:22px; align-items:end; padding:0 0 18px; color:#aebbb1; font-size:12px; flex-wrap:wrap; }
+.sf-dashboard .sf-session-toolbar label { display:grid; gap:6px; }
+.sf-dashboard .sf-session-toolbar select { color:#e6ece5; border:1px solid #3b4b40; background:#212b24; padding:8px 30px 8px 10px; border-radius:6px; max-width:min(400px, 80vw); }
+.sf-dashboard .sf-model-evidence { display:grid; gap:7px; padding:0 0 18px; font-size:11px; color:#a4b3a7; line-height:1.6; }
+.sf-dashboard .sf-plant-marker small { font-size:9px; }
+.sf-dashboard .gp-validation-note { margin:0 16px 16px; flex-shrink:0; }
+.sf-dashboard .sf-session-toolbar { padding-left:18px; padding-right:18px; flex-shrink:0; }
+.sf-dashboard .sf-candidate-outline { position:absolute; border:1px solid currentColor; opacity:.55; pointer-events:none; }
+.sf-dashboard .sf-model-evidence summary { cursor:pointer; padding:4px 0; }
+.sf-dashboard .sf-model-evidence > span { display:block; margin-top:7px; }
+.sf-dashboard .sf-empty-evidence { margin:0 18px 12px; font-size:13px; color:#c7c8af; }

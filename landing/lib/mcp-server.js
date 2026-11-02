@@ -6,7 +6,7 @@ import { ApiError } from './meta-api.js';
 import { analyzeRobotFrame, MAX_FRAME_PLANTS } from './robot-analysis.js';
 import { sampleSession } from '../src/dashboard/data.js';
 
-const MAX_BODY = 1_100_000;
+const MAX_BODY = 1_300_000;
 const ANALYZE_TOOL = 'greenpoint_analyze_frame';
 const readOnly = { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false };
 const identity = z.string().min(1).max(80).regex(/^[a-zA-Z0-9_.:-]+$/);
@@ -16,6 +16,7 @@ export const frameInput = {
   crop: z.enum(['Maize', 'Lettuce', 'Soybean', 'Sugar beet', 'Rice', 'Wheat']),
   frame_id: identity.describe('Caller-owned frame identity. Plant IDs are scoped to this one response.'),
   device_id: identity.optional(), captured_at: z.iso.datetime({ offset: true }).optional(),
+  crop_reference: z.string().max(140_000).regex(/^data:image\/jpeg;base64,\/9j\/[A-Za-z0-9+/]+={0,2}$/).optional().describe('Optional operator-confirmed crop reference JPEG, at most 100 KB. Never a URL or ground-truth annotation.'),
 };
 export const FRAME_SCHEMA = z.toJSONSchema(z.object(frameInput));
 
@@ -27,11 +28,11 @@ export function capabilities(env = process.env) {
     live_analysis_configured: Boolean(env.MODEL_API_KEY && env.MCP_ACCESS_TOKEN),
     analysis_authentication: 'Authorization: Bearer <MCP_ACCESS_TOKEN>',
     authentication_mode: 'owner_managed_token; no OAuth discovery',
-    limits: { jpeg_bytes: 750_000, frame_long_edge: 1280, plants_per_frame: MAX_FRAME_PLANTS, request_deadline_seconds: 110 },
+    limits: { jpeg_bytes: 750_000, crop_reference_bytes: 100_000, frame_long_edge: 1280, plants_per_frame: MAX_FRAME_PLANTS, request_deadline_seconds: 110 },
     coordinate_system: 'normalized_image_xywh', identity_scope: 'one_frame_response',
     confidence_calibrated: false, requires_human_review: true, treatment_authorized: false,
     data_retention: 'No images, results, or device sessions are persisted by this service.',
-    model_processing: 'Authorized live calls send the frame and cropped plant images to Meta.',
+    model_processing: 'Authorized live calls send the frame, same-source plant/context crops and any supplied crop reference to Meta.',
     unsupported: ['flight_control', 'navigation', 'real_time_obstacle_avoidance', 'actuation', 'GPS_projection', 'cross_frame_tracking', 'browser_session_sync'],
   };
 }

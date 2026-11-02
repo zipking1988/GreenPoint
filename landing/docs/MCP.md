@@ -100,3 +100,20 @@ npm run build
 ```
 
 Official references: [MCP server SDK](https://ts.sdk.modelcontextprotocol.io/server), [Streamable HTTP specification](https://modelcontextprotocol.io/specification/2025-11-25/basic/transports).
+
+
+## Evidence sprint additions / 2026-11-03
+
+Frame perception now returns schema 1.1 with `classification_strategy`, `crop_reference_used` and best-effort usage estimates. A missing usage breakdown is unknown, not free. The default baseline classifies bounded tight crops in batches of four. Optional `crop_reference` is an orientation-normalized JPEG ≤100 KB, confirmed by the caller; it and same-source context crops are sent to Meta. References are experimental: the development comparison increased crop-as-weed errors. Never send reference annotations or claim this improves accuracy.
+
+A real Muse Spark scouter example is available at `scripts/muse-agent.mjs`. It advertises only capability discovery and a host-owned frame handle, actually invokes the authenticated MCP tool, and permits at most two tool calls over three model turns. It cannot read arbitrary files, choose an upstream URL, or request navigation/treatment. The final next step is `human_review`, `request_closer_view` or `no_candidates`, with mandatory review and no treatment authorization. An empty result cannot establish weed-free ground.
+
+From `landing/`, after the owner provides server-only variables in ignored `.env.local`:
+
+```sh
+node --env-file=.env.local scripts/muse-agent.mjs --live --frame /absolute/path/to/public-field.jpg --crop "Sugar beet"
+```
+
+`GREENPOINT_MCP_URL` defaults to the existing production endpoint; loopback HTTP is allowed for local development. The runner reads `MCP_ACCESS_TOKEN` without exposing it to Muse. It reserves cost in `reviews/hackathon-sprint-2026-11-03/budget.json`; run paid sprint scripts sequentially. Unknown cost retains its reservation. The separate robot-client example continues to use `GREENPOINT_MCP_TOKEN`.
+
+A labeled recorded trace is available at `/assets/verified-run/agent-trace.json`. This demonstrates an upper-level software agent, not a physical robot or drone. The public frozen-image report at `/validation.html` explains the failed weed-recall target and native-video checks with zero candidates.

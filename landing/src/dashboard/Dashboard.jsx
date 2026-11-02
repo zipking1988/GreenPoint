@@ -27,25 +27,22 @@ import { FilmStrip } from '@phosphor-icons/react/dist/csr/FilmStrip';
 import { List } from '@phosphor-icons/react/dist/csr/List';
 import { SlidersHorizontal } from '@phosphor-icons/react/dist/csr/SlidersHorizontal';
 import { MeasuredCopy } from '../MeasuredCopy.jsx';
-import { LABELS, canExportSession, createId, csvText, downloadFile, frameTimecode, matchesPlant, nextReview, restoreSampleEdit, reviewDecision, reviewQueue, reviewStatus, sampleSession, summary, timecode } from './data.js';
+import { LABELS, canExportSession, createId, csvText, downloadFile, frameTimecode, matchesPlant, nextReview, reviewDecision, reviewQueue, reviewStatus, sampleSession, summary, timecode } from './data.js';
 import { requestAnalysis } from './analysis-client.js';
 import { checkModelConfiguration, initialModelConnection, modelConnectionReducer } from './model-connection.js';
-import { cropPlant, MAX_ANALYSIS_SECONDS, readVideo, validateVideo } from './video.js';
-import { linkDetections } from './tracker.js';
+import { browserEvidence, cropPlant, jpegSnapshot, MAX_ANALYSIS_SECONDS, nativeVideoData, readVideo, validateVideo } from './video.js';
+import { linkDetections, nativeTracks } from './tracker.js';
+import { classificationBatches } from './evidence.js';
+import { useSessionStore } from './sessions.js';
+import { NativeTrackingOption, ReferencePicker } from './ReferencePicker.jsx';
+import { ValidationNote } from './ValidationNote.jsx';
 import { Connections } from './Connections.jsx';
 import { Modal } from './Modal.jsx';
 import './dashboard.css';
 
 const CROPS = ['Maize', 'Lettuce', 'Soybean', 'Sugar beet', 'Rice', 'Wheat'];
 const PHASES = ['Read video', 'Find plants', 'Link observations', 'Review labels'];
-const makeSample = () => {
-  const sample = sampleSession();
-  try {
-    const saved = JSON.parse(localStorage.getItem('greenpoint-review-v2') || localStorage.getItem('greenpoint-review-v1') || '{}');
-    sample.plants = sample.plants.map(p => restoreSampleEdit(p, saved[p.id]));
-  } catch { /* The sample works even when local storage is unavailable. */ }
-  return sample;
-};
+
 
 function IconButton({ label, children, className = '', ...props }) {
   return <button type="button" className={`gp-icon-button ${className}`} aria-label={label} title={label} {...props}>{children}</button>;
@@ -140,12 +137,12 @@ function VideoWorkspace({ session, selected, onSelect, activeFrame, onFrame, see
     try { document.fullscreenElement ? await document.exitFullscreen() : await stage.current.requestFullscreen(); } catch { /* Playback remains available when fullscreen is disallowed. */ }
   };
   return <section className="gp-video-workspace" aria-label="Field video and sampled observations">
-    <div className="gp-workspace-heading"><div className="gp-view-tabs"><span className="gp-tab-active"><FilmStrip size={17} />Field video</span><span className="gp-workspace-caption">{session.mode === 'sample' ? 'ILLUSTRATIVE SAMPLE' : 'LOCAL VIDEO'}</span></div><div className="gp-overlay-actions"><button type="button" className={showBoxes ? 'gp-toggle-active' : ''} aria-pressed={showBoxes} onClick={() => setShowBoxes(!showBoxes)}><Crosshair size={16} />Labels</button>{session.mode !== 'sample' && <button type="button" aria-pressed={masks} className={masks ? 'gp-toggle-active' : ''} onClick={() => setMasks(!masks)}>Masks</button>}<IconButton label={full ? 'Exit fullscreen' : 'Expand video'} onClick={toggleFullscreen}><ArrowsOut size={17} /></IconButton></div></div>
+    <div className="gp-workspace-heading"><div className="gp-view-tabs"><span className="gp-tab-active"><FilmStrip size={17} />{session.video ? "Field video" : "Source image"}</span><span className="gp-workspace-caption">{session.mode === 'sample' ? 'ILLUSTRATIVE SAMPLE' : !session.video ? 'RECORDED SOURCE IMAGE' : session.provenance?.recorded ? 'RECORDED REAL CLIP' : 'LOCAL VIDEO'}</span></div><div className="gp-overlay-actions"><button type="button" className={showBoxes ? 'gp-toggle-active' : ''} aria-pressed={showBoxes} onClick={() => setShowBoxes(!showBoxes)}><Crosshair size={16} />Labels</button>{session.mode !== 'sample' && <button type="button" aria-pressed={masks} className={masks ? 'gp-toggle-active' : ''} onClick={() => setMasks(!masks)}>Masks</button>}<IconButton label={full ? 'Exit fullscreen' : 'Expand video'} onClick={toggleFullscreen}><ArrowsOut size={17} /></IconButton></div></div>
     <div className="gp-video-stage" ref={stage} style={{ aspectRatio: `${session.width} / ${session.height}`, width: `min(100%, ${620 * session.width / session.height}px)`, marginInline: 'auto' }}>
-      <video ref={ref} key={session.id} src={session.video} poster={session.image} playsInline muted preload="metadata" aria-label={session.mode === 'sample' ? 'Eight-second static preview of an AI-generated field illustration' : session.fileName} onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} onEnded={() => setPlaying(false)} onTimeUpdate={e => {
+      {session.video && <video ref={ref} key={session.id} src={session.video} poster={session.image} playsInline muted preload="metadata" aria-label={session.mode === 'sample' ? 'Eight-second static preview of an AI-generated field illustration' : session.fileName} onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} onEnded={() => setPlaying(false)} onTimeUpdate={e => {
         setClock(e.currentTarget.currentTime);
         if (session.frames.length) onFrame(session.frames.reduce((best, f, i) => Math.abs(f.time - e.currentTarget.currentTime) < Math.abs(session.frames[best].time - e.currentTarget.currentTime) ? i : best, 0));
-      }} />
+      }} />}
       {session.mode !== 'sample' && !playing && active && <img className="gp-snapshot" src={active.image} alt={`Sampled frame at ${frameTimecode(active.time)}`} />}
       {masks && !playing && <MaskOverlay plants={plants} frame={activeFrame} selected={selected} />}
       {showBoxes && (!playing || session.mode === 'sample') && <div className="gp-detections">{visiblePlants.map(p => {
@@ -157,7 +154,7 @@ function VideoWorkspace({ session, selected, onSelect, activeFrame, onFrame, see
       {working && <div className="gp-processing"><CircleDashed size={35} /><h3>{PHASES[progress.phase]}</h3><p>{progress.detail}</p><progress value={progress.value} max="100" aria-label="Video analysis progress" /><button className="gp-button gp-button-secondary" onClick={onCancel}>Cancel analysis</button></div>}
       {full && <IconButton className="gp-fullscreen-close" label="Exit fullscreen" onClick={toggleFullscreen}><X /></IconButton>}
     </div>
-    <div className="gp-video-controls"><IconButton label={playing ? 'Pause field video' : 'Play field video'} onClick={togglePlay}>{playing ? <Pause weight="fill" /> : <Play weight="fill" />}</IconButton><span className="gp-timecode">{timecode(clock)}<span> / {timecode(session.duration)}</span></span><input type="range" aria-label="Video timeline" min="0" max={session.duration} step="0.05" value={clock} onChange={e => seek(Number(e.target.value))} style={{ '--gp-progress': `${clock / session.duration * 100}%` }} /><span className="gp-playback-rate">1×</span><IconButton label="Restart video" onClick={() => { ref.current?.pause(); seek(0); }}><ArrowCounterClockwise size={17} /></IconButton></div>
+    {session.video && <div className="gp-video-controls"><IconButton label={playing ? 'Pause field video' : 'Play field video'} onClick={togglePlay}>{playing ? <Pause weight="fill" /> : <Play weight="fill" />}</IconButton><span className="gp-timecode">{timecode(clock)}<span> / {timecode(session.duration)}</span></span><input type="range" aria-label="Video timeline" min="0" max={session.duration} step="0.05" value={clock} onChange={e => seek(Number(e.target.value))} style={{ '--gp-progress': `${clock / session.duration * 100}%` }} /><span className="gp-playback-rate">1×</span><IconButton label="Restart video" onClick={() => { ref.current?.pause(); seek(0); }}><ArrowCounterClockwise size={17} /></IconButton></div>}
     <div className="gp-filmstrip">{session.frames.map((frame, i) => <button type="button" key={i} className={i === activeFrame ? 'gp-frame-active' : ''} aria-label={`Inspect sampled frame ${i + 1} at ${frameTimecode(frame.time)}`} aria-pressed={i === activeFrame} onClick={() => { ref.current?.pause(); seek(frame.time); onFrame(i); }}><img src={frame.image} alt="" /><span>{frameTimecode(frame.time)}</span></button>)}</div>
     <div className="gp-workspace-footnote"><span><span className="gp-small-cross">+</span>{session.mode === 'sample' ? 'AI illustration · 12 example records' : `${session.frames.length} sampled frames · ${session.plants.length} plant candidates`}{plants.length > displayLimit ? ` · ${displayLimit} labels shown` : ''}</span><span>Image coordinates, not GPS</span></div>
   </section>;
@@ -176,6 +173,7 @@ function Inspector({ plant, session, onReview, onNext, onClose, working }) {
     <header className="gp-inspector-heading"><div><h2 id="gp-inspector-title" tabIndex="-1">Plant inspection</h2><span>{index + 1} of {session.plants.length} candidates</span></div><div><IconButton label="Previous plant" onClick={() => onNext(-1)}><CaretLeft /></IconButton><IconButton label="Next plant" onClick={() => onNext(1)}><CaretRight /></IconButton><IconButton label="Close plant inspection" className="gp-inspector-dismiss" onClick={onClose}><X /></IconButton></div></header>
     <PlantCrop image={image} box={plant.box} alt={`${plant.id}, cropped from its best available observation`} className="gp-inspection-photo" />
     <div className="gp-specimen-title"><h3>{plant.id}</h3><Label value={plant.label} reviewed={status === 'confirmed'} /></div>
+    {!sample && <p className="gp-recorded-note">Original model: {plant.originalLabel ?? 'not classified'} · Representative frame {plant.bestFrame + 1}</p>}
     <dl className="gp-specimen-meta"><div><dt>Source</dt><dd>{sample ? 'Illustrative record' : plant.source}</dd></div><div><dt>Observations</dt><dd>{sample ? 'Example scene' : `${plant.observations.length} sampled views`}</dd></div><div><dt>Model confidence</dt><dd>{sample || plant.confidence == null ? 'Not measured' : `${Math.round(plant.confidence * 100)}% · uncalibrated`}</dd></div><div><dt>Review</dt><dd className={status === 'confirmed' ? 'gp-reviewed-text' : ''}>{reviewText}</dd></div></dl>
     <div className="gp-reasoning"><h4>{sample ? 'Example observation' : 'Visual reasoning'}</h4><MeasuredCopy>{plant.reasoning}</MeasuredCopy></div>
     <fieldset className="gp-review-actions" disabled={working}><legend>{working ? 'Review paused during analysis' : 'Your decision'}</legend>{Object.entries(LABELS).map(([value, label]) => {
@@ -202,13 +200,11 @@ function Inventory({ session, selected, onSelect, filter, setFilter, view, setVi
   </section>;
 }
 
-export default function Dashboard({ active = true, onMap, uploadRequest = 0, connection: sharedConnection, dispatchConnection: sharedDispatch, abortRef: sharedAbortRef, setAccessCode: externalSetAccessCode }) {
-  const [sessions, setSessions] = useState(() => [makeSample()]);
-  const [activeId, setActiveId] = useState('sample-east-plot');
+export default function Dashboard({ active = true, onMap, uploadRequest = 0, connection: sharedConnection, dispatchConnection: sharedDispatch, abortRef: sharedAbortRef, setAccessCode: externalSetAccessCode, sessionStore }) {
+  const localStore = useSessionStore();
+  const { sessions, setSessions, activeId, setActiveId, selectedId, setSelectedId, activeFrame, setActiveFrame } = sessionStore ?? localStore;
   const session = sessions.find(s => s.id === activeId) ?? sessions[0];
-  const [selectedId, setSelectedId] = useState('GP-007');
   const [inspectorDismissed, setInspectorDismissed] = useState(false);
-  const [activeFrame, setActiveFrame] = useState(0);
   const [seekRequest, setSeekRequest] = useState(null);
   const [filter, setFilter] = useState('all');
   const [search, setSearch] = useState('');
@@ -225,7 +221,10 @@ export default function Dashboard({ active = true, onMap, uploadRequest = 0, con
   const [pendingExport, setPendingExport] = useState(null);
   const [uploadError, setUploadError] = useState('');
   const [uploadName, setUploadName] = useState('');
-  const [uploadCrop, setUploadCrop] = useState('Maize');
+  const [uploadCrop, setUploadCrop] = useState('Sugar beet');
+  const [nativeTracking, setNativeTracking] = useState(false);
+  const [referenceRequest, setReferenceRequest] = useState(null);
+  const referenceResolver = useRef(null);
   const [pending, setPending] = useState(null);
   const [dragging, setDragging] = useState(false);
   const [working, setWorking] = useState(false);
@@ -253,6 +252,7 @@ export default function Dashboard({ active = true, onMap, uploadRequest = 0, con
   }, [abortRef, checkConnection, hasSharedConnection]);
   useEffect(() => {
     if (!active) {
+      abortRef.current?.abort();
       if (modal === 'upload') closeUpload();
       else setModal(null);
       setSidebar(false);
@@ -264,7 +264,7 @@ export default function Dashboard({ active = true, onMap, uploadRequest = 0, con
     const timeout = setTimeout(() => setNotice(''), 6000);
     return () => clearTimeout(timeout);
   }, [notice]);
-  const hasUnsavedResults = working || sessions.some(item => item.dirty);
+  const hasUnsavedResults = working;
   useEffect(() => {
     if (!hasUnsavedResults) return;
     const warn = event => { event.preventDefault(); event.returnValue = ''; };
@@ -404,7 +404,7 @@ export default function Dashboard({ active = true, onMap, uploadRequest = 0, con
       const data = await readVideo(file, url, controller.signal, ratio => setProgress({ phase: 0, value: Math.round(ratio * 100), detail: 'Reading up to 12 preview frames locally.' }));
       controller.signal.throwIfAborted();
       if (pending?.video) { URL.revokeObjectURL(pending.video); urls.current.delete(pending.video); }
-      setPending({ id: `video-${createId()}`, fileName: file.name, video: url, mode: 'local', ...data, image: data.frames[0].image, plants: [], coverage: `${data.frames.length} frames sampled across ${timecode(data.duration)}`, createdAt: new Date().toISOString() });
+      setPending({ id: `video-${createId()}`, file, fileName: file.name, video: url, mode: 'local', ...data, image: data.frames[0].image, plants: [], coverage: `${data.frames.length} frames sampled across ${timecode(data.duration)}`, createdAt: new Date().toISOString() });
       setUploadName(file.name.replace(/\.[^.]+$/, '').replaceAll('_', ' '));
     } catch (error) {
       if (url) { URL.revokeObjectURL(url); urls.current.delete(url); }
@@ -434,7 +434,7 @@ export default function Dashboard({ active = true, onMap, uploadRequest = 0, con
       setSessions(current => [...current, target]);
       setActiveId(target.id); setActiveFrame(0); setFilter('all'); setSearch(''); setQueueMode(false);
     }
-    target = { ...target, runId: createId(), lastError: null };
+    target = { ...target, runId: createId(), lastError: null, identityMethod: nativeTracking ? 'sam_video' : target.frames.length === 1 ? 'single_frame' : 'geometric', coverage: target.coverage ?? `${target.frames.length} source frames`, cropReference: null, provenance: target.provenance ? { recorded: false, source: target.provenance.source, sourceUrl: target.provenance.sourceUrl, license: target.provenance.license, parentRunId: target.runId, sourceRecording: target.provenance.sourceRecording ?? target.provenance } : null };
     const connectionRevision = provider.revision;
     const controller = new AbortController(); abortRef.current = controller;
     setWorking(true); setSelectedId(null); setNotice('');
@@ -447,7 +447,7 @@ export default function Dashboard({ active = true, onMap, uploadRequest = 0, con
       const requestStarted = performance.now();
       try {
         const result = await requestAnalysis(body, accessCode, controller.signal);
-        analysisLog.push({ stage, index, elapsed_ms: Math.round(performance.now() - requestStarted), candidates: result.detections?.length ?? result.plants?.length ?? 0, status: 'completed' });
+        analysisLog.push({ stage, index, elapsed_ms: Math.round(performance.now() - requestStarted), candidates: result.detections?.length ?? result.plants?.length ?? 0, status: 'completed', usage: result.usage ?? null });
         return result;
       } catch (error) {
         if (['access_required', 'provider_auth', 'not_configured'].includes(error.code)) dispatchConnection({ type: 'authentication-failed', revision: connectionRevision });
@@ -456,8 +456,25 @@ export default function Dashboard({ active = true, onMap, uploadRequest = 0, con
       }
     }
     try {
+      if (nativeTracking) {
+        setProgress({ phase: 1, value: 5, detail: 'SAM 3.1 · sending the selected full clip for native tracking.' });
+        const video = target.file ? await nativeVideoData(target.file) : null;
+        if (!video) throw new Error('Upload the original MP4 again to use native video tracking. Recorded results cannot be re-sent as a live clip.');
+        const data = await trackedRequest('segment_video', 1, { action: 'segment_video', video });
+        const decodeUrl = URL.createObjectURL(target.file);
+        urls.current.add(decodeUrl);
+        target = { ...target, video: decodeUrl };
+        const extracted = await readVideo(target.file, decodeUrl, controller.signal, undefined, data.frames.map(frame => frame.time));
+        if (extracted.width !== data.width || extracted.height !== data.height) throw new Error('Decoded video dimensions differ from native tracking. Use sampled frames explicitly.');
+        target = { ...target, ...extracted, image: extracted.frames[0].image };
+        tracks.push(...nativeTracks(data.frames));
+        completedFrames = data.frames.length; limited = data.limited;
+        dispatchConnection({ type: 'verified', model: 'sam-3.1', revision: connectionRevision });
+      } else {
       for (let i = 0; i < target.frames.length; i++) {
         setProgress({ phase: 1, value: Math.round(i / target.frames.length * 65), detail: `SAM 3.1 · frame ${i + 1} of ${target.frames.length}` });
+        const snapshot = await jpegSnapshot(target.frames[i].image, target.width, target.height);
+        target = { ...target, frames: target.frames.map((frame, index) => index === i ? { ...frame, image: snapshot } : frame) };
         const data = await trackedRequest('segment', i + 1, { action: 'segment', image: target.frames[i].image, width: target.width, height: target.height });
         dispatchConnection({ type: 'verified', model: 'sam-3.1', revision: connectionRevision });
         limited ||= data.limited;
@@ -466,13 +483,29 @@ export default function Dashboard({ active = true, onMap, uploadRequest = 0, con
         // Keep a bounded inventory and expose the cap as partial coverage.
         if (tracks.length >= 96) { tracks.splice(96); limited = true; break; }
       }
+      }
       setProgress({ phase: 2, value: 68, detail: `${tracks.length} conservative candidate identities. Selecting best observations.` });
-      for (let i = 0; i < tracks.length; i += 8) {
+      let referenceImage;
+      if (tracks.length) {
+        const reference = await new Promise((resolve, reject) => {
+          const aborted = () => { referenceResolver.current = null; setReferenceRequest(null); reject(new DOMException('Canceled', 'AbortError')); };
+          controller.signal.addEventListener('abort', aborted, { once: true });
+          referenceResolver.current = value => { controller.signal.removeEventListener('abort', aborted); referenceResolver.current = null; setReferenceRequest(null); resolve(value); };
+          setReferenceRequest({ plants: tracks, target });
+          if (controller.signal.aborted) aborted();
+        });
+        if (reference) {
+          referenceImage = await cropPlant(target.frames[reference.bestFrame].image, reference.box);
+          target = { ...target, cropReference: { plantId: reference.id, frame: reference.bestFrame, box: reference.box, confirmedBy: 'operator', image: referenceImage } };
+        }
+      }
+      target = { ...target, classificationStrategy: referenceImage ? 'reference' : 'baseline' };
+      const evidence = await Promise.all(tracks.map(async plant => ({ id: plant.id, ...await browserEvidence(target.frames[plant.bestFrame].image, plant.box, Boolean(referenceImage)) })));
+      const batches = classificationBatches(evidence, referenceImage);
+      for (let i = 0; i < batches.length; i++) {
         controller.signal.throwIfAborted();
-        const batch = tracks.slice(i, i + 8);
-        const plants = await Promise.all(batch.map(async plant => ({ id: plant.id, image: await cropPlant(target.frames[plant.bestFrame].image, plant.box) })));
-        setProgress({ phase: 3, value: 70 + Math.round(i / tracks.length * 29), detail: `Muse Spark · reviewing plants ${i + 1}–${Math.min(i + 8, tracks.length)} of ${tracks.length}` });
-        const data = await trackedRequest('classify', i / 8 + 1, { action: 'classify', crop: target.crop, plants });
+        setProgress({ phase: 3, value: 70 + Math.round(i / batches.length * 29), detail: `Muse Spark · evidence batch ${i + 1} of ${batches.length}` });
+        const data = await trackedRequest('classify', i + 1, { action: 'classify', crop: target.crop, plants: batches[i], ...(referenceImage ? { referenceImage } : {}) });
         dispatchConnection({ type: 'verified', model: 'muse-spark-1.3', revision: connectionRevision });
         data.plants.forEach(result => { const plant = tracks.find(p => p.id === result.id); if (plant) Object.assign(plant, { label: result.label, originalLabel: result.originalLabel, confidence: result.confidence, reasoning: result.reasoning, source: 'sam-3.1 + muse-spark-1.3' }); });
       }
@@ -506,20 +539,23 @@ export default function Dashboard({ active = true, onMap, uploadRequest = 0, con
     <a className="gp-skip" href="#gp-main">Skip to analysis</a>
     <nav className="gp-rail" aria-label="Workspace navigation"><a href="/" className="gp-rail-brand" aria-label="GreenPoint home"><Leaf weight="fill" /></a><div className="gp-rail-main">{onMap && <IconButton label="Back to field map" onClick={onMap} disabled={working || reading}><MapTrifold /><span className="gp-rail-label">Field</span></IconButton>}<IconButton label="Field sessions" className={!queueMode && view === 'table' && filter === 'all' ? 'gp-rail-active' : ''} onClick={() => { setView('table'); setFilter('all'); setQueueMode(false); if (window.innerWidth < 801) setSidebar(true); }}><SquaresFour /><span className="gp-rail-label">Sessions</span></IconButton><IconButton label="Frame atlas" className={!queueMode && view === 'atlas' ? 'gp-rail-active' : ''} onClick={() => openInventory('all', 'atlas')}><MapTrifold /><span className="gp-rail-label">Atlas</span></IconButton><IconButton label="Review queue" className={queueMode ? 'gp-rail-active' : ''} onClick={() => openInventory('all', 'table', true)}><CheckSquare /><span className="gp-rail-label">Review</span>{stats.pending + stats.deferred > 0 && <span className="gp-rail-count">{stats.pending + stats.deferred}</span>}</IconButton></div><div className="gp-rail-bottom"><IconButton label="Connection settings" onClick={() => setModal('connection')}><GearSix /></IconButton><IconButton label="About GreenPoint" onClick={() => setModal('about')}><Question /></IconButton></div></nav>
     {sidebar && <button className="gp-sidebar-scrim" aria-label="Close field sessions" onClick={() => setSidebar(false)} />}
-    <aside ref={sidebarRef} className={`gp-sessions ${sidebar ? 'gp-sessions-open' : ''}`} aria-label="Field sessions" role={sidebar ? 'dialog' : undefined} aria-modal={sidebar ? true : undefined}><a className="gp-brand" href="/">Green<span>Point</span><span className="gp-brand-dot" /></a><div className="gp-session-head"><span className="gp-section-label">WORKSPACE</span><h2>Field sessions</h2><p>A clearer view of every field.</p><button className="gp-new-session" onClick={openUpload} disabled={working || reading}><Plus size={17} />New session</button></div><div className="gp-sessions-list"><div className="gp-recent-label">RECENT SESSIONS<span>{sessions.length.toString().padStart(2, '0')}</span></div>{sessions.map(s => <button type="button" key={s.id} className={`gp-session-item ${session.id === s.id ? 'gp-session-active' : ''}`} aria-pressed={session.id === s.id} onClick={() => selectSession(s.id)} disabled={working || reading}><img src={s.image} alt="" /><span><b>{s.name}</b><span>{s.mode === 'sample' ? 'Illustrative sample' : s.mode === 'local' ? 'Local preview' : s.mode === 'partial' ? 'Partial analysis' : 'Analyzed'}<span className="gp-session-dot">·</span>{timecode(s.duration)}</span></span><CaretRight size={14} /></button>)}</div><div className="gp-session-bottom"><button className="gp-upload-card" onClick={openUpload} disabled={working || reading}><UploadSimple size={25} /><strong>Start with a field walk.</strong><span>Upload a short phone video.</span><span className="gp-upload-card-action">Upload video<ArrowUpRight size={16} /></span></button><button className="gp-connection-status" onClick={() => setModal('connection')}><span className={provider.configured ? 'gp-dot-on' : ''} />{provider.configured ? 'Analysis configured' : provider.error ? 'Connection check failed' : provider.checked ? 'Sample workspace' : 'Checking connection…'}<ArrowUpRight size={12} /></button><a className="gp-project-link" href="/">Explore GreenPoint<ArrowUpRight size={13} /></a></div></aside>
+    <aside ref={sidebarRef} className={`gp-sessions ${sidebar ? 'gp-sessions-open' : ''}`} aria-label="Field sessions" role={sidebar ? 'dialog' : undefined} aria-modal={sidebar ? true : undefined}><a className="gp-brand" href="/">Green<span>Point</span><span className="gp-brand-dot" /></a><div className="gp-session-head"><span className="gp-section-label">WORKSPACE</span><h2>Field sessions</h2><p>A clearer view of every field.</p><button className="gp-new-session" onClick={openUpload} disabled={working || reading}><Plus size={17} />New session</button></div><div className="gp-sessions-list"><div className="gp-recent-label">RECENT SESSIONS<span>{sessions.length.toString().padStart(2, '0')}</span></div>{sessions.map(s => <button type="button" key={s.id} className={`gp-session-item ${session.id === s.id ? 'gp-session-active' : ''}`} aria-pressed={session.id === s.id} onClick={() => selectSession(s.id)} disabled={working || reading}><img src={s.image} alt="" /><span><b>{s.name}</b><span>{s.mode === 'sample' ? 'Illustrative sample' : s.provenance?.recorded ? 'Recorded real Meta run' : s.mode === 'local' ? 'Local preview' : s.mode === 'partial' ? 'Partial analysis' : 'Analyzed'}<span className="gp-session-dot">·</span>{timecode(s.duration)}</span></span><CaretRight size={14} /></button>)}</div><div className="gp-session-bottom"><button className="gp-upload-card" onClick={openUpload} disabled={working || reading}><UploadSimple size={25} /><strong>Start with a field walk.</strong><span>Upload a short phone video.</span><span className="gp-upload-card-action">Upload video<ArrowUpRight size={16} /></span></button><button className="gp-connection-status" onClick={() => setModal('connection')}><span className={provider.configured ? 'gp-dot-on' : ''} />{provider.configured ? 'Analysis configured' : provider.error ? 'Connection check failed' : provider.checked ? 'Sample workspace' : 'Checking connection…'}<ArrowUpRight size={12} /></button><a className="gp-project-link" href="/">Explore GreenPoint<ArrowUpRight size={13} /></a></div></aside>
     <main id="gp-main" className="gp-main">
       <header className="gp-topbar"><div className="gp-breadcrumb"><IconButton label="Open field sessions" className="gp-mobile-menu" onClick={() => setSidebar(true)}><List /></IconButton><span>Workspace</span><CaretRight size={12} /><strong>Field intelligence</strong></div><div className="gp-top-actions"><span className="gp-prototype-note">RESEARCH PROTOTYPE</span><button className="gp-button gp-button-primary" onClick={openUpload} disabled={working || reading}><UploadSimple size={18} /><span>Upload video</span><ArrowUpRight size={17} /></button></div></header>
-      <div className="gp-page-content"><div className="gp-page-heading"><div><h1>Field intelligence<span>.</span></h1><p>A field walk. Plant candidates to review.</p></div><button className="gp-help-button" onClick={() => setModal('about')}><Question size={16} />How it works</button></div>
+      <div className="gp-page-content"><ValidationNote /><div className="gp-page-heading"><div><h1>Field intelligence<span>.</span></h1><p>A field walk. Plant candidates to review.</p></div><button className="gp-help-button" onClick={() => setModal('about')}><Question size={16} />How it works</button></div>
         <div className="gp-session-summary"><div className="gp-current-session"><span className="gp-section-label">CURRENT SESSION</span><h2>{session.name}</h2><span>{session.mode === 'sample' ? 'Illustrative dataset' : session.fileName}<span className="gp-summary-dot">/</span>{session.crop}</span></div><div className="gp-session-stats"><div><strong>{session.plants.length.toString().padStart(2, '0')}</strong><span>{session.mode === 'sample' ? 'Example plants' : 'Candidate plants'}</span></div><button className="gp-crop" onClick={() => openInventory('crop')}><Leaf size={16} /><b>{stats.crop.toString().padStart(2, '0')}</b><span>Crop</span></button><button className="gp-weed" onClick={() => openInventory('weed')}><Leaf size={16} weight="fill" /><b>{stats.weed.toString().padStart(2, '0')}</b><span>Weed</span></button><button className="gp-uncertain" onClick={() => openInventory('uncertain')}><WarningCircle size={16} /><b>{stats.uncertain.toString().padStart(2, '0')}</b><span>Uncertain</span></button></div></div>
-        {session.mode !== 'sample' && <div className={`gp-analysis-banner ${session.limited ? 'gp-analysis-partial' : ''}`}><div><Crosshair size={18} /><span>{session.mode === 'local' ? `${session.coverage}. ${session.duration > MAX_ANALYSIS_SECONDS ? 'Preview only. Trim to 6 seconds for analysis.' : provider.configured ? 'Ready for analysis.' : provider.error ? 'Check the analysis connection.' : 'Configure the model connection to analyze.'}` : `${session.completedFrames} of ${session.frames.length} sampled frames processed${session.elapsed != null ? ` in ${session.elapsed}s` : ''}. Geometric identity linking is experimental.${session.limited ? ' Coverage is partial.' : ''}${session.lastError ? ` ${session.lastError}` : ''}`}</span></div><button className="gp-button gp-button-secondary" disabled={working || session.duration > MAX_ANALYSIS_SECONDS} onClick={() => runAnalysis()}>{working ? 'Analyzing…' : session.mode === 'local' ? 'Analyze video' : 'Run again'}<ArrowRight size={15} /></button></div>}
+        {session.mode !== 'sample' && <div className={`gp-analysis-banner ${session.limited ? 'gp-analysis-partial' : ''}`}><div><Crosshair size={18} /><span>{session.mode === 'local' ? `${session.coverage}. ${session.duration > MAX_ANALYSIS_SECONDS ? 'Preview only. Trim to 6 seconds for analysis.' : provider.configured ? 'Ready for analysis.' : provider.error ? 'Check the analysis connection.' : 'Configure the model connection to analyze.'}` : `${session.completedFrames} of ${session.frames.length} sampled frames processed${session.elapsed != null ? ` in ${session.elapsed}s` : ''}. ${session.identityMethod === 'single_frame' ? 'Single image; no cross-frame tracking.' : session.identityMethod === 'sam_video' ? 'SAM native video mode; identity tracking is unvalidated.' : 'Geometric identity linking is experimental.'}${session.limited ? ' Coverage is partial.' : ''}${session.lastError ? ` ${session.lastError}` : ''}`}</span></div><button className="gp-button gp-button-secondary" disabled={working || session.duration > MAX_ANALYSIS_SECONDS} onClick={() => runAnalysis()}>{working ? 'Analyzing…' : session.mode === 'local' ? 'Analyze video' : 'Run again'}<ArrowRight size={15} /></button></div>}
+        {session.mode !== 'sample' && <NativeTrackingOption checked={nativeTracking} onChange={setNativeTracking} disabled={working || reading} />}
+        {session.provenance?.recorded && <div className="gp-recorded-note"><strong>Recorded real Meta run</strong><span>{session.provenance.recordedAt} · {session.provenance.source} · Results replayed from this run; no new inference on page load.</span></div>}
         {notice && <div className="gp-notice" role="status"><WarningCircle size={17} /><span>{notice}</span><IconButton label="Dismiss notification" onClick={() => setNotice('')}><X size={15} /></IconButton></div>}
         {pendingExport && <div className="gp-notice gp-export-confirmation"><WarningCircle size={17} /><span role="status">{pendingExportCurrent ? `CSV download started for ${pendingExport.session.name}. Check that the file was saved before confirming.` : `${pendingExport.session.name} changed after this download. Export it again to keep the latest results.`}</span>{pendingExportCurrent && <button type="button" className="gp-button gp-button-secondary" onClick={confirmExport}>I saved the CSV</button>}<IconButton label="Dismiss export confirmation" onClick={() => setPendingExport(null)}><X size={15} /></IconButton></div>}
         <div className="gp-analysis-grid"><div className="gp-analysis-primary"><VideoWorkspace session={session} selected={selectedId} onSelect={selectPlant} activeFrame={activeFrame} onFrame={setActiveFrame} seekRequest={seekRequest} masks={masks} setMasks={setMasks} filter={filter} search={search} queueMode={queueMode} working={working} progress={progress} onCancel={() => abortRef.current?.abort()} /><div ref={inventoryRef}><Inventory session={session} selected={selectedId} onSelect={selectPlant} filter={filter} setFilter={setFilter} view={view} setView={setView} search={search} setSearch={setSearch} queueMode={queueMode} setQueueMode={setQueueMode} onExport={exportInventory} onReset={resetSample} /></div></div>{!inspectorDismissed && <Inspector plant={selected} session={session} onReview={reviewPlant} onNext={nextPlant} onClose={() => { setInspectorDismissed(true); setSelectedId(null); }} working={working} />}</div>
         <footer className="gp-dashboard-footer"><span>GreenPoint<span className="gp-footer-separator">/</span>Plant intelligence, with a human in the loop.</span><span>{session.mode === 'sample' ? 'Illustrative visuals & annotations' : 'Sampled video evidence'}<span className="gp-footer-separator">·</span>No treatment decisions automated</span></footer>
       </div>
     </main>
-    {active && modal === 'upload' && <Modal title="A field walk is all it takes." onClose={closeUpload} wide><p className="gp-dialog-intro">Upload a short video. Find the plants. Review the evidence.</p><input ref={uploadInput} type="file" accept="video/mp4,video/quicktime,video/webm,video/x-m4v,.mp4,.mov,.m4v,.webm" className="gp-sr-only" tabIndex="-1" onChange={e => { const file = e.target.files?.[0]; if (file) acceptFile(file); e.target.value = ''; }} /><button className={`gp-dropzone ${dragging ? 'gp-dropzone-dragging' : ''}`} disabled={reading} onClick={() => uploadInput.current?.click()} onDragOver={e => { e.preventDefault(); setDragging(true); }} onDragLeave={() => setDragging(false)} onDrop={e => { e.preventDefault(); setDragging(false); if (e.dataTransfer.files.length !== 1) setUploadError('Choose one field video at a time.'); else acceptFile(e.dataTransfer.files[0]); }}><UploadSimple size={31} /><strong>{reading ? 'Reading your field video…' : pending ? pending.fileName : 'Drop your field video here'}</strong><span>{reading ? `${progress.value}% · sampling frames locally` : pending ? 'Click to choose a different video' : 'or choose a file'}</span><small>MP4, MOV, M4V or WebM · 150 MB · preview up to 2 minutes · analyze up to 6 seconds</small>{reading && <progress max="100" value={progress.value} aria-label="Reading video progress" />}</button>{uploadError && <p className="gp-form-error" role="alert"><WarningCircle size={17} />{uploadError}</p>}{pending && <><div className="gp-upload-preview">{pending.frames.slice(0, 6).map((frame, i) => <img key={i} src={frame.image} alt={`Video preview ${i + 1}`} />)}</div><div className="gp-upload-form"><label>Session name<input maxLength="70" value={uploadName} onChange={e => setUploadName(e.target.value)} /></label><label>Planted crop<select value={uploadCrop} onChange={e => setUploadCrop(e.target.value)}>{CROPS.map(crop => <option key={crop}>{crop}</option>)}</select></label></div></>}{pending && pending.duration > MAX_ANALYSIS_SECONDS && <div className="gp-connection-note"><WarningCircle size={18} /><span>Preview only: trim this video to 6 seconds or less and upload it again to analyze.</span></div>}<p className="gp-upload-privacy"><CheckSquare size={18} />Your video stays in this tab. Only sampled frames are sent to Meta when you start live analysis.</p>{!provider.configured && <div className="gp-connection-note"><WarningCircle size={18} /><span>{provider.error ? 'Connection check failed. Retry in Connection settings.' : 'Live analysis is not configured yet. You can preview your video or explore the sample session.'}</span></div>}<div className="gp-dialog-actions"><button className="gp-text-button" onClick={() => { closeUpload(); selectSession('sample-east-plot'); setSelectedId('GP-007'); }}>Explore sample<ArrowRight size={16} /></button><button className="gp-button gp-button-primary" disabled={!pending || reading} onClick={() => openUploaded(provider.configured && Boolean(accessCode) && pending.duration <= MAX_ANALYSIS_SECONDS)}>{provider.configured && accessCode && pending?.duration <= MAX_ANALYSIS_SECONDS ? 'Analyze video' : 'Open local preview'}<ArrowRight size={17} /></button></div></Modal>}
+    {active && modal === 'upload' && <Modal title="A field walk is all it takes." onClose={closeUpload} wide><p className="gp-dialog-intro">Upload a short video. Find the plants. Review the evidence.</p><input ref={uploadInput} type="file" accept="video/mp4,video/quicktime,video/webm,video/x-m4v,.mp4,.mov,.m4v,.webm" className="gp-sr-only" tabIndex="-1" onChange={e => { const file = e.target.files?.[0]; if (file) acceptFile(file); e.target.value = ''; }} /><button className={`gp-dropzone ${dragging ? 'gp-dropzone-dragging' : ''}`} disabled={reading} onClick={() => uploadInput.current?.click()} onDragOver={e => { e.preventDefault(); setDragging(true); }} onDragLeave={() => setDragging(false)} onDrop={e => { e.preventDefault(); setDragging(false); if (e.dataTransfer.files.length !== 1) setUploadError('Choose one field video at a time.'); else acceptFile(e.dataTransfer.files[0]); }}><UploadSimple size={31} /><strong>{reading ? 'Reading your field video…' : pending ? pending.fileName : 'Drop your field video here'}</strong><span>{reading ? `${progress.value}% · sampling frames locally` : pending ? 'Click to choose a different video' : 'or choose a file'}</span><small>MP4, MOV, M4V or WebM · 150 MB · preview up to 2 minutes · analyze up to 6 seconds</small>{reading && <progress max="100" value={progress.value} aria-label="Reading video progress" />}</button>{uploadError && <p className="gp-form-error" role="alert"><WarningCircle size={17} />{uploadError}</p>}{pending && <><div className="gp-upload-preview">{pending.frames.slice(0, 6).map((frame, i) => <img key={i} src={frame.image} alt={`Video preview ${i + 1}`} />)}</div><div className="gp-upload-form"><label>Session name<input maxLength="70" value={uploadName} onChange={e => setUploadName(e.target.value)} /></label><label>Planted crop<select value={uploadCrop} onChange={e => setUploadCrop(e.target.value)}>{CROPS.map(crop => <option key={crop}>{crop}</option>)}</select></label></div></>}{pending && pending.duration > MAX_ANALYSIS_SECONDS && <div className="gp-connection-note"><WarningCircle size={18} /><span>Preview only: trim this video to 6 seconds or less and upload it again to analyze.</span></div>}<NativeTrackingOption checked={nativeTracking} onChange={setNativeTracking} disabled={reading} /><p className="gp-upload-privacy"><CheckSquare size={18} />{nativeTracking ? "Starting native analysis sends the complete selected short clip to Meta." : "Only sampled frames and same-source plant evidence are sent to Meta when analysis starts."} Results stay in this tab until exported.</p>{!provider.configured && <div className="gp-connection-note"><WarningCircle size={18} /><span>{provider.error ? 'Connection check failed. Retry in Connection settings.' : 'Live analysis is not configured yet. You can preview your video or explore the sample session.'}</span></div>}<div className="gp-dialog-actions"><button className="gp-text-button" onClick={() => { closeUpload(); selectSession('sample-east-plot'); setSelectedId('GP-007'); }}>Explore sample<ArrowRight size={16} /></button><button className="gp-button gp-button-primary" disabled={!pending || reading} onClick={() => openUploaded(provider.configured && Boolean(accessCode) && pending.duration <= MAX_ANALYSIS_SECONDS)}>{provider.configured && accessCode && pending?.duration <= MAX_ANALYSIS_SECONDS ? 'Analyze video' : 'Open local preview'}<ArrowRight size={17} /></button></div></Modal>}
+    {active && referenceRequest && <ReferencePicker request={referenceRequest} PlantCrop={PlantCrop} onChoose={value => referenceResolver.current?.(value)} />}
     {active && modal === 'connection' && <Modal title="Connections" onClose={() => setModal(null)}><Connections provider={provider} accessCode={accessCode} setAccessCode={setAccessCode} onCheck={checkConnection} onDone={() => { setModal(null); if (provider.configured && accessCode) setNotice('Access code set for this tab. Start analysis from your field video.'); }} /></Modal>}
-    {active && modal === 'about' && <Modal title="Every judgment has a frame." onClose={() => setModal(null)}><p className="gp-dialog-intro">GreenPoint turns a short field video into a reviewable plant inventory. Built for growers managing scattered plots.</p><ol className="gp-about-steps"><li><span>01</span><div><h3>Bring a field walk.</h3><p>Preview a phone video up to 2 minutes. Analyze a clip up to 6 seconds using at most 12 sampled frames; your original stays local.</p></div></li><li><span>02</span><div><h3>Find plants. Keep the evidence.</h3><p>SAM 3.1 segments plants. Conservative geometric matching proposes identities between closely spaced frames. Sparse samples stay separate.</p></div></li><li><span>03</span><div><h3>Make the final call.</h3><p>Muse Spark suggests crop, weed or uncertain. Review the source image, change a label, then export the inventory.</p></div></li></ol><div className="gp-about-honesty"><strong>What you are seeing now</strong><p>The sample uses AI-generated imagery and 12 hand-authored records. It demonstrates the workflow, not measured model performance. Image coordinates are not GPS. The tracker and classification need field validation.</p></div><div className="gp-dialog-actions"><a className="gp-text-button" href="https://github.com/zipking1988/GreenPoint" target="_blank" rel="noreferrer">View project<ArrowUpRight size={16} /></a><button className="gp-button gp-button-primary" onClick={() => setModal(null)}>Back to the field<ArrowRight size={17} /></button></div></Modal>}
+    {active && modal === 'about' && <Modal title="Every judgment has a frame." onClose={() => setModal(null)}><p className="gp-dialog-intro">GreenPoint turns a short field video into a reviewable plant inventory. Built for growers managing scattered plots.</p><ol className="gp-about-steps"><li><span>01</span><div><h3>Bring a field walk.</h3><p>Preview a phone video up to 2 minutes. Analyze a clip up to 6 seconds using at most 12 sampled frames, or explicitly opt into sending the short clip for native tracking.</p></div></li><li><span>02</span><div><h3>Find plants. Keep the evidence.</h3><p>SAM 3.1 segments plants. Choose sampled-frame matching or native video identities, then supply a crop reference you recognize. Tracking still needs field validation.</p></div></li><li><span>03</span><div><h3>Make the final call.</h3><p>Muse Spark suggests crop, weed or uncertain. Review the source image, change a label, then export the inventory.</p></div></li></ol><div className="gp-about-honesty"><strong>What you are seeing now</strong><p>The illustrative sample uses AI-generated imagery and 12 hand-authored records. A recorded real run is labeled separately with its source and timestamp. It demonstrates the workflow, not measured model performance. Image coordinates are not GPS. The tracker and classification need field validation.</p></div><div className="gp-dialog-actions"><a className="gp-text-button" href="https://github.com/zipking1988/GreenPoint" target="_blank" rel="noreferrer">View project<ArrowUpRight size={16} /></a><button className="gp-button gp-button-primary" onClick={() => setModal(null)}>Back to the field<ArrowRight size={17} /></button></div></Modal>}
   </div>;
 }

@@ -106,11 +106,11 @@ export function csvText(session) {
     if (/^[=+\-@\t\r]/.test(text)) text = `'${text}`;
     return `"${text.replaceAll('"', '""')}"`;
   };
-  const rows = [['plant_id', 'label', 'original_label', 'reviewed', 'model_confidence_uncalibrated', 'source', 'best_frame', 'time_s', 'x_normalized', 'y_normalized', 'width_normalized', 'height_normalized', 'reasoning', 'session_id', 'run_id', 'session_mode', 'review_status', 'model_ids', 'elapsed_s', 'completed_frames', 'analysis_log', 'record_type']];
+  const rows = [['plant_id', 'label', 'original_label', 'reviewed', 'model_confidence_uncalibrated', 'source', 'best_frame', 'time_s', 'x_normalized', 'y_normalized', 'width_normalized', 'height_normalized', 'reasoning', 'session_id', 'run_id', 'session_mode', 'review_status', 'model_ids', 'elapsed_s', 'completed_frames', 'analysis_log', 'record_type', 'identity_method', 'provider_object_id', 'crop_reference', 'recorded_run', 'source_provenance']];
   const log = session.analysisLog?.length ? JSON.stringify(session.analysisLog) : '';
-  session.plants.forEach(p => rows.push([p.id, p.label, p.originalLabel, reviewStatus(p) === 'confirmed', p.confidence ?? '', p.source ?? '', p.bestFrame, p.observations?.find(o => o.frame === p.bestFrame)?.time ?? 0, ...p.box, p.reasoning, session.id, session.runId ?? '', session.mode, reviewStatus(p), ['illustrative', 'illustrative-map'].includes(p.source) ? '' : (p.source ?? ''), session.elapsed ?? '', session.completedFrames ?? '', log, 'plant']));
+  session.plants.forEach(p => rows.push([p.id, p.label, p.originalLabel, reviewStatus(p) === 'confirmed', p.confidence ?? '', p.source ?? '', p.bestFrame, p.observations?.find(o => o.frame === p.bestFrame)?.time ?? 0, ...p.box, p.reasoning, session.id, session.runId ?? '', session.mode, reviewStatus(p), ['illustrative', 'illustrative-map'].includes(p.source) ? '' : (p.source ?? ''), session.elapsed ?? '', session.completedFrames ?? '', log, 'plant', session.identityMethod ?? '', p.providerObjectId ?? '', session.cropReference ? JSON.stringify({ plantId: session.cropReference.plantId, frame: session.cropReference.frame, box: session.cropReference.box, confirmedBy: session.cropReference.confirmedBy }) : '', Boolean(session.provenance?.recorded), session.provenance ? JSON.stringify(session.provenance) : '']));
   if (!session.plants.length && canExportSession(session)) {
-    rows.push([...Array(13).fill(''), session.id, session.runId, session.mode, '', '', session.elapsed ?? '', session.completedFrames ?? '', log, 'run_summary']);
+    rows.push([...Array(13).fill(''), session.id, session.runId, session.mode, '', '', session.elapsed ?? '', session.completedFrames ?? '', log, 'run_summary', session.identityMethod ?? '', '', '', Boolean(session.provenance?.recorded), session.provenance ? JSON.stringify(session.provenance) : '']);
   }
   return '\uFEFF' + rows.map(row => row.map(safe).join(',')).join('\r\n');
 }

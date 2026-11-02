@@ -92,7 +92,7 @@ test('authenticated robot analysis returns source crops, original suggestions, s
   assert.equal(fake.calls.length, 2);
   const crop = fake.calls[1].body.messages[1].content[1].image_url.url;
   const metadata = await sharp(Buffer.from(crop.split(',')[1], 'base64')).metadata();
-  assert.equal(metadata.width, 60); assert.equal(metadata.height, 27);
+  assert.equal(metadata.width, 78); assert.equal(metadata.height, 36);
   assert.ok(!JSON.stringify(result.body).includes(env.MCP_ACCESS_TOKEN));
 });
 
@@ -134,7 +134,7 @@ test('HTTP boundary enforces origin, bounded JSON, method and content negotiatio
   const allowed = await post(call('greenpoint_capabilities'), { origin: 'https://greenpoint-vert.vercel.app' });
   assert.equal(allowed.headers.get('access-control-allow-origin'), 'https://greenpoint-vert.vercel.app');
   assert.equal((await post('{broken')).status, 400);
-  assert.equal((await post('x'.repeat(1_100_001))).status, 413);
+  assert.equal((await post('x'.repeat(1_300_001))).status, 413);
   assert.equal((await post([])).status, 400);
   assert.equal((await post(call('greenpoint_capabilities'), { 'content-type': 'text/plain' })).status, 415);
   assert.equal((await post(call('greenpoint_capabilities'), { accept: 'application/json' })).status, 406);

@@ -1,3 +1,5 @@
+import { evidenceRegion } from './evidence.js';
+
 const MAX_VIDEO = 150 * 1024 * 1024;
 export const MAX_PREVIEW_SECONDS = 120;
 export const MAX_ANALYSIS_SECONDS = 6;
@@ -36,14 +38,14 @@ function waitEvent(video, event, signal, action) {
   });
 }
 
-export async function readVideo(file, url, signal, onProgress) {
+export async function readVideo(file, url, signal, onProgress, exactTimes) {
   validateVideo(file);
   const video = document.createElement('video');
   video.preload = 'auto'; video.muted = true; video.playsInline = true;
   try {
     await waitEvent(video, 'loadeddata', signal, () => { video.src = url; video.load(); });
-    const times = sampleTimes(video.duration);
-    const scale = Math.min(1, 960 / Math.max(video.videoWidth, video.videoHeight));
+    const times = exactTimes ?? sampleTimes(video.duration);
+    const scale = Math.min(1, 1280 / Math.max(video.videoWidth, video.videoHeight));
     const canvas = document.createElement('canvas');
     canvas.width = Math.max(32, Math.round(video.videoWidth * scale));
     canvas.height = Math.max(32, Math.round(video.videoHeight * scale));
@@ -54,7 +56,7 @@ export async function readVideo(file, url, signal, onProgress) {
       const time = times[i];
       if (Math.abs(video.currentTime - time) > 0.005) await waitEvent(video, 'seeked', signal, () => { video.currentTime = time; });
       context.drawImage(video, 0, 0, canvas.width, canvas.height);
-      frames.push({ time, image: canvas.toDataURL('image/jpeg', 0.78) });
+      frames.push({ time, image: boundedJpeg(canvas, 700_000) });
       onProgress?.((i + 1) / times.length);
     }
     return { frames, width: canvas.width, height: canvas.height, duration: video.duration };
@@ -64,18 +66,58 @@ export async function readVideo(file, url, signal, onProgress) {
 }
 
 export async function cropPlant(imageUrl, box) {
+  return (await browserEvidence(imageUrl, box, false)).image;
+}
+
+export async function jpegSnapshot(source, width, height) {
+  if (source.startsWith('data:image/jpeg;base64,')) return source;
+  const image = new Image(); image.src = source;
+  await image.decode();
+  if (image.naturalWidth !== width || image.naturalHeight !== height) throw new Error('The source frame dimensions changed. Reload the original footage before analysis.');
+  const canvas = document.createElement('canvas'); canvas.width = width; canvas.height = height;
+  canvas.getContext('2d').drawImage(image, 0, 0);
+  return boundedJpeg(canvas, 700_000);
+}
+
+function boundedJpeg(canvas, limit) {
+  for (const quality of [0.85, 0.75, 0.65, 0.5]) {
+    const encoded = canvas.toDataURL('image/jpeg', quality);
+    if ((encoded.length - 23) * 0.75 <= limit) return encoded;
+  }
+  throw new Error('This evidence image exceeds the preview limit. Try a clearer, smaller clip.');
+}
+
+export async function browserEvidence(imageUrl, box, context = true) {
   const image = new Image(); image.src = imageUrl;
   await image.decode();
-  const [x, y, w, h] = box;
-  const padding = 0.15;
-  const left = Math.max(0, x - w * padding);
-  const top = Math.max(0, y - h * padding);
-  const width = Math.min(1 - left, w * (1 + 2 * padding));
-  const height = Math.min(1 - top, h * (1 + 2 * padding));
-  const scale = Math.min(1, 360 / Math.max(width * image.width, height * image.height));
-  const canvas = document.createElement('canvas');
-  canvas.width = Math.max(1, Math.round(width * image.width * scale));
-  canvas.height = Math.max(1, Math.round(height * image.height * scale));
-  canvas.getContext('2d').drawImage(image, left * image.width, top * image.height, width * image.width, height * image.height, 0, 0, canvas.width, canvas.height);
-  return canvas.toDataURL('image/jpeg', 0.85);
+  function encode(region, size, limit, mark = false) {
+    const scale = Math.min(1, size / Math.max(region.width, region.height));
+    const canvas = document.createElement('canvas');
+    canvas.width = Math.max(1, Math.round(region.width * scale));
+    canvas.height = Math.max(1, Math.round(region.height * scale));
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(image, region.left, region.top, region.width, region.height, 0, 0, canvas.width, canvas.height);
+    if (mark) {
+      const [x, y, w, h] = region.targetBox;
+      ctx.strokeStyle = '#fff'; ctx.lineWidth = 1.5;
+      ctx.strokeRect(x * canvas.width, y * canvas.height, w * canvas.width, h * canvas.height);
+    }
+    return boundedJpeg(canvas, limit);
+  }
+  const tight = evidenceRegion(box, image.width, image.height);
+  const output = { image: encode(tight, 360, 100_000) };
+  if (context) {
+    const expanded = evidenceRegion(box, image.width, image.height, true);
+    output.contextImage = encode(expanded, 512, 200_000, true);
+    output.contextBox = expanded.targetBox;
+  }
+  return output;
+}
+
+export async function nativeVideoData(file) {
+  if (!file || !/\.mp4$/i.test(file.name) || file.size > 2_000_000) throw new Error('Native tracking needs an H.264 MP4 up to 2 MB. Choose sampled frames for other clips.');
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  let binary = '';
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return `data:video/mp4;base64,${btoa(binary)}`;
 }
