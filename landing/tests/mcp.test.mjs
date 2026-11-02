@@ -22,7 +22,7 @@ function upstream() {
       const events = [{ type: 'response.output_text.delta', ...lane, delta: text }, { type: 'response.output_text.done', ...lane, text }, { type: 'response.completed' }];
       return new Response(events.map(e => `data: ${JSON.stringify(e)}\n\n`).join(''));
     }
-    return Response.json({ choices: [{ finish_reason: 'stop', message: { content: JSON.stringify({ plants: [{ id: 'GP-001', label: 'weed', confidence: 0.65, reasoning: 'Broad leaves between planted rows.', reviewed: true, box: [0, 0, 1, 1] }] }) } }] });
+    return Response.json({ choices: [{ finish_reason: 'stop', message: { content: JSON.stringify({ plants: [{ id: 'GP-001', label: 'weed', confidence: 0.65, reasoning: 'Broad leaves between planted rows.', reviewed: true, box: [0, 0, 1, 1] }] }) } }], usage: { prompt_tokens: 100, completion_tokens: 20 } });
   } };
 }
 async function endpoint(t, config = {}, fetcher = () => { throw new Error('No upstream request expected'); }, preparse = false) {
@@ -90,6 +90,8 @@ test('authenticated robot analysis returns source crops, original suggestions, s
   assert.equal(data.plants[0].reviewed, false); assert.equal(data.treatment_authorized, false);
   assert.deepEqual(data.plants[0].box, [0.1, 0.2, 0.6, 0.26999999999999996]);
   assert.equal(fake.calls.length, 2);
+  assert.equal(data.usage.requests.length, 2);
+  assert.ok(data.usage.estimatedUsd > 0.0025);
   const crop = fake.calls[1].body.messages[1].content[1].image_url.url;
   const metadata = await sharp(Buffer.from(crop.split(',')[1], 'base64')).metadata();
   assert.equal(metadata.width, 78); assert.equal(metadata.height, 36);
@@ -103,6 +105,25 @@ test('classification failure preserves uncertain partial evidence without claimi
   const data = result.body.result.structuredContent;
   assert.equal(result.body.result.isError, true); assert.equal(data.status, 'partial'); assert.equal(data.error_code, 'provider_rate_limit');
   assert.equal(data.plants.length, 1); assert.equal(data.plants[0].original_label, null); assert.equal(data.plants[0].label, 'uncertain');
+  assert.equal(data.usage, null);
+});
+
+test('billable truncated or malformed classifier output cannot report a SAM-only total', async t => {
+  for (const message of [{ finish_reason: 'length', content: '{"plants":[' }, { finish_reason: 'stop', content: 'not JSON' }]) {
+    const fake = upstream(); let requests = 0;
+    const { post } = await endpoint(t, env, (url, options) => {
+      requests++;
+      return url.endsWith('/responses') ? fake.fetcher(url, options) : Response.json({ choices: [{ finish_reason: message.finish_reason, message: { content: message.content } }], usage: { prompt_tokens: 500, completion_tokens: 4000 } });
+    });
+    const result = await post(call('greenpoint_analyze_frame', frame), { authorization: `Bearer ${env.MCP_ACCESS_TOKEN}` });
+    const data = result.body.result.structuredContent;
+    assert.equal(requests, 2);
+    assert.equal(result.body.result.isError, true);
+    assert.equal(data.status, 'partial');
+    assert.equal(data.error_code, 'invalid_classification');
+    assert.equal(data.usage, null);
+    assert.equal(data.plants[0].label, 'uncertain');
+  }
 });
 
 test('valid large textured frames are not inflated by a higher-quality JPEG re-encode', async t => {

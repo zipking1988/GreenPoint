@@ -4,6 +4,8 @@ Scope: tracked changes and new source/assets relative to `868c1ab`, including AP
 
 ## Findings resolved
 
+- **Native video discarded targets between fixed preview samples.** Preview selection now covers actual detected identities first and retains their exact source frame/time, then fills temporal preview gaps. Invalid observations or identities omitted by preview/plant caps mark coverage partial. Regressions cover a target visible only at source frame 1 and three identities competing for two preview slots.
+- **Partial MCP output reported a segmentation-only cost after a billable classifier failure.** Failed classification now makes the total usage unknown. HTTP regressions use truncated and malformed provider responses with reported token usage; successful complete runs still return their full usage breakdown.
 - **Recorded-image reruns sent a URL to the JPEG-only API.** Browser regression reproduced the rejection. Reruns now materialize a bounded JPEG and use those same source pixels for segmentation and classification. A new real run completed with seven candidates; the old run and its human decisions remained separate.
 - **Map-only review had no unload warning before Video mounted.** Dirty-session protection now lives in the shared session store. Both workspaces retain version-specific CSV save confirmation; decisions made after export require another export.
 - **Best-frame masks could leak onto an observation without a mask.** Observed plants use only the displayed observation's box and mask. Tests verify missing observations disappear and a missing current mask stays null. The connector also updates when the same ID moves between source frames.
@@ -15,7 +17,7 @@ Scope: tracked changes and new source/assets relative to `868c1ab`, including AP
 
 ## Verified locally
 
-- 62 automated checks: analysis, MCP protocol/authentication, map geometry, Meta probe, media/evidence, budget/agent boundaries and Sites packaging.
+- 65 automated checks: analysis, MCP protocol/authentication, map geometry, Meta probe, media/evidence, budget/agent boundaries and Sites packaging.
 - Production build and Sites client/server/hosting artifacts generated successfully.
 - Browser: genuine video upload/preview; explicit full-clip native transfer; native completion with zero candidates; real single-frame rerun; optional reference prompt and baseline skip.
 - Map → defer GP-001 → Video inventory → Map: the same recorded session retained its decision. CSV preserved `uncertain`, original `weed`, `deferred`, source and run identity. Downloaded file was inspected; no invented farmer feedback or time-saving result.

@@ -56,6 +56,9 @@ export async function analyzeRobotFrame(input, env, fetcher = fetch, signal) {
         Object.assign(plant, { label: result.label, original_label: result.originalLabel, confidence: result.confidence, reasoning: result.reasoning });
       });
     } catch (error) {
+      // Rejected or incomplete output can still be billable. A missing usage
+      // record must keep the aggregate unknown instead of settling SAM alone.
+      usages.push(null);
       failure = error instanceof ApiError ? error.code : signal?.aborted ? 'analysis_canceled' : 'classification_failed';
       break;
     }

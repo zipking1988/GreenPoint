@@ -133,24 +133,49 @@ async function nativeVideoResult(stream, payload) {
   }
   const result = await parseVideoStream(events()).finalResult;
   if (result.outcome.status !== 'completed' || result.diagnostics.some(d => d.severity === 'error')) throw new ApiError(502, 'Native tracking could not be verified. Keep the clip or explicitly retry with sampled frames.', 'incomplete_segmentation');
-  const times = [...new Set(Array.from({ length: Math.min(12, Math.ceil(payload.duration * 2)) }, (_, i) => Math.min(payload.frameCount - 1, Math.round(i * 0.5 * payload.fps))))];
+  const maxFrames = Math.min(12, Math.ceil(payload.duration * 2), payload.frameCount);
   const boxes = recordsOfKind(result.records, 'box');
   const masks = new Map(recordsOfKind(result.records, 'mask').map(m => [`${frameIndexOf(m)}:${m.objectId}`, m]));
-  const identities = [...new Set(boxes.map(b => b.objectId))];
+  const observations = new Map();
+  let limited = false;
+  for (const box of boxes) {
+    const frameIndex = frameIndexOf(box);
+    const left = Math.max(0, box.left / payload.width), top = Math.max(0, box.top / payload.height);
+    const right = Math.min(1, box.right / payload.width), bottom = Math.min(1, box.bottom / payload.height);
+    if (!Number.isInteger(frameIndex) || frameIndex < 0 || frameIndex >= payload.frameCount || !(left < right && top < bottom)) { limited = true; continue; }
+    const m = masks.get(`${frameIndex}:${box.objectId}`);
+    if (!observations.has(frameIndex)) observations.set(frameIndex, []);
+    observations.get(frameIndex).push({ providerObjectId: box.objectId, box: [left, top, right - left, bottom - top], detectionConfidence: box.confidence ?? null, mask: m && m.mask.width * m.mask.height <= 1_638_400 ? { ...m.mask, bounds: m.bounds, sourceWidth: payload.width, sourceHeight: payload.height } : null });
+  }
+  const identities = [...new Set([...observations.values()].flatMap(items => items.map(d => d.providerObjectId)))];
   const allowed = new Set(identities.slice(0, 96));
-  const frames = times.map(frameIndex => ({
-    frameIndex, time: frameIndex / payload.fps,
-    detections: boxes.filter(b => frameIndexOf(b) === frameIndex && allowed.has(b.objectId)).slice(0, MAX_OBJECTS).flatMap(box => {
-      const left = Math.max(0, box.left / payload.width), top = Math.max(0, box.top / payload.height);
-      const right = Math.min(1, box.right / payload.width), bottom = Math.min(1, box.bottom / payload.height);
-      if (!(left < right && top < bottom)) return [];
-      const m = masks.get(`${frameIndex}:${box.objectId}`);
-      return [{ providerObjectId: box.objectId, box: [left, top, right - left, bottom - top], detectionConfidence: box.confidence ?? null, mask: m && m.mask.width * m.mask.height <= 1_638_400 ? { ...m.mask, bounds: m.bounds, sourceWidth: payload.width, sourceHeight: payload.height } : null }];
-    }),
-  }));
+  const candidates = [...observations].map(([frameIndex, items]) => {
+    if (items.length > MAX_OBJECTS) limited = true;
+    return { frameIndex, time: frameIndex / payload.fps, detections: items.filter(d => allowed.has(d.providerObjectId)).slice(0, MAX_OBJECTS) };
+  }).filter(frame => frame.detections.length);
+  const selected = new Map(), represented = new Set();
+  // Cover distinct native identities before filling temporal preview gaps.
+  // A transient target must retain its actual source frame, never a nearby box.
+  while (selected.size < maxFrames) {
+    const ranked = candidates.filter(frame => !selected.has(frame.frameIndex)).map(frame => {
+      const unseen = frame.detections.filter(d => !represented.has(d.providerObjectId));
+      return { frame, added: new Set(unseen.map(d => d.providerObjectId)).size, area: (unseen.length ? unseen : frame.detections).reduce((sum, d) => sum + d.box[2] * d.box[3], 0), distance: selected.size ? Math.min(...[...selected.keys()].map(index => Math.abs(index - frame.frameIndex))) : 0 };
+    }).sort((a, b) => b.added - a.added || (a.added ? b.area - a.area : b.distance - a.distance) || a.frame.frameIndex - b.frame.frameIndex);
+    if (!ranked.length) break;
+    const frame = ranked[0].frame;
+    selected.set(frame.frameIndex, frame);
+    frame.detections.forEach(d => represented.add(d.providerObjectId));
+  }
+  const times = [...new Set(Array.from({ length: maxFrames }, (_, i) => Math.min(payload.frameCount - 1, Math.round(i * 0.5 * payload.fps))))];
+  for (const frameIndex of times) {
+    if (selected.size >= maxFrames) break;
+    if (!selected.has(frameIndex)) selected.set(frameIndex, { frameIndex, time: frameIndex / payload.fps, detections: [] });
+  }
+  const frames = [...selected.values()].sort((a, b) => a.frameIndex - b.frameIndex);
+  limited ||= identities.length > 96 || identities.some(id => !represented.has(id));
   const billed = providerUsage?.video_frames_processed;
   const billedFrames = Number.isFinite(billed) && billed >= 50 ? billed : Math.max(50, payload.frameCount);
-  return { frames, width: payload.width, height: payload.height, fps: payload.fps, duration: payload.duration, identityMethod: 'sam_video', limited: identities.length > 96 || frames.some(f => boxes.filter(b => frameIndexOf(b) === f.frameIndex).length > MAX_OBJECTS), usage: { model: 'sam-3.1', videoFrames: billedFrames, estimatedUsd: billedFrames * 0.0002, estimated: !Number.isFinite(billed) } };
+  return { frames, width: payload.width, height: payload.height, fps: payload.fps, duration: payload.duration, identityMethod: 'sam_video', limited, usage: { model: 'sam-3.1', videoFrames: billedFrames, estimatedUsd: billedFrames * 0.0002, estimated: !Number.isFinite(billed) } };
 }
 
 const CLASSIFICATION_SCHEMA = {

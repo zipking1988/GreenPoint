@@ -77,6 +77,34 @@ test('invalid MCP crop reference is rejected before any provider billing', async
   await assert.rejects(analyzeRobotFrame({ image: `data:image/jpeg;base64,${image.toString('base64')}`, width: 100, height: 100, crop: 'Sugar beet', crop_reference: 'data:image/jpeg;base64,/9j/AAAA' }, { MODEL_API_KEY: 'test' }, async () => assert.fail('invalid reference reached provider')), error => error.code === 'invalid_reference');
 });
 
+async function nativeResultFor(text) {
+  const lane = { item_id: 'native-review-regression', output_index: 0, content_index: 0 };
+  const events = [{ type: 'response.output_text.delta', ...lane, delta: text }, { type: 'response.output_text.done', ...lane, text }, { type: 'response.completed' }];
+  return analyze(validatePayload({ action: 'segment_video', video: `data:video/mp4;base64,${movie().toString('base64')}` }), { MODEL_API_KEY: 'test' }, async () => new Response(events.map(event => `data: ${JSON.stringify(event)}\n\n`).join('')));
+}
+const nativeRecord = id => `${id}<|box;x1=10;y1=20;x2=69;y2=46;w=100;h=100;c=0.92|><|mask;x=0;y=0;data=27,60,~!!!!M!0c[0o91w?q1!pIH4pPRVp2B3'7\`e.ioeAf6-k/#Xd8%dX9x(|>`;
+
+test('transient native target between half-second samples retains its exact source evidence', async () => {
+  const result = await nativeResultFor(`<1f>${nativeRecord(0)}`);
+  assert.ok(result.frames.length <= 2);
+  assert.equal(result.limited, false);
+  const source = result.frames.find(frame => frame.frameIndex === 1);
+  assert.equal(source.time, 0.1);
+  assert.equal(source.detections.length, 1);
+  const track = nativeTracks(result.frames)[0];
+  assert.equal(track.observations[0].sourceFrameIndex, 1);
+  assert.equal(result.frames[track.bestFrame].frameIndex, 1);
+  assert.deepEqual(observedPlants({ plants: [track] }, track.bestFrame)[0].box, source.detections[0].box);
+});
+
+test('native preview cap reports partial coverage when not every returned identity fits', async () => {
+  const result = await nativeResultFor([1, 2, 3].map((frame, i) => `<${frame}f>${nativeRecord(i)}`).join('\n'));
+  assert.equal(result.frames.length, 2);
+  assert.equal(nativeTracks(result.frames).length, 2);
+  assert.equal(result.limited, true);
+  assert.ok(result.frames.every(frame => frame.detections.length && frame.time === frame.frameIndex / result.fps));
+});
+
 test('empty recorded run export retains source attribution and identity method', () => {
   const csv = csvText({ id: 'native-recording', runId: 'recorded-id', mode: 'live', plants: [], identityMethod: 'sam_video', provenance: { recorded: true, source: 'Bonn', clipSha256: 'source-hash' } });
   assert.match(csv, /"run_summary","sam_video","","","true"/);
