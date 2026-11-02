@@ -99,10 +99,35 @@ test('agent really requests MCP evidence, respects frame handles and cannot clai
   const frameId = 'frame-1'; let turn = 0;
   const reply = message => ({ choices: [{ message, finish_reason: 'stop' }] });
   const tool = (id, name, args) => ({ id, type: 'function', function: { name, arguments: JSON.stringify(args) } });
-  const chat = async () => ++turn === 1 ? reply({ role: 'assistant', tool_calls: [tool('a', 'greenpoint_capabilities', {}), tool('b', 'greenpoint_analyze_frame', { frame_id: frameId })] }) : reply({ role: 'assistant', content: JSON.stringify({ decision: 'no_candidates', reasoning: 'No candidate plants were returned, without proving weed-free ground.', evidence_ids: [] }) });
+  const chat = async body => {
+    assert.equal(body.max_tokens, 4000);
+    turn++;
+    if (turn === 1) { assert.deepEqual(body.tools.map(t => t.function.name), ['greenpoint_capabilities']); return reply({ role: 'assistant', tool_calls: [tool('a', 'greenpoint_capabilities', {})] }); }
+    if (turn === 2) { assert.deepEqual(body.tools.map(t => t.function.name), ['greenpoint_analyze_frame']); return reply({ role: 'assistant', tool_calls: [tool('b', 'greenpoint_analyze_frame', { frame_id: frameId })] }); }
+    assert.equal(body.tools, undefined); assert.equal(body.response_format.type, 'json_schema');
+    return reply({ role: 'assistant', content: JSON.stringify({ decision: 'no_candidates', reasoning: 'No candidate plants were returned, without proving weed-free ground.', evidence_ids: [] }) });
+  };
   const output = await runPerceptionAgent({ frameId, chat, callTool: async name => name === 'greenpoint_capabilities' ? { image_coordinates_only: true } : { status: 'completed', limited: false, plants: [] } });
   assert.equal(output.trace.length, 2); assert.equal(output.treatment_authorized, false);
   turn = 0;
   await assert.rejects(runPerceptionAgent({ frameId, chat, callTool: async name => name === 'greenpoint_capabilities' ? {} : { status: 'partial', limited: true, plants: [] } }), /does not support/);
   await assert.rejects(runPerceptionAgent({ frameId, chat: async () => reply({ tool_calls: [tool('x', 'fly_to_plant', {})] }), callTool: async () => assert.fail('forbidden tool executed') }), /forbidden/);
+});
+
+test('agent rejects early perception before discovery and preserves incomplete-turn diagnostics', async () => {
+  const tool = (name, args = {}) => ({ id: name, type: 'function', function: { name, arguments: JSON.stringify(args) } });
+  const reply = (message, finish_reason = 'stop') => ({ choices: [{ message, finish_reason }] });
+  await assert.rejects(runPerceptionAgent({ frameId: 'f', chat: async () => reply({ tool_calls: [tool('greenpoint_analyze_frame', { frame_id: 'f' })] }), callTool: async () => assert.fail('out-of-order tool executed') }), /out-of-order/);
+  let turn = 0;
+  await assert.rejects(runPerceptionAgent({ frameId: 'f', chat: async () => {
+    turn++;
+    if (turn === 1) return reply({ role: 'assistant', tool_calls: [tool('greenpoint_capabilities')] }, 'tool_calls');
+    if (turn === 2) return reply({ role: 'assistant', tool_calls: [tool('greenpoint_analyze_frame', { frame_id: 'f' })] }, 'tool_calls');
+    return reply({ role: 'assistant', content: '{"decision":' }, 'length');
+  }, callTool: async name => name === 'greenpoint_capabilities' ? {} : { status: 'completed', limited: false, plants: [] } }), error => {
+    assert.match(error.message, /incomplete \(length\)/);
+    assert.equal(error.agentTrace.trace.length, 2);
+    assert.equal(error.agentTrace.model_turns[2].finish_reason, 'length');
+    return true;
+  });
 });

@@ -1,6 +1,7 @@
 import { parseArgs } from 'node:util';
 import { stat, writeFile, mkdir } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
+import { createHash } from 'node:crypto';
 import sharp from 'sharp';
 import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { StreamableHTTPClientTransport } from '@modelcontextprotocol/sdk/client/streamableHttp.js';
@@ -40,10 +41,15 @@ try {
   } });
   const out = resolve(values.out);
   await mkdir(dirname(out), { recursive: true });
-  await writeFile(out, JSON.stringify({ ...result, recorded_at: new Date().toISOString(), endpoint: endpoint.origin + endpoint.pathname, source_image: { width: info.width, height: info.height } }, null, 2) + '\n', { mode: 0o600 });
+  await writeFile(out, JSON.stringify({ ...result, recorded_at: new Date().toISOString(), endpoint: endpoint.origin + endpoint.pathname, source_image: { width: info.width, height: info.height, prepared_image_sha256: createHash('sha256').update(data).digest('hex') } }, null, 2) + '\n', { mode: 0o600 });
   console.log(JSON.stringify({ decision: result.decision, frame_id: frameId, tool_calls: result.trace.map(t => t.name), output: out }));
 } catch (error) {
   let text = String(error.message);
   for (const secret of [process.env.MODEL_API_KEY, process.env.MCP_ACCESS_TOKEN]) if (secret) text = text.replaceAll(secret, '[redacted]');
+  if (error.agentTrace) {
+    const out = resolve(values.out + '.failure.json');
+    await mkdir(dirname(out), { recursive: true });
+    await writeFile(out, JSON.stringify({ recorded_at: new Date().toISOString(), error: text, ...error.agentTrace }, null, 2) + '\n', { mode: 0o600 });
+  }
   console.error(text); process.exitCode = 1;
 } finally { await client.close(); }
