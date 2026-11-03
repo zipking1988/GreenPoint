@@ -56,7 +56,7 @@ shadows:
 
 ## Product and audience
 
-A landing page for international hackathon judges and Japanese agricultural operators managing scattered small fields. The visitor should remember: repeated views become one reviewable plant identity, then a field inventory. This is a presentation prototype, not a deployed agricultural model pipeline.
+A landing page for international hackathon judges and Japanese agricultural operators managing scattered small fields. The visitor should remember: inspect the source behind each candidate, then make a human review decision. The prototype has a deployed Meta perception pipeline and generic MCP interface; public-data results have not met the weed-recognition target, and real-farmer performance remains unvalidated.
 
 ## Selected direction
 
@@ -70,7 +70,7 @@ Sora supplies a geometric display voice close to the selected mock. Source Sans 
 
 ## Layout
 
-One immersive, full-bleed photographic hero. Each following section has a separate purpose: problem, identity explanation, field atlas, architecture, evaluation plan, FAQ, invitation. No generic feature-card grid, fabricated testimonials, award badges, pricing, or ornamental dashboards. Thin rules group related content. Map image keeps its natural aspect ratio and full plot bounds.
+One immersive, full-bleed photographic hero. Each following section has a separate purpose: recorded source evidence, farmer problem, illustrative identity explanation, field atlas, architecture, recorded MCP loop, measured evaluation, FAQ, invitation. No generic feature-card grid, fabricated testimonials, award badges, pricing, or ornamental dashboards. Thin rules group related content. Map image keeps its natural aspect ratio and full plot bounds. The source-evidence preview uses the actual recorded frame and corresponding plant crop, with a responsive connector on desktop. Both primary invitations enter the real workspace; the illustrative walkthrough is secondary.
 
 ## Motion
 
@@ -78,7 +78,7 @@ Premium, measured, finite. Easing: `cubic-bezier(.2,.7,.2,1)`. Quick feedback150
 
 ## Interaction and accessibility
 
-Sticky navigation uses section anchors and current-section indication. Buttons and touch targets at least44px. Native range input supports keyboard scrubbing. Pipeline tabs use arrow/Home/End navigation. FAQ uses native details/summary. Full-map dialog uses the native modal focus trap, Escape, close button, and focus restoration. Labels distinguish illustrative data, planned model capabilities, and future field validation. The downloadable CSV contains four explicitly illustrative, normalized-image-coordinate records.
+Sticky navigation uses section anchors and current-section indication. Buttons and touch targets at least44px. Native range input supports keyboard scrubbing. Pipeline tabs use arrow/Home/End navigation. FAQ uses native details/summary. Full-map dialog uses the native modal focus trap, Escape, close button, and focus restoration. Labels distinguish illustrative data, actual recorded Meta/MCP results, live processing and future field validation. Important mobile provenance and limitation copy is at least12px. The downloadable CSV contains four explicitly illustrative, normalized-image-coordinate records.
 
 ## Decisions log
 

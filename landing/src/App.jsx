@@ -13,6 +13,7 @@ import { List } from '@phosphor-icons/react/dist/csr/List';
 import { Leaf } from '@phosphor-icons/react/dist/csr/Leaf';
 import { Crosshair } from '@phosphor-icons/react/dist/csr/Crosshair';
 import { MeasuredCopy } from './MeasuredCopy.jsx';
+import { AgentEvidence, RecordedFieldEvidence } from './PublishedEvidence.jsx';
 import { evaluation, faqs, pipeline, samplePlants } from './content.js';
 import './styles.css';
 
@@ -164,7 +165,7 @@ function Architecture() {
 
 function Research() {
   return <section id="research" className="research section-wrap" aria-labelledby="research-title">
-    <div className="section-heading"><h2 id="research-title">Designed to be tested.</h2><MeasuredCopy className="section-copy">Public-data evaluation first. Real-field validation next.</MeasuredCopy></div>
+    <div className="section-heading"><h2 id="research-title">Tested on public data.</h2><MeasuredCopy className="section-copy">Measured results. Real-field validation is still ahead.</MeasuredCopy></div>
     <div className="evaluation-table" role="table" aria-label="Public-data validation results and limitations">
       <div className="evaluation-row evaluation-head" role="row"><span role="columnheader">STAGE</span><span role="columnheader">OBSERVED RESULT</span><span role="columnheader">STATUS</span><span role="columnheader">METHOD</span></div>
       {evaluation.map(item => <div className="evaluation-row" role="row" key={item.name}><strong role="cell">{item.name}</strong><span role="cell">{item.metric}</span><span className="planned-status" role="cell">{item.status}</span><span className="evaluation-method" role="cell">{item.method}</span></div>)}
@@ -201,7 +202,7 @@ export function App() {
           if (entry.isIntersecting) setActiveSection(entry.target.id === 'top' ? '' : entry.target.id);
         });
       }, { rootMargin: `-${height * 0.15}px 0px -${height * 0.55}px 0px` });
-      ['top', 'approach', 'field-atlas', 'research'].forEach(id => observer.observe(document.getElementById(id)));
+      ['top', 'evidence', 'field-atlas', 'agents', 'research'].forEach(id => observer.observe(document.getElementById(id)));
     };
     observeSections();
     window.addEventListener('resize', observeSections);
@@ -234,23 +235,25 @@ export function App() {
     document.getElementById('tracking-title').focus({ preventScroll: true });
     setPlayRequest(value => value + 1);
   }
-  const navigation = [['approach', 'The approach'], ['field-atlas', 'Field atlas'], ['research', 'Research']];
+  const navigation = [['evidence', 'Real evidence'], ['field-atlas', 'Field atlas'], ['agents', 'Agents & MCP'], ['research', 'Results']];
 
   return <>
     <a className="skip-link" href="#main-content">Skip to content</a>
     <header className="masthead"><div className="header-inner"><a href="#top" aria-label="GreenPoint home"><Brand /></a><span className="prototype-label">Research prototype</span><nav className="desktop-nav" aria-label="Main navigation">{navigation.map(([id, text]) => <a key={id} href={`#${id}`} aria-current={activeSection === id ? 'location' : undefined}>{text}</a>)}<a href="/dashboard" className="dashboard-link">Open workspace<ArrowUpRight size={15} /></a></nav><button ref={menuToggle} className="icon-button mobile-menu-button" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={menuOpen} aria-controls="mobile-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <List />}</button></div>{menuOpen && <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation">{navigation.map(([id, text]) => <a key={id} href={`#${id}`} onClick={() => setMenuOpen(false)}>{text}<ArrowRight /></a>)}<a href="/dashboard">Open workspace<ArrowUpRight /></a><span>Research prototype</span></nav>}</header>
     <main id="main-content">
       <section id="top" className="hero" aria-labelledby="hero-title"><img className="hero-image" src={asset('vision-field')} alt="Illustrative young crop rows on dark soil, with individual crop and weed leaves highlighted." width="1495" height="1052" fetchPriority="high" /><div className="hero-content section-wrap"><div className="hero-copy"><p className="hero-kicker">A NEW VIEW OF SMALLER FIELDS</p><h1 id="hero-title">See the field.<br /><span>Plant by plant.</span></h1><MeasuredCopy className="hero-description">A phone-first approach to turning a field walk into a reviewable plant candidate inventory.</MeasuredCopy><a className="primary-button" href="/dashboard">Review real model evidence<ArrowRight aria-hidden="true" /></a></div><div className="hero-legend"><Legend vertical /></div><span className="hero-specimen"><Crosshair aria-hidden="true" /><span>GP-007<span>Illustrative candidate.</span></span></span><span className="hero-disclosure">Illustrative concept · not live analysis</span></div></section>
-      <div className="hero-bottom section-wrap"><span>PHONE VIDEO</span><span className="hero-path">Plant candidates<ArrowRight aria-hidden="true" />Human review<ArrowRight aria-hidden="true" />Frame evidence</span><a href="#approach" aria-label="Explore the approach"><ArrowRight /></a></div>
+      <div className="hero-bottom section-wrap"><span>FIELD REVIEW</span><span className="hero-path"><span>Candidates</span><ArrowRight aria-hidden="true" /><span>Human review</span><ArrowRight aria-hidden="true" /><span>Source evidence</span></span><a href="#evidence" aria-label="Explore real model evidence"><ArrowRight /></a></div>
+      <RecordedFieldEvidence />
       <section className="problem section-wrap" aria-labelledby="problem-title"><div className="problem-copy"><h2 id="problem-title">Small fields.<br /><span>Big blind spots.</span></h2><MeasuredCopy className="section-copy">When a team manages scattered plots, finding individual weeds takes close attention. Broad treatment starts with an incomplete picture of what is actually growing.</MeasuredCopy><p className="audience-line">For Japanese growers and field-service teams.</p></div><div className="problem-visual"><figure><img src={asset('field-walk')} width="1642" height="958" alt="Illustrative small Japanese farm plots and a farmer using an ordinary phone." loading="lazy" /><figcaption className="caption">A familiar field walk. A different way to see it. / Illustrative visual</figcaption></figure><div className="policy-note"><p>Japan’s MIDORI Strategy targets a <strong>50% reduction in risk-weighted chemical pesticide use by 2050.</strong> Better plant-level information is one direction worth exploring.</p><a className="source-link" href="https://www.maff.go.jp/e/policies/env/env_policy/midori.html" target="_blank" rel="noreferrer">MAFF / MIDORI Strategy<ArrowUpRight aria-hidden="true" /></a><span className="caption">A national policy target, not a GreenPoint performance result.</span></div></div></section>
       <TrackingExperience playRequest={playRequest} reducedMotion={reducedMotion} />
       <FieldAtlas onExpand={() => setMapOpen(true)} />
       <Architecture />
+      <AgentEvidence />
       <Research />
       <section className="faq section-wrap" aria-labelledby="faq-title"><h2 id="faq-title">A closer look.</h2><div className="faq-list">{faqs.map(item => <details key={item.q}><summary>{item.q}<Plus className="faq-plus" aria-hidden="true" /><Minus className="faq-minus" aria-hidden="true" /></summary><MeasuredCopy>{item.a}</MeasuredCopy></details>)}</div></section>
-      <section className="closing" aria-labelledby="closing-title"><img src={asset('vision-field')} alt="" loading="lazy" width="1495" height="1052" /><div className="section-wrap closing-inner"><h2 id="closing-title">Start with<br />a <span>walk.</span></h2><p>Precision should travel lighter.</p><button className="primary-button" onClick={explore}>Explore the walkthrough<ArrowRight aria-hidden="true" /></button></div></section>
+      <section className="closing" aria-labelledby="closing-title"><img src={asset('vision-field')} alt="" loading="lazy" width="1495" height="1052" /><div className="section-wrap closing-inner"><h2 id="closing-title">Start with<br />a <span>walk.</span></h2><p>Inspect the evidence. Make the next judgment yours.</p><div className="closing-actions"><a className="primary-button" href="/dashboard">Review real model evidence<ArrowRight aria-hidden="true" /></a><button className="text-link" onClick={explore}>Explore the illustrative walkthrough<ArrowRight aria-hidden="true" /></button></div></div></section>
     </main>
-    <footer className="footer section-wrap"><div className="footer-top"><a href="#top" aria-label="GreenPoint back to top"><Brand /></a><span>Small fields. A clearer view.</span></div><div className="footer-bottom"><span>© 2026 GreenPoint / Independent research prototype</span><button className="motion-toggle" aria-label="Reduce page motion" aria-pressed={reducedMotion} disabled={systemReducedMotion} onClick={() => setMotionReduced(value => !value)}>Motion {reducedMotion ? 'reduced' : 'on'}</button><span>Illustrative AI visuals. Human review in the approach.</span></div></footer>
+    <footer className="footer section-wrap"><div className="footer-top"><a href="#top" aria-label="GreenPoint back to top"><Brand /></a><span>Small fields. A clearer view.</span></div><div className="footer-bottom"><span>© 2026 GreenPoint / Independent research prototype</span><button className="motion-toggle" aria-label="Reduce page motion" aria-pressed={reducedMotion} disabled={systemReducedMotion} onClick={() => setMotionReduced(value => !value)}>Motion {reducedMotion ? 'reduced' : 'on'}</button><span>Illustrations and recorded evidence are labeled. Human review required.</span></div></footer>
     <dialog className="map-dialog" ref={mapDialog} aria-labelledby="map-dialog-title" onCancel={() => setMapOpen(false)} onClose={() => setMapOpen(false)} onClick={event => { if (event.target === event.currentTarget) setMapOpen(false); }}>
       {mapOpen && <div className="dialog-surface"><div className="dialog-header"><div><span className="technical-label">GREENPOINT / FIELD ATLAS</span><h2 id="map-dialog-title">Every plant has a place.</h2></div><button className="icon-button" aria-label="Close full field map" onClick={() => setMapOpen(false)}><X /></button></div><img src={asset('field-map')} alt="The complete illustrative vegetable plot with all crop rows and surrounding field paths visible." /><div className="dialog-footer"><Legend /><p className="caption">Illustrative field map. Not surveyed coordinates or live analysis.</p></div></div>}
     </dialog>

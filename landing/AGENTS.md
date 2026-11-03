@@ -1,5 +1,12 @@
 # Prototype Instructions
 
+## Landing evidence refresh approved / 2026-11-03
+
+- User approved the Product Design audit follow-up: preserve the farmer visual direction, place real source-pixel evidence before the simulated explanation, introduce the recorded Muse → MCP loop, unify the primary workspace CTA, and clean up old copy on desktop and mobile.
+- The landing reads the existing published recordings; opening it or selecting a plant/agent step must not start live inference. Keep the example's selection bias and failed overall validation target visible.
+- Plant highlight, crop and model reasoning in the real-evidence preview must come from the same published session and selected plant. The MCP sequence is a separate recorded request; do not mix its candidate labels with the workspace recording.
+- Keep important provenance and limitations readable on mobile. Recorded public UAV/robot imagery does not validate Japanese phone-camera use, geographical mapping or physical robot operation.
+
 ## Evidence sprint approved / 2026-11-03
 
 - User approved the “Every recognition has evidence” sprint and delegated implementation, review fixes, GitHub main push, Vercel production deployment and verification. Preserve the farmer narrative and charcoal/sage design.
