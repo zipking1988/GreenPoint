@@ -1,8 +1,10 @@
+// Manual visual anchors in the 1586×992 illustration, not model detections.
+// Recheck the plant centres whenever field-map.webp changes.
 export const samplePlants = [
-  { id: 'GP-007', label: 'Needs review', x: 51, y: 55, note: 'Keep ambiguous plants in the review queue. A person makes the treatment decision.', action: 'Manual review' },
-  { id: 'GP-014', label: 'Weed', x: 68.5, y: 18, note: 'An example weed candidate, flagged for a person to inspect before treatment.', action: 'Treatment review' },
-  { id: 'GP-021', label: 'Crop', x: 29.5, y: 46, note: 'An example crop observation retained in the inventory and left untreated.', action: 'Keep in inventory' },
-  { id: 'GP-032', label: 'Needs review', x: 44, y: 36.5, note: 'Uncertainty stays visible rather than being forced into a crop or weed label.', action: 'Manual review' },
+  { id: 'GP-007', label: 'Needs review', x: 67.8, y: 49, note: 'Keep ambiguous plants in the review queue. A person makes the treatment decision.', action: 'Manual review' },
+  { id: 'GP-014', label: 'Weed', x: 70.4, y: 16.9, note: 'An example weed candidate, flagged for a person to inspect before treatment.', action: 'Treatment review' },
+  { id: 'GP-021', label: 'Crop', x: 17.8, y: 41.9, note: 'An example crop observation retained in the inventory and left untreated.', action: 'Keep in inventory' },
+  { id: 'GP-032', label: 'Needs review', x: 38.3, y: 35.2, note: 'Uncertainty stays visible rather than being forced into a crop or weed label.', action: 'Manual review' },
 ];
 
 export const pipeline = [

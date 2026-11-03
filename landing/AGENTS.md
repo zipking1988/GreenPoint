@@ -1,5 +1,11 @@
 # Prototype Instructions
 
+## Field-atlas annotation correction / 2026-11-03
+
+- User flagged Crop and Needs review markers pointing at the wrong places in the landing's illustrative field atlas. Each manual marker must be visually anchored to a clear plant centre in the 1586×992 `field-map.webp`; keep the plant visible beneath its crosshair.
+- Preserve the four illustrative records, labels, palette and whole-field layout. Recheck marker centres, label leaders, non-overlapping touch targets and caption visibility at desktop and phone widths, including 320px, whenever these anchors or the artwork change.
+- These hand-authored anchors are not model detections, measured crop/weed labels, GPS or validation data. The judge demo uses the separately labeled real Meta evidence and Muse MCP trace for technical proof.
+
 ## Landing evidence refresh approved / 2026-11-03
 
 - User approved the Product Design audit follow-up: preserve the farmer visual direction, place real source-pixel evidence before the simulated explanation, introduce the recorded Muse → MCP loop, unify the primary workspace CTA, and clean up old copy on desktop and mobile.
