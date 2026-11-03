@@ -1,0 +1,80 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.2021484375,
+        0.44921875,
+        0.2021484375,
+        0.267578125
+      ],
+      "detectionConfidence": 0.9532163739204407,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!$LB(Y:Z]+qkbjWUd1#Y9#p!46XB)%k8.1'7Yn(8Qo2I%V4q&7E'=VBhdO`5d=J=?Gq$c)OR6!GWZ+wZt{9xXYPsirrvBk3%2g'1MUW*xTM`$Vv3'tbr^S^vgyE$PsE/@-OnG1=qxu%:J!r%Y$:!7o-m&Esy`+UYkuBOHtM-Fr8LGSh{Qi1Vc@vcVYWyj)Ogu9qlS2')qo^gLkvdm#G8S0/D6Z0uGR_j{zKCvW@iWth&h8.Rmw7BzhweTB$a]wdf&nSHPVE",
+        "width": 207,
+        "height": 274,
+        "bounds": {
+          "left": 207,
+          "top": 460,
+          "right": 414,
+          "bottom": 734
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.1650390625,
+        0.12109375,
+        0.19140625,
+        0.1669921875
+      ],
+      "detectionConfidence": 0.9452055096626282,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!$4E9[nY.x{-Xbf.{x5yKFdY*)QU/x))Uq//PskC$p%YO=[bGxeLp1_Xw@M^[YGle#]NQ%dL)cemv#mpQYGe8:t`-jr6Bb%{cbDZ*_u&9_g/C'*uA7A6](wWOjM*_T$6G@5uLQvile!uKPTaqU_chGS)pvuu=ne9LV9U)r!&DF=zzg(KfP/W?tq)NuF[k6f1]YV1{K]sec%/{MoqGm*l!.y+R_xWl%(l7]D^hRM'L%F%L",
+        "width": 196,
+        "height": 171,
+        "bounds": {
+          "left": 169,
+          "top": 124,
+          "right": 365,
+          "bottom": 295
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.48828125,
+        0.2138671875,
+        0.0361328125,
+        0.07421875
+      ],
+      "detectionConfidence": 0.6717948913574219,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!RE_E{F$33[Z0ua8{Zo.#m2z/(ju4c-sNRcDf[wY$AhOqIr4*TyRTUh(_",
+        "width": 37,
+        "height": 76,
+        "bounds": {
+          "left": 500,
+          "top": 219,
+          "right": 537,
+          "bottom": 295
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 2607
+}

@@ -1,0 +1,124 @@
+[
+  {
+    "image_id": "05-26_00055_P0034282.png",
+    "gt_id": 1523,
+    "box": [
+      0.3603515625,
+      0.3359375,
+      0.05078125,
+      0.0400390625
+    ],
+    "size_px": 52.0,
+    "status": {
+      "current": "missed",
+      "whole": "missed",
+      "hybrid": "weed"
+    },
+    "ground_truth_label": "weed",
+    "category": "small",
+    "title": "Small weed recovered by zooming",
+    "description": "The whole-frame SAM run has no IoU >= 0.5 match. The frozen tile pipeline recovers this annotated weed and labels it weed.",
+    "figure": "cases/confirmatory-small.png",
+    "source_sha256": "514d0264f8cc6b921dbfcccc1c6e48e503703c65cf7087463b0b5fa4a2718312",
+    "selection": "Post-evaluation illustrative example; not representative of aggregate performance",
+    "scope": "confirmatory"
+  },
+  {
+    "image_id": "05-15_00214_P0030792.png",
+    "gt_id": 1217,
+    "box": [
+      0.5439453125,
+      0.87890625,
+      0.0341796875,
+      0.0439453125
+    ],
+    "size_px": 45.0,
+    "status": {
+      "current": "uncertain",
+      "whole": "weed",
+      "hybrid": "weed"
+    },
+    "ground_truth_label": "weed",
+    "category": "classification",
+    "title": "Same plant, agricultural evidence",
+    "description": "The SAM candidate already existed. Pooling pretrained agricultural predictions over its SAM mask resolves the original uncertain/misclassified label.",
+    "figure": "cases/confirmatory-classification.png",
+    "source_sha256": "58cd65b4314c86f76587f79b9b5ed8c83b0998ade0125f3aebedf01fa713b8c9",
+    "selection": "Post-evaluation illustrative example; not representative of aggregate performance",
+    "scope": "confirmatory"
+  },
+  {
+    "image_id": "05-15_00120_P0030859.png",
+    "gt_id": 485,
+    "box": [
+      0.365234375,
+      0.8369140625,
+      0.021484375,
+      0.0107421875
+    ],
+    "size_px": 22.0,
+    "status": {
+      "current": "missed",
+      "whole": "missed",
+      "hybrid": "uncertain"
+    },
+    "ground_truth_label": "weed",
+    "category": "missed",
+    "title": "A remaining miss",
+    "description": "The frozen hybrid still misses this annotated weed or leaves its class unresolved. This failure remains in the reported denominator.",
+    "figure": "cases/confirmatory-missed.png",
+    "source_sha256": "51898b11facae2ff79678b9f159fad3c7d2261f88ca87f5921d3836047f1a684",
+    "selection": "Post-evaluation illustrative example; not representative of aggregate performance",
+    "scope": "confirmatory"
+  },
+  {
+    "image_id": "06-05_00030_P0037991.png",
+    "gt_id": null,
+    "prediction_id": "tiles640-2-4",
+    "box": [
+      0.3668212890625,
+      0.375,
+      0.062255859375,
+      0.025634765625
+    ],
+    "size_px": 63.75,
+    "best_gt_iou": 0.4022686298076923,
+    "ground_truth_label": "unmatched weed prediction",
+    "status": {
+      "current": "see image",
+      "whole": "see image",
+      "hybrid": "weed / false positive at IoU .5"
+    },
+    "category": "falsepositive",
+    "title": "A prediction that fails the box test",
+    "description": "The hybrid labels this box weed, but it does not receive a one-to-one weed match at IoU >= 0.5. Fragments and poor boxes count against precision.",
+    "figure": "cases/confirmatory-falsepositive.png",
+    "source_sha256": "ceba8876b5517f6f922830b53eaffe1c5e00cc6186ca73378fb2e10877f185d3",
+    "selection": "Post-evaluation illustrative example; not representative of aggregate performance",
+    "scope": "confirmatory"
+  },
+  {
+    "image_id": "05-26_00239_P0034016.png",
+    "gt_id": 1748,
+    "box": [
+      0.984375,
+      0.98046875,
+      0.015625,
+      0.015625
+    ],
+    "size_px": 16.0,
+    "status": {
+      "current": "missed",
+      "whole": "missed",
+      "hybrid": "weed"
+    },
+    "ground_truth_label": "weed",
+    "category": "tiny",
+    "title": "A 16-pixel border weed recovered",
+    "description": "This 16-pixel weed is at the source-image border. Whole-frame SAM misses it; the tile pipeline recovers it. Border plants stay in the benchmark denominator.",
+    "figure": "cases/confirmatory-tiny.png",
+    "source_sha256": "de367263a287c745e98300a5ab7a9b3328e7517e6c45a58bbee184719fd0946f",
+    "selection": "Post-evaluation illustrative example; not representative of aggregate performance",
+    "scope": "confirmatory"
+  }
+]

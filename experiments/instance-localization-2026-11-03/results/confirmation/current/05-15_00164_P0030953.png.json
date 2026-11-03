@@ -1,0 +1,119 @@
+{
+  "image_id": "05-15_00164_P0030953.png",
+  "plants": [
+    {
+      "box": [
+        0.7578125,
+        0.697265625,
+        0.03125,
+        0.0341796875
+      ],
+      "detectionConfidence": 0.5747508406639099,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!FEw8jr]cV#z`yUe#FJMtx0Qt`bR28UO56ld6[bFN{",
+        "width": 32,
+        "height": 35,
+        "bounds": {
+          "left": 776,
+          "top": 714,
+          "right": 808,
+          "bottom": 749
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-001",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Tiny blurred thumbnail shows indistinct green tissue without clear sugar beet morphology."
+    },
+    {
+      "box": [
+        0.234375,
+        0.58203125,
+        0.0146484375,
+        0.0419921875
+      ],
+      "detectionConfidence": 0.5460992455482483,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!=I4Y66ryJ&owjkZrn57%CM?h/L]_ru`",
+        "width": 15,
+        "height": 43,
+        "bounds": {
+          "left": 240,
+          "top": 596,
+          "right": 255,
+          "bottom": 639
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Very low resolution crop prevents confirmation of leaf shape or row pattern."
+    },
+    {
+      "box": [
+        0.7373046875,
+        0.5009765625,
+        0.037109375,
+        0.0185546875
+      ],
+      "detectionConfidence": 0.5114504098892212,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!BGSWi!'_8+I.y+$+*gTD%j)b]wLWl`13#D9)",
+        "width": 38,
+        "height": 19,
+        "bounds": {
+          "left": 755,
+          "top": 513,
+          "right": 793,
+          "bottom": 532
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-003",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.32,
+      "reasoning": "Indistinct seedling detail is insufficient to distinguish crop from weed."
+    },
+    {
+      "box": [
+        0.224609375,
+        0.736328125,
+        0.0341796875,
+        0.0234375
+      ],
+      "detectionConfidence": 0.5345454812049866,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!AF9j5SK.g`QEl6`@cC?g6]26-yVgE+Tj/?Y",
+        "width": 35,
+        "height": 24,
+        "bounds": {
+          "left": 230,
+          "top": 754,
+          "right": 265,
+          "bottom": 778
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-004",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Occluded blurred view lacks clear sugar beet leaf evidence."
+    }
+  ],
+  "errors": [],
+  "limited": false
+}

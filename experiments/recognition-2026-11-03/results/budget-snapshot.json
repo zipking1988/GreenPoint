@@ -1,0 +1,3547 @@
+{
+  "estimated_or_held_usd_total": 2.570849,
+  "this_experiment_estimated_or_held_usd": 0.8762595,
+  "provider_requests_this_experiment": 288,
+  "unsettled_this_experiment": 1,
+  "not_a_reconciled_bill": true,
+  "new_experiments_stop_usd": 8,
+  "total_limit_usd": 10,
+  "entries": [
+    {
+      "id": "69e90064-e264-4cd6-add9-005545795b9d",
+      "label": "recognition-v2:development:tiles640:05-15_00203_P0030690.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:03:28.990Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "c756639f-199c-4ec0-aa85-d716fe032bfa",
+      "label": "recognition-v2:development:tiles640:05-15_00203_P0030690.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:03:31.100Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "024c6b31-2db7-4908-a125-a8a5f158e3b2",
+      "label": "recognition-v2:development:tiles640:05-15_00203_P0030690.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:03:35.141Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "86b4211c-e8ef-484b-ab3b-9ef8703c1c1b",
+      "label": "recognition-v2:development:tiles640:05-15_00203_P0030690.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:03:38.362Z"
+    },
+    {
+      "id": "e67b4995-904f-4274-a473-a1a6557efc10",
+      "label": "recognition-v2:development:tiles640:05-15_00141_P0030690.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:03:38.917Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "b1b26112-6f38-4a62-9a36-cb4c65a7ded2",
+      "label": "recognition-v2:development:tiles640:05-15_00141_P0030690.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:03:41.554Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e1a034b2-92df-4c25-a04f-05d579ab4124",
+      "label": "recognition-v2:development:tiles640:05-15_00141_P0030690.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:03:43.002Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "101dcd73-6355-4f08-b096-39ed7d529cd1",
+      "label": "recognition-v2:development:tiles640:05-15_00141_P0030690.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:03:45.461Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "c4cf94fd-f653-400c-af78-4963c0003695",
+      "label": "recognition-v2:development:tiles640:06-05_00135_P0037987.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:03:46.662Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "159a722e-0c5a-41be-afdb-268fcc734810",
+      "label": "recognition-v2:development:tiles640:06-05_00135_P0037987.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:03:48.356Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "1f6e92fe-e8b2-41b5-acd1-218874ae35ca",
+      "label": "recognition-v2:development:tiles640:06-05_00135_P0037987.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:03:49.295Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "39df35b4-c5b8-40e6-97b8-39b447174f77",
+      "label": "recognition-v2:development:tiles640:06-05_00135_P0037987.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:03:50.871Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d4993baf-df48-4353-a72f-2c7f6a6cbeee",
+      "label": "recognition-v2:development:tiles640:05-26_00220_P0034119.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:03:52.239Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a7915da1-2326-467b-8bdd-99985cddc0ab",
+      "label": "recognition-v2:development:tiles640:05-26_00220_P0034119.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:03:53.476Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d8dfba98-411d-4c60-8f4f-ee8d98438bbc",
+      "label": "recognition-v2:development:tiles640:05-26_00220_P0034119.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:03:54.417Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "5819cb2e-04b7-44be-8487-65b0c9911168",
+      "label": "recognition-v2:development:tiles640:05-26_00220_P0034119.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:03:56.249Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "303abbdd-a013-4e9a-b3f4-9e60e58873da",
+      "label": "recognition-v2:development:tiles640:05-15_00196_P0030690.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:03:58.635Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "75b8c74e-22f2-4cac-9e7c-0b2a55c95243",
+      "label": "recognition-v2:development:tiles640:05-15_00196_P0030690.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:03:59.771Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "146d2d17-3c1e-49b5-ac38-4bcc4a1f5ac4",
+      "label": "recognition-v2:development:tiles640:05-15_00196_P0030690.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:04:02.495Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "3f2fdd91-559c-4458-8db1-704b9a2aae94",
+      "label": "recognition-v2:development:tiles640:05-15_00196_P0030690.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:04:03.443Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "6081b3b8-dbb0-4fc2-93df-6bc9ae44e62d",
+      "label": "recognition-v2:development:tiles512:05-15_00203_P0030690.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:05:38.321Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a3ef82f9-0f23-4e9e-a79e-d7f139e51d0b",
+      "label": "recognition-v2:development:tiles512:05-15_00203_P0030690.png:256-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:05:40.602Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "846d5f20-5366-4a76-b44d-8f8e97036911",
+      "label": "recognition-v2:development:tiles512:05-15_00203_P0030690.png:512-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:05:42.212Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e2f4422b-f156-4327-8809-8069500eb511",
+      "label": "recognition-v2:development:tiles512:05-15_00203_P0030690.png:0-256",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:05:42.898Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e7a30c99-6449-4f91-b5c4-abd9680e26fe",
+      "label": "recognition-v2:development:tiles512:05-15_00203_P0030690.png:256-256",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:05:45.677Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d6faa1c3-a614-4468-b82f-16c6f25079ea",
+      "label": "recognition-v2:development:tiles512:05-15_00203_P0030690.png:512-256",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:05:48.433Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "ab5cb093-71a3-4e86-bdf0-9f532277decb",
+      "label": "recognition-v2:development:tiles512:05-15_00203_P0030690.png:0-512",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:05:49.371Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "518f9dce-3539-413a-b0d2-2532c7423817",
+      "label": "recognition-v2:development:tiles512:05-15_00203_P0030690.png:256-512",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:05:50.917Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "ea9af939-f5ad-49be-bf08-4a1e7a7286dc",
+      "label": "recognition-v2:development:tiles512:05-15_00203_P0030690.png:512-512",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:05:52.873Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "734873b0-b9f7-412e-9214-8eccd40454fa",
+      "label": "recognition-v2:development:tiles512:05-15_00141_P0030690.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:05:54.373Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "1817b5bf-57ec-4f69-8e70-b9d58c9cc108",
+      "label": "recognition-v2:development:tiles512:05-15_00141_P0030690.png:256-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:05:56.158Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "73b5686e-b69a-487b-a5cb-f93b93f2feb3",
+      "label": "recognition-v2:development:tiles512:05-15_00141_P0030690.png:512-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:05:57.967Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "89037f99-2424-42e2-854a-f2b8d731d041",
+      "label": "recognition-v2:development:tiles512:05-15_00141_P0030690.png:0-256",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:05:58.979Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "8e34664b-482c-478c-b5e8-81cc150b2720",
+      "label": "recognition-v2:development:tiles512:05-15_00141_P0030690.png:256-256",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:00.151Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "fdacdfd5-b9b1-4fe6-9115-ea7a1393ad11",
+      "label": "recognition-v2:development:tiles512:05-15_00141_P0030690.png:512-256",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:01.161Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "1d230bae-f807-4f72-9dea-134300247d86",
+      "label": "recognition-v2:development:tiles512:05-15_00141_P0030690.png:0-512",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:02.128Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "b1b3a533-9bbc-4ee9-8c1d-896a6fa103a1",
+      "label": "recognition-v2:development:tiles512:05-15_00141_P0030690.png:256-512",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:04.021Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "47d9934d-1e85-4499-a7c3-62c83ed7e2e5",
+      "label": "recognition-v2:development:tiles512:05-15_00141_P0030690.png:512-512",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:04.741Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "13e8af42-04c9-4758-abde-d55f87be6970",
+      "label": "recognition-v2:development:tiles512:06-05_00135_P0037987.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:05.864Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "6a450b43-3ac2-41e9-87d7-03dffbf6fc4e",
+      "label": "recognition-v2:development:tiles512:06-05_00135_P0037987.png:256-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:06.635Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "707e735c-a30d-48cd-9c49-8cf3ab6992a0",
+      "label": "recognition-v2:development:tiles512:06-05_00135_P0037987.png:512-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:07.687Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "f166f47b-a29b-4f6e-a8d3-8fd1236bd7c5",
+      "label": "recognition-v2:development:tiles512:06-05_00135_P0037987.png:0-256",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:09.280Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "729a84c0-cb75-4235-9d21-ff25c47ffa48",
+      "label": "recognition-v2:development:tiles512:06-05_00135_P0037987.png:256-256",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:11.104Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "600f4d6f-3d41-4dca-a33b-52ab79f4d17f",
+      "label": "recognition-v2:development:tiles512:06-05_00135_P0037987.png:512-256",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:11.986Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e5f53ee0-2494-46e2-87fd-705d6f9f2967",
+      "label": "recognition-v2:development:tiles512:06-05_00135_P0037987.png:0-512",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:13.544Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "649aaf51-0c20-4975-afb0-b6424c789df8",
+      "label": "recognition-v2:development:tiles512:06-05_00135_P0037987.png:256-512",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:14.816Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "5b1d9d3a-4af3-4729-8eef-28b3ca5a0824",
+      "label": "recognition-v2:development:tiles512:06-05_00135_P0037987.png:512-512",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:17.892Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "b38fe69a-9a08-4b5e-a7ea-b054122a8334",
+      "label": "recognition-v2:development:tiles512:05-26_00220_P0034119.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:18.694Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "07486689-a15d-469a-ac7d-0eef63a836d4",
+      "label": "recognition-v2:development:tiles512:05-26_00220_P0034119.png:256-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:20.387Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "51a47c82-c471-483c-9044-cad5ebdc6f43",
+      "label": "recognition-v2:development:tiles512:05-26_00220_P0034119.png:512-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:21.320Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "16e9ca43-8c38-4a69-abba-ac185b48bfe4",
+      "label": "recognition-v2:development:tiles512:05-26_00220_P0034119.png:0-256",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:22.243Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "41bf9684-42c8-4fa5-96f5-b10f6e95bcd9",
+      "label": "recognition-v2:development:tiles512:05-26_00220_P0034119.png:256-256",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:23.438Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e2e8b633-0912-496e-8067-94c8ea30507a",
+      "label": "recognition-v2:development:tiles512:05-26_00220_P0034119.png:512-256",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:25.097Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "0bedacc1-3a1a-4220-a67c-0efd73c249af",
+      "label": "recognition-v2:development:tiles512:05-26_00220_P0034119.png:0-512",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:26.812Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "aff1ef80-7d8f-4dcd-9d0e-a69453b27da0",
+      "label": "recognition-v2:development:tiles512:05-26_00220_P0034119.png:256-512",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:27.694Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "cad0b351-3ef9-4828-95fd-0ecdb4989111",
+      "label": "recognition-v2:development:tiles512:05-26_00220_P0034119.png:512-512",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:29.062Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "8177aa2f-7e30-40fa-ad45-5e48fe5352f3",
+      "label": "recognition-v2:development:tiles512:05-15_00196_P0030690.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:30.904Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "23020821-8f25-4045-9567-de21db12b4e9",
+      "label": "recognition-v2:development:tiles512:05-15_00196_P0030690.png:256-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:31.803Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "1ffd026b-4064-415a-ab5d-a9f83c1a782f",
+      "label": "recognition-v2:development:tiles512:05-15_00196_P0030690.png:512-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:33.676Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "2b7e8a1e-9868-42f2-b3cc-6e9f8d5e5d9e",
+      "label": "recognition-v2:development:tiles512:05-15_00196_P0030690.png:0-256",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:34.517Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "99ffb2af-63e1-4a6e-b95f-4de14e77475a",
+      "label": "recognition-v2:development:tiles512:05-15_00196_P0030690.png:256-256",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:35.482Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "36c6b68a-56a0-4770-b561-c3255358df62",
+      "label": "recognition-v2:development:tiles512:05-15_00196_P0030690.png:512-256",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:36.302Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "9a283863-e032-4473-bb0e-dc6d48076164",
+      "label": "recognition-v2:development:tiles512:05-15_00196_P0030690.png:0-512",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:38.456Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "07a6667d-13fe-4550-a36b-1ec32e22199a",
+      "label": "recognition-v2:development:tiles512:05-15_00196_P0030690.png:256-512",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:39.865Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "9edc8b01-2a38-42da-965f-acafa10e98e5",
+      "label": "recognition-v2:development:tiles512:05-15_00196_P0030690.png:512-512",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:06:40.721Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "573da2f4-86e2-4283-8569-387551893ff0",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00178_P0030686.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:07:49.766Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "1bc35f93-b3cd-4fb9-a7e9-95319ff7fe28",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00178_P0030686.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:07:51.227Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "5fa503b7-63d4-4d54-8799-fee5a3a681a6",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00178_P0030686.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:07:52.231Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "f4aec26c-850d-4d76-ba75-9006517b4c83",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00178_P0030686.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:07:53.600Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "c0e84040-7bab-4612-97d0-43de190a9be8",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00246_P0030953.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:07:54.664Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "308d6280-c128-4d2a-80c7-aebbcc0ecaa1",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00246_P0030953.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:07:56.927Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "7886b6a8-b9df-41fa-952f-df67c744ea6d",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00246_P0030953.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:07:57.798Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "8ed55df3-ed4a-4bc1-8a1f-1b41617a9c5e",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00246_P0030953.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:07:59.099Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e4255a51-e88c-4a55-bd16-25c36179ae73",
+      "label": "recognition-v2:evaluation:tiles640:06-05_00050_P0037991.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:01.705Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "fedefc43-c589-4280-acb1-0d7f87855f6a",
+      "label": "recognition-v2:evaluation:tiles640:06-05_00050_P0037991.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:03.252Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d58337f5-7fc3-4bae-a411-727e964fd9a8",
+      "label": "recognition-v2:evaluation:tiles640:06-05_00050_P0037991.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:04.142Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "148f2ff5-2829-4839-b6e7-1043ad34e731",
+      "label": "recognition-v2:evaluation:tiles640:06-05_00050_P0037991.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:05.214Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "76b18b6b-0f81-4255-a5ca-c93353e32c5b",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00095_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:06.734Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "8bb9e4ae-482b-431e-90b0-e680723222f7",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00095_P0030859.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:08.311Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "df7e3ee8-84cd-4e90-943a-7562da6aa70f",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00095_P0030859.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:10.008Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "fdee39b5-7d53-4f14-9671-d910d3464479",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00095_P0030859.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:11.529Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "bbf18e93-54d5-432a-9b3a-fc6701faf337",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00174_P0030686.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:12.990Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a103277f-6ea2-4d27-80b5-43c9af6451e5",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00174_P0030686.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:14.029Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "0693886b-d003-4dc5-8ecf-f63716f37851",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00174_P0030686.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:15.244Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "18030a71-5d34-4c61-a266-7bc474642c39",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00174_P0030686.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:16.196Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "7c6c4d1f-7e26-49dc-b757-5ea79d223150",
+      "label": "recognition-v2:evaluation:tiles640:05-26_00154_P0034121.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:17.086Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "72987363-0443-4b5f-bbad-b2d40a4f20d0",
+      "label": "recognition-v2:evaluation:tiles640:05-26_00154_P0034121.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:19.409Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "008dab29-cec3-4d42-ac55-80110349be39",
+      "label": "recognition-v2:evaluation:tiles640:05-26_00154_P0034121.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:20.329Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "6566cf63-c370-4ccd-92f0-94827dd820e9",
+      "label": "recognition-v2:evaluation:tiles640:05-26_00154_P0034121.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:23.165Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "82c4a1f9-2693-4f3c-ba2f-bb304dc50e99",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00219_P0030953.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:25.409Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "370abf4f-995f-422a-b154-bde241ba09aa",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00219_P0030953.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:26.185Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a3834f9b-9290-4cd5-b951-9a9c30f73ddf",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00219_P0030953.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:27.160Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "46a510e8-267f-4625-b2fc-088582a51ffe",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00219_P0030953.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:27.977Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "adbb0785-4aa1-4d58-bd14-b1bfb490395e",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00139_P0030953.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:28.740Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "87a9058d-bc7f-41a1-8cc3-f497a252245d",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00139_P0030953.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:29.610Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "ae3c7426-e2c9-4687-8f91-b9822eee281b",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00139_P0030953.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:30.816Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "64de6f69-55eb-47ab-a59e-962fae477f0d",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00139_P0030953.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:31.859Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "f75a2e7f-868c-4831-a309-99f2fdfdb4e8",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00162_P0030695.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:33.331Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "597499b9-2154-4d1a-a359-0c56fdd9bf0e",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00162_P0030695.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:34.257Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "9612ccd6-0b65-4767-a5e9-54ceda23dbd4",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00162_P0030695.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:35.277Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "71b98987-b94e-43b6-8f4e-65a03438b4d6",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00162_P0030695.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:36.969Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "dcf096ff-db9a-437b-9104-50760bd37e7d",
+      "label": "recognition-v2:evaluation:tiles640:06-05_00134_P0037991.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:38.161Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "38ee36fe-777c-424a-9d11-d112ef37d76b",
+      "label": "recognition-v2:evaluation:tiles640:06-05_00134_P0037991.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:39.080Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "4d511af9-c354-4bef-a551-58ebd78db099",
+      "label": "recognition-v2:evaluation:tiles640:06-05_00134_P0037991.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:40.771Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "7848822e-d0fd-4d23-b964-053b5205784a",
+      "label": "recognition-v2:evaluation:tiles640:06-05_00134_P0037991.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:42.348Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "7018ae21-dfd8-4795-876c-e8e76ee0748e",
+      "label": "recognition-v2:evaluation:tiles640:05-26_00222_P0034016.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:43.050Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d6355c2f-2896-4f2d-826e-2a1a222a5cf6",
+      "label": "recognition-v2:evaluation:tiles640:05-26_00222_P0034016.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:44.330Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d14f9e21-f271-4a4b-a1ca-3d2786e2b5ed",
+      "label": "recognition-v2:evaluation:tiles640:05-26_00222_P0034016.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:45.777Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "4e314df2-4614-46f9-8ff6-9af355da2d4c",
+      "label": "recognition-v2:evaluation:tiles640:05-26_00222_P0034016.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:46.546Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "2b4a91a7-c07c-4c25-9d48-2bc693f663c6",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00167_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:47.930Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "064106c6-a38f-4e50-96be-402ef5851a68",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00167_P0030859.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:49.776Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d571fc94-f39c-4d9e-b78c-41df325448b9",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00167_P0030859.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:50.574Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "2ab3dbcc-4ef2-4c87-946e-f8d98b8a93bd",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00167_P0030859.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:53.225Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "bd95e540-9717-44a6-8407-ec47801de596",
+      "label": "recognition-v2:evaluation:tiles640:05-26_00198_P0034121.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:54.547Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "2d18b9f1-bba3-4ee8-999a-f1216969fb14",
+      "label": "recognition-v2:evaluation:tiles640:05-26_00198_P0034121.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:08:56.934Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "1f8708a6-eeac-44ef-8639-29d76313af1b",
+      "label": "recognition-v2:evaluation:tiles640:05-26_00198_P0034121.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:00.346Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "47066b7b-452c-4268-9370-06a032c4c916",
+      "label": "recognition-v2:evaluation:tiles640:05-26_00198_P0034121.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:02.363Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "c9e2bd16-8fe9-4285-b832-011238bc4cc6",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00301_P0030792.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:03.202Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "7db61f1a-bb82-4351-b70e-b404c8f7c09b",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00301_P0030792.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:04.366Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "38b4fc55-61c0-40ca-8bcc-303d19508f51",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00301_P0030792.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:05.013Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "75f11d47-4588-4984-86ec-c695e8175817",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00301_P0030792.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:06.993Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "44729939-e07b-4572-8ff9-e62e436a1beb",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00201_P0030953.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:08.117Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "c5da6d55-c74d-4a30-8a95-010215929f44",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00201_P0030953.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:08.922Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "af6d06cf-6988-4c36-8914-61782eec6854",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00201_P0030953.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:10.275Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "776bb837-2127-4496-887c-cb5f9629c474",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00201_P0030953.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:11.301Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "fa5b7d2b-3d07-4bc9-8219-1b2e58d6bdbf",
+      "label": "recognition-v2:evaluation:tiles640:06-05_00138_P0038051.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:12.248Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "ad0ef0ae-9060-4e4e-ae77-42a56040fcbc",
+      "label": "recognition-v2:evaluation:tiles640:06-05_00138_P0038051.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:13.083Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "1b05cec4-2f86-4faf-8c96-f9631acac54e",
+      "label": "recognition-v2:evaluation:tiles640:06-05_00138_P0038051.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:13.832Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a16872ed-b56e-4e52-b5fe-86fb042d5409",
+      "label": "recognition-v2:evaluation:tiles640:06-05_00138_P0038051.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:14.997Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "f77ea6e7-803e-4dec-b9a9-6cb6f3bd9fd8",
+      "label": "recognition-v2:evaluation:tiles640:06-05_00110_P0037822.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:16.489Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "3de90e9d-545c-45c4-a077-e148805e3a63",
+      "label": "recognition-v2:evaluation:tiles640:06-05_00110_P0037822.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:17.111Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e86d62ed-c609-488a-a1aa-321cbd6e4337",
+      "label": "recognition-v2:evaluation:tiles640:06-05_00110_P0037822.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:19.122Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d514d461-fd15-4059-ada7-ecc8fec250da",
+      "label": "recognition-v2:evaluation:tiles640:06-05_00110_P0037822.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:19.889Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "edc2aa88-1700-436c-a78c-947a465839e9",
+      "label": "recognition-v2:evaluation:tiles640:05-26_00219_P0034016.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:20.693Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "c5ce3f9a-ff45-43c0-8ffc-311620707ee0",
+      "label": "recognition-v2:evaluation:tiles640:05-26_00219_P0034016.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:21.478Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "1c385a53-dfdc-4543-8532-7912ecccd546",
+      "label": "recognition-v2:evaluation:tiles640:05-26_00219_P0034016.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:22.392Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e1d16b4d-534c-4ab3-b329-fb52ad1fa5eb",
+      "label": "recognition-v2:evaluation:tiles640:05-26_00219_P0034016.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:23.533Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "802ab0d7-63c5-41ea-9e7f-bff3be2765f9",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00095_P0030943.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:24.318Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "fc7b8e8c-97f8-45de-aab1-c20a562cc4d6",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00095_P0030943.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:25.157Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "b4ea3c51-d197-4324-92a7-ed8d7913a606",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00095_P0030943.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:26.449Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "25c78bad-987f-46a7-bd03-61b662f8ef01",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00095_P0030943.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:27.113Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "c592fad9-7530-4023-b6d0-091f441edf41",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00174_P0030695.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:27.815Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "aa9b43b5-5bb5-4ab9-81f1-cb80d23ea0d5",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00174_P0030695.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:28.733Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "cd006753-d90d-427c-b0d9-617f0cbd3bcf",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00174_P0030695.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:30.614Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d4a9f40b-e1e8-4c28-9385-2c7d25ce01e2",
+      "label": "recognition-v2:evaluation:tiles640:05-15_00174_P0030695.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:09:31.435Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e4f8d1d2-4513-4d3c-a6ea-7d7e515b288c",
+      "label": "recognition-v2:confirmatory:whole:05-15_00146_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:10:42.938Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "93c951c3-16de-49ef-b78a-0a50848e453d",
+      "label": "recognition-v2:confirmatory:muse:05-15_00146_P0030859.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:10:44.748Z",
+      "actual_usd": 0.00607425,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 436,
+        "outputTokens": 1301,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.00607425
+      }
+    },
+    {
+      "id": "e55b6f76-5389-499c-a3d7-b079a8a1f60b",
+      "label": "recognition-v2:confirmatory:muse:05-15_00146_P0030859.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:10:57.060Z",
+      "actual_usd": 0.0056955,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 405,
+        "outputTokens": 1221,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.0056955
+      }
+    },
+    {
+      "id": "b9666b0d-ab7e-40d6-8dcf-241232e16b85",
+      "label": "recognition-v2:confirmatory:whole:05-26_00138_P0034282.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:11:08.905Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "7d34564c-a9de-48b4-bcf5-f809c942983e",
+      "label": "recognition-v2:confirmatory:muse:05-26_00138_P0034282.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:11:11.287Z",
+      "actual_usd": 0.006971,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 283,
+        "outputTokens": 1557,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.006971
+      }
+    },
+    {
+      "id": "498d6a37-628a-45a1-a403-8d64a95ed284",
+      "label": "recognition-v2:confirmatory:muse:05-26_00138_P0034282.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:11:27.175Z",
+      "actual_usd": 0.0107,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 536,
+        "outputTokens": 2360,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.0107
+      }
+    },
+    {
+      "id": "106afc03-733a-4a14-9c0c-11a4b0fadf8c",
+      "label": "recognition-v2:confirmatory:muse:05-26_00138_P0034282.png:2",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:11:50.547Z",
+      "actual_usd": 0.005948,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 437,
+        "outputTokens": 1271,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.005948
+      }
+    },
+    {
+      "id": "d6fb8ae4-1477-463a-a9ee-b2c4df3547ce",
+      "label": "recognition-v2:confirmatory:muse:05-26_00138_P0034282.png:3",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:12:02.720Z",
+      "actual_usd": 0.00579625,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 234,
+        "outputTokens": 1295,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.00579625
+      }
+    },
+    {
+      "id": "315ee6bf-2a46-4656-bd93-fe3edaa55057",
+      "label": "recognition-v2:confirmatory:whole:05-15_00214_P0030792.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:12:13.988Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "aca7dd6b-1a50-4e7f-9092-3776c78d8630",
+      "label": "recognition-v2:confirmatory:muse:05-15_00214_P0030792.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:12:15.961Z",
+      "actual_usd": 0.0053511999999999995,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 246,
+        "outputTokens": 1216,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.0053511999999999995
+      }
+    },
+    {
+      "id": "32b2a0d3-8b30-47e1-876b-4d99e62a06eb",
+      "label": "recognition-v2:confirmatory:muse:05-15_00214_P0030792.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:12:27.969Z",
+      "actual_usd": 0.0058995,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 371,
+        "outputTokens": 1279,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.0058995
+      }
+    },
+    {
+      "id": "03d8baf2-1308-40f2-9987-36ae6e6b7bc6",
+      "label": "recognition-v2:confirmatory:whole:05-15_00259_P0030792.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:12:41.223Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "54f321ec-6226-4f09-b796-dcec92680412",
+      "label": "recognition-v2:confirmatory:muse:05-15_00259_P0030792.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:12:42.031Z",
+      "actual_usd": 0.0060525,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 337,
+        "outputTokens": 1325,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.0060525
+      }
+    },
+    {
+      "id": "e04acce6-0542-4056-a2a3-ff238eeb550c",
+      "label": "recognition-v2:confirmatory:whole:05-15_00179_P0030695.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:12:55.394Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "9b7766f8-d394-4bfa-b4d4-c7f96f18091b",
+      "label": "recognition-v2:confirmatory:muse:05-15_00179_P0030695.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:12:57.556Z",
+      "actual_usd": 0.00671645,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 342,
+        "outputTokens": 1509,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.00671645
+      }
+    },
+    {
+      "id": "d1d717f0-52d1-4e41-af9f-93d063ca7b5e",
+      "label": "recognition-v2:confirmatory:muse:05-15_00179_P0030695.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:13:12.996Z",
+      "actual_usd": 0.0049682,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 436,
+        "outputTokens": 1070,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.0049682
+      }
+    },
+    {
+      "id": "1a0f220a-957f-4849-88c1-e5d2d32747bb",
+      "label": "recognition-v2:confirmatory:whole:06-05_00101_P0037991.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:13:25.025Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "6cc87871-916b-40bc-8404-a0d356d1fa2b",
+      "label": "recognition-v2:confirmatory:muse:06-05_00101_P0037991.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:13:26.391Z",
+      "actual_usd": 0.008632450000000002,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 304,
+        "outputTokens": 1971,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.008632450000000002
+      }
+    },
+    {
+      "id": "818f8ad5-ce95-4302-b31c-4a6786b2e38f",
+      "label": "recognition-v2:confirmatory:muse:06-05_00101_P0037991.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:13:45.865Z",
+      "actual_usd": 0.00574245,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 372,
+        "outputTokens": 1271,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.00574245
+      }
+    },
+    {
+      "id": "bdbf399a-97e4-42f5-b71a-2cbdfd636343",
+      "label": "recognition-v2:confirmatory:muse:06-05_00101_P0037991.png:2",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:13:56.783Z",
+      "actual_usd": 0.00797825,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 487,
+        "outputTokens": 1734,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.00797825
+      }
+    },
+    {
+      "id": "ca2365e5-8e05-4558-ad12-7610c0a7ac9f",
+      "label": "recognition-v2:confirmatory:whole:05-15_00303_P0030792.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:14:14.480Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "48d0ff80-0b37-4322-88ca-c7517e675a21",
+      "label": "recognition-v2:confirmatory:muse:05-15_00303_P0030792.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:14:16.304Z",
+      "actual_usd": 0.00589245,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 254,
+        "outputTokens": 1341,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.00589245
+      }
+    },
+    {
+      "id": "cc679177-6f93-4781-9ce8-1f7904b84283",
+      "label": "recognition-v2:confirmatory:whole:05-15_00235_P0030792.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:14:29.932Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "ff76dc43-6c30-4ea0-8ea8-851ba62de122",
+      "label": "recognition-v2:confirmatory:muse:05-15_00235_P0030792.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:14:32.626Z",
+      "actual_usd": 0.0062267,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 280,
+        "outputTokens": 1412,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.0062267
+      }
+    },
+    {
+      "id": "193eae82-7241-4cc5-a21b-20f6f8055ff9",
+      "label": "recognition-v2:confirmatory:muse:05-15_00235_P0030792.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:14:45.795Z",
+      "actual_usd": 0.00646095,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 311,
+        "outputTokens": 1458,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.00646095
+      }
+    },
+    {
+      "id": "67c81263-efeb-4c8f-a4a5-0361db230721",
+      "label": "recognition-v2:confirmatory:whole:05-15_00137_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:14:59.319Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "350a33f0-3397-41ee-9de8-a1b0f7bcd8a2",
+      "label": "recognition-v2:confirmatory:muse:05-15_00137_P0030859.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:15:05.087Z",
+      "actual_usd": 0.0053262,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 430,
+        "outputTokens": 1156,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.0053262
+      }
+    },
+    {
+      "id": "81ef84d3-a7b1-42df-b5b6-6457ea98a6db",
+      "label": "recognition-v2:confirmatory:muse:05-15_00137_P0030859.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:15:16.128Z",
+      "actual_usd": 0.0059485,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 230,
+        "outputTokens": 1332,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.0059485
+      }
+    },
+    {
+      "id": "70325c0a-f3a1-4a95-9185-3fc904de0b78",
+      "label": "recognition-v2:confirmatory:whole:05-15_00176_P0030686.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:15:28.814Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "148d9757-dbc4-4848-a34e-d4dd245cff6a",
+      "label": "recognition-v2:confirmatory:muse:05-15_00176_P0030686.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:15:30.781Z",
+      "actual_usd": 0.0078547,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 338,
+        "outputTokens": 1778,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.0078547
+      }
+    },
+    {
+      "id": "e56f9793-8668-475c-9231-4bd6b0ea7544",
+      "label": "recognition-v2:confirmatory:muse:05-15_00176_P0030686.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:15:46.787Z",
+      "actual_usd": 0.0050127,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 305,
+        "outputTokens": 1119,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.0050127
+      }
+    },
+    {
+      "id": "dc4078da-8164-47cd-bb9a-f586e7601e38",
+      "label": "recognition-v2:confirmatory:muse:05-15_00176_P0030686.png:2",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:15:56.712Z",
+      "actual_usd": 0.00583445,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 364,
+        "outputTokens": 1295,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.00583445
+      }
+    },
+    {
+      "id": "c9159b17-161c-42e8-b4c7-aa09ae63b91d",
+      "label": "recognition-v2:confirmatory:muse:05-15_00176_P0030686.png:3",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:16:07.770Z",
+      "actual_usd": 0.00558595,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 240,
+        "outputTokens": 1273,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.00558595
+      }
+    },
+    {
+      "id": "81d6b1c4-461e-430e-90b3-9cedb9971d52",
+      "label": "recognition-v2:confirmatory:whole:05-26_00055_P0034282.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:16:20.242Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "4ed0377f-6620-4aac-a280-cb414bae7b31",
+      "label": "recognition-v2:confirmatory:muse:05-26_00055_P0034282.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:16:21.629Z",
+      "actual_usd": 0.008743200000000001,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 277,
+        "outputTokens": 2005,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.008743200000000001
+      }
+    },
+    {
+      "id": "f38edd14-f6fb-4711-bdad-222edd1b9c8a",
+      "label": "recognition-v2:confirmatory:muse:05-26_00055_P0034282.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:16:39.559Z",
+      "actual_usd": 0.0067361999999999995,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 283,
+        "outputTokens": 1531,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.0067361999999999995
+      }
+    },
+    {
+      "id": "81f8f873-6052-4d8b-87c1-29e33375a91a",
+      "label": "recognition-v2:confirmatory:muse:05-26_00055_P0034282.png:2",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:16:54.068Z",
+      "actual_usd": 0.004594,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 537,
+        "outputTokens": 923,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.004594
+      }
+    },
+    {
+      "id": "186eb46c-6566-419c-85b5-da1f91de7aa9",
+      "label": "recognition-v2:confirmatory:whole:05-15_00245_P0030953.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:17:02.317Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "33da1808-b2ed-4987-ba56-5f856de64888",
+      "label": "recognition-v2:confirmatory:muse:05-15_00245_P0030953.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:17:03.673Z",
+      "actual_usd": 0.0058652,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 307,
+        "outputTokens": 1319,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.0058652
+      }
+    },
+    {
+      "id": "56709a03-608c-4242-a99e-b6e8c7e0056c",
+      "label": "recognition-v2:confirmatory:muse:05-15_00245_P0030953.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:17:17.875Z",
+      "actual_usd": 0.00602695,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 297,
+        "outputTokens": 1360,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.00602695
+      }
+    },
+    {
+      "id": "3c510bb0-f397-40fa-9cd9-a6a552c6f5e1",
+      "label": "recognition-v2:confirmatory:whole:05-15_00120_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:17:30.141Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "09865ac5-cc36-4e98-ad1a-a7d886d4a702",
+      "label": "recognition-v2:confirmatory:muse:05-15_00120_P0030859.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:17:31.443Z",
+      "actual_usd": 0.00740845,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 321,
+        "outputTokens": 1678,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.00740845
+      }
+    },
+    {
+      "id": "5ef6a142-9eb5-4085-ac08-c033e35048b8",
+      "label": "recognition-v2:confirmatory:muse:05-15_00120_P0030859.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:17:46.049Z",
+      "actual_usd": 0.0050865,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 234,
+        "outputTokens": 1128,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.0050865
+      }
+    },
+    {
+      "id": "70a0a9ff-73ed-4221-bc08-509d1d0ec162",
+      "label": "recognition-v2:confirmatory:whole:05-26_00132_P0034121.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:17:54.726Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "20fb08c8-bb9f-447c-91e2-07b01db1b9b4",
+      "label": "recognition-v2:confirmatory:muse:05-26_00132_P0034121.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:17:55.601Z",
+      "actual_usd": 0.00659195,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 307,
+        "outputTokens": 1490,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.00659195
+      }
+    },
+    {
+      "id": "eb23d4a8-9d2c-4028-b249-5bf012606c25",
+      "label": "recognition-v2:confirmatory:muse:05-26_00132_P0034121.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:18:08.521Z",
+      "actual_usd": 0.0063857,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 533,
+        "outputTokens": 1375,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.0063857
+      }
+    },
+    {
+      "id": "069a5aee-09e8-4169-86f8-b2e1f6dc753e",
+      "label": "recognition-v2:confirmatory:whole:05-15_00138_P0030686.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:18:21.644Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "0bef0a83-cc05-4aca-a6fe-a479cea06c66",
+      "label": "recognition-v2:confirmatory:muse:05-15_00138_P0030686.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:18:23.791Z",
+      "actual_usd": 0.00543575,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 255,
+        "outputTokens": 1204,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.00543575
+      }
+    },
+    {
+      "id": "6d070942-1d79-44cd-a39c-111c5aa22c89",
+      "label": "recognition-v2:confirmatory:whole:05-15_00158_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:18:35.316Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "175d080c-d688-456d-97aa-62b8bb33db4b",
+      "label": "recognition-v2:confirmatory:muse:05-15_00158_P0030859.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:18:36.868Z",
+      "actual_usd": 0.00440595,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 537,
+        "outputTokens": 908,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.00440595
+      }
+    },
+    {
+      "id": "67c74687-a0dd-4973-8e0f-d6191d428101",
+      "label": "recognition-v2:confirmatory:muse:05-15_00158_P0030859.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:18:45.452Z",
+      "actual_usd": 0.004381,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 285,
+        "outputTokens": 947,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.004381
+      }
+    },
+    {
+      "id": "09f207fa-05b4-4136-a807-6e4b5ef56b18",
+      "label": "recognition-v2:confirmatory:whole:05-15_00206_P0030695.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:18:54.578Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "be227fcc-67cd-4526-bd81-26bc79686515",
+      "label": "recognition-v2:confirmatory:muse:05-15_00206_P0030695.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:18:56.869Z",
+      "actual_usd": 0.0077722,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 323,
+        "outputTokens": 1763,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.0077722
+      }
+    },
+    {
+      "id": "dab75d5f-4dfe-4a6a-80bc-4005a484ff66",
+      "label": "recognition-v2:confirmatory:muse:05-15_00206_P0030695.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:19:15.928Z",
+      "actual_usd": 0.0037467,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 251,
+        "outputTokens": 837,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.0037467
+      }
+    },
+    {
+      "id": "c1f2aae0-9354-4517-838d-6cac13655c59",
+      "label": "recognition-v2:confirmatory:whole:06-05_00030_P0037991.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:19:23.649Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "fb9dabcd-666e-4cb9-99e7-0abf2c2801d6",
+      "label": "recognition-v2:confirmatory:muse:06-05_00030_P0037991.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:19:24.453Z",
+      "actual_usd": 0.00615845,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 494,
+        "outputTokens": 1333,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.00615845
+      }
+    },
+    {
+      "id": "8a0b8f54-e910-4805-beac-b881c76dccac",
+      "label": "recognition-v2:confirmatory:muse:06-05_00030_P0037991.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:19:37.519Z",
+      "actual_usd": 0.003127,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 227,
+        "outputTokens": 669,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.003127
+      }
+    },
+    {
+      "id": "a63cfd60-e876-4ba9-8d26-bb10c8fd398b",
+      "label": "recognition-v2:confirmatory:whole:05-26_00239_P0034016.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:19:43.739Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "45cc8f6a-3d95-441e-a870-43cb47d6d04c",
+      "label": "recognition-v2:confirmatory:muse:05-26_00239_P0034016.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:19:44.689Z",
+      "actual_usd": 0.0078562,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 295,
+        "outputTokens": 1791,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.0078562
+      }
+    },
+    {
+      "id": "6bc9cab1-400d-4602-823d-6663eaa84144",
+      "label": "recognition-v2:confirmatory:muse:05-26_00239_P0034016.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:20:01.225Z",
+      "actual_usd": 0.00600025,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 523,
+        "outputTokens": 1258,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.00600025
+      }
+    },
+    {
+      "id": "f82db778-9bef-41ef-8e74-8e767ad12980",
+      "label": "recognition-v2:confirmatory:muse:05-26_00239_P0034016.png:2",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:20:12.038Z",
+      "actual_usd": 0.0034585,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 227,
+        "outputTokens": 747,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.0034585
+      }
+    },
+    {
+      "id": "220f988a-69c8-498c-818e-b43404b69e1b",
+      "label": "recognition-v2:confirmatory:whole:05-15_00180_P0030686.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:20:19.314Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "284785ec-ff6f-45a0-b797-75f39fc40116",
+      "label": "recognition-v2:confirmatory:muse:05-15_00180_P0030686.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:20:20.738Z",
+      "actual_usd": 0.00731075,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 429,
+        "outputTokens": 1594,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.00731075
+      }
+    },
+    {
+      "id": "ff2c88f4-e868-4c2a-ae46-a01b521e943f",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00146_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:20:34.714Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "f39729ee-8d13-432a-8088-5ccf4dc5a3ad",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00146_P0030859.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:20:36.803Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "0f16143f-7c1b-4c2f-8af9-64cfc95a44be",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00146_P0030859.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:20:38.550Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "fe49a862-19a6-48ed-9ea6-94b0554437fe",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00146_P0030859.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:20:40.372Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "f52826ac-d6db-40d3-8688-c2ca7fc183e1",
+      "label": "recognition-v2:confirmatory:tiles640:05-26_00138_P0034282.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:20:42.825Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "c15a7846-1c4e-4022-8296-ea1bfb38a5ca",
+      "label": "recognition-v2:confirmatory:tiles640:05-26_00138_P0034282.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:20:43.715Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "f20158ba-c94e-427f-96c9-67c18d33debe",
+      "label": "recognition-v2:confirmatory:tiles640:05-26_00138_P0034282.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:20:45.667Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "26f7bffd-62d8-475e-9c28-98d301d6382b",
+      "label": "recognition-v2:confirmatory:tiles640:05-26_00138_P0034282.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:20:49.189Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d1334aa9-7e5c-4ec7-8b52-f18990d384b0",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00214_P0030792.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:20:50.183Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "484108ab-6e9e-40b8-ac36-607cd6900867",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00214_P0030792.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:20:51.163Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "3a8d9f44-c833-4db0-aa97-b5353fc8b5b9",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00214_P0030792.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:20:51.903Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "115d1ce7-8455-4f17-b921-24fc3d6b02ef",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00214_P0030792.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:20:53.456Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "0744e9ae-2c8a-4dde-b5ca-5828a5c93613",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00259_P0030792.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:20:54.235Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "73a16a71-0ef8-4e3f-85b6-16f95a6cc4cc",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00259_P0030792.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:20:55.920Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "9c1e1a18-0f6b-4c47-91cc-cbf9dc0c0794",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00259_P0030792.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:20:56.959Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "b778895d-f89c-4e98-9332-4ac090d068a7",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00259_P0030792.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:20:58.087Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e5749de2-48a6-453b-a797-d34b5d2fd7a5",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00179_P0030695.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:20:59.103Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d640bab9-2445-41c5-bda1-5b900fbac43a",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00179_P0030695.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:00.022Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "c866f03a-f89e-4124-9f7c-75c0d6da6786",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00179_P0030695.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:02.291Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "2dc3f737-5472-4a75-9c33-087a4a83f755",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00179_P0030695.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:03.109Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "c68be16b-8ceb-4ec2-9585-b9cf9bc4fd99",
+      "label": "recognition-v2:confirmatory:tiles640:06-05_00101_P0037991.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:03.922Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d6af3e95-33ca-42be-ac02-d4c4bcb7d307",
+      "label": "recognition-v2:confirmatory:tiles640:06-05_00101_P0037991.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:05.055Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "8275d534-7df1-4a3e-b94e-9f542c2f5fcc",
+      "label": "recognition-v2:confirmatory:tiles640:06-05_00101_P0037991.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:06.831Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "84476423-b69c-4387-bf56-0b5cb0f73d31",
+      "label": "recognition-v2:confirmatory:tiles640:06-05_00101_P0037991.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:07.640Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a7602b70-b764-4391-a9fb-29bcdfc61bc1",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00303_P0030792.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:08.527Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "bddd330d-dfc3-4f5c-ad0f-641db3ccc65c",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00303_P0030792.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:09.194Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e1b1e6fb-1433-43de-84e6-ca8d334bde8b",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00303_P0030792.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:10.133Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "f6fc428c-0b51-4e2b-8628-bb8cffb76765",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00303_P0030792.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:11.012Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "568aacef-2889-4375-8d53-4fb733b3e051",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00235_P0030792.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:12.017Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "cf6abf29-f3aa-49e4-ac18-bfe2f0ea7ac9",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00235_P0030792.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:12.910Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "ea15540f-6789-4fcf-919b-62583fb1a381",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00235_P0030792.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:13.638Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "6afe0caa-0a59-4a04-ad6b-7f5fd5ae7a0d",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00235_P0030792.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:14.873Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "17b734ab-b44e-4c0c-bde0-cb6cf50f03cc",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00137_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:15.932Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e47d6814-9c85-459f-9c5c-95153c0dc717",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00137_P0030859.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:16.733Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "984b99a0-f46f-41b5-b95f-e51f823c64c6",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00137_P0030859.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:17.458Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "3a11d79a-891e-41aa-b09f-6f256801b59d",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00137_P0030859.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:18.311Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "fe2a98ef-e636-4281-a3d5-dd4105d748d1",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00176_P0030686.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:19.152Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "c1486092-baa4-42b4-bf22-9250593cfc7a",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00176_P0030686.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:20.720Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "859617b6-db17-412d-aa88-3371600f5681",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00176_P0030686.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:21.548Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "f960f877-dbcd-4939-a684-d7ab001d964d",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00176_P0030686.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:22.599Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "74010020-a662-4199-abcc-a1db140834ea",
+      "label": "recognition-v2:confirmatory:tiles640:05-26_00055_P0034282.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:23.550Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d6495119-9c0e-4de9-9830-1de95f450dd0",
+      "label": "recognition-v2:confirmatory:tiles640:05-26_00055_P0034282.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:24.494Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "223cbbdf-a241-42f0-9798-50fd0cd208bc",
+      "label": "recognition-v2:confirmatory:tiles640:05-26_00055_P0034282.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:25.277Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a46d9ba0-1ded-4289-9419-6bf6f8f8f834",
+      "label": "recognition-v2:confirmatory:tiles640:05-26_00055_P0034282.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:26.076Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "92ce40a9-9ef8-4f04-be8b-225672f72580",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00245_P0030953.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:27.286Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "6c16a535-e3ab-4d8a-aaa1-246fcc6aff3a",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00245_P0030953.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:27.985Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "9cef241d-81a9-4303-a8ee-e5a2b06a3a6f",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00245_P0030953.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:29.065Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "278f1182-80cf-48e1-9f54-33f24fee2e60",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00245_P0030953.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:29.850Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "2229dc6d-5651-4385-8cde-325fd88360c4",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00120_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:31.758Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "3c24c15f-f54a-44df-8479-11f2b9b022cd",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00120_P0030859.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:33.111Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "9b455da1-7816-4fdf-bbbe-0a36e5212ba1",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00120_P0030859.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:34.906Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a86a7e2a-528f-4cce-883d-2f701348df61",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00120_P0030859.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:36.139Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a08cd246-cd2c-4e0f-8d94-19af4529f852",
+      "label": "recognition-v2:confirmatory:tiles640:05-26_00132_P0034121.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:37.917Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "964f8723-52db-4a1a-8303-eb49a24fd221",
+      "label": "recognition-v2:confirmatory:tiles640:05-26_00132_P0034121.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:39.310Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "f2903246-6797-4b02-9da6-3d19eff82bac",
+      "label": "recognition-v2:confirmatory:tiles640:05-26_00132_P0034121.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:40.331Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "0ee4308a-8223-4eef-82aa-bace7cad1d7f",
+      "label": "recognition-v2:confirmatory:tiles640:05-26_00132_P0034121.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:41.009Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e2241a79-74f6-49a1-b20b-2c0b19d5a768",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00138_P0030686.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:41.897Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "90aee460-f2aa-4c1e-8b26-01af49a1ec4b",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00138_P0030686.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:43.356Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "1b99f649-19a1-440d-bd5e-7288a97fc3bb",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00138_P0030686.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:45.315Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "53974bd0-a92d-402d-a897-071fd871c113",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00138_P0030686.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:47.532Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "3abb14ff-2eb3-4eec-98bd-8b3dfe5fc876",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00158_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:49.030Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "35e31cd6-a049-4228-a602-cf2e95f9058c",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00158_P0030859.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:49.849Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "6cd4d0dd-8ceb-4321-aa05-e7c51b880d4b",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00158_P0030859.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:50.863Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "1556fd3a-3c82-414e-bca3-0f78e92b9d6a",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00158_P0030859.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:52.081Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "6b414ed5-744c-4e89-848a-d9ec323fe8b6",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00206_P0030695.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:52.803Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "5ad1e8a8-ef77-4004-bd1a-91edaa32f330",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00206_P0030695.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:53.851Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "b046a5c2-deda-4ce8-b545-6ac09f5c6b4c",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00206_P0030695.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:57.105Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "adb6eec4-e236-43e4-97a0-c9c269a5e553",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00206_P0030695.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:58.260Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "cfbfef9c-09ab-4fe2-bb5a-f6e709a4212e",
+      "label": "recognition-v2:confirmatory:tiles640:06-05_00030_P0037991.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:58.987Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "f3227fa5-d9bc-45a4-be7b-b0d9ac62de10",
+      "label": "recognition-v2:confirmatory:tiles640:06-05_00030_P0037991.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:21:59.844Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "4bcf51d5-72d8-4f7b-9949-8ddf2b25f006",
+      "label": "recognition-v2:confirmatory:tiles640:06-05_00030_P0037991.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:22:02.233Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "991180e3-bd4f-4b1f-9656-fca7579f4434",
+      "label": "recognition-v2:confirmatory:tiles640:06-05_00030_P0037991.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:22:03.919Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "3aa1ff98-3df4-4317-94fa-86cf3d076afd",
+      "label": "recognition-v2:confirmatory:tiles640:05-26_00239_P0034016.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:22:05.290Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "61ee9e15-203f-4be9-9652-2e44b91678ca",
+      "label": "recognition-v2:confirmatory:tiles640:05-26_00239_P0034016.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:22:06.011Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "983bdcfd-665e-44e8-90cf-bf899afced72",
+      "label": "recognition-v2:confirmatory:tiles640:05-26_00239_P0034016.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:22:07.434Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "2fe3cb68-5d65-4498-9608-71254dc47328",
+      "label": "recognition-v2:confirmatory:tiles640:05-26_00239_P0034016.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:22:09.395Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "b4631565-4d64-4706-9f8b-f0eb4e37725b",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00180_P0030686.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:22:11.596Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "40bf43e2-cec2-4f26-be41-91354d974e64",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00180_P0030686.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:22:13.567Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "6f524f30-f665-42b5-a961-56f3a273124c",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00180_P0030686.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:22:14.471Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "0552a6b4-31f3-4700-ac08-3e83131fe7bb",
+      "label": "recognition-v2:confirmatory:tiles640:05-15_00180_P0030686.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:22:15.497Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    }
+  ]
+}

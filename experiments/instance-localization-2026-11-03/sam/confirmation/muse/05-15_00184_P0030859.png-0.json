@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-001",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is too dark and blurred to verify leaf shape."
+    },
+    {
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Seedling is too small and indistinct against soil to confirm crop traits."
+    },
+    {
+      "id": "GP-003",
+      "label": "uncertain",
+      "originalLabel": "crop",
+      "confidence": 0.7,
+      "reasoning": "Young seedling shows broad rounded smooth cotyledons consistent with crop."
+    },
+    {
+      "id": "GP-004",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.88,
+      "reasoning": "Rosette shows broad glossy wavy true leaves consistent with crop."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 334,
+    "outputTokens": 1623,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.00719095
+  },
+  "elapsed_ms": 29936
+}

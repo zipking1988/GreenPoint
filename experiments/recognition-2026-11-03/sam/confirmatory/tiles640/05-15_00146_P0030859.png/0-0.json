@@ -1,0 +1,80 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.9833984375,
+        0.783203125,
+        0.0166015625,
+        0.0263671875
+      ],
+      "detectionConfidence": 0.6097560524940491,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!5Fw2z[bbCR111a..mx[XgEU0",
+        "width": 17,
+        "height": 27,
+        "bounds": {
+          "left": 1007,
+          "top": 802,
+          "right": 1024,
+          "bottom": 829
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.1513671875,
+        0.4833984375,
+        0.1923828125,
+        0.171875
+      ],
+      "detectionConfidence": 0.9452055096626282,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#ZClV9L7d4Cv4%nB(f4!8^lWkUv/li9[BuPe]H/zdQu']'yy$aF]!6YaQH{T{HI_=C^/9h+&+L.hjPv@S+Wr&G8P*C!ZKJ[ym)OB.LbEAbo)S{5krV6N8d:yX`&Z#`$`.e0_tb6-+q9j9.El{OzE:P]a[Ff.iSP0r6*t!MA.$b[%Ax",
+        "width": 197,
+        "height": 176,
+        "bounds": {
+          "left": 155,
+          "top": 495,
+          "right": 352,
+          "bottom": 671
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.1240234375,
+        0.1103515625,
+        0.234375,
+        0.25390625
+      ],
+      "detectionConfidence": 0.9609756469726562,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!$EB+'/?1$Sy$toJE[?B=yU[MjI/1Ki?y(mz'4om2fekLg!q/jg^Xl_0yXn2]OW$K#$SfQtThp*V/t?F4wn].&=7p9]4:x8l8YNNP+XvKeaBN-63]%-ZulFg5s_8?&7p]yLEMF(=`.XdL]Wr^*Q]'A33]re_?sM(3]sQ61KYDvP+ps+u'lTEp7d[&YwmqUTeCq7z-N-F)dx*aR[z$j2-='.xsR'4t(5uXvicDdk6f.^/g%Do/]lI+xC+pIPU@!!",
+        "width": 240,
+        "height": 260,
+        "bounds": {
+          "left": 127,
+          "top": 113,
+          "right": 367,
+          "bottom": 373
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 2065
+}

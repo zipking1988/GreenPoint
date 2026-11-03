@@ -1,0 +1,126 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.876953125,
+        0.4765625,
+        0.0927734375,
+        0.15234375
+      ],
+      "detectionConfidence": 0.941605806350708,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#LEBp5+$tomloZW(A$TdmNM[jioWNL*Ljogyws!jBIEs0@asiowo[cAHXY*1GSTT6#RC0msF0X2j#61O:FDe(b&HX'z-/yx=NrG=S`#crxD3g]d/@7rr{^v.N@n^UNQO^NDl]9iGn)&Et-+yVieMUm^/HxN9",
+        "width": 95,
+        "height": 156,
+        "bounds": {
+          "left": 898,
+          "top": 488,
+          "right": 993,
+          "bottom": 644
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.896484375,
+        0.8330078125,
+        0.103515625,
+        0.1669921875
+      ],
+      "detectionConfidence": 0.9259259104728699,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#JCEj1%=$MWWua(wQBo:%x?RUmft)^?aeCDlVR8nyW&OMdV1bG_oev&tT9gwSY`?U^@4[RFE$TSL.@55*3ka:ddpQ3Qx1?K:]V{uOi^R:(-b9S6[t-B#{7Ay$aT#Tc@LPxd5sQR@&]k$w1hp(7E'og^YdF",
+        "width": 106,
+        "height": 171,
+        "bounds": {
+          "left": 918,
+          "top": 853,
+          "right": 1024,
+          "bottom": 1024
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.0361328125,
+        0.4453125,
+        0.029296875,
+        0.03515625
+      ],
+      "detectionConfidence": 0.5540069937705994,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!IH2nMwppY9bCS_*mhy7DD^A&QYKI0pBAbiWFm=KDaGL3E",
+        "width": 30,
+        "height": 36,
+        "bounds": {
+          "left": 37,
+          "top": 456,
+          "right": 67,
+          "bottom": 492
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.09765625,
+        0.1025390625,
+        0.05859375,
+        0.05859375
+      ],
+      "detectionConfidence": 0.8672199249267578,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!![Dl!3TDMZ$xE+.I'5T2wKaZUM)GFzjV2%1kaqF^l9l6bGY+(B&v#QuI-br8zXTmKSn!!",
+        "width": 60,
+        "height": 60,
+        "bounds": {
+          "left": 100,
+          "top": 105,
+          "right": 160,
+          "bottom": 165
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.8525390625,
+        0.021484375,
+        0.1396484375,
+        0.177734375
+      ],
+      "detectionConfidence": 0.9452055096626282,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#aD):70KUF6y.4{PLR[BU4/oKMniKQ&[w(xU.q1kEyE*j_%k$I=NeE3nu?`D62'7dEEil=rgb4n^EN@L5lYV=bydW)Ux$ukLVC88cH+dY_EG81GUD/sj'P895C`t7D6$t_e&pp%sg6X$eF&ok.0UG]dM9^m[1#.]fc)xmW&1Y9!xXu?.Pb$l]",
+        "width": 143,
+        "height": 182,
+        "bounds": {
+          "left": 873,
+          "top": 22,
+          "right": 1016,
+          "bottom": 204
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 1639
+}

@@ -1,0 +1,80 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.0478515625,
+        0.4404296875,
+        0.02734375,
+        0.03515625
+      ],
+      "detectionConfidence": 0.6908212304115295,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!CJ:`gg_?]ILi4tR'&8pIw0`ld]Aaj31850W[!!",
+        "width": 28,
+        "height": 36,
+        "bounds": {
+          "left": 49,
+          "top": 451,
+          "right": 77,
+          "bottom": 487
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.2919921875,
+        0.7685546875,
+        0.2900390625,
+        0.2314453125
+      ],
+      "detectionConfidence": 0.9375000596046448,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!%1A!SJo[-HJteaYn!FC+%n&:5!8IN5!V:5c6as`cQyH$aQ(J1b?GZu--S[8mp40v2aJE@xk_T1yTR2cN3-ksYq)VlLzBri&z3s*]dq9$$hYk_9DRNyfsqhKFpm5EUZ8QIEVs'y:']+D_.(fCBdP:9J-a12yG&SE_u7kSyBzhH'F2xw*W.HMPfsMtDx%Db%3xRGXc&:!90Ywh.]j8@AumtTeZ%XYEnn:0t!-v5'2^RaUI'?=oJy[XD-r0s29L-HZHVd?wxS6oEjsneV(p%vTZ8OL$mSEl94pt6BO6XdRvlEwC`s2$f31a&IE]y3^!d6=5S#jq]w+-Mz@/E5c/!R{",
+        "width": 297,
+        "height": 237,
+        "bounds": {
+          "left": 299,
+          "top": 787,
+          "right": 596,
+          "bottom": 1024
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.1689453125,
+        0.365234375,
+        0.3779296875,
+        0.373046875
+      ],
+      "detectionConfidence": 0.9298245906829834,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!&@?l%KaaspStxgRa!o1(.e&cQ#_:%5qpdhh+%KFoY][{U(eW[T:4e7Q:be&%w5^AH{GDe8xB(@hK?6lf{hM$J+`XwA!R?RlCS_Muq{B[9saa]MFq35dPWEw=aYIxtG5d/{duOAQpYfLI`a5p0+]B?Kt-R{O$IaQ`]vf5&=Y@{i$fZ)YsFtl6]ZAMw*{a&F8'f0=:ANGArQ'?H.[rNq!iclE]@gTIrB=BBgNoYO&@V-u[eG-GwY:0a&WF&ZP!^P7F8R7{%'H0:X?_.$PyY^9]`3aq3O2zm*UOVQLY_&TtDe8K]TYzouJ@y$AH3=#`sx)&@Y`k#v3U&Vr*l[?*p?'oHeAKG_@4($K7tTKBMj_^@1sKX&7Fh*C=^N{/y8hQoC%FUAS-Y.af.GCra3dd2@&oPluteV{`=-i#(Km)FM2*&_qRkKQo?jP{t(0DQ5QC[_SprQpf]mm/bJA$",
+        "width": 387,
+        "height": 382,
+        "bounds": {
+          "left": 173,
+          "top": 374,
+          "right": 560,
+          "bottom": 756
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 1323
+}

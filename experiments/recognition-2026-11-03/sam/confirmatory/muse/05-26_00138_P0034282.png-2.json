@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-009",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.4,
+      "reasoning": "Only a cropped leaf edge is visible so shape cannot be confirmed."
+    },
+    {
+      "id": "GP-010",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.45,
+      "reasoning": "Small blurry seedling lacks clear leaf detail for reliable identification."
+    },
+    {
+      "id": "GP-011",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.4,
+      "reasoning": "Tiny indistinct seedling is too blurry to confirm crop traits."
+    },
+    {
+      "id": "GP-012",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.93,
+      "reasoning": "Large rosette of broad wrinkled leaves matches expected sugar beet morphology."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 437,
+    "outputTokens": 1271,
+    "cachedTokens": 0,
+    "estimatedUsd": 0.005948
+  },
+  "elapsed_ms": 12167
+}

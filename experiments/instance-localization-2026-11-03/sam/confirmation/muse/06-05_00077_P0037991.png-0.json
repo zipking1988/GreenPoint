@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-001",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Seedlings appear very small and indistinct with insufficient leaf detail."
+    },
+    {
+      "id": "GP-002",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.85,
+      "reasoning": "Large broad slightly wavy leaves in rosette form are consistent with sugar beet."
+    },
+    {
+      "id": "GP-003",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.8,
+      "reasoning": "Small rosette of broad rounded leaves matches early sugar beet."
+    },
+    {
+      "id": "GP-004",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.88,
+      "reasoning": "Rosette of broad wavy-margined leaves with prominent midribs matches sugar beet."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 449,
+    "outputTokens": 1834,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.008231450000000001
+  },
+  "elapsed_ms": 19631
+}

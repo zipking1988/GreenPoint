@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-009",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.85,
+      "reasoning": "Broad glossy rosette leaves with wavy margins are consistent with sugar beet."
+    },
+    {
+      "id": "GP-010",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.83,
+      "reasoning": "Broad rounded rosette leaves with prominent midveins are consistent with sugar beet."
+    },
+    {
+      "id": "GP-011",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is too tiny and dark to discern leaf shape reliably."
+    },
+    {
+      "id": "GP-012",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.55,
+      "reasoning": "Seedling is small and shadowed with indistinct leaf detail."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 364,
+    "outputTokens": 1295,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.00583445
+  },
+  "elapsed_ms": 11057
+}

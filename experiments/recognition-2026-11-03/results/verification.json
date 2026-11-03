@@ -1,0 +1,17 @@
+{
+  "frozen_selection_sha_verified": true,
+  "all_45_source_annotation_triplets_verified": true,
+  "original_20_image_metrics_reproduce_exactly": true,
+  "standalone_rgb_cli_matches_frozen_hybrid": true,
+  "standalone_image": "05-26_00055_P0034282.png",
+  "standalone_candidates": 18,
+  "gallery_cases": 5,
+  "gallery_modes": 4,
+  "javascript_interaction_paths_checked": 20,
+  "static_case_figures_visually_inspected": true,
+  "browser_rendering_checked": false,
+  "browser_limitation": "CUA connection timed out twice",
+  "video_unchanged_sha256": "4d1ff8d6a9515a2f0b0652e257edd3c6f4da78a1f22448da0e12309b976552e6",
+  "trained_new_model": false,
+  "deployed_changes": false
+}

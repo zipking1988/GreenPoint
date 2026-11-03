@@ -1,0 +1,103 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.1669921875,
+        0.552734375,
+        0.087890625,
+        0.17578125
+      ],
+      "detectionConfidence": 0.7460317611694336,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#2Dtqwdoec@_M`KXdjXt_Y+UbcfXw2KP`'b?^hNiA4[mRA{QQ@5c`XL'^NkQgU!pFp/4`A=4aq(HQ7ubj73%WP&4rt0E#Drq^J==5Zd%0RqVl.z8EpZs'0KmU.#4!)f",
+        "width": 90,
+        "height": 180,
+        "bounds": {
+          "left": 171,
+          "top": 566,
+          "right": 261,
+          "bottom": 746
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0,
+        0.107421875,
+        0.1796875,
+        0.2255859375
+      ],
+      "detectionConfidence": 0.8865247964859009,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#7DNOZuoPAS$&pHA-R(#9.[nrnb/t6?ZceKmP&&QU[P6Sj$+os%YVPjQ11mCd+Xc#ve+sZ:A)Dkbe1=$mD9D^g{6:]skvcRT[@LCHftV&qTKo+I98eAHs%(i%%]T9O@OXkfl!!",
+        "width": 184,
+        "height": 231,
+        "bounds": {
+          "left": 0,
+          "top": 110,
+          "right": 184,
+          "bottom": 341
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.1708984375,
+        0.2470703125,
+        0.8291015625,
+        0.7529296875
+      ],
+      "detectionConfidence": 0.8709677457809448,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!/`A.Gc3H`EGn?.K/.k:&L$Puruk0ws:Zm-G[cc_[RKmmzF#^cR&0Fj1/Txi[JeGAiw6k_gdIM9^.FHp1q7+LlA(gs{Bm6b39cy(0Ow1:lL6`Pvm3D6AbG?EUly:w7$3M'9YTi?Y'?-PCg!v-e[5am!FPy5RuYHGw??2rx%M72F!Tt95Kk3(8$YEMG6Gag4ieeU]?:T.sW%c?P72i=ZhtDugN$k0Rg!nU4W5wr(Lsm)4i!%qKBgtPZv!ku*9u.G:GNvLvm40l5X2nmHx+)y5=[e=]HO0JYaStYXe(`^8H-5zUKf:60.YC.Vz/%(2%chXPT+O&B6hE4VGTGTGr]b/q2J^:EiPTTCAPe3GAtFo-EQ4rldrmvNACTB%Sp=2fN$ptnUX`)@.u5yK!_@gf`nCRuM&XaDIM?4F5eZQ4oF=.#yWr(fQ-WH_'u`{0L_begKBo9b8@R@&5e'=jcwv319K`)+WbxloXombZWd:Gsnhk&HH2pR6'!Fo]72)Y@B6Y(xqJ&b5&S&PzTE@7`iRQ4'd9^tq65%o!{9]$Tx_bybiX8Fc@1%uVaUaaIiz1Qoe2qz8./4&seA*hI*5r1nKV)q*Nf-jlF?:ZA%^%:WKr%swOcqK#dSeQbez*-:cuL*VB/mj-e'3pYU`h*Z_uoApn0@).G6QXQ4xmqAi5O#q5@QQK[tuYA+h@`n6/$Wy=&-3T*fBA(r??H&'Nj$Ei^duRPFLb[*fd`InDN7H)=sC^Nb?L[TuNV*@xG#0Q-gj?Y(@s+a66NwGb@k[:Bs#u`Mxboz:JZV`[3Fpfo9YbyLjo6:CH`[VMX]&9b-C]FXLMF(VsIj!.(H!IZB*&qQ8bdjzOm0RrWZG4zu`B/ZqD0E#T7sj@ioEuf63J){/'.aA*2JfY]u]Y%l/U&QT'$dt3iR=Q.q%&!/x&_n07Mhi?wfD0E:N(hu)w=TN$tmk=WLI!oTKSS5N2AtM[7`4cWSUct:FW=I^4?y9iQ8YXybz]:5sMDsS2f*356Cq6^6z3rN_K!ia:Ud6u0I(fXo_I`QqJdRUYkl/%(O:rMS!Z0xI(xOt0/[%cj?'#C{Jp?mF:]dFHIz'8UDcmWk5cB@G&CMc)BcM!C=N9)4*AkF8Cq1@(mMm$.IY]bP4D+i?T@Is&OPtYog`jzv?1khp#b_GKi@.dJXjgLw1R0kTkcq[L(gv5B%SQ4dE`kaGoBZW$_l'[%o6k*Zaj?MGViXYct'5]KJ`6Dt_Dp2*6)vD@TcwlrNYMM&X)JZ`(8'7)=e3IC4EHfnd@4Br]57#QF$i[OQe:f0@!qAG*5/beQef'm!1ks`kA37+%vkD%^?'Z/xyrvNWatyej1t75jYb2^Qz!!",
+        "width": 849,
+        "height": 771,
+        "bounds": {
+          "left": 175,
+          "top": 253,
+          "right": 1024,
+          "bottom": 1024
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.279296875,
+        0,
+        0.54296875,
+        0.4326171875
+      ],
+      "detectionConfidence": 0.5345454812049866,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!)&r{1L1Mu_*R24AyCO:?1OsQWg0I[#[cq`V40*Lq*CdW/jZLX@f49Z4Q:##$#1EVJ3GHwh8v(GPm/.K%7vrDdx8M=kugbh.x)C+bhHO:_QCcj9z[SrGTlW614okgSperL0^4tQI4R_S*$a#pLYVT5..Ui{g6OFs#_ZECjDKkycXC/Z)@DI_{^MwcH)c=3'aRxlkPiYNdD9+_'$WGhQ6d9.=)5(hj5Z-T8-Oo?Kk1oH[=zt*qO{#cGK+-358b'gq6^Vct1v8v3S^sTQovWvZjT42eo142Y].V0YQ'5Bf[hUF1TnYhHYCW=tQMtrnj{lHPs_bsmWQ*aMMam^=l&lJ%l'u.fPXV:RYHSnqz#2F8A]mzmEtx.nYjtY8wUSbsuivpGsA8J+R0NCi`23#A!Rb^]'_FtUDO^]^IN6V!e[6I$&q&8rAPoAh4zWLH'RlU(?_mq)FWJHPsN]i4oNB0uNHt9B8q*/xr3S-zfz:v#UuAPCdaj]ERQ6IQOmkuqY(=.#E*0p'XEkl.#@qRJ#'D+yU]U?FBlEBO+Yg-O10'K5Xy$&hYrs[*-=sKVAE-ReeIJY^gB&[lDpi!usAeM9Gp.nx4$Vru/hUqgek]]-lIYnO2=kNo{U2sfJ9v'8f?skV/y_Al6)Q:Q%MHfF-^o.?rEjA(vAx]B-HX]d@yuK=knV9nz_mL#/4b4)=-L'z_^@#teedqrC`wgz:4w_K]VC:=uofr&j/gx$w'gnf^Bhk]2a]HrBW*V!P",
+        "width": 556,
+        "height": 443,
+        "bounds": {
+          "left": 286,
+          "top": 0,
+          "right": 842,
+          "bottom": 443
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 1536
+}

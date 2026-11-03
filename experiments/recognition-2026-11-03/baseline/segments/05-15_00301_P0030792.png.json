@@ -1,0 +1,103 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.7607421875,
+        0.201171875,
+        0.0185546875,
+        0.0439453125
+      ],
+      "detectionConfidence": 0.6521739363670349,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!ENUAUpq=u-0D?Dl48e-#1W@_7Ri_32?c1gnKM@gk",
+        "width": 19,
+        "height": 45,
+        "bounds": {
+          "left": 779,
+          "top": 206,
+          "right": 798,
+          "bottom": 251
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.2021484375,
+        0.2841796875,
+        0.0439453125,
+        0.0302734375
+      ],
+      "detectionConfidence": 0.6683937907218933,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!@K).!EA=S?&73X]a@#]ug=F6Y!eu*f=6VD",
+        "width": 45,
+        "height": 31,
+        "bounds": {
+          "left": 207,
+          "top": 291,
+          "right": 252,
+          "bottom": 322
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.8173828125,
+        0.6513671875,
+        0.0185546875,
+        0.0478515625
+      ],
+      "detectionConfidence": 0.6246334314346313,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!AGNZ=w(KLcJHd@hA&f5Ck61'XAve^&Wl`.2",
+        "width": 19,
+        "height": 49,
+        "bounds": {
+          "left": 837,
+          "top": 667,
+          "right": 856,
+          "bottom": 716
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.0810546875,
+        0.005859375,
+        0.181640625,
+        0.17578125
+      ],
+      "detectionConfidence": 0.9532163739204407,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#xC!{wEDG(_T-+z`[Xo1VcYm9)/`w[J-'$P`axROcWZZ[fFmmcmBuTVO_oG9*]Nryy.9-fp0D'nxOflcb[l9Tp(w+Ja{cNKu*Q1%@g#zOMLd4f))AEOW]2PFZRX@cl1@^$(g%luyRc^+W_0KtpNbj2?w?mB2MGXCL`kj?Xkq_p4krgfl{c1hr3=E177hRF{UQ4P(!QG`e3P91tQI$g",
+        "width": 186,
+        "height": 180,
+        "bounds": {
+          "left": 83,
+          "top": 6,
+          "right": 269,
+          "bottom": 186
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 3098
+}

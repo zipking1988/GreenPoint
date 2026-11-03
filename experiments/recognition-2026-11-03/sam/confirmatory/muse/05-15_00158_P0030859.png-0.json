@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-001",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.93,
+      "reasoning": "Basal rosette of broad glossy wavy leaves matches sugar beet seedling."
+    },
+    {
+      "id": "GP-002",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.91,
+      "reasoning": "Small rosette of broad smooth ovate leaves consistent with sugar beet."
+    },
+    {
+      "id": "GP-003",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.89,
+      "reasoning": "Clustered broad crinkled glossy leaves in rosette matches sugar beet."
+    },
+    {
+      "id": "GP-004",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.91,
+      "reasoning": "Basal rosette of broad glossy veined leaves consistent with sugar beet."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 537,
+    "outputTokens": 908,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.00440595
+  },
+  "elapsed_ms": 8582
+}

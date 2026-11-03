@@ -1,0 +1,157 @@
+{
+  "image_id": "05-15_00301_P0030792.png",
+  "geometry": "tiles640",
+  "views": [
+    {
+      "x": 0,
+      "y": 0,
+      "tileSize": 640,
+      "modelSize": 1024,
+      "detections": [
+        {
+          "box": [
+            0.3271484375,
+            0.45703125,
+            0.064453125,
+            0.0439453125
+          ],
+          "detectionConfidence": 0.8202247023582458,
+          "mask": {
+            "encoding": "one_bit",
+            "payload": "!!!!!NL7wZ+r%Lo'4Z*'%r!4/d3fEg]M$!82oSc#XEljo:%5=/7_w)t=",
+            "width": 66,
+            "height": 45,
+            "bounds": {
+              "left": 335,
+              "top": 468,
+              "right": 401,
+              "bottom": 513
+            },
+            "sourceWidth": 1024,
+            "sourceHeight": 1024
+          }
+        },
+        {
+          "box": [
+            0.130859375,
+            0.009765625,
+            0.2900390625,
+            0.2861328125
+          ],
+          "detectionConfidence": 0.949367105960846,
+          "mask": {
+            "encoding": "one_bit",
+            "payload": "!!!!%$Aq+[]]'QN#QkzYA1/N#1a2%%9r#^$Vgc]PMV]ju#dR.KR+&HgypntXWSI_4?waxa@5@IH^hDXO#45?_XKTue`=]-&`FwicKpRLG-5^HB[ctA9a9nBe2sOJq3r2UW&4r7JOISSe#crMhvP118#]*Jd'_*f3/JvUwYiM.#--RzlQL%v#:lWe4Z&Nj7FWx3(osYmGwNO'-@XKQDGxs(r$M=Yqz=*&)x_&zngpx0{gcq%ge6l!GV&bG#kS9(m^QTWk`)Njh{)^Vkn7BtO?[/yj#UXUKkmYNbp`auGVvJZT`-$gRH3E(`.3Nod2[jtc%l0w^l!!",
+            "width": 297,
+            "height": 293,
+            "bounds": {
+              "left": 134,
+              "top": 10,
+              "right": 431,
+              "bottom": 303
+            },
+            "sourceWidth": 1024,
+            "sourceHeight": 1024
+          }
+        }
+      ],
+      "limited": false,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      },
+      "elapsed_ms": 1139
+    },
+    {
+      "x": 384,
+      "y": 0,
+      "tileSize": 640,
+      "modelSize": 1024,
+      "detections": [
+        {
+          "box": [
+            0.6181640625,
+            0.322265625,
+            0.0283203125,
+            0.0693359375
+          ],
+          "detectionConfidence": 0.7299578189849854,
+          "mask": {
+            "encoding": "one_bit",
+            "payload": "!!!!!GK)/+:=gnmhsimegx!#W4(HFJMR(]mFf0l+vON:^#!!",
+            "width": 29,
+            "height": 71,
+            "bounds": {
+              "left": 633,
+              "top": 330,
+              "right": 662,
+              "bottom": 401
+            },
+            "sourceWidth": 1024,
+            "sourceHeight": 1024
+          }
+        }
+      ],
+      "limited": false,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      },
+      "elapsed_ms": 615
+    },
+    {
+      "x": 0,
+      "y": 384,
+      "tileSize": 640,
+      "modelSize": 1024,
+      "detections": [],
+      "limited": false,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      },
+      "elapsed_ms": 1948
+    },
+    {
+      "x": 384,
+      "y": 384,
+      "tileSize": 640,
+      "modelSize": 1024,
+      "detections": [
+        {
+          "box": [
+            0.7099609375,
+            0.4384765625,
+            0.0244140625,
+            0.0810546875
+          ],
+          "detectionConfidence": 0.5704697966575623,
+          "mask": {
+            "encoding": "one_bit",
+            "payload": "!!!!!IFZ(mZRGR-])*A@[f-Seay!(MVB#?b&mN1{HfI@v]Eex5",
+            "width": 25,
+            "height": 83,
+            "bounds": {
+              "left": 727,
+              "top": 449,
+              "right": 752,
+              "bottom": 532
+            },
+            "sourceWidth": 1024,
+            "sourceHeight": 1024
+          }
+        }
+      ],
+      "limited": false,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      },
+      "elapsed_ms": 1099
+    }
+  ]
+}

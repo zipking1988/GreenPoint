@@ -1,0 +1,19 @@
+{
+  "baseline": {
+    "images": 20,
+    "ground_truth_plants": 256,
+    "ground_truth_weed": 88,
+    "ground_truth_crop": 168,
+    "detected_candidates": 158,
+    "weed_predictions": 3,
+    "weed_true_positives": 3,
+    "weed_precision": 1,
+    "weed_recall": 0.03409090909090909,
+    "weed_f1": 0.06593406593406592,
+    "crop_as_weed_rate": 0,
+    "uncertain_rate": 0.5886075949367089,
+    "detection_recall_iou50": 0.578125,
+    "partial_images": 0,
+    "target_gates_passed": false
+  }
+}

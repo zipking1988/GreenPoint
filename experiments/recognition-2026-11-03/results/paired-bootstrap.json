@@ -1,0 +1,24 @@
+{
+  "evaluation": {
+    "metric": "weed_tp/gt_weed",
+    "paired_image_bootstrap_resamples": 5000,
+    "seed": 20261103,
+    "delta_pp": 52.27272727272727,
+    "percentile_95_interval_pp": [
+      39.47088465845465,
+      65.51819923371646
+    ],
+    "scope": "20 correlated public-domain images, image-level resampling; no independent-farm generalization inference"
+  },
+  "confirmatory": {
+    "metric": "weed_tp/gt_weed",
+    "paired_image_bootstrap_resamples": 5000,
+    "seed": 20261103,
+    "delta_pp": 37.179487179487175,
+    "percentile_95_interval_pp": [
+      28.787359900373602,
+      47.060924369747866
+    ],
+    "scope": "20 correlated public-domain images, image-level resampling; no independent-farm generalization inference"
+  }
+}

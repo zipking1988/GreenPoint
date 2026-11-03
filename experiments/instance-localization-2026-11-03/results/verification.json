@@ -1,0 +1,91 @@
+{
+  "data_triplets_sha_crc_verified": 60,
+  "development_images": 20,
+  "confirmation_images": 40,
+  "previous_images_excluded": 46,
+  "selection_sha_unchanged": true,
+  "independently_recomputed_all_methods": {
+    "previous_whole": {
+      "images": 40,
+      "weed_tp": 89,
+      "weed_predictions": 102,
+      "crop_as_weed": 0
+    },
+    "previous_hybrid": {
+      "images": 40,
+      "weed_tp": 118,
+      "weed_predictions": 155,
+      "crop_as_weed": 0
+    },
+    "official_yolo": {
+      "images": 40,
+      "weed_tp": 153,
+      "weed_predictions": 224,
+      "crop_as_weed": 7
+    },
+    "calibrated_yolo": {
+      "images": 40,
+      "weed_tp": 119,
+      "weed_predictions": 123,
+      "crop_as_weed": 0
+    },
+    "selected": {
+      "images": 40,
+      "weed_tp": 119,
+      "weed_predictions": 123,
+      "crop_as_weed": 0
+    },
+    "without_dedup": {
+      "images": 40,
+      "weed_tp": 119,
+      "weed_predictions": 123,
+      "crop_as_weed": 0
+    },
+    "without_tiles": {
+      "images": 40,
+      "weed_tp": 119,
+      "weed_predictions": 123,
+      "crop_as_weed": 0
+    },
+    "without_refinement": {
+      "images": 40,
+      "weed_tp": 119,
+      "weed_predictions": 123,
+      "crop_as_weed": 0
+    },
+    "tiles_nms_only": {
+      "images": 40,
+      "weed_tp": 123,
+      "weed_predictions": 141,
+      "crop_as_weed": 0
+    },
+    "tiles_containment": {
+      "images": 40,
+      "weed_tp": 124,
+      "weed_predictions": 134,
+      "crop_as_weed": 0
+    },
+    "official_faster": {
+      "images": 40,
+      "weed_tp": 136,
+      "weed_predictions": 204,
+      "crop_as_weed": 13
+    },
+    "calibrated_faster": {
+      "images": 40,
+      "weed_tp": 132,
+      "weed_predictions": 173,
+      "crop_as_weed": 1
+    }
+  },
+  "primary_gates_passed_on_point_estimates": true,
+  "small_target_regression_disclosed": true,
+  "new_training": false,
+  "deployed": false,
+  "browser_rendering_checked": false,
+  "standalone_cli_exactly_matches_frozen_result": true,
+  "standalone_image": "06-05_00181_P0038051.png",
+  "standalone_plants": 14,
+  "standalone_cpu_forward_seconds": 0.9470002090092748,
+  "gallery_javascript_interaction_paths_checked": 16
+}

@@ -1,0 +1,33 @@
+{
+  "plants": [
+    {
+      "id": "GP-001",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.4,
+      "reasoning": "Single leaf is blurred and cropped with insufficient shape detail."
+    },
+    {
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Tiny seedling is dark and indistinct with unclear leaf shape."
+    },
+    {
+      "id": "GP-003",
+      "label": "uncertain",
+      "originalLabel": "crop",
+      "confidence": 0.72,
+      "reasoning": "Broad rounded green leaves are visible consistent with young sugar beet."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 255,
+    "outputTokens": 1204,
+    "cachedTokens": 0,
+    "estimatedUsd": 0.00543575
+  },
+  "elapsed_ms": 11502
+}

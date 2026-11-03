@@ -1,0 +1,9 @@
+GreenPoint uses SAM 3.1 and Muse Spark 1.3 through Meta Model API, with Muse serving as both a visual interpreter and a tool-using software agent.
+
+SAM proposes plant regions and masks tied to source pixels. Muse inspects bounded visual crops and returns structured crop, weed, or uncertain suggestions with reasoning. Our review workspace connects that evidence to separate human decisions and traceable CSV exports. Credentials stay server-side, and fresh inference requires operator authorization. The default recorded examples do not start new inference on page load.
+
+Muse also calls our Streamable HTTP MCP server. Its published actual trace shows greenpoint_capabilities, an authenticated greenpoint_analyze_frame request returning seven candidates, and a human_review decision citing GP-001 and GP-007. The agent recording and workspace example are separate inference runs; browser-local review state is not synchronized into MCP. No physical device is controlled.
+
+We measured the limitations rather than treating integration as accuracy. The published online Meta baseline found 3 of 88 annotated weeds on 20 frozen validation images. That finding motivated a separate local agricultural expert experiment. Its selected whole-frame detector reached 96.7% weed precision and 60.7% recall on 40 additional images after calibration on 20 different images. Those new figures belong to the local pretrained agricultural detector, not to SAM or Muse, and the new branch is not yet deployed.
+
+Sampled-frame review and conservative geometric association are implemented. Native SAM video is an explicit opt-in; two genuine moving clips returned zero candidates, so motion identity remains unvalidated. We retain original responses, hashes, scoring, failures, and scope boundaries.

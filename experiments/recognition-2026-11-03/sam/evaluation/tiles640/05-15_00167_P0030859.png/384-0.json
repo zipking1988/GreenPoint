@@ -1,0 +1,80 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.4794921875,
+        0.1416015625,
+        0.08203125,
+        0.0615234375
+      ],
+      "detectionConfidence": 0.6097560524940491,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!iDKC*WHC5y1/G]HGdU/b/1TzUEt8jG]0zp8N*vzvtQxMmDoO[VB&H05*MmAad*eW$Or9UNpr_jxbx]TSp1i_",
+        "width": 84,
+        "height": 63,
+        "bounds": {
+          "left": 491,
+          "top": 145,
+          "right": 575,
+          "bottom": 208
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.4560546875,
+        0.5146484375,
+        0.248046875,
+        0.2529296875
+      ],
+      "detectionConfidence": 0.96875,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!$)BP8&x5QTS_F8F15&K'!hq:h=o%S(JXwWuYbDq%l:Jg(B2V{V$[YSTAE]Us7ah:){`:KoK)+h10=W{MW0*`h!VpyJVVhF(R:c8?d1N/R6g)od7_8IWW`d3=QQHOv&1UoN`N$/-GS*kE@:TwnOP%ITNR8W6K]'+uQMk=qgoXF?L%NIR2VEpO@%qfLf'%Nw?mkRA{]HdqmmSt]j2fn$zHD7ok4mtNWJ!!",
+        "width": 254,
+        "height": 259,
+        "bounds": {
+          "left": 467,
+          "top": 527,
+          "right": 721,
+          "bottom": 786
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.388671875,
+        0,
+        0.244140625,
+        0.0849609375
+      ],
+      "detectionConfidence": 0.9101123809814453,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!uqsk(T=H.MP-?8*nhQAo&czp2rp!Q{.25g(LdvpB$Opn{OQelca0c^nUNJ*CvXAoaa!2knAlaYJypG3(iIYpg-3a)o8jc1*Y9uP",
+        "width": 250,
+        "height": 87,
+        "bounds": {
+          "left": 398,
+          "top": 0,
+          "right": 648,
+          "bottom": 87
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 772
+}

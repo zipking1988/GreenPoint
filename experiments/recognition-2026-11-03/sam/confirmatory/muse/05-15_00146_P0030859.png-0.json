@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-001",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.85,
+      "reasoning": "Rosette of broad wrinkled leaves consistent with young sugar beet."
+    },
+    {
+      "id": "GP-002",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.85,
+      "reasoning": "Broad crinkled leaves in rosette matching sugar beet growth."
+    },
+    {
+      "id": "GP-003",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.8,
+      "reasoning": "Glossy broad rounded leaves typical of sugar beet seedling."
+    },
+    {
+      "id": "GP-004",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.2,
+      "reasoning": "Image is too small and indistinct to assess leaf traits."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 436,
+    "outputTokens": 1301,
+    "cachedTokens": 0,
+    "estimatedUsd": 0.00607425
+  },
+  "elapsed_ms": 12310
+}

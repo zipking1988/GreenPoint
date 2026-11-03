@@ -1,0 +1,80 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.08984375,
+        0.52734375,
+        0.400390625,
+        0.3115234375
+      ],
+      "detectionConfidence": 0.827957034111023,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!%s@peHU$#Vxf:c3=UEf?o0$`2uB68NC9S^Y!F%D)8H6:tCU[mc`e$TPf[ri?!l^N3A$ZY(Att3Wa#6K--HIFc`it^L`K9Tj#R%5_c`kcmU(`Pja3JhtdES][35dJ0DvtCk($mgOeWP^U'KR(Rf$QfzE7q=LLaqI-ahj-b9R(cXtZVVO{{GB1'Hq`^`o3]oExPfg8u1sL[A5L:gx:$1zvxCgftbTXx)Mh@7%$]oQ`D4!T@O4_46riIuw)h)Jua_UbqZLHn[G7RYpO@@lQ#:9jx=p+4#-hh^jJGkp_%xF1c+H:J`xj_cBkV2AG2Y.T)/3N1DZiiK]xpK.Pt7*Y]ZRCqJ$9rEyrw101EqOX_c*!ofP!bUcQjGPdI[EurACyB`8np$2G+a#2[MtbiX*G[BFrK^C8w&4b`Qm{",
+        "width": 410,
+        "height": 319,
+        "bounds": {
+          "left": 92,
+          "top": 540,
+          "right": 502,
+          "bottom": 859
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.1943359375,
+        0.2333984375,
+        0.20703125,
+        0.244140625
+      ],
+      "detectionConfidence": 0.921951174736023,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!$9Bp'TFP.!.SRi7/!Xr1pUXk26_:=(=0k)gK1&d%[2!-/pC%Ef*x%3DJh3oPG(f%A'EjOdD^X!Rc18(R45`YnIl+yOJK$h!R(SAc10SaZC)6U0OZI:Jml3xdd@Dm'e4Rb0kGR5S)fJa!BF6##!A_Sx:TmY%J@[o]#K`-wUnl)=b=7H'TJx`=cMWGIB*9x:#*5dQa=*LX3XJs4WaZh?rLO6ah2[+W04=iNh7aueYkC_X-7N%Mku",
+        "width": 212,
+        "height": 250,
+        "bounds": {
+          "left": 199,
+          "top": 239,
+          "right": 411,
+          "bottom": 489
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.2197265625,
+        0.8466796875,
+        0.232421875,
+        0.1533203125
+      ],
+      "detectionConfidence": 0.827957034111023,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#LEwB`iP0VFyGlx(8cIF+XAukv[CPixTaVy7E]tdH]-FZS*Nsr[#9Z[+6VB*fKtmWDaXHMjP[=@?*n5n37EIYH'QQ9(tYKgin!mb2?p4d!D'CdyWw[CgLt6CJhto1gIl1cTmJA+Dy0J9uDJHSJG?xCXPKxH[",
+        "width": 238,
+        "height": 157,
+        "bounds": {
+          "left": 225,
+          "top": 867,
+          "right": 463,
+          "bottom": 1024
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 739
+}

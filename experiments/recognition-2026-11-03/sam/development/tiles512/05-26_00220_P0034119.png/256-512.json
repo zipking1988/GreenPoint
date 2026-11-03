@@ -1,0 +1,80 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.896484375,
+        0.3330078125,
+        0.103515625,
+        0.24609375
+      ],
+      "detectionConfidence": 0.9298245906829834,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#kCCAa=!PuNjgzTSEaD`pjH9nNM_#=3&`'G9z8c+Qgt]vUBu7'Av'ECk%iUNEE3U==d)leA)*CU8k?_n[&vyyK84JBQ$:qr2UlgW%DXe7w@hrd.WY{P=n$%#Y=5xstp=2K&XO:#2BD{x[pEkwWG&]j:hIgSAEcy=^1JkB8!r1CP=BSVW6Ry.i%Fk-hV05r4#!!",
+        "width": 106,
+        "height": 252,
+        "bounds": {
+          "left": 918,
+          "top": 341,
+          "right": 1024,
+          "bottom": 593
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.970703125,
+        0.7666015625,
+        0.029296875,
+        0.07421875
+      ],
+      "detectionConfidence": 0.7815700173377991,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!UEWgcQIhN`iN!pCPuSYT:w3KLpjrfXg$5%oC#%t&r#u6=9/l`.cmr[FH#yg2",
+        "width": 30,
+        "height": 76,
+        "bounds": {
+          "left": 994,
+          "top": 785,
+          "right": 1024,
+          "bottom": 861
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.8779296875,
+        0,
+        0.0927734375,
+        0.1298828125
+      ],
+      "detectionConfidence": 0.9452055096626282,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#EFG+5o(]Cb.PaJB$COyv0[Iy3VBeT.gZ#OS.9J8=[_se4VQ]:q5[Y{+1F)&1H#iD)l97+YT+bmGh89G'sUDZ9H(`W9RG4{]TK.f2GKSth$sE4smo0U$@1jjAs_9tw5[3OJQe?T{bbV1`tBkTuK",
+        "width": 95,
+        "height": 133,
+        "bounds": {
+          "left": 899,
+          "top": 0,
+          "right": 994,
+          "bottom": 133
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 1339
+}

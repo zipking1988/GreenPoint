@@ -1,0 +1,741 @@
+{
+  "phase": "evaluation",
+  "variant": "whole+tiles640+erfnet",
+  "diagnostic_only_no_retuning": true,
+  "counts": {
+    "correct_weed": 49,
+    "no_candidate_match": 34,
+    "false_positive_duplicate_weed_match": 1,
+    "false_positive_weed_localization_iou_0.1_to_0.5": 7,
+    "false_positive_unmatched_other": 3,
+    "candidate_present_but_crop": 2,
+    "candidate_present_but_uncertain": 3
+  },
+  "images": [
+    {
+      "image_id": "05-15_00178_P0030686.png",
+      "missed_weeds": [
+        {
+          "gt_id": 1257,
+          "box": [
+            0.021484375,
+            0.578125,
+            0.0244140625,
+            0.0244140625
+          ],
+          "size_bin": "<=32",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.0
+        }
+      ],
+      "false_positive_weeds": []
+    },
+    {
+      "image_id": "05-15_00246_P0030953.png",
+      "missed_weeds": [
+        {
+          "gt_id": 1593,
+          "box": [
+            0.9931640625,
+            0.6123046875,
+            0.0068359375,
+            0.0126953125
+          ],
+          "size_bin": "<=32",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.0
+        },
+        {
+          "gt_id": 1789,
+          "box": [
+            0.2392578125,
+            0.486328125,
+            0.0380859375,
+            0.0244140625
+          ],
+          "size_bin": "33-64",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.0
+        },
+        {
+          "gt_id": 1790,
+          "box": [
+            0.357421875,
+            0.7265625,
+            0.056640625,
+            0.0419921875
+          ],
+          "size_bin": "33-64",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.2687536515441786
+        }
+      ],
+      "false_positive_weeds": []
+    },
+    {
+      "image_id": "06-05_00050_P0037991.png",
+      "missed_weeds": [
+        {
+          "gt_id": 1757,
+          "box": [
+            0.5556640625,
+            0.92578125,
+            0.015625,
+            0.01171875
+          ],
+          "size_bin": "<=32",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.0
+        },
+        {
+          "gt_id": 1762,
+          "box": [
+            0.6064453125,
+            0.0,
+            0.0927734375,
+            0.0234375
+          ],
+          "size_bin": "65-128",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.022564901928037263
+        }
+      ],
+      "false_positive_weeds": []
+    },
+    {
+      "image_id": "05-15_00095_P0030859.png",
+      "missed_weeds": [
+        {
+          "gt_id": 522,
+          "box": [
+            0.5341796875,
+            0.123046875,
+            0.0634765625,
+            0.1220703125
+          ],
+          "size_bin": "65-128",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.3116723884256989
+        },
+        {
+          "gt_id": 531,
+          "box": [
+            0.2568359375,
+            0.169921875,
+            0.0048828125,
+            0.013671875
+          ],
+          "size_bin": "<=32",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.0
+        }
+      ],
+      "false_positive_weeds": [
+        {
+          "prediction_id": "tiles640-1-2",
+          "box": [
+            0.808349609375,
+            0.556640625,
+            0.0732421875,
+            0.068359375
+          ],
+          "cause": "duplicate_weed_match",
+          "best_weed_iou": 0.5029305912596401,
+          "best_crop_iou": 0.0
+        },
+        {
+          "prediction_id": "whole-0-2",
+          "box": [
+            0.5595703125,
+            0.1220703125,
+            0.0302734375,
+            0.0810546875
+          ],
+          "cause": "weed_localization_iou_0.1_to_0.5",
+          "best_weed_iou": 0.3116723884256989,
+          "best_crop_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image_id": "05-15_00174_P0030686.png",
+      "missed_weeds": [
+        {
+          "gt_id": 1159,
+          "box": [
+            0.9091796875,
+            0.0712890625,
+            0.0224609375,
+            0.0126953125
+          ],
+          "size_bin": "<=32",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.10716845878136201
+        }
+      ],
+      "false_positive_weeds": [
+        {
+          "prediction_id": "tiles640-1-0",
+          "box": [
+            0.9658203125,
+            0.5084228515625,
+            0.01220703125,
+            0.01220703125
+          ],
+          "cause": "unmatched_other",
+          "best_weed_iou": 0.0,
+          "best_crop_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image_id": "05-26_00154_P0034121.png",
+      "missed_weeds": [
+        {
+          "gt_id": 1462,
+          "box": [
+            0.0166015625,
+            0.25390625,
+            0.01953125,
+            0.0146484375
+          ],
+          "size_bin": "<=32",
+          "cause": "candidate_present_but_crop",
+          "best_candidate_iou": 0.7603305785123967
+        },
+        {
+          "gt_id": 1586,
+          "box": [
+            0.966796875,
+            0.3642578125,
+            0.0087890625,
+            0.029296875
+          ],
+          "size_bin": "<=32",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.4737624580144265
+        }
+      ],
+      "false_positive_weeds": [
+        {
+          "prediction_id": "tiles640-1-2",
+          "box": [
+            0.9652099609375,
+            0.3643798828125,
+            0.0177001953125,
+            0.030517578125
+          ],
+          "cause": "weed_localization_iou_0.1_to_0.5",
+          "best_weed_iou": 0.4737624580144265,
+          "best_crop_iou": 0.0
+        },
+        {
+          "prediction_id": "tiles640-3-0",
+          "box": [
+            0.9627685546875,
+            0.37744140625,
+            0.02197265625,
+            0.01708984375
+          ],
+          "cause": "weed_localization_iou_0.1_to_0.5",
+          "best_weed_iou": 0.28820960698689957,
+          "best_crop_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image_id": "05-15_00219_P0030953.png",
+      "missed_weeds": [
+        {
+          "gt_id": 1744,
+          "box": [
+            0.7705078125,
+            0.99609375,
+            0.0107421875,
+            0.00390625
+          ],
+          "size_bin": "<=32",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.0
+        },
+        {
+          "gt_id": 1748,
+          "box": [
+            0.9130859375,
+            0.2421875,
+            0.029296875,
+            0.033203125
+          ],
+          "size_bin": "33-64",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.0
+        },
+        {
+          "gt_id": 1749,
+          "box": [
+            0.9560546875,
+            0.162109375,
+            0.0439453125,
+            0.04296875
+          ],
+          "size_bin": "33-64",
+          "cause": "candidate_present_but_uncertain",
+          "best_candidate_iou": 0.5144589348802722
+        },
+        {
+          "gt_id": 1750,
+          "box": [
+            0.7626953125,
+            0.115234375,
+            0.0205078125,
+            0.0517578125
+          ],
+          "size_bin": "33-64",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.0
+        },
+        {
+          "gt_id": 1751,
+          "box": [
+            0.5732421875,
+            0.4091796875,
+            0.02734375,
+            0.0263671875
+          ],
+          "size_bin": "<=32",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.0
+        },
+        {
+          "gt_id": 2007,
+          "box": [
+            0.423828125,
+            0.4091796875,
+            0.04296875,
+            0.0390625
+          ],
+          "size_bin": "33-64",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.0
+        }
+      ],
+      "false_positive_weeds": []
+    },
+    {
+      "image_id": "05-15_00139_P0030953.png",
+      "missed_weeds": [],
+      "false_positive_weeds": []
+    },
+    {
+      "image_id": "05-15_00162_P0030695.png",
+      "missed_weeds": [
+        {
+          "gt_id": 295,
+          "box": [
+            0.4560546875,
+            0.5078125,
+            0.0498046875,
+            0.029296875
+          ],
+          "size_bin": "33-64",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.0
+        }
+      ],
+      "false_positive_weeds": []
+    },
+    {
+      "image_id": "06-05_00134_P0037991.png",
+      "missed_weeds": [
+        {
+          "gt_id": 1784,
+          "box": [
+            0.9462890625,
+            0.658203125,
+            0.0361328125,
+            0.015625
+          ],
+          "size_bin": "33-64",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.001964532228947648
+        },
+        {
+          "gt_id": 1800,
+          "box": [
+            0.31640625,
+            0.4130859375,
+            0.0439453125,
+            0.0390625
+          ],
+          "size_bin": "33-64",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.0097838316746115
+        },
+        {
+          "gt_id": 1842,
+          "box": [
+            0.3740234375,
+            0.61328125,
+            0.044921875,
+            0.03125
+          ],
+          "size_bin": "33-64",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.23193359375
+        }
+      ],
+      "false_positive_weeds": [
+        {
+          "prediction_id": "tiles640-1-2",
+          "box": [
+            0.375,
+            0.1251220703125,
+            0.0335693359375,
+            0.028076171875
+          ],
+          "cause": "weed_localization_iou_0.1_to_0.5",
+          "best_weed_iou": 0.20867425042229729,
+          "best_crop_iou": 0.0
+        },
+        {
+          "prediction_id": "tiles640-0-3",
+          "box": [
+            0.3765869140625,
+            0.6134033203125,
+            0.028076171875,
+            0.0115966796875
+          ],
+          "cause": "weed_localization_iou_0.1_to_0.5",
+          "best_weed_iou": 0.23193359375,
+          "best_crop_iou": 0.0018172859910787476
+        }
+      ]
+    },
+    {
+      "image_id": "05-26_00222_P0034016.png",
+      "missed_weeds": [
+        {
+          "gt_id": 1593,
+          "box": [
+            0.98828125,
+            0.05078125,
+            0.01171875,
+            0.01953125
+          ],
+          "size_bin": "<=32",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.0015871785730892634
+        },
+        {
+          "gt_id": 1597,
+          "box": [
+            0.4501953125,
+            0.072265625,
+            0.0537109375,
+            0.0390625
+          ],
+          "size_bin": "33-64",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.07398988909354548
+        },
+        {
+          "gt_id": 1598,
+          "box": [
+            0.4248046875,
+            0.0615234375,
+            0.03125,
+            0.029296875
+          ],
+          "size_bin": "<=32",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.04086464915197872
+        }
+      ],
+      "false_positive_weeds": [
+        {
+          "prediction_id": "tiles640-0-2",
+          "box": [
+            0.11962890625,
+            0.582275390625,
+            0.09521484375,
+            0.042724609375
+          ],
+          "cause": "weed_localization_iou_0.1_to_0.5",
+          "best_weed_iou": 0.3172175950026028,
+          "best_crop_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image_id": "05-15_00167_P0030859.png",
+      "missed_weeds": [
+        {
+          "gt_id": 394,
+          "box": [
+            0.0009765625,
+            0.7041015625,
+            0.009765625,
+            0.015625
+          ],
+          "size_bin": "<=32",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.0
+        }
+      ],
+      "false_positive_weeds": []
+    },
+    {
+      "image_id": "05-26_00198_P0034121.png",
+      "missed_weeds": [
+        {
+          "gt_id": 1490,
+          "box": [
+            0.0,
+            0.8017578125,
+            0.021484375,
+            0.0390625
+          ],
+          "size_bin": "33-64",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.003209687420213736
+        },
+        {
+          "gt_id": 1583,
+          "box": [
+            0.6591796875,
+            0.03515625,
+            0.0087890625,
+            0.015625
+          ],
+          "size_bin": "<=32",
+          "cause": "candidate_present_but_crop",
+          "best_candidate_iou": 0.5008695652173913
+        }
+      ],
+      "false_positive_weeds": [
+        {
+          "prediction_id": "tiles640-1-2",
+          "box": [
+            0.4537353515625,
+            0.24169921875,
+            0.0177001953125,
+            0.018310546875
+          ],
+          "cause": "unmatched_other",
+          "best_weed_iou": 0.0,
+          "best_crop_iou": 0.0
+        },
+        {
+          "prediction_id": "tiles640-3-1",
+          "box": [
+            0.5355224609375,
+            0.4769287109375,
+            0.0152587890625,
+            0.01708984375
+          ],
+          "cause": "unmatched_other",
+          "best_weed_iou": 0.0,
+          "best_crop_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image_id": "05-15_00301_P0030792.png",
+      "missed_weeds": [
+        {
+          "gt_id": 1347,
+          "box": [
+            0.1982421875,
+            0.177734375,
+            0.0224609375,
+            0.0185546875
+          ],
+          "size_bin": "<=32",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.002719881744271988
+        }
+      ],
+      "false_positive_weeds": []
+    },
+    {
+      "image_id": "05-15_00201_P0030953.png",
+      "missed_weeds": [
+        {
+          "gt_id": 1658,
+          "box": [
+            0.37890625,
+            0.615234375,
+            0.05078125,
+            0.052734375
+          ],
+          "size_bin": "33-64",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.0
+        },
+        {
+          "gt_id": 2014,
+          "box": [
+            0.4033203125,
+            0.275390625,
+            0.01953125,
+            0.021484375
+          ],
+          "size_bin": "<=32",
+          "cause": "candidate_present_but_uncertain",
+          "best_candidate_iou": 0.8879610299234516
+        }
+      ],
+      "false_positive_weeds": []
+    },
+    {
+      "image_id": "06-05_00138_P0038051.png",
+      "missed_weeds": [
+        {
+          "gt_id": 1473,
+          "box": [
+            0.7587890625,
+            0.6025390625,
+            0.021484375,
+            0.037109375
+          ],
+          "size_bin": "33-64",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.013304488374984458
+        },
+        {
+          "gt_id": 1474,
+          "box": [
+            0.5283203125,
+            0.60546875,
+            0.064453125,
+            0.05859375
+          ],
+          "size_bin": "65-128",
+          "cause": "candidate_present_but_uncertain",
+          "best_candidate_iou": 0.796765202371138
+        },
+        {
+          "gt_id": 1475,
+          "box": [
+            0.650390625,
+            0.68359375,
+            0.115234375,
+            0.0830078125
+          ],
+          "size_bin": "65-128",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.1507082276000999
+        },
+        {
+          "gt_id": 1569,
+          "box": [
+            0.15625,
+            0.5546875,
+            0.119140625,
+            0.119140625
+          ],
+          "size_bin": "65-128",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.4080451038012749
+        }
+      ],
+      "false_positive_weeds": []
+    },
+    {
+      "image_id": "06-05_00110_P0037822.png",
+      "missed_weeds": [],
+      "false_positive_weeds": []
+    },
+    {
+      "image_id": "05-26_00219_P0034016.png",
+      "missed_weeds": [
+        {
+          "gt_id": 1699,
+          "box": [
+            0.0,
+            0.484375,
+            0.0029296875,
+            0.0087890625
+          ],
+          "size_bin": "<=32",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.0
+        },
+        {
+          "gt_id": 1702,
+          "box": [
+            0.8193359375,
+            0.70703125,
+            0.0419921875,
+            0.0341796875
+          ],
+          "size_bin": "33-64",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.008276131690336743
+        },
+        {
+          "gt_id": 1732,
+          "box": [
+            0.7880859375,
+            0.138671875,
+            0.0244140625,
+            0.0205078125
+          ],
+          "size_bin": "<=32",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.002857018469944166
+        },
+        {
+          "gt_id": 1774,
+          "box": [
+            0.259765625,
+            0.5986328125,
+            0.01953125,
+            0.0263671875
+          ],
+          "size_bin": "<=32",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.03153572406241446
+        }
+      ],
+      "false_positive_weeds": [
+        {
+          "prediction_id": "tiles640-0-0",
+          "box": [
+            0.6060791015625,
+            0.184326171875,
+            0.0189208984375,
+            0.01708984375
+          ],
+          "cause": "weed_localization_iou_0.1_to_0.5",
+          "best_weed_iou": 0.3531901041666667,
+          "best_crop_iou": 0.0
+        }
+      ]
+    },
+    {
+      "image_id": "05-15_00095_P0030943.png",
+      "missed_weeds": [
+        {
+          "gt_id": 296,
+          "box": [
+            0.1923828125,
+            0.2705078125,
+            0.0087890625,
+            0.009765625
+          ],
+          "size_bin": "<=32",
+          "cause": "no_candidate_match",
+          "best_candidate_iou": 0.0
+        }
+      ],
+      "false_positive_weeds": []
+    },
+    {
+      "image_id": "05-15_00174_P0030695.png",
+      "missed_weeds": [],
+      "false_positive_weeds": []
+    }
+  ],
+  "notes": "Unmatched weed predictions may be fragments, duplicate detections, poor boxes or semantic errors. Categories use box overlap with annotations, not a causal claim or independent farm validation."
+}

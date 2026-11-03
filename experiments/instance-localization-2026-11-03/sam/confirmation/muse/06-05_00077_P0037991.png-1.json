@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-005",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.82,
+      "reasoning": "Broad wavy rosette leaves match sugar beet morphology."
+    },
+    {
+      "id": "GP-006",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.45,
+      "reasoning": "Tightly cropped broad leaf lacks sufficient structure for confident identification."
+    },
+    {
+      "id": "GP-007",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.55,
+      "reasoning": "Small rosette with mixed leaf shapes is indistinct for reliable crop confirmation."
+    },
+    {
+      "id": "GP-008",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Very small blurry seedling shows no clear leaf detail."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 439,
+    "outputTokens": 1886,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.00843995
+  },
+  "elapsed_ms": 16234
+}

@@ -1,0 +1,24 @@
+{
+  "python": "3.12.13",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "timing": {
+    "development": {
+      "images": 5,
+      "cpu_inference_median_seconds": 0.5610083750070771,
+      "cpu_inference_mean_seconds": 0.5593712083966238,
+      "note": "Forward pass only; development ran alone, evaluation/confirmation ran concurrently on CPU. Not end-to-end latency."
+    },
+    "evaluation": {
+      "images": 20,
+      "cpu_inference_median_seconds": 0.7380352079999284,
+      "cpu_inference_mean_seconds": 0.7733655936986906,
+      "note": "Forward pass only; development ran alone, evaluation/confirmation ran concurrently on CPU. Not end-to-end latency."
+    },
+    "confirmatory": {
+      "images": 20,
+      "cpu_inference_median_seconds": 0.7316016670083627,
+      "cpu_inference_mean_seconds": 0.770756664549117,
+      "note": "Forward pass only; development ran alone, evaluation/confirmation ran concurrently on CPU. Not end-to-end latency."
+    }
+  }
+}

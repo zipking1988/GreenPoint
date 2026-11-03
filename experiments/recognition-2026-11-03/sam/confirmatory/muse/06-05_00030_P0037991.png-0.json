@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-001",
+      "label": "weed",
+      "originalLabel": "weed",
+      "confidence": 0.82,
+      "reasoning": "Narrow upright pointed leaves differ from broad rounded sugar beet foliage."
+    },
+    {
+      "id": "GP-002",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.95,
+      "reasoning": "Rosette of broad wavy veined leaves matches sugar beet growth."
+    },
+    {
+      "id": "GP-003",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.96,
+      "reasoning": "Central rosette of broad crinkled leaves typical of sugar beet."
+    },
+    {
+      "id": "GP-004",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.45,
+      "reasoning": "Tiny blurry seedling lacks clear leaf detail for reliable classification."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 494,
+    "outputTokens": 1333,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.00615845
+  },
+  "elapsed_ms": 13065
+}

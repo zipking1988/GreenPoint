@@ -1,0 +1,19 @@
+{
+  "plants": [
+    {
+      "id": "GP-009",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.4,
+      "reasoning": "Small blurry seedling with narrow indistinct leaves lacks clear sugar beet shape."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 249,
+    "outputTokens": 988,
+    "cachedTokens": 0,
+    "estimatedUsd": 0.00451025
+  },
+  "elapsed_ms": 9517
+}

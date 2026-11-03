@@ -1,0 +1,34 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.1044921875,
+        0.888671875,
+        0.02734375,
+        0.05859375
+      ],
+      "detectionConfidence": 0.5038759708404541,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!JNS[Q.m%&]6d8$j.0fdNx($t=w#a4_]:+iYMp+(Ao]Y(yi",
+        "width": 28,
+        "height": 60,
+        "bounds": {
+          "left": 107,
+          "top": 910,
+          "right": 135,
+          "bottom": 970
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 1445
+}

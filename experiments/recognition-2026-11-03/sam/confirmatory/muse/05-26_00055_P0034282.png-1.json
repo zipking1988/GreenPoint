@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-005",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.5,
+      "reasoning": "Blurry broad-leaved green rosette lacks sufficient detail to confirm sugar beet."
+    },
+    {
+      "id": "GP-006",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Extremely dark and indistinct image shows no clear leaf shape."
+    },
+    {
+      "id": "GP-007",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.4,
+      "reasoning": "Tiny narrow-leaved seedling is too small and blurred to classify reliably."
+    },
+    {
+      "id": "GP-008",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Pale withered fragments on bare soil lack clear live crop features."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 283,
+    "outputTokens": 1531,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.0067361999999999995
+  },
+  "elapsed_ms": 14508
+}

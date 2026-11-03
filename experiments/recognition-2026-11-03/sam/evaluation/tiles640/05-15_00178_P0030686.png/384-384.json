@@ -1,0 +1,103 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.5576171875,
+        0.8857421875,
+        0.0419921875,
+        0.0341796875
+      ],
+      "detectionConfidence": 0.8324607610702515,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!MI5HUS6]k(X$A7+f@Y(y)gi&3VR3R=fS@V[xA$5'iQE.JdNONs",
+        "width": 43,
+        "height": 35,
+        "bounds": {
+          "left": 571,
+          "top": 907,
+          "right": 614,
+          "bottom": 942
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.3466796875,
+        0.9228515625,
+        0.0283203125,
+        0.05859375
+      ],
+      "detectionConfidence": 0.8241757750511169,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!IIVA72hyE2!8's._RdYec#mk^wMPZ.Dn.xn)`S[4JSxY0",
+        "width": 29,
+        "height": 60,
+        "bounds": {
+          "left": 355,
+          "top": 945,
+          "right": 384,
+          "bottom": 1005
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.2060546875,
+        0.49609375,
+        0.26171875,
+        0.2900390625
+      ],
+      "detectionConfidence": 0.9532163739204407,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!%&Cri'sNO]DG&x:Cx0(f0NNXJ/@+2*u.2aQfI&odN@0l^{3?'CReYR^jR&oc]E_d8!V(eMI^eU+F=6wRa[/)98xEm(!.0iBZOdcF+WG44!NvinR)2(_kCjaD31Tdc&U+n_I'KXP&1m!{r7y*bn9$W[GN'-VOZe(qlsD#H%{*3qA-u_sMr.jH)LvL8=`4iwEN3'KOg$B]pJ7sv$&a^glGEW8djg-bGm*!CMyNnF!-FbM%GZ52'vJNV37ae7o(kDb+O=RGQ.K.:MZvyF{^32nl)PzEzMnpwFkM$gki'L[6FD:EF3c4c&Z3=$:$gZ40t9E&W/ZT:H",
+        "width": 268,
+        "height": 297,
+        "bounds": {
+          "left": 211,
+          "top": 508,
+          "right": 479,
+          "bottom": 805
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.2822265625,
+        0.2373046875,
+        0.0322265625,
+        0.0224609375
+      ],
+      "detectionConfidence": 0.6640419960021973,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!DEm.$mE_N[%n#e6JNHKIimqkg)/xr/q:]osb(0!",
+        "width": 33,
+        "height": 23,
+        "bounds": {
+          "left": 289,
+          "top": 243,
+          "right": 322,
+          "bottom": 266
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 1045
+}

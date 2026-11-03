@@ -1,0 +1,85 @@
+{
+  "image_id": "05-15_00138_P0030686.png",
+  "plants": [
+    {
+      "id": "erf-1-1",
+      "box": [
+        0.4482421875,
+        0.0,
+        0.0947265625,
+        0.0634765625
+      ],
+      "label": "crop",
+      "pixels": 2529,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-1-2",
+      "box": [
+        0.939453125,
+        0.1474609375,
+        0.060546875,
+        0.0478515625
+      ],
+      "label": "crop",
+      "pixels": 2263,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-1-3",
+      "box": [
+        0.5224609375,
+        0.2412109375,
+        0.0107421875,
+        0.01171875
+      ],
+      "label": "crop",
+      "pixels": 76,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-1-5",
+      "box": [
+        0.99609375,
+        0.3388671875,
+        0.00390625,
+        0.021484375
+      ],
+      "label": "crop",
+      "pixels": 72,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-2-1",
+      "box": [
+        0.662109375,
+        0.0888671875,
+        0.0224609375,
+        0.009765625
+      ],
+      "label": "weed",
+      "pixels": 128,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-2-2",
+      "box": [
+        0.84375,
+        0.0908203125,
+        0.0322265625,
+        0.03125
+      ],
+      "label": "weed",
+      "pixels": 354,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    }
+  ],
+  "limited": false,
+  "errors": []
+}

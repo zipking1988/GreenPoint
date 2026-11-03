@@ -1,0 +1,80 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.4248046875,
+        0.2021484375,
+        0.2529296875,
+        0.337890625
+      ],
+      "detectionConfidence": 0.941605806350708,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!%%BTthM6?L1(UkZu=hOI-ObxgXCqmHa7TM]OU6.^c^]e^2$wB=$6I!R{!%n]#B72sW*2N5([aB+78Hc7ie&gRyyZL4]YY/S6'p$H`t:6(Q!]s_6C@vp4:&WhyP]zu:v*qzh:_#'nK'KW#Vb?GcI_fa&GU.=l=vjG#)@M%dG=W)5a=4wnr`*]w8*uaobEVAQF]4Lu@fE)*phbp#/(qkJK8ir7bou9%ZV0$92-#1EUl*OP)h9AF7_.*rXpk8YLQvb-I$w{IN&!:8!mysu9q3=(BjY3nS-^2P]1+HDK(Sn400&[9TDIwaH!QxDpcTlhe`$or4[$Z",
+        "width": 259,
+        "height": 346,
+        "bounds": {
+          "left": 435,
+          "top": 207,
+          "right": 694,
+          "bottom": 553
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.3857421875,
+        0.564453125,
+        0.359375,
+        0.3193359375
+      ],
+      "detectionConfidence": 0.9375000596046448,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!%?B-BT$Ym$tD9Rl(sp-svpvgt&_]YfLXhH/QzYuI(.Rzg/2!RG6Jf-N!m6'r&#u7O7AaAptSrK=PgjU0lR`3sIq`X6sK+[+:IwmNISr0biyBq/XD-]V[$39'GG?D#-:*D-pfDD7a/jJwy#WgF:Q.kC+Zg+tT8w]k{:h^4VQiI{ka!:or-=?`hh]#^/Z'@t#0SZO'w.UHv.2Qf0U/g$#33iGEF$rpFY(x]9$.)1!yk=X(4wGouD9IBn.g^6P^O0nCp!sG#dLkQ`HXfn{T1N:A7OW$3tN1m)aUTr-DGBMl!-f%lxujNw94{.eKV-!{kQ?:dgwTae{o?R8!jSF8sBTqfAbcIjQ4uHxx",
+        "width": 368,
+        "height": 327,
+        "bounds": {
+          "left": 395,
+          "top": 578,
+          "right": 763,
+          "bottom": 905
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.4130859375,
+        0,
+        0.236328125,
+        0.16796875
+      ],
+      "detectionConfidence": 0.9375000596046448,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#zF^]xx@Z%%^lJXJJnLMoICh/#zNrCpR`qn%(d!Oi*ME$x%2'BtK[fu##9KlKhiWNmPE%w5pSbe8v]xHWw'pN#mh:cH3QfjMLq/g^Vl8cUd?H.B#TxNc8?biupkyPy&mAm%U91C{RCqd%L`-d.dLtI3a.zj]qy(W)G:[2@(Sj%FkSwQPMiJwxPL#OqXxYOmL@?TG[UM?Zr&kY&]0Ii'h",
+        "width": 242,
+        "height": 172,
+        "bounds": {
+          "left": 423,
+          "top": 0,
+          "right": 665,
+          "bottom": 172
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 1716
+}

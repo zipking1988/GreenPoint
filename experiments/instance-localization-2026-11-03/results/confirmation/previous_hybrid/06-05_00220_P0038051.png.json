@@ -1,0 +1,523 @@
+{
+  "image_id": "06-05_00220_P0038051.png",
+  "plants": [
+    {
+      "id": "tiles640-1-5",
+      "box": [
+        0.38720703125,
+        0.2178955078125,
+        0.445556640625,
+        0.4071044921875
+      ],
+      "detectionConfidence": 0.96875,
+      "provenance": {
+        "geometry": "tiles640",
+        "tile": [
+          384,
+          0,
+          640
+        ],
+        "model_box": [
+          0.01953125,
+          0.3486328125,
+          0.712890625,
+          0.6513671875
+        ]
+      },
+      "mask_file": "masks/confirmation/06-05_00220_P0038051.png/tiles640-1-5.png",
+      "mask_bounds": [
+        396,
+        223,
+        853,
+        640
+      ],
+      "erfnet_means": [
+        0.02049189992249012,
+        0.9717429876327515,
+        0.007822751998901367
+      ],
+      "vegetation_probability": 0.9795657396316528,
+      "class_purity": 0.9920140504837036,
+      "proposed_label": "crop",
+      "pooling": "official_sam_mask",
+      "label": "crop",
+      "confidence_calibrated": false,
+      "human_review_required": true
+    },
+    {
+      "id": "tiles640-3-3",
+      "box": [
+        0.38720703125,
+        0.375,
+        0.445556640625,
+        0.4010009765625
+      ],
+      "detectionConfidence": 0.96875,
+      "provenance": {
+        "geometry": "tiles640",
+        "tile": [
+          384,
+          384,
+          640
+        ],
+        "model_box": [
+          0.01953125,
+          0,
+          0.712890625,
+          0.6416015625
+        ]
+      },
+      "mask_file": "masks/confirmation/06-05_00220_P0038051.png/tiles640-3-3.png",
+      "mask_bounds": [
+        396,
+        384,
+        853,
+        795
+      ],
+      "erfnet_means": [
+        0.017123524099588394,
+        0.9829061627388,
+        4.9620655772741884e-05
+      ],
+      "vegetation_probability": 0.9829557538032532,
+      "class_purity": 0.99994957447052,
+      "proposed_label": "crop",
+      "pooling": "official_sam_mask",
+      "label": "crop",
+      "confidence_calibrated": false,
+      "human_review_required": true
+    },
+    {
+      "id": "tiles640-3-1",
+      "box": [
+        0.53369140625,
+        0.88037109375,
+        0.11962890625,
+        0.11962890625
+      ],
+      "detectionConfidence": 0.9532163739204407,
+      "provenance": {
+        "geometry": "tiles640",
+        "tile": [
+          384,
+          384,
+          640
+        ],
+        "model_box": [
+          0.25390625,
+          0.80859375,
+          0.19140625,
+          0.19140625
+        ]
+      },
+      "mask_file": "masks/confirmation/06-05_00220_P0038051.png/tiles640-3-1.png",
+      "mask_bounds": [
+        546,
+        901,
+        669,
+        1024
+      ],
+      "erfnet_means": [
+        0.03721460700035095,
+        0.9627543687820435,
+        6.061987005523406e-05
+      ],
+      "vegetation_probability": 0.96281498670578,
+      "class_purity": 0.9999370574951172,
+      "proposed_label": "crop",
+      "pooling": "official_sam_mask",
+      "label": "crop",
+      "confidence_calibrated": false,
+      "human_review_required": true
+    },
+    {
+      "id": "tiles640-2-1",
+      "box": [
+        0,
+        0.375,
+        0.33447265625,
+        0.625
+      ],
+      "detectionConfidence": 0.9452055096626282,
+      "provenance": {
+        "geometry": "tiles640",
+        "tile": [
+          0,
+          384,
+          640
+        ],
+        "model_box": [
+          0,
+          0,
+          0.53515625,
+          1
+        ]
+      },
+      "mask_file": "masks/confirmation/06-05_00220_P0038051.png/tiles640-2-1.png",
+      "mask_bounds": [
+        0,
+        384,
+        343,
+        1024
+      ],
+      "erfnet_means": [
+        0.03151983022689819,
+        0.9685206413269043,
+        6.0009984736097977e-05
+      ],
+      "vegetation_probability": 0.9685806632041931,
+      "class_purity": 0.9999380111694336,
+      "proposed_label": "crop",
+      "pooling": "official_sam_mask",
+      "label": "crop",
+      "confidence_calibrated": false,
+      "human_review_required": true
+    },
+    {
+      "id": "tiles640-1-4",
+      "box": [
+        0.375,
+        0.1165771484375,
+        0.0701904296875,
+        0.08544921875
+      ],
+      "detectionConfidence": 0.9024390578269958,
+      "provenance": {
+        "geometry": "tiles640",
+        "tile": [
+          384,
+          0,
+          640
+        ],
+        "model_box": [
+          0,
+          0.1865234375,
+          0.1123046875,
+          0.13671875
+        ]
+      },
+      "mask_file": "masks/confirmation/06-05_00220_P0038051.png/tiles640-1-4.png",
+      "mask_bounds": [
+        384,
+        119,
+        456,
+        207
+      ],
+      "erfnet_means": [
+        0.00888902135193348,
+        0.9907239079475403,
+        0.0004208206373732537
+      ],
+      "vegetation_probability": 0.9911447167396545,
+      "class_purity": 0.9995754361152649,
+      "proposed_label": "crop",
+      "pooling": "official_sam_mask",
+      "label": "crop",
+      "confidence_calibrated": false,
+      "human_review_required": true
+    },
+    {
+      "id": "tiles640-2-3",
+      "box": [
+        0.343017578125,
+        0.375,
+        0.0640869140625,
+        0.05859375
+      ],
+      "detectionConfidence": 0.8904109597206116,
+      "provenance": {
+        "geometry": "tiles640",
+        "tile": [
+          0,
+          384,
+          640
+        ],
+        "model_box": [
+          0.548828125,
+          0,
+          0.1025390625,
+          0.09375
+        ]
+      },
+      "mask_file": "masks/confirmation/06-05_00220_P0038051.png/tiles640-2-3.png",
+      "mask_bounds": [
+        351,
+        384,
+        417,
+        444
+      ],
+      "erfnet_means": [
+        0.06256986409425735,
+        0.0006711340392939746,
+        0.9367538094520569
+      ],
+      "vegetation_probability": 0.9374249577522278,
+      "class_purity": 0.999284029006958,
+      "proposed_label": "weed",
+      "pooling": "official_sam_mask",
+      "label": "weed",
+      "confidence_calibrated": false,
+      "human_review_required": true
+    },
+    {
+      "id": "tiles640-3-0",
+      "box": [
+        0.9298095703125,
+        0.4384765625,
+        0.0701904296875,
+        0.147705078125
+      ],
+      "detectionConfidence": 0.8904109597206116,
+      "provenance": {
+        "geometry": "tiles640",
+        "tile": [
+          384,
+          384,
+          640
+        ],
+        "model_box": [
+          0.8876953125,
+          0.1015625,
+          0.1123046875,
+          0.236328125
+        ]
+      },
+      "mask_file": "masks/confirmation/06-05_00220_P0038051.png/tiles640-3-0.png",
+      "mask_bounds": [
+        952,
+        449,
+        1024,
+        601
+      ],
+      "erfnet_means": [
+        0.010549874976277351,
+        0.975313127040863,
+        0.014163017272949219
+      ],
+      "vegetation_probability": 0.9894761443138123,
+      "class_purity": 0.9856863617897034,
+      "proposed_label": "crop",
+      "pooling": "official_sam_mask",
+      "label": "crop",
+      "confidence_calibrated": false,
+      "human_review_required": true
+    },
+    {
+      "id": "tiles640-1-0",
+      "box": [
+        0.9639892578125,
+        0.159912109375,
+        0.0360107421875,
+        0.042724609375
+      ],
+      "detectionConfidence": 0.8358974456787109,
+      "provenance": {
+        "geometry": "tiles640",
+        "tile": [
+          384,
+          0,
+          640
+        ],
+        "model_box": [
+          0.9423828125,
+          0.255859375,
+          0.0576171875,
+          0.068359375
+        ]
+      },
+      "mask_file": "masks/confirmation/06-05_00220_P0038051.png/tiles640-1-0.png",
+      "mask_bounds": [
+        987,
+        163,
+        1024,
+        208
+      ],
+      "erfnet_means": [
+        0.08710657805204391,
+        0.0010168307926505804,
+        0.91187584400177
+      ],
+      "vegetation_probability": 0.9128926992416382,
+      "class_purity": 0.9988861083984375,
+      "proposed_label": "weed",
+      "pooling": "official_sam_mask",
+      "label": "weed",
+      "confidence_calibrated": false,
+      "human_review_required": true
+    },
+    {
+      "id": "tiles640-3-2",
+      "box": [
+        0.375,
+        0.375,
+        0.03173828125,
+        0.0537109375
+      ],
+      "detectionConfidence": 0.8083832263946533,
+      "provenance": {
+        "geometry": "tiles640",
+        "tile": [
+          384,
+          384,
+          640
+        ],
+        "model_box": [
+          0,
+          0,
+          0.05078125,
+          0.0859375
+        ]
+      },
+      "mask_file": "masks/confirmation/06-05_00220_P0038051.png/tiles640-3-2.png",
+      "mask_bounds": [
+        384,
+        384,
+        417,
+        439
+      ],
+      "erfnet_means": [
+        0.08076705783605576,
+        0.0005140568246133626,
+        0.9187219142913818
+      ],
+      "vegetation_probability": 0.9192359447479248,
+      "class_purity": 0.9994407892227173,
+      "proposed_label": "weed",
+      "pooling": "official_sam_mask",
+      "label": "weed",
+      "confidence_calibrated": false,
+      "human_review_required": true
+    },
+    {
+      "id": "whole-0-6",
+      "box": [
+        0,
+        0,
+        0.443359375,
+        0.42578125
+      ],
+      "detectionConfidence": 0.8012422323226929,
+      "provenance": {
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "model_box": [
+          0,
+          0,
+          0.443359375,
+          0.42578125
+        ]
+      },
+      "mask_file": "masks/confirmation/06-05_00220_P0038051.png/whole-0-6.png",
+      "mask_bounds": [
+        0,
+        0,
+        454,
+        436
+      ],
+      "erfnet_means": [
+        0.01715824380517006,
+        0.982701301574707,
+        0.00020729082461912185
+      ],
+      "vegetation_probability": 0.9829086065292358,
+      "class_purity": 0.9997891187667847,
+      "proposed_label": "crop",
+      "pooling": "official_sam_mask",
+      "label": "crop",
+      "confidence_calibrated": false,
+      "human_review_required": true
+    },
+    {
+      "id": "tiles640-1-1",
+      "box": [
+        0.375,
+        0,
+        0.0115966796875,
+        0.0341796875
+      ],
+      "detectionConfidence": 0.7968254089355469,
+      "provenance": {
+        "geometry": "tiles640",
+        "tile": [
+          384,
+          0,
+          640
+        ],
+        "model_box": [
+          0,
+          0,
+          0.0185546875,
+          0.0546875
+        ]
+      },
+      "mask_file": "masks/confirmation/06-05_00220_P0038051.png/tiles640-1-1.png",
+      "mask_bounds": [
+        384,
+        0,
+        396,
+        35
+      ],
+      "erfnet_means": [
+        0.05492674931883812,
+        0.022919967770576477,
+        0.9221599698066711
+      ],
+      "vegetation_probability": 0.9450799226760864,
+      "class_purity": 0.9757481217384338,
+      "proposed_label": "weed",
+      "pooling": "official_sam_mask",
+      "label": "weed",
+      "confidence_calibrated": false,
+      "human_review_required": true
+    },
+    {
+      "id": "tiles640-0-1",
+      "box": [
+        0,
+        0.33935546875,
+        0.29052734375,
+        0.28564453125
+      ],
+      "detectionConfidence": 0.7730495929718018,
+      "provenance": {
+        "geometry": "tiles640",
+        "tile": [
+          0,
+          0,
+          640
+        ],
+        "model_box": [
+          0,
+          0.54296875,
+          0.46484375,
+          0.45703125
+        ]
+      },
+      "mask_file": "masks/confirmation/06-05_00220_P0038051.png/tiles640-0-1.png",
+      "mask_bounds": [
+        0,
+        347,
+        298,
+        640
+      ],
+      "erfnet_means": [
+        0.04159550741314888,
+        0.9584100842475891,
+        6.006713374517858e-05
+      ],
+      "vegetation_probability": 0.9584701657295227,
+      "class_purity": 0.9999372959136963,
+      "proposed_label": "crop",
+      "pooling": "official_sam_mask",
+      "label": "crop",
+      "confidence_calibrated": false,
+      "human_review_required": true
+    }
+  ],
+  "limited": false,
+  "errors": []
+}

@@ -1,0 +1,19 @@
+{
+  "plants": [
+    {
+      "id": "GP-005",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.85,
+      "reasoning": "Young rosette with broad glossy ovate leaves matches sugar beet seedling morphology."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 285,
+    "outputTokens": 947,
+    "cachedTokens": 0,
+    "estimatedUsd": 0.004381
+  },
+  "elapsed_ms": 9093
+}

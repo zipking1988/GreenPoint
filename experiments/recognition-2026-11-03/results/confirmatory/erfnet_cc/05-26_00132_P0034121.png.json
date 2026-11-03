@@ -1,0 +1,163 @@
+{
+  "image_id": "05-26_00132_P0034121.png",
+  "plants": [
+    {
+      "id": "erf-1-1",
+      "box": [
+        0.3046875,
+        0.0,
+        0.2783203125,
+        0.3115234375
+      ],
+      "label": "crop",
+      "pixels": 42712,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-1-2",
+      "box": [
+        0.9306640625,
+        0.0,
+        0.0693359375,
+        0.0478515625
+      ],
+      "label": "crop",
+      "pixels": 1523,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-1-3",
+      "box": [
+        0.0,
+        0.138671875,
+        0.03515625,
+        0.044921875
+      ],
+      "label": "crop",
+      "pixels": 1363,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-1-4",
+      "box": [
+        0.0,
+        0.1923828125,
+        0.08203125,
+        0.0615234375
+      ],
+      "label": "crop",
+      "pixels": 3574,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-1-5",
+      "box": [
+        0.0,
+        0.287109375,
+        0.0615234375,
+        0.09375
+      ],
+      "label": "crop",
+      "pixels": 4264,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-1-6",
+      "box": [
+        0.310546875,
+        0.306640625,
+        0.3408203125,
+        0.4072265625
+      ],
+      "label": "crop",
+      "pixels": 63524,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-1-7",
+      "box": [
+        0.984375,
+        0.65234375,
+        0.015625,
+        0.015625
+      ],
+      "label": "crop",
+      "pixels": 171,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-1-8",
+      "box": [
+        0.515625,
+        0.7529296875,
+        0.021484375,
+        0.0166015625
+      ],
+      "label": "crop",
+      "pixels": 194,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-1-9",
+      "box": [
+        0.4814453125,
+        0.86328125,
+        0.1376953125,
+        0.13671875
+      ],
+      "label": "crop",
+      "pixels": 8533,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-1-11",
+      "box": [
+        0.4091796875,
+        0.9755859375,
+        0.12109375,
+        0.0244140625
+      ],
+      "label": "crop",
+      "pixels": 2105,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-2-1",
+      "box": [
+        0.3076171875,
+        0.1181640625,
+        0.0087890625,
+        0.0146484375
+      ],
+      "label": "weed",
+      "pixels": 101,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-2-3",
+      "box": [
+        0.103515625,
+        0.953125,
+        0.0419921875,
+        0.0400390625
+      ],
+      "label": "weed",
+      "pixels": 883,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    }
+  ],
+  "limited": false,
+  "errors": []
+}

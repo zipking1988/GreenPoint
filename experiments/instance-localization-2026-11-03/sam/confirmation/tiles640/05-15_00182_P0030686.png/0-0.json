@@ -1,0 +1,103 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.2421875,
+        0.67578125,
+        0.0283203125,
+        0.056640625
+      ],
+      "detectionConfidence": 0.5345454812049866,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!JH-E@?l@HTIf&Tq6NyuRe:PulLKhn1+Sf0%ecbXLq$9+Su",
+        "width": 29,
+        "height": 58,
+        "bounds": {
+          "left": 248,
+          "top": 692,
+          "right": 277,
+          "bottom": 750
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.126953125,
+        0.482421875,
+        0.0859375,
+        0.2392578125
+      ],
+      "detectionConfidence": 0.7620818018913269,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#KCsWYCAZ]96+SHjtG=]=G27)4[8D(]Vu^0pc:[f2(G)f{5ZCB&)Lo[1Pd*Pmfg-^P4@Fwc7`(w-nP:o1SWfgG)*7vnr:_g_L&2k+RZ590kkrd`ge:SJ=2f&RR'E$F-vOW.JQpD)fQ5Pn?Qd(lt%#bR0X.f",
+        "width": 88,
+        "height": 245,
+        "bounds": {
+          "left": 130,
+          "top": 494,
+          "right": 218,
+          "bottom": 739
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.21875,
+        0.3662109375,
+        0.029296875,
+        0.05078125
+      ],
+      "detectionConfidence": 0.7730495929718018,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!GJ:`DpdDu/'6a=CkYlV3uGhpDSc^0BU!&k4kPrDUN!!",
+        "width": 30,
+        "height": 52,
+        "bounds": {
+          "left": 224,
+          "top": 375,
+          "right": 254,
+          "bottom": 427
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.3779296875,
+        0.5712890625,
+        0.0546875,
+        0.109375
+      ],
+      "detectionConfidence": 0.7852349281311035,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!dF`b{C%RTNxhEL`A1Y5_bwc!B'']y=/a_cS-QFs?)2^E=z:'p2x^2Yq(++{vPGp%0s?dLdeM`{0f!!",
+        "width": 56,
+        "height": 112,
+        "bounds": {
+          "left": 387,
+          "top": 585,
+          "right": 443,
+          "bottom": 697
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 2804
+}

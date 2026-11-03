@@ -1,0 +1,119 @@
+{
+  "image_id": "05-15_00180_P0030686.png",
+  "plants": [
+    {
+      "box": [
+        0.609375,
+        0.8564453125,
+        0.140625,
+        0.1435546875
+      ],
+      "detectionConfidence": 0.9336099624633789,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#.CreE9$RhqYawN=GqQ!E.KfXIX?j)^61C?-N]PRKhn@T)Ru_t8#f+xt+M=!WRl'A1S+AccMY(uslEcl*TaGuKq0p@R*k(*zgGJ+t'i/]5Bl_a8.1Do/8=-!uQ",
+        "width": 144,
+        "height": 147,
+        "bounds": {
+          "left": 624,
+          "top": 877,
+          "right": 768,
+          "bottom": 1024
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-001",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.75,
+      "reasoning": "Broad dark green rosette leaves on bare soil match sugar beet seedling."
+    },
+    {
+      "box": [
+        0.083984375,
+        0.447265625,
+        0.0205078125,
+        0.0341796875
+      ],
+      "detectionConfidence": 0.5114504098892212,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!AK($UxR^X7^5TZ/4:tEZjBi^RZ5=rXYYFGU",
+        "width": 21,
+        "height": 35,
+        "bounds": {
+          "left": 86,
+          "top": 458,
+          "right": 107,
+          "bottom": 493
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.15,
+      "reasoning": "Image is too tiny and blurred to discern leaf shape."
+    },
+    {
+      "box": [
+        0.509765625,
+        0.443359375,
+        0.23046875,
+        0.1806640625
+      ],
+      "detectionConfidence": 0.9375000596046448,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!$'B6G_82X66/J_2c2mJwaT4][4%:X+(SZck_4((HkY9#?*v1hS4aiEMjXl?K{K*bh$(Ci*S/8aXtMSGCkr[K@i^Y/Ci1ld'lH]Im.cx)cy'Ddhb+:K-#+xoxkMVnsX-u.7kbxN^RlGnovxBGe^rv)5[]+/hQ7I2&d4m07)mn8iY$h)VChc^eytJ{z?I/I2fwT:MD1hOrVX:hhhCuF7%f?fpCvaYLr",
+        "width": 236,
+        "height": 185,
+        "bounds": {
+          "left": 522,
+          "top": 454,
+          "right": 758,
+          "bottom": 639
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-003",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.88,
+      "reasoning": "Small rosette of broad ovate glossy leaves typical of sugar beet."
+    },
+    {
+      "box": [
+        0.4921875,
+        0.220703125,
+        0.1708984375,
+        0.15234375
+      ],
+      "detectionConfidence": 0.941605806350708,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#uBAXpldB)SGMy_zYfZs1QH3p'/7dzfWN0D]&e_6]b(AG118BP?&4_g=M)zjY1db-shY&Pl3l!wspgs$e2/&/:E35=&#YSrD4I2IoRhIA8^6]?]tev.&S/Leax_CAE]UeVcx`qT?.83]OVT*5%:0--#7F)dBWUAFS!'xV)'8ij5`+dWxkCcmKpgs!_j'M=.TFLdtvBX=_]jl=E",
+        "width": 175,
+        "height": 156,
+        "bounds": {
+          "left": 504,
+          "top": 226,
+          "right": 679,
+          "bottom": 382
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-004",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.9,
+      "reasoning": "Rosette of broad wavy glossy leaves on soil typical of sugar beet."
+    }
+  ],
+  "errors": [],
+  "limited": false
+}

@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "date": "2026-11-03",
+  "objective": "Compare a pretrained agricultural baseline and small-object candidate recall against the actual existing SAM 3.1 + Muse Spark pipeline, before deciding on classifier-head training. Video work is paused.",
+  "source_commit": "dcd0e31cd47f9cfd27fa5c2fb2742e8ce5a55fc5",
+  "baseline_frozen_manifest_sha256": "8e7c4853ce84a5be28884708fe726b6edc5d8d2c037a81327cda28068252c44d",
+  "splits": {
+    "development": "Existing 5 official train images; agricultural checkpoint may have trained on them. Parameter selection only, never held-out results.",
+    "published_diagnostic": "Existing 20 official validation images; previously inspected error set, paired comparisons, not a fresh untouched test.",
+    "new_confirmatory": "20 image-disjoint official val images selected by SHA256(recognition-v2-20261103:filename), excluding all previous images and smoke frame, before new inference. No farm-generalization claim."
+  },
+  "candidate_variants": [
+    "existing_whole_frame",
+    "four_640px_tiles_resized_1024",
+    "nine_512px_tiles_resized_1024",
+    "whole_plus_selected_tiles"
+  ],
+  "agricultural_baseline": {
+    "architecture": "Official PhenoBench ERFNet semantic segmentation",
+    "checkpoint_url": "https://www.ipb.uni-bonn.de/html/projects/phenobench/semantic_segmentation/semantic-seg-erfnet.ckpt",
+    "checkpoint_sha256": "06252edf0e4d75a288d5f2d45bd386393e117454787dad93c5cdaa65e2c66fe2",
+    "training": "Published pretrained weights; no training by us.",
+    "normalization": "Official per-image RGB channel mean/std; full 1024 RGB input."
+  },
+  "metrics": {
+    "matching": "Class-agnostic one-to-one greedy IoU >= .5, identical to existing benchmark. All annotated plants including partial border instances stay in denominator.",
+    "small_target_bins": "GT bbox maximum side <=32px, 33-64px, 65-128px, >128px at original image resolution. Fixed before results.",
+    "semantic": "Pixel IoU for ERFNet; reported separately, never compared to box recall as if same metric.",
+    "classification": "Weed precision, recall, crop-as-weed, uncertainty; same candidate boxes isolate classification effects."
+  },
+  "selection": "Choose candidate geometry and ERFNet instance adapter only using development data. Freeze selection before final evaluation. New confirmatory images never inform thresholds.",
+  "budget": {
+    "total_usd": 10,
+    "new_experiments_stop_usd": 8,
+    "regression_reserve_usd": 2,
+    "shared_ledger": "/Users/zip/.codex/worktrees/color-refinement/GreenPoint/reviews/hackathon-sprint-2026-11-03/budget.json",
+    "initial_held_estimated_usd": 1.6945895,
+    "reported_as_estimate_not_reconciled_bill": true,
+    "no_automatic_paid_retries": true
+  },
+  "guardrails": [
+    "Ground truth never enters inference.",
+    "No classifier training before baseline and recall results.",
+    "No video edits, fabricated successes, tracking/GPS/hardware claims.",
+    "Keep original model output, human review and source provenance separate."
+  ]
+}

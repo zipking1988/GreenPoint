@@ -1,0 +1,62 @@
+{
+  "small": {
+    "image_id": "05-15_00184_P0030859.png",
+    "image": "evidence/agricultural/images/05-15_00184_P0030859.png",
+    "sha256": "fefc7d9cb071f270d274c680f8d371cc9fe32f391b627f2b927246902bac8502",
+    "box": [
+      0.4326171875,
+      0.1953125,
+      0.0224609375,
+      0.017578125
+    ],
+    "gt_id": 476,
+    "size_px": 23.0,
+    "previous": "crop",
+    "selected": "weed"
+  },
+  "recovery": {
+    "image_id": "06-05_00181_P0038051.png",
+    "image": "evidence/agricultural/images/06-05_00181_P0038051.png",
+    "sha256": "fe34d55a787dc513337e5ff5b2fc425fcb0bc2b92ecf7b0363d50b54dea20cb7",
+    "box": [
+      0.6357421875,
+      0.46484375,
+      0.0341796875,
+      0.0498046875
+    ],
+    "gt_id": 1525,
+    "size_px": 51.0,
+    "previous": "no IoU >= .5 match",
+    "selected": "weed"
+  },
+  "miss": {
+    "image_id": "05-15_00136_P0030943.png",
+    "image": "evidence/agricultural/images/05-15_00136_P0030943.png",
+    "sha256": "ea34d681131dedb54110ec37ab0971db75080ef3734b0815045e765602387c23",
+    "box": [
+      0.4150390625,
+      0.51171875,
+      0.0234375,
+      0.015625
+    ],
+    "gt_id": 493,
+    "size_px": 24.0,
+    "previous": "no IoU >= .5 match",
+    "selected": "no IoU >= .5 match"
+  },
+  "false_positive": {
+    "image_id": "06-05_00113_P0037822.png",
+    "image": "evidence/agricultural/images/06-05_00113_P0037822.png",
+    "sha256": "7f538eadf6812867a136c21b1601bda54c452d934aa3ccad2e4e8390457fb299",
+    "box": [
+      0.6188499927520752,
+      0.5542570948600769,
+      0.02200305461883545,
+      0.02334463596343994
+    ],
+    "gt_id": null,
+    "size_px": 23.9049072265625,
+    "previous": "see source",
+    "selected": "unmatched weed prediction"
+  }
+}

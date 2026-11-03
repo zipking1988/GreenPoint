@@ -1,0 +1,231 @@
+{
+  "image_id": "05-15_00146_P0030859.png",
+  "plants": [
+    {
+      "box": [
+        0.6162109375,
+        0.3525390625,
+        0.22265625,
+        0.19921875
+      ],
+      "detectionConfidence": 0.9375000596046448,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!$0C)-@BM1EI0:.4U!LiY2RZNv6b*w`ZJ2/_1OC3?Y!KBK/fni:6i78/)^ok?fBs=+95IHvQdri'tw)LPH3^=u{s]vgv=SdB/_+bjXM`-gO8Vif6d1Mr(12tXS!MW@Um72plKDFeccq!zczRt[seQXk&5R`'9NQ$le4l+ZlsO/t3Zo):w^A+XE0W$:?HTpWh!8=kHp/B5VY$%4lI/&Tb/y1(@9nOqm4vo]P#uTk0",
+        "width": 228,
+        "height": 204,
+        "bounds": {
+          "left": 631,
+          "top": 361,
+          "right": 859,
+          "bottom": 565
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-001",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.85,
+      "reasoning": "Rosette of broad wrinkled leaves consistent with young sugar beet."
+    },
+    {
+      "box": [
+        0.640625,
+        0.126953125,
+        0.15625,
+        0.2099609375
+      ],
+      "detectionConfidence": 0.9375000596046448,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#mCW^9r52RK2VAc3gKB:iAE!KepK8:ctkn7WP.)#9sgmrjXD)K]gH2m5]9s+/9FV$A`f@6IK-)'4%dZQ&H]y)TP4_6gF0HFBbDLSm[FkO23-6Sc[:*-)BBsvPBgG*8jKJaQgD_cMNEO'Lks{C.Um=gxPA{RL#jLCo^`x2%mgv[dC8L:=$h'/0!2qtuYcd2iFOY!0",
+        "width": 160,
+        "height": 215,
+        "bounds": {
+          "left": 656,
+          "top": 130,
+          "right": 816,
+          "bottom": 345
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-002",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.85,
+      "reasoning": "Broad crinkled leaves in rosette matching sugar beet growth."
+    },
+    {
+      "box": [
+        0.6328125,
+        0,
+        0.1484375,
+        0.1044921875
+      ],
+      "detectionConfidence": 0.9259259104728699,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#5Gc1(NEHe^c#jTglK7]-%T'-ld%JHG5w?BQ.hx^CLSFDqB0meei!v2RGq=h3&[oo053PC3@@7V)sfq:BI@*9'1%TCI272a[L=yQJ3LR5B82sabH--/47Rb#9iOv#nmJaw-",
+        "width": 152,
+        "height": 107,
+        "bounds": {
+          "left": 648,
+          "top": 0,
+          "right": 800,
+          "bottom": 107
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-003",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.8,
+      "reasoning": "Glossy broad rounded leaves typical of sugar beet seedling."
+    },
+    {
+      "box": [
+        0,
+        0.619140625,
+        0.0283203125,
+        0.0546875
+      ],
+      "detectionConfidence": 0.6952381134033203,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!FEz*!*b(?5Vj&rL`*vnf[n&pUnF&'cyvUlh4?uIb`",
+        "width": 29,
+        "height": 56,
+        "bounds": {
+          "left": 0,
+          "top": 634,
+          "right": 29,
+          "bottom": 690
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-004",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.2,
+      "reasoning": "Image is too small and indistinct to assess leaf traits."
+    },
+    {
+      "box": [
+        0.66015625,
+        0.8212890625,
+        0.154296875,
+        0.158203125
+      ],
+      "detectionConfidence": 0.9532163739204407,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#HCJ*7POUTWW%fGi!@98t7rGz3raY])3=pMheF3j1?.7F&u6'e?t&uWV!#p#L1/N?_Y5{1z(`bnsiuN6=svUF(Bps:xcam.a-@.jJwpu!SP#My'=.!X3v*AwtHadEWEax=(-]+]{uZsNP%=jg?(H$hi",
+        "width": 158,
+        "height": 162,
+        "bounds": {
+          "left": 676,
+          "top": 841,
+          "right": 834,
+          "bottom": 1003
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-005",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.85,
+      "reasoning": "Rosette of broad glossy rounded leaves consistent with sugar beet."
+    },
+    {
+      "box": [
+        0.1025390625,
+        0.9501953125,
+        0.1181640625,
+        0.0498046875
+      ],
+      "detectionConfidence": 0.9064327478408813,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!oEvxPo2KBUKTjnJ1M'Ao(nTeMFot]9dcZ%K1!i`L4Pd.490GG(`3eWqnZn-E{K1w-jOO_Q=97k2RQUk/u?'zauOmXh{",
+        "width": 121,
+        "height": 51,
+        "bounds": {
+          "left": 105,
+          "top": 973,
+          "right": 226,
+          "bottom": 1024
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-006",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Image is very small and blurred with indistinct leaf detail."
+    },
+    {
+      "box": [
+        0.078125,
+        0.0693359375,
+        0.1455078125,
+        0.158203125
+      ],
+      "detectionConfidence": 0.9532163739204407,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#UC+68qL7dQKY(yc.Z1!m*Zp:ZMJ@p]`$v`cvAw&f`na(J?7s(DgBKsXWA*0=O)8QRb/{9dEblv?c01kcJrwNKglv$i(G.GTW*8H95AsZ*JM:=Su$q.VL3cQp?[XRuci4E5a'^&gi.LZZOQrol7b^_yEO6ugHwj2qQG2rW{",
+        "width": 149,
+        "height": 162,
+        "bounds": {
+          "left": 80,
+          "top": 71,
+          "right": 229,
+          "bottom": 233
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-007",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.88,
+      "reasoning": "Broad wavy green rosette leaves match sugar beet growth."
+    },
+    {
+      "box": [
+        0.0947265625,
+        0.2998046875,
+        0.1181640625,
+        0.109375
+      ],
+      "detectionConfidence": 0.9336099624633789,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#1Dc^&4AG$k%I`#+3oyv1Ey:I_'TYSd]uTky5KPzW&jGZHPlu!]HU7of'3sNf31=J%dCFn5Fn+VD.@lq6hnTM*aJ7D^Y#I0*Nn2R@Io2M`eMrCiP_qd&=Nf6{e`lc?",
+        "width": 121,
+        "height": 112,
+        "bounds": {
+          "left": 97,
+          "top": 307,
+          "right": 218,
+          "bottom": 419
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-008",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.85,
+      "reasoning": "Compact rosette of broad glossy leaves consistent with sugar beet."
+    }
+  ],
+  "errors": [],
+  "limited": false
+}

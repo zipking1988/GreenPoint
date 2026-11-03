@@ -1,0 +1,4106 @@
+[
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 83,
+    "weed_predictions": 137,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6058394160583942,
+    "weed_recall": 0.8383838383838383,
+    "weed_f1": 0.7033898305084745,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 79,
+    "weed_predictions": 127,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6220472440944882,
+    "weed_recall": 0.797979797979798,
+    "weed_f1": 0.6991150442477876,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 65,
+    "weed_predictions": 111,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.5855855855855856,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.6190476190476191,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 82,
+    "weed_predictions": 132,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6212121212121212,
+    "weed_recall": 0.8282828282828283,
+    "weed_f1": 0.70995670995671,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 78,
+    "weed_predictions": 122,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.639344262295082,
+    "weed_recall": 0.7878787878787878,
+    "weed_f1": 0.7058823529411764,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 64,
+    "weed_predictions": 106,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6037735849056604,
+    "weed_recall": 0.6464646464646465,
+    "weed_f1": 0.624390243902439,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 83,
+    "weed_predictions": 142,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.5845070422535211,
+    "weed_recall": 0.8383838383838383,
+    "weed_f1": 0.6887966804979253,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 79,
+    "weed_predictions": 130,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6076923076923076,
+    "weed_recall": 0.797979797979798,
+    "weed_f1": 0.6899563318777292,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 65,
+    "weed_predictions": 114,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.5701754385964912,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.6103286384976525,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 82,
+    "weed_predictions": 134,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6119402985074627,
+    "weed_recall": 0.8282828282828283,
+    "weed_f1": 0.703862660944206,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 78,
+    "weed_predictions": 122,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.639344262295082,
+    "weed_recall": 0.7878787878787878,
+    "weed_f1": 0.7058823529411764,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 64,
+    "weed_predictions": 106,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6037735849056604,
+    "weed_recall": 0.6464646464646465,
+    "weed_f1": 0.624390243902439,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 83,
+    "weed_predictions": 125,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.664,
+    "weed_recall": 0.8383838383838383,
+    "weed_f1": 0.7410714285714286,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 79,
+    "weed_predictions": 117,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6752136752136753,
+    "weed_recall": 0.797979797979798,
+    "weed_f1": 0.7314814814814815,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 65,
+    "weed_predictions": 103,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6310679611650486,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.6435643564356436,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 82,
+    "weed_predictions": 122,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6721311475409836,
+    "weed_recall": 0.8282828282828283,
+    "weed_f1": 0.7420814479638008,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 78,
+    "weed_predictions": 114,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6842105263157895,
+    "weed_recall": 0.7878787878787878,
+    "weed_f1": 0.732394366197183,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 64,
+    "weed_predictions": 100,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.64,
+    "weed_recall": 0.6464646464646465,
+    "weed_f1": 0.6432160804020101,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 83,
+    "weed_predictions": 128,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6484375,
+    "weed_recall": 0.8383838383838383,
+    "weed_f1": 0.7312775330396477,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 79,
+    "weed_predictions": 119,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6638655462184874,
+    "weed_recall": 0.797979797979798,
+    "weed_f1": 0.724770642201835,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 65,
+    "weed_predictions": 105,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6190476190476191,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.6372549019607843,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 82,
+    "weed_predictions": 123,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6666666666666666,
+    "weed_recall": 0.8282828282828283,
+    "weed_f1": 0.7387387387387387,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 78,
+    "weed_predictions": 114,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6842105263157895,
+    "weed_recall": 0.7878787878787878,
+    "weed_f1": 0.732394366197183,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 64,
+    "weed_predictions": 100,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.64,
+    "weed_recall": 0.6464646464646465,
+    "weed_f1": 0.6432160804020101,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 82,
+    "weed_predictions": 120,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6833333333333333,
+    "weed_recall": 0.8282828282828283,
+    "weed_f1": 0.7488584474885845,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 78,
+    "weed_predictions": 113,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6902654867256637,
+    "weed_recall": 0.7878787878787878,
+    "weed_f1": 0.7358490566037735,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 65,
+    "weed_predictions": 100,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.65,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.6532663316582915,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 81,
+    "weed_predictions": 118,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6864406779661016,
+    "weed_recall": 0.8181818181818182,
+    "weed_f1": 0.7465437788018433,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 77,
+    "weed_predictions": 111,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6936936936936937,
+    "weed_recall": 0.7777777777777778,
+    "weed_f1": 0.7333333333333334,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 64,
+    "weed_predictions": 98,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6530612244897959,
+    "weed_recall": 0.6464646464646465,
+    "weed_f1": 0.649746192893401,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 82,
+    "weed_predictions": 123,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6666666666666666,
+    "weed_recall": 0.8282828282828283,
+    "weed_f1": 0.7387387387387387,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 78,
+    "weed_predictions": 115,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6782608695652174,
+    "weed_recall": 0.7878787878787878,
+    "weed_f1": 0.7289719626168224,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 65,
+    "weed_predictions": 102,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6372549019607843,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.6467661691542288,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 81,
+    "weed_predictions": 119,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.680672268907563,
+    "weed_recall": 0.8181818181818182,
+    "weed_f1": 0.743119266055046,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 77,
+    "weed_predictions": 111,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6936936936936937,
+    "weed_recall": 0.7777777777777778,
+    "weed_f1": 0.7333333333333334,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 64,
+    "weed_predictions": 98,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6530612244897959,
+    "weed_recall": 0.6464646464646465,
+    "weed_f1": 0.649746192893401,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 82,
+    "weed_predictions": 118,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6949152542372882,
+    "weed_recall": 0.8282828282828283,
+    "weed_f1": 0.7557603686635945,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 78,
+    "weed_predictions": 111,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7027027027027027,
+    "weed_recall": 0.7878787878787878,
+    "weed_f1": 0.7428571428571429,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 65,
+    "weed_predictions": 98,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6632653061224489,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.6598984771573604,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 81,
+    "weed_predictions": 116,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6982758620689655,
+    "weed_recall": 0.8181818181818182,
+    "weed_f1": 0.7534883720930233,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 77,
+    "weed_predictions": 109,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7064220183486238,
+    "weed_recall": 0.7777777777777778,
+    "weed_f1": 0.7403846153846154,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 64,
+    "weed_predictions": 96,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6666666666666666,
+    "weed_recall": 0.6464646464646465,
+    "weed_f1": 0.6564102564102564,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 82,
+    "weed_predictions": 119,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6890756302521008,
+    "weed_recall": 0.8282828282828283,
+    "weed_f1": 0.7522935779816514,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 78,
+    "weed_predictions": 111,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7027027027027027,
+    "weed_recall": 0.7878787878787878,
+    "weed_f1": 0.7428571428571429,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 65,
+    "weed_predictions": 98,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6632653061224489,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.6598984771573604,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 81,
+    "weed_predictions": 117,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6923076923076923,
+    "weed_recall": 0.8181818181818182,
+    "weed_f1": 0.7500000000000001,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 77,
+    "weed_predictions": 109,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7064220183486238,
+    "weed_recall": 0.7777777777777778,
+    "weed_f1": 0.7403846153846154,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 64,
+    "weed_predictions": 96,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6666666666666666,
+    "weed_recall": 0.6464646464646465,
+    "weed_f1": 0.6564102564102564,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 81,
+    "weed_predictions": 116,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6982758620689655,
+    "weed_recall": 0.8181818181818182,
+    "weed_f1": 0.7534883720930233,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 77,
+    "weed_predictions": 109,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7064220183486238,
+    "weed_recall": 0.7777777777777778,
+    "weed_f1": 0.7403846153846154,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 65,
+    "weed_predictions": 97,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6701030927835051,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.663265306122449,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 80,
+    "weed_predictions": 114,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.7017543859649122,
+    "weed_recall": 0.8080808080808081,
+    "weed_f1": 0.7511737089201878,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 76,
+    "weed_predictions": 107,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7102803738317757,
+    "weed_recall": 0.7676767676767676,
+    "weed_f1": 0.7378640776699028,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 64,
+    "weed_predictions": 95,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6736842105263158,
+    "weed_recall": 0.6464646464646465,
+    "weed_f1": 0.6597938144329898,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 81,
+    "weed_predictions": 116,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6982758620689655,
+    "weed_recall": 0.8181818181818182,
+    "weed_f1": 0.7534883720930233,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 77,
+    "weed_predictions": 109,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7064220183486238,
+    "weed_recall": 0.7777777777777778,
+    "weed_f1": 0.7403846153846154,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 65,
+    "weed_predictions": 97,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6701030927835051,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.663265306122449,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 80,
+    "weed_predictions": 114,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.7017543859649122,
+    "weed_recall": 0.8080808080808081,
+    "weed_f1": 0.7511737089201878,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 76,
+    "weed_predictions": 107,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7102803738317757,
+    "weed_recall": 0.7676767676767676,
+    "weed_f1": 0.7378640776699028,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 64,
+    "weed_predictions": 95,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6736842105263158,
+    "weed_recall": 0.6464646464646465,
+    "weed_f1": 0.6597938144329898,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 79,
+    "weed_predictions": 110,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.7181818181818181,
+    "weed_recall": 0.797979797979798,
+    "weed_f1": 0.7559808612440191,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 75,
+    "weed_predictions": 103,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7281553398058253,
+    "weed_recall": 0.7575757575757576,
+    "weed_f1": 0.7425742574257427,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 64,
+    "weed_predictions": 92,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6956521739130435,
+    "weed_recall": 0.6464646464646465,
+    "weed_f1": 0.6701570680628272,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 79,
+    "weed_predictions": 109,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.7247706422018348,
+    "weed_recall": 0.797979797979798,
+    "weed_f1": 0.7596153846153847,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 75,
+    "weed_predictions": 102,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7352941176470589,
+    "weed_recall": 0.7575757575757576,
+    "weed_f1": 0.746268656716418,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 64,
+    "weed_predictions": 91,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7032967032967034,
+    "weed_recall": 0.6464646464646465,
+    "weed_f1": 0.6736842105263158,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 79,
+    "weed_predictions": 110,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.7181818181818181,
+    "weed_recall": 0.797979797979798,
+    "weed_f1": 0.7559808612440191,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 75,
+    "weed_predictions": 103,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7281553398058253,
+    "weed_recall": 0.7575757575757576,
+    "weed_f1": 0.7425742574257427,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 64,
+    "weed_predictions": 92,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6956521739130435,
+    "weed_recall": 0.6464646464646465,
+    "weed_f1": 0.6701570680628272,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 79,
+    "weed_predictions": 109,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.7247706422018348,
+    "weed_recall": 0.797979797979798,
+    "weed_f1": 0.7596153846153847,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 75,
+    "weed_predictions": 102,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7352941176470589,
+    "weed_recall": 0.7575757575757576,
+    "weed_f1": 0.746268656716418,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 64,
+    "weed_predictions": 91,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7032967032967034,
+    "weed_recall": 0.6464646464646465,
+    "weed_f1": 0.6736842105263158,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 74,
+    "weed_predictions": 100,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.74,
+    "weed_recall": 0.7474747474747475,
+    "weed_f1": 0.743718592964824,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 70,
+    "weed_predictions": 93,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7526881720430108,
+    "weed_recall": 0.7070707070707071,
+    "weed_f1": 0.7291666666666666,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 60,
+    "weed_predictions": 83,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7228915662650602,
+    "weed_recall": 0.6060606060606061,
+    "weed_f1": 0.6593406593406593,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 74,
+    "weed_predictions": 99,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.7474747474747475,
+    "weed_recall": 0.7474747474747475,
+    "weed_f1": 0.7474747474747475,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 70,
+    "weed_predictions": 92,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7608695652173914,
+    "weed_recall": 0.7070707070707071,
+    "weed_f1": 0.7329842931937174,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 60,
+    "weed_predictions": 82,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7317073170731707,
+    "weed_recall": 0.6060606060606061,
+    "weed_f1": 0.6629834254143646,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 74,
+    "weed_predictions": 100,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.74,
+    "weed_recall": 0.7474747474747475,
+    "weed_f1": 0.743718592964824,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 70,
+    "weed_predictions": 93,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7526881720430108,
+    "weed_recall": 0.7070707070707071,
+    "weed_f1": 0.7291666666666666,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 60,
+    "weed_predictions": 83,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7228915662650602,
+    "weed_recall": 0.6060606060606061,
+    "weed_f1": 0.6593406593406593,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 74,
+    "weed_predictions": 99,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.7474747474747475,
+    "weed_recall": 0.7474747474747475,
+    "weed_f1": 0.7474747474747475,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 70,
+    "weed_predictions": 92,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7608695652173914,
+    "weed_recall": 0.7070707070707071,
+    "weed_f1": 0.7329842931937174,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 60,
+    "weed_predictions": 82,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7317073170731707,
+    "weed_recall": 0.6060606060606061,
+    "weed_f1": 0.6629834254143646,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 72,
+    "weed_predictions": 91,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.7912087912087912,
+    "weed_recall": 0.7272727272727273,
+    "weed_f1": 0.7578947368421052,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 68,
+    "weed_predictions": 86,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7906976744186046,
+    "weed_recall": 0.6868686868686869,
+    "weed_f1": 0.735135135135135,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 58,
+    "weed_predictions": 76,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7631578947368421,
+    "weed_recall": 0.5858585858585859,
+    "weed_f1": 0.6628571428571428,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 72,
+    "weed_predictions": 91,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.7912087912087912,
+    "weed_recall": 0.7272727272727273,
+    "weed_f1": 0.7578947368421052,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 68,
+    "weed_predictions": 86,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7906976744186046,
+    "weed_recall": 0.6868686868686869,
+    "weed_f1": 0.735135135135135,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 58,
+    "weed_predictions": 76,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7631578947368421,
+    "weed_recall": 0.5858585858585859,
+    "weed_f1": 0.6628571428571428,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 72,
+    "weed_predictions": 91,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.7912087912087912,
+    "weed_recall": 0.7272727272727273,
+    "weed_f1": 0.7578947368421052,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 68,
+    "weed_predictions": 86,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7906976744186046,
+    "weed_recall": 0.6868686868686869,
+    "weed_f1": 0.735135135135135,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 58,
+    "weed_predictions": 76,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7631578947368421,
+    "weed_recall": 0.5858585858585859,
+    "weed_f1": 0.6628571428571428,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 72,
+    "weed_predictions": 91,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.7912087912087912,
+    "weed_recall": 0.7272727272727273,
+    "weed_f1": 0.7578947368421052,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 68,
+    "weed_predictions": 86,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7906976744186046,
+    "weed_recall": 0.6868686868686869,
+    "weed_f1": 0.735135135135135,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 58,
+    "weed_predictions": 76,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7631578947368421,
+    "weed_recall": 0.5858585858585859,
+    "weed_f1": 0.6628571428571428,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 69,
+    "weed_predictions": 84,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.8214285714285714,
+    "weed_recall": 0.696969696969697,
+    "weed_f1": 0.7540983606557378,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 65,
+    "weed_predictions": 80,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.8125,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.7262569832402236,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 57,
+    "weed_predictions": 72,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7916666666666666,
+    "weed_recall": 0.5757575757575758,
+    "weed_f1": 0.6666666666666667,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 69,
+    "weed_predictions": 84,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.8214285714285714,
+    "weed_recall": 0.696969696969697,
+    "weed_f1": 0.7540983606557378,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 65,
+    "weed_predictions": 80,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.8125,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.7262569832402236,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 57,
+    "weed_predictions": 72,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7916666666666666,
+    "weed_recall": 0.5757575757575758,
+    "weed_f1": 0.6666666666666667,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 69,
+    "weed_predictions": 84,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.8214285714285714,
+    "weed_recall": 0.696969696969697,
+    "weed_f1": 0.7540983606557378,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 65,
+    "weed_predictions": 80,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.8125,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.7262569832402236,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 57,
+    "weed_predictions": 72,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7916666666666666,
+    "weed_recall": 0.5757575757575758,
+    "weed_f1": 0.6666666666666667,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 69,
+    "weed_predictions": 84,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.8214285714285714,
+    "weed_recall": 0.696969696969697,
+    "weed_f1": 0.7540983606557378,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 65,
+    "weed_predictions": 80,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.8125,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.7262569832402236,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "whole",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 57,
+    "weed_predictions": 72,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7916666666666666,
+    "weed_recall": 0.5757575757575758,
+    "weed_f1": 0.6666666666666667,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 84,
+    "weed_predictions": 173,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.48554913294797686,
+    "weed_recall": 0.8484848484848485,
+    "weed_f1": 0.6176470588235293,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 80,
+    "weed_predictions": 149,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.5369127516778524,
+    "weed_recall": 0.8080808080808081,
+    "weed_f1": 0.6451612903225806,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 67,
+    "weed_predictions": 131,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.5114503816793893,
+    "weed_recall": 0.6767676767676768,
+    "weed_f1": 0.5826086956521739,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 84,
+    "weed_predictions": 156,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.5384615384615384,
+    "weed_recall": 0.8484848484848485,
+    "weed_f1": 0.6588235294117647,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 79,
+    "weed_predictions": 134,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.5895522388059702,
+    "weed_recall": 0.797979797979798,
+    "weed_f1": 0.6781115879828327,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 66,
+    "weed_predictions": 116,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.5689655172413793,
+    "weed_recall": 0.6666666666666666,
+    "weed_f1": 0.613953488372093,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 84,
+    "weed_predictions": 192,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.4375,
+    "weed_recall": 0.8484848484848485,
+    "weed_f1": 0.5773195876288659,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 80,
+    "weed_predictions": 165,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.48484848484848486,
+    "weed_recall": 0.8080808080808081,
+    "weed_f1": 0.6060606060606062,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 67,
+    "weed_predictions": 144,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.4652777777777778,
+    "weed_recall": 0.6767676767676768,
+    "weed_f1": 0.551440329218107,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 84,
+    "weed_predictions": 168,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.5,
+    "weed_recall": 0.8484848484848485,
+    "weed_f1": 0.6292134831460674,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 79,
+    "weed_predictions": 143,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.5524475524475524,
+    "weed_recall": 0.797979797979798,
+    "weed_f1": 0.652892561983471,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.1,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 66,
+    "weed_predictions": 123,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.5365853658536586,
+    "weed_recall": 0.6666666666666666,
+    "weed_f1": 0.5945945945945946,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 84,
+    "weed_predictions": 160,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.525,
+    "weed_recall": 0.8484848484848485,
+    "weed_f1": 0.6486486486486487,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 80,
+    "weed_predictions": 144,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.5555555555555556,
+    "weed_recall": 0.8080808080808081,
+    "weed_f1": 0.6584362139917695,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 67,
+    "weed_predictions": 126,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.5317460317460317,
+    "weed_recall": 0.6767676767676768,
+    "weed_f1": 0.5955555555555555,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 84,
+    "weed_predictions": 147,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.5714285714285714,
+    "weed_recall": 0.8484848484848485,
+    "weed_f1": 0.6829268292682927,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 79,
+    "weed_predictions": 132,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.5984848484848485,
+    "weed_recall": 0.797979797979798,
+    "weed_f1": 0.683982683982684,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 66,
+    "weed_predictions": 114,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.5789473684210527,
+    "weed_recall": 0.6666666666666666,
+    "weed_f1": 0.619718309859155,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 84,
+    "weed_predictions": 172,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.4883720930232558,
+    "weed_recall": 0.8484848484848485,
+    "weed_f1": 0.6199261992619925,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 80,
+    "weed_predictions": 154,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.5194805194805194,
+    "weed_recall": 0.8080808080808081,
+    "weed_f1": 0.6324110671936758,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 67,
+    "weed_predictions": 134,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.5,
+    "weed_recall": 0.6767676767676768,
+    "weed_f1": 0.575107296137339,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 84,
+    "weed_predictions": 153,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.5490196078431373,
+    "weed_recall": 0.8484848484848485,
+    "weed_f1": 0.6666666666666667,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 79,
+    "weed_predictions": 137,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.5766423357664233,
+    "weed_recall": 0.797979797979798,
+    "weed_f1": 0.6694915254237288,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.15,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 66,
+    "weed_predictions": 118,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.559322033898305,
+    "weed_recall": 0.6666666666666666,
+    "weed_f1": 0.608294930875576,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 82,
+    "weed_predictions": 146,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.5616438356164384,
+    "weed_recall": 0.8282828282828283,
+    "weed_f1": 0.6693877551020408,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 78,
+    "weed_predictions": 132,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.5909090909090909,
+    "weed_recall": 0.7878787878787878,
+    "weed_f1": 0.6753246753246752,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 66,
+    "weed_predictions": 115,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.5739130434782609,
+    "weed_recall": 0.6666666666666666,
+    "weed_f1": 0.616822429906542,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 82,
+    "weed_predictions": 135,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6074074074074074,
+    "weed_recall": 0.8282828282828283,
+    "weed_f1": 0.7008547008547008,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 77,
+    "weed_predictions": 122,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6311475409836066,
+    "weed_recall": 0.7777777777777778,
+    "weed_f1": 0.6968325791855203,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 65,
+    "weed_predictions": 105,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.6190476190476191,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.6372549019607843,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 82,
+    "weed_predictions": 157,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.5222929936305732,
+    "weed_recall": 0.8282828282828283,
+    "weed_f1": 0.640625,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 78,
+    "weed_predictions": 141,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.5531914893617021,
+    "weed_recall": 0.7878787878787878,
+    "weed_f1": 0.65,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 66,
+    "weed_predictions": 122,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.5409836065573771,
+    "weed_recall": 0.6666666666666666,
+    "weed_f1": 0.5972850678733032,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 82,
+    "weed_predictions": 140,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.5857142857142857,
+    "weed_recall": 0.8282828282828283,
+    "weed_f1": 0.6861924686192468,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 77,
+    "weed_predictions": 126,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6111111111111112,
+    "weed_recall": 0.7777777777777778,
+    "weed_f1": 0.6844444444444445,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.2,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 65,
+    "weed_predictions": 108,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.6018518518518519,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.6280193236714976,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 82,
+    "weed_predictions": 144,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.5694444444444444,
+    "weed_recall": 0.8282828282828283,
+    "weed_f1": 0.6748971193415638,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 78,
+    "weed_predictions": 131,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.5954198473282443,
+    "weed_recall": 0.7878787878787878,
+    "weed_f1": 0.6782608695652174,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 66,
+    "weed_predictions": 114,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.5789473684210527,
+    "weed_recall": 0.6666666666666666,
+    "weed_f1": 0.619718309859155,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 82,
+    "weed_predictions": 134,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6119402985074627,
+    "weed_recall": 0.8282828282828283,
+    "weed_f1": 0.703862660944206,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 77,
+    "weed_predictions": 121,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6363636363636364,
+    "weed_recall": 0.7777777777777778,
+    "weed_f1": 0.7000000000000001,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 65,
+    "weed_predictions": 104,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.625,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.6403940886699507,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 82,
+    "weed_predictions": 150,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.5466666666666666,
+    "weed_recall": 0.8282828282828283,
+    "weed_f1": 0.6586345381526104,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 78,
+    "weed_predictions": 135,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.5777777777777777,
+    "weed_recall": 0.7878787878787878,
+    "weed_f1": 0.6666666666666666,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 66,
+    "weed_predictions": 118,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.559322033898305,
+    "weed_recall": 0.6666666666666666,
+    "weed_f1": 0.608294930875576,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 82,
+    "weed_predictions": 137,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.5985401459854015,
+    "weed_recall": 0.8282828282828283,
+    "weed_f1": 0.6949152542372883,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 77,
+    "weed_predictions": 123,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6260162601626016,
+    "weed_recall": 0.7777777777777778,
+    "weed_f1": 0.6936936936936937,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.25,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 65,
+    "weed_predictions": 106,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.6132075471698113,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.6341463414634146,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 82,
+    "weed_predictions": 137,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.5985401459854015,
+    "weed_recall": 0.8282828282828283,
+    "weed_f1": 0.6949152542372883,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 78,
+    "weed_predictions": 126,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6190476190476191,
+    "weed_recall": 0.7878787878787878,
+    "weed_f1": 0.6933333333333334,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 66,
+    "weed_predictions": 109,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.6055045871559633,
+    "weed_recall": 0.6666666666666666,
+    "weed_f1": 0.6346153846153847,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 82,
+    "weed_predictions": 128,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.640625,
+    "weed_recall": 0.8282828282828283,
+    "weed_f1": 0.7224669603524229,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 77,
+    "weed_predictions": 117,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6581196581196581,
+    "weed_recall": 0.7777777777777778,
+    "weed_f1": 0.712962962962963,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 65,
+    "weed_predictions": 100,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.65,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.6532663316582915,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 82,
+    "weed_predictions": 142,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.5774647887323944,
+    "weed_recall": 0.8282828282828283,
+    "weed_f1": 0.6804979253112032,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 78,
+    "weed_predictions": 130,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6,
+    "weed_recall": 0.7878787878787878,
+    "weed_f1": 0.6812227074235808,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 66,
+    "weed_predictions": 113,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.584070796460177,
+    "weed_recall": 0.6666666666666666,
+    "weed_f1": 0.6226415094339623,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 82,
+    "weed_predictions": 130,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6307692307692307,
+    "weed_recall": 0.8282828282828283,
+    "weed_f1": 0.7161572052401747,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 77,
+    "weed_predictions": 119,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6470588235294118,
+    "weed_recall": 0.7777777777777778,
+    "weed_f1": 0.7064220183486238,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.3,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 65,
+    "weed_predictions": 102,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.6372549019607843,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.6467661691542288,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 80,
+    "weed_predictions": 129,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6201550387596899,
+    "weed_recall": 0.8080808080808081,
+    "weed_f1": 0.7017543859649121,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 76,
+    "weed_predictions": 119,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6386554621848739,
+    "weed_recall": 0.7676767676767676,
+    "weed_f1": 0.6972477064220183,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 65,
+    "weed_predictions": 103,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.6310679611650486,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.6435643564356436,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 81,
+    "weed_predictions": 123,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6585365853658537,
+    "weed_recall": 0.8181818181818182,
+    "weed_f1": 0.7297297297297297,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 76,
+    "weed_predictions": 113,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.672566371681416,
+    "weed_recall": 0.7676767676767676,
+    "weed_f1": 0.7169811320754718,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 65,
+    "weed_predictions": 97,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.6701030927835051,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.663265306122449,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 80,
+    "weed_predictions": 131,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6106870229007634,
+    "weed_recall": 0.8080808080808081,
+    "weed_f1": 0.6956521739130436,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 76,
+    "weed_predictions": 121,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.628099173553719,
+    "weed_recall": 0.7676767676767676,
+    "weed_f1": 0.6909090909090909,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 65,
+    "weed_predictions": 105,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.6190476190476191,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.6372549019607843,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 81,
+    "weed_predictions": 124,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6532258064516129,
+    "weed_recall": 0.8181818181818182,
+    "weed_f1": 0.726457399103139,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 76,
+    "weed_predictions": 114,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6666666666666666,
+    "weed_recall": 0.7676767676767676,
+    "weed_f1": 0.7136150234741783,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.4,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 65,
+    "weed_predictions": 98,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.6632653061224489,
+    "weed_recall": 0.6565656565656566,
+    "weed_f1": 0.6598984771573604,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 77,
+    "weed_predictions": 121,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6363636363636364,
+    "weed_recall": 0.7777777777777778,
+    "weed_f1": 0.7000000000000001,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 73,
+    "weed_predictions": 111,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6576576576576577,
+    "weed_recall": 0.7373737373737373,
+    "weed_f1": 0.6952380952380952,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 62,
+    "weed_predictions": 98,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.6326530612244898,
+    "weed_recall": 0.6262626262626263,
+    "weed_f1": 0.6294416243654822,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 78,
+    "weed_predictions": 117,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6666666666666666,
+    "weed_recall": 0.7878787878787878,
+    "weed_f1": 0.7222222222222221,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 73,
+    "weed_predictions": 107,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6822429906542056,
+    "weed_recall": 0.7373737373737373,
+    "weed_f1": 0.7087378640776699,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 62,
+    "weed_predictions": 94,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.6595744680851063,
+    "weed_recall": 0.6262626262626263,
+    "weed_f1": 0.6424870466321243,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 77,
+    "weed_predictions": 123,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6260162601626016,
+    "weed_recall": 0.7777777777777778,
+    "weed_f1": 0.6936936936936937,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 73,
+    "weed_predictions": 113,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6460176991150443,
+    "weed_recall": 0.7373737373737373,
+    "weed_f1": 0.6886792452830189,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 62,
+    "weed_predictions": 100,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.62,
+    "weed_recall": 0.6262626262626263,
+    "weed_f1": 0.6231155778894472,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 78,
+    "weed_predictions": 118,
+    "gt_weed": 99,
+    "crop_as_weed": 2,
+    "gt_crop": 164,
+    "weed_precision": 0.6610169491525424,
+    "weed_recall": 0.7878787878787878,
+    "weed_f1": 0.7188940092165897,
+    "crop_as_weed_rate": 0.012195121951219513,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 73,
+    "weed_predictions": 108,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.6759259259259259,
+    "weed_recall": 0.7373737373737373,
+    "weed_f1": 0.7053140096618358,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.5,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 62,
+    "weed_predictions": 95,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.6526315789473685,
+    "weed_recall": 0.6262626262626263,
+    "weed_f1": 0.6391752577319588,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 76,
+    "weed_predictions": 105,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7238095238095238,
+    "weed_recall": 0.7676767676767676,
+    "weed_f1": 0.7450980392156863,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 73,
+    "weed_predictions": 98,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.7448979591836735,
+    "weed_recall": 0.7373737373737373,
+    "weed_f1": 0.7411167512690355,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 62,
+    "weed_predictions": 86,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.7209302325581395,
+    "weed_recall": 0.6262626262626263,
+    "weed_f1": 0.6702702702702703,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 77,
+    "weed_predictions": 104,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7403846153846154,
+    "weed_recall": 0.7777777777777778,
+    "weed_f1": 0.7586206896551725,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 73,
+    "weed_predictions": 97,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.7525773195876289,
+    "weed_recall": 0.7373737373737373,
+    "weed_f1": 0.7448979591836734,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 62,
+    "weed_predictions": 85,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.7294117647058823,
+    "weed_recall": 0.6262626262626263,
+    "weed_f1": 0.6739130434782609,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 76,
+    "weed_predictions": 106,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7169811320754716,
+    "weed_recall": 0.7676767676767676,
+    "weed_f1": 0.7414634146341463,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 73,
+    "weed_predictions": 99,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.7373737373737373,
+    "weed_recall": 0.7373737373737373,
+    "weed_f1": 0.7373737373737375,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 62,
+    "weed_predictions": 87,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.7126436781609196,
+    "weed_recall": 0.6262626262626263,
+    "weed_f1": 0.6666666666666667,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 77,
+    "weed_predictions": 104,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7403846153846154,
+    "weed_recall": 0.7777777777777778,
+    "weed_f1": 0.7586206896551725,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 73,
+    "weed_predictions": 97,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.7525773195876289,
+    "weed_recall": 0.7373737373737373,
+    "weed_f1": 0.7448979591836734,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.6,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 62,
+    "weed_predictions": 85,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.7294117647058823,
+    "weed_recall": 0.6262626262626263,
+    "weed_f1": 0.6739130434782609,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 73,
+    "weed_predictions": 95,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7684210526315789,
+    "weed_recall": 0.7373737373737373,
+    "weed_f1": 0.7525773195876289,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 70,
+    "weed_predictions": 89,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.7865168539325843,
+    "weed_recall": 0.7070707070707071,
+    "weed_f1": 0.7446808510638298,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.5,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 59,
+    "weed_predictions": 78,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.7564102564102564,
+    "weed_recall": 0.5959595959595959,
+    "weed_f1": 0.6666666666666666,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 74,
+    "weed_predictions": 94,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7872340425531915,
+    "weed_recall": 0.7474747474747475,
+    "weed_f1": 0.766839378238342,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 70,
+    "weed_predictions": 88,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.7954545454545454,
+    "weed_recall": 0.7070707070707071,
+    "weed_f1": 0.748663101604278,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 59,
+    "weed_predictions": 77,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.7662337662337663,
+    "weed_recall": 0.5959595959595959,
+    "weed_f1": 0.6704545454545454,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 73,
+    "weed_predictions": 96,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7604166666666666,
+    "weed_recall": 0.7373737373737373,
+    "weed_f1": 0.7487179487179487,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 70,
+    "weed_predictions": 90,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.7777777777777778,
+    "weed_recall": 0.7070707070707071,
+    "weed_f1": 0.7407407407407408,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.65,
+      "dedup": "none",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 59,
+    "weed_predictions": 79,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.7468354430379747,
+    "weed_recall": 0.5959595959595959,
+    "weed_f1": 0.6629213483146067,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.0
+    },
+    "weed_tp": 74,
+    "weed_predictions": 94,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.7872340425531915,
+    "weed_recall": 0.7474747474747475,
+    "weed_f1": 0.766839378238342,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5
+    },
+    "weed_tp": 70,
+    "weed_predictions": 88,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.7954545454545454,
+    "weed_recall": 0.7070707070707071,
+    "weed_f1": 0.748663101604278,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  },
+  {
+    "config": {
+      "geometry": "multiscale",
+      "weed_threshold": 0.7,
+      "nms_iou": 0.65,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.8
+    },
+    "weed_tp": 59,
+    "weed_predictions": 77,
+    "gt_weed": 99,
+    "crop_as_weed": 0,
+    "gt_crop": 164,
+    "weed_precision": 0.7662337662337663,
+    "weed_recall": 0.5959595959595959,
+    "weed_f1": 0.6704545454545454,
+    "crop_as_weed_rate": 0.0,
+    "target_gates_passed": false
+  }
+]

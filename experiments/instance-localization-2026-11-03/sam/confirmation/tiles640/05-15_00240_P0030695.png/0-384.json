@@ -1,0 +1,80 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.634765625,
+        0.8388671875,
+        0.1689453125,
+        0.1611328125
+      ],
+      "detectionConfidence": 0.9569892287254333,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#[B1.5jKbe+9:o%rGrw![&JAj'*)oQ)sM8v/i78TMd#sZhcWHqq63/HToL[.z@cH{S{DRhNJ`tP8IpS6@xN_&o$QQ9mWZa/cto8tO#HpqAm]Lt$2YIEQ6jzS6PLjSE5P_+V?r`8!QtE-8iMCs:6O]-q(6%DC7g9$vikO2/nDYP2Xsl5",
+        "width": 173,
+        "height": 165,
+        "bounds": {
+          "left": 650,
+          "top": 859,
+          "right": 823,
+          "bottom": 1024
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.5498046875,
+        0.22265625,
+        0.236328125,
+        0.212890625
+      ],
+      "detectionConfidence": 0.949367105960846,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!$CB=k5(xyuY3`Mwac.L-ttbZ7M((cO[#0[66cvE'B^F%5##]HZ2:1lZuE`aT[-d]=a8=GZO#tL=$+/[v!F7oe/R=Tt{t1p%5'Syy5mn(K63Y*5@tD]Fp_HZ8#avd9'qOnk:am+nFqjKq4g($n?uqmlPCI1rlKFmAT9UEdx^sR:7whV[T_EZP@8nW3]ZG?]gPaJFKe]1n%]^Z+?95mCLrwK8+WA(HT#2@9ViYRo6k.aU'6AI@{-KFKX9*U`J",
+        "width": 242,
+        "height": 218,
+        "bounds": {
+          "left": 563,
+          "top": 228,
+          "right": 805,
+          "bottom": 446
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.6728515625,
+        0.5986328125,
+        0.0341796875,
+        0.05859375
+      ],
+      "detectionConfidence": 0.6444444060325623,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!GL9_lz9{.[([NK?*[8*[c-97VXqvGW(q(8'ejS`]1!!",
+        "width": 35,
+        "height": 60,
+        "bounds": {
+          "left": 689,
+          "top": 613,
+          "right": 724,
+          "bottom": 673
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 763
+}

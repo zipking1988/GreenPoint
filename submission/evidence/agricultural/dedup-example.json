@@ -1,0 +1,83 @@
+{
+  "image_id": "06-05_00164_P0037991.png",
+  "removed": {
+    "id": "tiles640-0-384-163",
+    "box": [
+      0.5817778408527374,
+      0.7062413394451141,
+      0.04299148917198181,
+      0.07384568452835083
+    ],
+    "label": "weed",
+    "score": 0.8685234785079956,
+    "provenance": {
+      "model": "official PhenoBench YOLOv7",
+      "geometry": "tiles640",
+      "tile": [
+        0,
+        384,
+        640
+      ],
+      "local_box": [
+        0.9308445453643799,
+        0.5299861431121826,
+        0.0687863826751709,
+        0.11815309524536133
+      ],
+      "touches_internal_tile_edge": true
+    },
+    "human_review_required": true,
+    "confidence_calibrated": false,
+    "expert_weed_fraction": 0.9996762275695801,
+    "expert_foreground_pixels": 1617,
+    "semantic_component_id": 25,
+    "semantic_component_box": [
+      0.58203125,
+      0.705078125,
+      0.0908203125,
+      0.07421875
+    ]
+  },
+  "retained": {
+    "id": "tiles640-384-384-125",
+    "box": [
+      0.5828951522707939,
+      0.7059980779886246,
+      0.0888466089963913,
+      0.07108122110366821
+    ],
+    "label": "weed",
+    "score": 0.9621819257736206,
+    "provenance": {
+      "model": "official PhenoBench YOLOv7",
+      "geometry": "tiles640",
+      "tile": [
+        384,
+        384,
+        640
+      ],
+      "local_box": [
+        0.33263224363327026,
+        0.5295969247817993,
+        0.14215457439422607,
+        0.11372995376586914
+      ],
+      "touches_internal_tile_edge": false
+    },
+    "human_review_required": true,
+    "confidence_calibrated": false,
+    "expert_weed_fraction": 0.9996684193611145,
+    "expert_foreground_pixels": 3100,
+    "semantic_component_id": 25,
+    "semantic_component_box": [
+      0.58203125,
+      0.705078125,
+      0.0908203125,
+      0.07421875
+    ]
+  },
+  "ios": 0.9343395367992527,
+  "retained_gt_iou": 0.9134337099047941,
+  "side": 90.97892761230469,
+  "label": "Selected actual fixed-tile-ablation example; not primary whole-frame method"
+}

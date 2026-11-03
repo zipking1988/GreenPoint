@@ -1,0 +1,203 @@
+1
+00:00:00,300 --> 00:00:02,698
+This tiny plant was labeled crop.
+
+2
+00:00:03,001 --> 00:00:05,008
+The annotation says weed.
+
+3
+00:00:05,500 --> 00:00:08,112
+GreenPoint makes that disagreement
+inspectable.
+
+4
+00:00:10,275 --> 00:00:14,920
+For growers reviewing scattered fields, a
+label alone isn't enough.
+
+5
+00:00:15,285 --> 00:00:20,168
+Our online flow uses Sam three point one
+for plant regions, and Muse
+
+6
+00:00:20,207 --> 00:00:22,820
+Spark for structured visual suggestions.
+
+7
+00:00:24,300 --> 00:00:28,995
+Select a candidate. Its box connects to
+pixels from that exact source
+
+8
+00:00:29,046 --> 00:00:33,500
+image. Zoom and pan: the evidence stays
+with the plant.
+
+9
+00:00:33,866 --> 00:00:36,264
+Here, the model suggests weed.
+
+10
+00:00:36,629 --> 00:00:38,598
+I keep it for review and save.
+
+11
+00:00:39,090 --> 00:00:42,246
+The original suggestion and my decision
+remain separate.
+
+12
+00:00:48,274 --> 00:00:51,132
+Switch to the video inventory, then
+export.
+
+13
+00:00:51,541 --> 00:00:53,426
+The same review follows the session.
+
+14
+00:00:53,679 --> 00:00:58,494
+The CSV preserves the original label,
+human status, source,
+
+15
+00:00:58,590 --> 00:01:00,031
+and run identity.
+
+16
+00:01:01,275 --> 00:01:03,484
+Muse can request evidence too.
+
+17
+00:01:03,913 --> 00:01:08,734
+In this separate recorded run, it
+discovers our MCP tools and requests
+
+18
+00:01:08,809 --> 00:01:10,815
+authenticated frame perception.
+
+19
+00:01:11,308 --> 00:01:12,986
+Seven candidates come back.
+
+20
+00:01:13,352 --> 00:01:16,999
+Muse cites evidence IDs and chooses human
+review.
+
+21
+00:01:22,263 --> 00:01:27,033
+We then tested a local agricultural
+expert, using published PhenoBench
+
+22
+00:01:27,096 --> 00:01:31,817
+weights. This is real CPU inference on the
+same RGB frame,
+
+23
+00:01:32,003 --> 00:01:34,457
+with no annotations sent to the model.
+
+24
+00:01:34,940 --> 00:01:38,806
+It is a research prototype, separate from
+the online Meta flow.
+
+25
+00:01:40,263 --> 00:01:44,970
+On this selected example, the previous
+pipeline missed a fifty-one-pixel
+
+26
+00:01:45,046 --> 00:01:48,996
+weed. The agricultural detector recovers
+its box.
+
+27
+00:01:49,298 --> 00:01:54,283
+Both views show the same source pixels,
+checked against the public annotation.
+
+28
+00:01:57,286 --> 00:02:01,636
+We chose settings on twenty calibration
+images, then evaluated forty different
+
+29
+00:02:01,683 --> 00:02:06,614
+images. On that same comparison, weed
+precision rose from seventy-six
+
+30
+00:02:06,697 --> 00:02:09,803
+point one to ninety-six point seven
+percent.
+
+31
+00:02:10,431 --> 00:02:13,004
+Recall stayed near sixty-one percent.
+
+32
+00:02:13,287 --> 00:02:16,203
+False weed flags fell from thirty-seven to
+four.
+
+33
+00:02:17,288 --> 00:02:21,958
+Tiles add fragments. Containment cleanup
+raised tile precision from
+
+34
+00:02:22,033 --> 00:02:26,450
+eighty-seven point two to ninety-two point
+five percent, with sixty-three
+
+35
+00:02:26,500 --> 00:02:28,241
+point three percent recall.
+
+36
+00:02:31,262 --> 00:02:33,191
+The smallest weeds remain difficult:
+
+37
+00:02:33,524 --> 00:02:37,635
+nineteen of seventy targets at thirty-two
+pixels or less were recovered.
+
+38
+00:02:38,025 --> 00:02:39,747
+Human review stays essential.
+
+39
+00:02:39,989 --> 00:02:44,617
+This is public-data validation; movement
+tracking and independent farm trials
+
+40
+00:02:44,697 --> 00:02:46,144
+remain unvalidated.
+
+41
+00:02:47,262 --> 00:02:48,839
+Inspectable Meta evidence.
+
+42
+00:02:49,046 --> 00:02:50,727
+Traceable human decisions.
+
+43
+00:02:50,899 --> 00:02:53,329
+A tested local recognition prototype.
+
+44
+00:02:53,721 --> 00:02:56,622
+Next: cloud integration and farmer trials.
+
+45
+00:02:56,795 --> 00:02:59,258
+GreenPoint. Every judgment has a frame.

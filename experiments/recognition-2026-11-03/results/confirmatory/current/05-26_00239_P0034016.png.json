@@ -1,0 +1,259 @@
+{
+  "image_id": "05-26_00239_P0034016.png",
+  "plants": [
+    {
+      "box": [
+        0.013671875,
+        0.3125,
+        0.0302734375,
+        0.033203125
+      ],
+      "detectionConfidence": 0.8083832263946533,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!DIa47Lu0=_QI%N8I5@wo4bYBaprT7V!x[KdCgmR",
+        "width": 31,
+        "height": 34,
+        "bounds": {
+          "left": 14,
+          "top": 320,
+          "right": 45,
+          "bottom": 354
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-001",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is too blurred and indistinct to verify leaf shape."
+    },
+    {
+      "box": [
+        0.919921875,
+        0.9150390625,
+        0.0615234375,
+        0.076171875
+      ],
+      "detectionConfidence": 0.8709677457809448,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!fIa{yZ*&5$-TdFJV(ch`FTNz_:J.Bb^M3zt{:{'m^'0Y]sivo`31EC.V@^SES-XkDFXeg%5jTULM%J+w",
+        "width": 63,
+        "height": 78,
+        "bounds": {
+          "left": 942,
+          "top": 937,
+          "right": 1005,
+          "bottom": 1015
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.5,
+      "reasoning": "Small seedling shows green leaves but detail is insufficient for confident identification."
+    },
+    {
+      "box": [
+        0.873046875,
+        0.7001953125,
+        0.0927734375,
+        0.1279296875
+      ],
+      "detectionConfidence": 0.9259259104728699,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#+C^#^u?RX*MjpUq2C:aT_.N+r4)fI*llwn{s!Aqs.#s^v-E^70r9@0XrXNH?KlD[oQMYhrG-uiHG2+1bwrG6c8qf)Rot8NWNt9iOf@)YDthlEm8KF']:@{i",
+        "width": 95,
+        "height": 131,
+        "bounds": {
+          "left": 894,
+          "top": 717,
+          "right": 989,
+          "bottom": 848
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-003",
+      "label": "uncertain",
+      "originalLabel": "crop",
+      "confidence": 0.72,
+      "reasoning": "Clustered broad rounded leaves form a rosette consistent with sugar beet."
+    },
+    {
+      "box": [
+        0.9013671875,
+        0.5029296875,
+        0.0498046875,
+        0.095703125
+      ],
+      "detectionConfidence": 0.9139785170555115,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!gI5W*s`]3!{6llgjG{Qc0xy59zW^`)8MH%NHo#Po7r/J/kEEPaXga)T&R^UA1S1zt4=H$ubKMryJ(=&LF",
+        "width": 51,
+        "height": 98,
+        "bounds": {
+          "left": 923,
+          "top": 515,
+          "right": 974,
+          "bottom": 613
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-004",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.45,
+      "reasoning": "Very small seedling lacks clear leaf detail for reliable classification."
+    },
+    {
+      "box": [
+        0.0537109375,
+        0.6279296875,
+        0.0966796875,
+        0.0859375
+      ],
+      "detectionConfidence": 0.9024390578269958,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!jG+.4).T+NY8HdG95A6`T+AqqLWZVJ+Upk[a)I%/w#jk7/+CEfRnP06ni)=)$3!&wTYl-?V/i11FxnUD20.q6",
+        "width": 99,
+        "height": 88,
+        "bounds": {
+          "left": 55,
+          "top": 643,
+          "right": 154,
+          "bottom": 731
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-005",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.4,
+      "reasoning": "Tiny blurry seedling lacks clear leaf shape for confident crop identification."
+    },
+    {
+      "box": [
+        0.7158203125,
+        0.0302734375,
+        0.2841796875,
+        0.2890625
+      ],
+      "detectionConfidence": 0.9649122953414917,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!%:ASzK6Qh/B4A_o3#mX+$nG=pV88{{^CM0#7:bYXGz(09yUC625w(kc+YgckBT0OlL%qrSD&e$fKC$UPj!gwkWHUyYeX1ABtyF5#^Xm==4)-pyWG7)eSXA68($v'Jkg+wr2#&1C7?kkYdmpQ.!.[$n*=x8@SP^:grU!j-HLf(0clrrTOPLkXUNOU1V&c@dq[7hK](Cz0.%e.rZYO{&kBd[s)4^!t3ArykQFBt28]PZ]%&dGZWdLw*zMI_p:_)A2zE`6:CP=$fo+wfTDEobYv:%jAQePsQqOoa0_?BwRb!wzI##x'48Gn^3Dei]GX'JirEz[?PIUZb%KtO_Fp0BZp'DLWOv7b.`",
+        "width": 291,
+        "height": 296,
+        "bounds": {
+          "left": 733,
+          "top": 31,
+          "right": 1024,
+          "bottom": 327
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-006",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.9,
+      "reasoning": "Rosette of broad wavy green leaves with pale midribs matches sugar beet growth."
+    },
+    {
+      "box": [
+        0.3681640625,
+        0.134765625,
+        0.0546875,
+        0.068359375
+      ],
+      "detectionConfidence": 0.9139785170555115,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!_EW#Y`/KO-!u]0{G?l=a]o9z8(M0*+LD&8L_+InsME!/8'EBVK-I38-EQmm?I91hr0YjS4/",
+        "width": 56,
+        "height": 70,
+        "bounds": {
+          "left": 377,
+          "top": 138,
+          "right": 433,
+          "bottom": 208
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-007",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Very small indistinct seedling with insufficient leaf detail for reliable identification."
+    },
+    {
+      "box": [
+        0.2666015625,
+        0.3798828125,
+        0.2998046875,
+        0.396484375
+      ],
+      "detectionConfidence": 0.976608157157898,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!&`B)n:2Xp!Q@KZX?yq2(y1S1!!MYOxUi360{/4l_5K^T:6cZ+vtRJ/a-#8&CQH2]VNU^JKl)Sr{oZr`[u)+LQROPR:r9id^I$:yUTCxBc!)G-q6{n#1cc/.T9.^M_/9NXlsz6=g+LEF''[+'@`Eo08Jr52IJr`_QS7B0So#hk`ZU+SMo]5vSzr:o)sLQTIJa&gv8/mgiRQ`lP:BYEHpS2-+x&vU/*gfy=$mif$c$e$b?EvcB``&zMJDxiw06]ge+:Ptlu'1w955T4x&rs38!txnU7Ae2XhcJW]^jZIX4W?+4lx5T3lp@/4[-5NXK@hApsx7M7#&p4@hGpu$D^t`)aac4t2tVGt.v*E'*m=fGeObFv]coj9tkowV*uy/V^$?`b#`Gl800MMdw@Xq#5oRbp'm7'9nyR90@=ZB./AbE(q:vDqMbWV/[^h&7pqFl{]e2Gt%2hf9SPsctq$i@@&``Dro6H_h{b3'PTzpEr5Nq0Vt#:bxKAnC",
+        "width": 307,
+        "height": 406,
+        "bounds": {
+          "left": 273,
+          "top": 389,
+          "right": 580,
+          "bottom": 795
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-008",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.92,
+      "reasoning": "Rosette of broad glossy leaves with prominent pale veins matches sugar beet growth."
+    },
+    {
+      "box": [
+        0.564453125,
+        0.0478515625,
+        0.0419921875,
+        0.0556640625
+      ],
+      "detectionConfidence": 0.827957034111023,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!TIbQ9dS6wQjPuz1hZnneDeTTD{sjpuq)mKD+ibGUMMPh0?._=w0&X@jz!!!",
+        "width": 43,
+        "height": 57,
+        "bounds": {
+          "left": 578,
+          "top": 49,
+          "right": 621,
+          "bottom": 106
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-009",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is too small and blurred to confirm sugar beet leaf shape."
+    }
+  ],
+  "errors": [],
+  "limited": false
+}

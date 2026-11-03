@@ -1,0 +1,19 @@
+{
+  "plants": [
+    {
+      "id": "GP-017",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.5,
+      "reasoning": "Broad rounded leaves forming a small rosette are visible but blur prevents firm crop confirmation."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 263,
+    "outputTokens": 1233,
+    "cachedTokens": 0,
+    "estimatedUsd": 0.005569
+  },
+  "elapsed_ms": 10401
+}

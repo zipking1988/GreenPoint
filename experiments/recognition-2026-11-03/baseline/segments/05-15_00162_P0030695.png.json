@@ -1,0 +1,103 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.4208984375,
+        0.78515625,
+        0.029296875,
+        0.03125
+      ],
+      "detectionConfidence": 0.6717948913574219,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!BL:R6!+!vKzYgTH]&4`4Uy9)yxuH@zz:K%8Z",
+        "width": 30,
+        "height": 32,
+        "bounds": {
+          "left": 431,
+          "top": 804,
+          "right": 461,
+          "bottom": 836
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.8896484375,
+        0.65625,
+        0.1103515625,
+        0.17578125
+      ],
+      "detectionConfidence": 0.9375000596046448,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#7D4vNw(SToM:BmR&g0vmg^1#H_ON_]r[8hZl@g:6.E^7_b=^-j't%-60MA%T#_eqY11l45LBpPDJi*.[*vb@.^rZ'c#TJ$@:K5Lmg6m{(Ay*Xg[TsPU8atEixvg#zDN^u3(!!",
+        "width": 113,
+        "height": 180,
+        "bounds": {
+          "left": 911,
+          "top": 672,
+          "right": 1024,
+          "bottom": 852
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.9189453125,
+        0.0400390625,
+        0.0341796875,
+        0.0341796875
+      ],
+      "detectionConfidence": 0.7697842121124268,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!CK(!l'fee86wieyQ(ZB.R4H0G.jM!*9FE5dV!!",
+        "width": 35,
+        "height": 35,
+        "bounds": {
+          "left": 941,
+          "top": 41,
+          "right": 976,
+          "bottom": 76
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.896484375,
+        0.2470703125,
+        0.103515625,
+        0.095703125
+      ],
+      "detectionConfidence": 0.9336099624633789,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#0Eg#]=nDceR8B'mD*(b+wryNk+!Xcu+I#1G:K6J$ECy/2iJec&_NlAM9M+3fm%U`?+98:@Klc/DH+fRB/=S3.%V(xO0n5N-&@%JaA:9c&2=b3[He.-17sN@%g6uh",
+        "width": 106,
+        "height": 98,
+        "bounds": {
+          "left": 918,
+          "top": 253,
+          "right": 1024,
+          "bottom": 351
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 1833
+}

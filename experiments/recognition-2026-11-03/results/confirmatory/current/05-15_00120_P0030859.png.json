@@ -1,0 +1,175 @@
+{
+  "image_id": "05-15_00120_P0030859.png",
+  "plants": [
+    {
+      "box": [
+        0.8583984375,
+        0,
+        0.041015625,
+        0.078125
+      ],
+      "detectionConfidence": 0.8632478713989258,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!bI6@2!ahFbw.Yf'0G5D:K_16Q_khqM&.?%&2O3@ZkQsg/7@^$zbt$?-he(P'uf#0tMfd4Ro1N$I",
+        "width": 42,
+        "height": 80,
+        "bounds": {
+          "left": 879,
+          "top": 0,
+          "right": 921,
+          "bottom": 80
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-001",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Image is very small and blurred with no clear leaf shape visible."
+    },
+    {
+      "box": [
+        0.349609375,
+        0.826171875,
+        0.0341796875,
+        0.037109375
+      ],
+      "detectionConfidence": 0.6289855241775513,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!LI5H/jJ*e)@]_SGS&09O'68^aXU@B1h)f4l7M&[xn65I(b!!!",
+        "width": 35,
+        "height": 38,
+        "bounds": {
+          "left": 358,
+          "top": 846,
+          "right": 393,
+          "bottom": 884
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Only brown soil texture is visible with no identifiable leaves."
+    },
+    {
+      "box": [
+        0.8427734375,
+        0.6298828125,
+        0.1494140625,
+        0.2158203125
+      ],
+      "detectionConfidence": 0.9532163739204407,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!$)Cy.0H+'2fNlFk:NOKfm]_ys#dt!Vo=B])tx1?OK'K24UB.(a1$D:Ls@h0!^W3P`qi$fg?$4#5xx'h#7m^R)F0wilZRK/'Z%=4MKih&^=3B.zuRFVV{^/sJisBNSgHUy.@J-xnb`-)sd02CQ1+C?QbVOO%F]cA2L(FE1n*8/!mUMBcg_x#6*imRbda4Hh+7OE*QQ/#q]Ls{FIeCv)M@'g`FQEhNG:!!",
+        "width": 153,
+        "height": 221,
+        "bounds": {
+          "left": 863,
+          "top": 645,
+          "right": 1016,
+          "bottom": 866
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-003",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.85,
+      "reasoning": "Rosette of broad glossy green leaves on bare soil matches sugar beet."
+    },
+    {
+      "box": [
+        0.3359375,
+        0.5771484375,
+        0.0185546875,
+        0.060546875
+      ],
+      "detectionConfidence": 0.5747508406639099,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!AFvq%Nww_+iiGn-K-{.bx5{uBIA$X@^v6.&",
+        "width": 19,
+        "height": 62,
+        "bounds": {
+          "left": 344,
+          "top": 591,
+          "right": 363,
+          "bottom": 653
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-004",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Only brown soil texture is visible with no identifiable leaves."
+    },
+    {
+      "box": [
+        0.9013671875,
+        0.919921875,
+        0.0283203125,
+        0.0458984375
+      ],
+      "detectionConfidence": 0.6167664527893066,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!CE3HkZxI36'+C^hz6lxfo*%X*hV(LsS?ty2&4`",
+        "width": 29,
+        "height": 47,
+        "bounds": {
+          "left": 923,
+          "top": 942,
+          "right": 952,
+          "bottom": 989
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-005",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is too blurred and indistinct to confirm sugar beet leaf traits."
+    },
+    {
+      "box": [
+        0.181640625,
+        0,
+        0.0263671875,
+        0.025390625
+      ],
+      "detectionConfidence": 0.7655677795410156,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!?K+aq#3z9gsj[E$Qy7s_zdgj9fPYvxn!!",
+        "width": 27,
+        "height": 26,
+        "bounds": {
+          "left": 186,
+          "top": 0,
+          "right": 213,
+          "bottom": 26
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-006",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.25,
+      "reasoning": "Image shows indistinct ground with no clear seedling leaves visible."
+    }
+  ],
+  "errors": [],
+  "limited": false
+}

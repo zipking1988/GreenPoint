@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-001",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.9,
+      "reasoning": "Broad glossy rounded leaves in a rosette match sugar beet crop growth."
+    },
+    {
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is too small and blurred to confirm leaf features."
+    },
+    {
+      "id": "GP-003",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.25,
+      "reasoning": "Crop region is indistinct with no clear leaves visible."
+    },
+    {
+      "id": "GP-004",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.25,
+      "reasoning": "Crop region is indistinct with no clear leaves visible."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 404,
+    "outputTokens": 995,
+    "cachedTokens": 0,
+    "estimatedUsd": 0.00473375
+  },
+  "elapsed_ms": 13779
+}

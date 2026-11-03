@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-005",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.5,
+      "reasoning": "No distinguishable leaf detail visible to confirm sugar beet."
+    },
+    {
+      "id": "GP-006",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.5,
+      "reasoning": "No distinguishable leaf detail visible to confirm sugar beet."
+    },
+    {
+      "id": "GP-007",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.5,
+      "reasoning": "No distinguishable leaf detail visible to confirm sugar beet."
+    },
+    {
+      "id": "GP-008",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.5,
+      "reasoning": "No distinguishable leaf detail visible to confirm sugar beet."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 372,
+    "outputTokens": 1271,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.00574245
+  },
+  "elapsed_ms": 10917
+}

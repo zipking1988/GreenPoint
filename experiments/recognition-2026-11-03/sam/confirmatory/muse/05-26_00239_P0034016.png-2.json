@@ -1,0 +1,19 @@
+{
+  "plants": [
+    {
+      "id": "GP-009",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is too small and blurred to confirm sugar beet leaf shape."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 227,
+    "outputTokens": 747,
+    "cachedTokens": 0,
+    "estimatedUsd": 0.0034585
+  },
+  "elapsed_ms": 7242
+}

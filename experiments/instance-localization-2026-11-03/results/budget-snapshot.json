@@ -1,0 +1,2955 @@
+{
+  "this_round_estimated_or_held_usd": 2.1178984,
+  "shared_total_estimated_or_held_usd": 4.6887474000000005,
+  "unsettled_this_round": 14,
+  "provider_requests_this_round": 247,
+  "not_a_reconciled_bill": true,
+  "entries": [
+    {
+      "id": "af259898-6551-4928-b72d-cd119f1cfaa2",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00164_P0030953.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:44:33.947Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "cddf737d-2d1d-4296-80ad-62528101ae07",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00164_P0030953.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:44:35.688Z",
+      "actual_usd": 0.00545,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 246,
+        "outputTokens": 1210,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.00545
+      }
+    },
+    {
+      "id": "4eddb1ee-b576-480c-98e5-df623d535979",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00182_P0030686.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:44:45.923Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "6147722a-8f01-4717-85c4-6221d3126a63",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00182_P0030686.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:44:48.434Z",
+      "actual_usd": 0.00588625,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 374,
+        "outputTokens": 1275,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.00588625
+      }
+    },
+    {
+      "id": "ff08f1b9-e197-4d3e-9625-047f233174af",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00182_P0030686.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:44:59.800Z",
+      "actual_usd": 0.0051655,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 270,
+        "outputTokens": 1136,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.0051655
+      }
+    },
+    {
+      "id": "f661e74b-3c32-4b41-8ead-3143a576a1a7",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00182_P0030686.png:2",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:45:10.279Z",
+      "actual_usd": 0.00451025,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 249,
+        "outputTokens": 988,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.00451025
+      }
+    },
+    {
+      "id": "587fc030-f75b-4e6b-97c1-43a9f71635f4",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00269_P0030695.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:45:19.836Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d7512610-6c6d-4343-8b37-0a285ae56314",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00269_P0030695.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:45:21.435Z",
+      "actual_usd": 0.00748595,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 519,
+        "outputTokens": 1638,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.00748595
+      }
+    },
+    {
+      "id": "3f1df251-9e38-4e75-b37d-5fd105009bd1",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00136_P0030943.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:45:36.870Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "807209a8-c52b-44e2-ba9b-b6b229c7e858",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00136_P0030943.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:45:39.119Z",
+      "actual_usd": 0.01585545,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 503,
+        "outputTokens": 3612,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.01585545
+      }
+    },
+    {
+      "id": "9cfcfb16-3541-4ee7-80f3-ac878731893e",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00136_P0030943.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:46:07.159Z",
+      "actual_usd": 0.00423275,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 231,
+        "outputTokens": 928,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.00423275
+      }
+    },
+    {
+      "id": "825fd41b-a668-4396-848e-f5627ca3e725",
+      "label": "instance-v2:previous:confirmation:whole:05-26_00174_P0034121.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:46:16.619Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "b08e2c14-8936-4213-827e-b949dbfaf331",
+      "label": "instance-v2:previous:confirmation:muse:05-26_00174_P0034121.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:46:18.488Z",
+      "actual_usd": 0.0053002,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 518,
+        "outputTokens": 1124,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.0053002
+      }
+    },
+    {
+      "id": "539a7459-8420-4fd8-bb46-a170c10c9888",
+      "label": "instance-v2:previous:confirmation:muse:05-26_00174_P0034121.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:46:27.738Z",
+      "actual_usd": 0.0060744499999999995,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 369,
+        "outputTokens": 1350,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.0060744499999999995
+      }
+    },
+    {
+      "id": "183d35a1-283d-45e1-a824-73aa3d440328",
+      "label": "instance-v2:previous:confirmation:muse:05-26_00174_P0034121.png:2",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:47:02.236Z",
+      "actual_usd": 0.00372125,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 325,
+        "outputTokens": 780,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.00372125
+      }
+    },
+    {
+      "id": "f09fe772-5241-46c6-87fc-595d9674bd39",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00141_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:47:27.054Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "bea1491f-532a-4ad7-8427-fa7f2211083a",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00141_P0030859.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:47:28.668Z",
+      "actual_usd": 0.00951745,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 315,
+        "outputTokens": 2176,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.00951745
+      }
+    },
+    {
+      "id": "14a3ec73-9773-4c57-8064-5c7fb9396de5",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00141_P0030859.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:47:49.507Z"
+    },
+    {
+      "id": "1fae616a-35e7-47df-98ed-34da8b8099f2",
+      "label": "instance-v2:previous:confirmation:whole:05-26_00159_P0034121.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:48:14.638Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "5f8f5d70-d7b3-43e1-9bd3-c5a36f85d501",
+      "label": "instance-v2:previous:confirmation:muse:05-26_00159_P0034121.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:48:15.901Z",
+      "actual_usd": 0.00473375,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 404,
+        "outputTokens": 995,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.00473375
+      }
+    },
+    {
+      "id": "7ce7fc8d-e3f8-4396-a5c4-020aec500f31",
+      "label": "instance-v2:previous:confirmation:muse:05-26_00159_P0034121.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:48:29.681Z"
+    },
+    {
+      "id": "79fdccc1-f704-44b0-ac63-0de640aacf20",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00154_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:48:48.576Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "9cddb367-d685-4840-a5d8-8f7c1bff1b60",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00154_P0030859.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:48:50.625Z"
+    },
+    {
+      "id": "90952e9b-3c75-4099-9a6d-d2e42588eceb",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00094_P0030943.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:49:19.076Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "c4fe1c18-3528-4892-b673-778feacd5025",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00094_P0030943.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:49:21.840Z",
+      "actual_usd": 0.0051437,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 369,
+        "outputTokens": 1131,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.0051437
+      }
+    },
+    {
+      "id": "e2f0dffb-527f-43c8-a6ba-2ad197d81232",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00094_P0030943.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:49:51.770Z"
+    },
+    {
+      "id": "c9c45df5-59dd-4115-bbc5-8ae1c4948edd",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00184_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:50:52.887Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "676dac06-4ae2-4fdb-8c1e-73451c4c83b7",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00184_P0030859.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:50:55.438Z",
+      "actual_usd": 0.00719095,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 334,
+        "outputTokens": 1623,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.00719095
+      }
+    },
+    {
+      "id": "0a8b91b3-46ee-4b28-b08c-12edefb5309b",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00184_P0030859.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:51:25.376Z"
+    },
+    {
+      "id": "a6bf9948-830b-4564-8afc-a8311ab1636d",
+      "label": "instance-v2:previous:confirmation:whole:05-26_00197_P0034121.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:51:26.549Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a9e9688b-09b5-4ffb-85f6-ce616ad93119",
+      "label": "instance-v2:previous:confirmation:muse:05-26_00197_P0034121.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:51:27.858Z"
+    },
+    {
+      "id": "0c0fa844-2210-4a38-a743-223fafdf5cb3",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00158_P0030953.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:51:59.028Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "1ca217e5-0a89-4c3c-8d3b-020466335836",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00158_P0030953.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:52:01.825Z",
+      "actual_usd": 0.006116,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 296,
+        "outputTokens": 1352,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.006116
+      }
+    },
+    {
+      "id": "1a1298d2-adfa-46de-a59b-fe3064d3da3b",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00158_P0030953.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:52:29.824Z"
+    },
+    {
+      "id": "1365b69a-27e4-44d7-aad8-51e845821bce",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00257_P0030686.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:53:31.795Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "813d2bff-542b-43c2-b411-03ba2efb58fd",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00257_P0030686.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:53:33.886Z",
+      "actual_usd": 0.01151895,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 325,
+        "outputTokens": 2644,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.01151895
+      }
+    },
+    {
+      "id": "53af735f-fd7e-47e2-ba9e-13724d7e1745",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00257_P0030686.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:54:06.876Z",
+      "actual_usd": 0.00380075,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 222,
+        "outputTokens": 829,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.00380075
+      }
+    },
+    {
+      "id": "dc3ead9f-18e6-4caa-826f-acbc7e9a0852",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00180_P0030695.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:54:31.340Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "7e49daa7-0b5a-412f-9aef-c7ace740d94c",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00180_P0030695.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:54:32.704Z"
+    },
+    {
+      "id": "463ada32-24d8-47f0-863b-5bcda204ea18",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00179_P0030953.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:54:34.073Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a5ea3cc1-7292-499f-9d38-2f36ace20169",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00179_P0030953.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:54:36.529Z"
+    },
+    {
+      "id": "01cb0c36-53f9-4cd1-8df0-38ddf380a6e7",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00121_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:54:37.533Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "35eec687-6966-442f-ab23-e54ae2b8b079",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00121_P0030859.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:54:39.715Z"
+    },
+    {
+      "id": "1022b3ec-0d03-4d38-86cd-786801ff397d",
+      "label": "instance-v2:previous:confirmation:whole:06-05_00161_P0037991.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:55:05.286Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d21092fd-b50c-448f-96b5-7ab48a93b5e9",
+      "label": "instance-v2:previous:confirmation:muse:06-05_00161_P0037991.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:55:06.398Z"
+    },
+    {
+      "id": "ab8f1f2b-3713-4e79-a478-3c64e0e9f057",
+      "label": "instance-v2:previous:confirmation:whole:05-26_00079_P0034282.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:55:06.893Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "343c2b5a-d359-4798-a803-429e4d3ec2b0",
+      "label": "instance-v2:previous:confirmation:muse:05-26_00079_P0034282.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:55:09.672Z"
+    },
+    {
+      "id": "29b7540c-edc7-44b1-8032-488fbeecbc5d",
+      "label": "instance-v2:previous:confirmation:whole:05-26_00100_P0034282.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:55:10.683Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "c098fbd2-c5d3-4cd1-8e39-83c6a0b4c101",
+      "label": "instance-v2:previous:confirmation:muse:05-26_00100_P0034282.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:55:12.722Z",
+      "actual_usd": 0.010640450000000001,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 360,
+        "outputTokens": 2427,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.010640450000000001
+      }
+    },
+    {
+      "id": "04ed75f0-b4f3-4d60-9acb-ae7f1b407af3",
+      "label": "instance-v2:previous:confirmation:muse:05-26_00100_P0034282.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:55:29.908Z",
+      "actual_usd": 0.00837,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 287,
+        "outputTokens": 1885,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.00837
+      }
+    },
+    {
+      "id": "2f585db6-966c-4f42-8a47-a0ac1de51213",
+      "label": "instance-v2:previous:confirmation:whole:06-05_00113_P0037822.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:55:44.885Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "6e7d9356-33da-4f98-8aa0-c045614f78b2",
+      "label": "instance-v2:previous:confirmation:muse:06-05_00113_P0037822.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:55:47.415Z"
+    },
+    {
+      "id": "1622ca1c-736b-4464-a0c5-fbc18de623a9",
+      "label": "instance-v2:previous:confirmation:whole:06-05_00164_P0037991.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:56:06.225Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "05a409c1-a65b-4f5e-9d4a-a055ad0b668c",
+      "label": "instance-v2:previous:confirmation:muse:06-05_00164_P0037991.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:56:07.299Z",
+      "actual_usd": 0.00483995,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 415,
+        "outputTokens": 1046,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.00483995
+      }
+    },
+    {
+      "id": "5896519b-786f-478f-a684-48d026fd4b73",
+      "label": "instance-v2:previous:confirmation:muse:06-05_00164_P0037991.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:56:19.789Z",
+      "actual_usd": 0.00730795,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 380,
+        "outputTokens": 1637,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.00730795
+      }
+    },
+    {
+      "id": "6b5a8196-b771-477f-8643-2b6ff8aa27d1",
+      "label": "instance-v2:previous:confirmation:muse:06-05_00164_P0037991.png:2",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:56:33.732Z",
+      "actual_usd": 0.00745175,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 348,
+        "outputTokens": 1651,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.00745175
+      }
+    },
+    {
+      "id": "3b70b76f-c14b-493b-adaa-5e4fa932f3bc",
+      "label": "instance-v2:previous:confirmation:muse:06-05_00164_P0037991.png:3",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:56:46.447Z",
+      "actual_usd": 0.00614375,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 291,
+        "outputTokens": 1360,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.00614375
+      }
+    },
+    {
+      "id": "c9071913-a0a4-46d4-bad1-6d5b450267bb",
+      "label": "instance-v2:previous:confirmation:whole:06-05_00137_P0037822.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:56:56.843Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "621201d7-e19a-4f1b-b9ee-2ef92a42731e",
+      "label": "instance-v2:previous:confirmation:muse:06-05_00137_P0037822.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:56:58.059Z",
+      "actual_usd": 0.0051767,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 443,
+        "outputTokens": 1117,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.0051767
+      }
+    },
+    {
+      "id": "8efddcd3-689c-4b53-bb62-ab33bffea8b7",
+      "label": "instance-v2:previous:confirmation:muse:06-05_00137_P0037822.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:57:06.368Z",
+      "actual_usd": 0.00571475,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 332,
+        "outputTokens": 1247,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.00571475
+      }
+    },
+    {
+      "id": "8dd66bae-2cb6-4bce-a19e-35de2bb85d3b",
+      "label": "instance-v2:previous:confirmation:muse:06-05_00137_P0037822.png:2",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:57:18.582Z",
+      "actual_usd": 0.00635625,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 376,
+        "outputTokens": 1385,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.00635625
+      }
+    },
+    {
+      "id": "dad316c9-baf3-4876-8107-da542bd61cce",
+      "label": "instance-v2:previous:confirmation:muse:06-05_00137_P0037822.png:3",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:57:28.958Z",
+      "actual_usd": 0.00537,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 318,
+        "outputTokens": 1170,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.00537
+      }
+    },
+    {
+      "id": "b586e957-2ef1-4b06-a5f8-55ae686c796a",
+      "label": "instance-v2:previous:confirmation:whole:06-05_00077_P0037991.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:57:38.768Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "dfcbea09-e3ca-42ba-91a3-d37f16beb6df",
+      "label": "instance-v2:previous:confirmation:muse:06-05_00077_P0037991.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:57:40.547Z",
+      "actual_usd": 0.008231450000000001,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 449,
+        "outputTokens": 1834,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.008231450000000001
+      }
+    },
+    {
+      "id": "a7fdbffa-15e1-46d2-9985-5fc5b5a9fda0",
+      "label": "instance-v2:previous:confirmation:muse:06-05_00077_P0037991.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:58:00.179Z",
+      "actual_usd": 0.00843995,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 439,
+        "outputTokens": 1886,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.00843995
+      }
+    },
+    {
+      "id": "2ee29fc7-4778-4d8e-9a18-e0c43bb25e20",
+      "label": "instance-v2:previous:confirmation:muse:06-05_00077_P0037991.png:2",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:58:16.414Z",
+      "actual_usd": 0.0074716999999999995,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 358,
+        "outputTokens": 1682,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.0074716999999999995
+      }
+    },
+    {
+      "id": "018bade8-477a-4037-9abe-d6d55046c166",
+      "label": "instance-v2:previous:confirmation:muse:06-05_00077_P0037991.png:3",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:58:31.298Z",
+      "actual_usd": 0.0053552,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 324,
+        "outputTokens": 1194,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.0053552
+      }
+    },
+    {
+      "id": "d6d5dfa4-10bd-4030-8f99-2d76f64e3435",
+      "label": "instance-v2:previous:confirmation:muse:06-05_00077_P0037991.png:4",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:58:41.480Z",
+      "actual_usd": 0.005569,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 263,
+        "outputTokens": 1233,
+        "cachedTokens": 0,
+        "estimatedUsd": 0.005569
+      }
+    },
+    {
+      "id": "48b09377-4dc5-4c15-82a5-0cf8d12c589f",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00177_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:58:51.923Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "df3a6e13-642f-45c0-a3ec-5cd0cd4e3b8f",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00177_P0030859.png:0",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:58:53.090Z",
+      "actual_usd": 0.0037559499999999997,
+      "usage": {
+        "model": "muse-spark-1.3",
+        "inputTokens": 306,
+        "outputTokens": 823,
+        "cachedTokens": 113,
+        "estimatedUsd": 0.0037559499999999997
+      }
+    },
+    {
+      "id": "05e19efb-561a-40ee-8e2f-25637b7d9fff",
+      "label": "instance-v2:previous:confirmation:muse:05-15_00177_P0030859.png:1",
+      "reserved_usd": 0.1,
+      "created_at": "2026-11-03T09:58:59.081Z"
+    },
+    {
+      "id": "5f3e7823-4a3c-48d6-b4a5-c0c37dabefe5",
+      "label": "instance-v2:previous:confirmation:whole:06-05_00095_P0037991.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:04.834Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "8cc06151-720a-4489-8281-32cb27ce9a15",
+      "label": "instance-v2:previous:confirmation:whole:06-05_00117_P0037822.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:07.675Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "b9a80581-1953-4b26-8cd1-34e0d4a45f24",
+      "label": "instance-v2:previous:confirmation:whole:05-26_00206_P0034016.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:09.597Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "56092758-c3dc-4692-9a2f-9937c8573fd2",
+      "label": "instance-v2:previous:confirmation:whole:06-05_00223_P0038051.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:10.743Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e152a44b-2862-4a70-bd66-ef683499c356",
+      "label": "instance-v2:previous:confirmation:whole:05-26_00054_P0034282.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:12.838Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "1f286fa7-dc10-4b49-95e5-c89de40860c2",
+      "label": "instance-v2:previous:confirmation:whole:06-05_00181_P0038051.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:14.834Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "8d3c524f-9792-43d5-bafd-31be5d8c9fa6",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00240_P0030695.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:15.506Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "35a84579-2b3b-49bd-b4ca-c8fd05d9194e",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00112_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:17.464Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "ad704a1e-c66e-4d34-8827-f4f4b4120a6e",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00248_P0030686.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:19.421Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "36f9a174-17b4-4f78-9e0e-a48b8117e9e6",
+      "label": "instance-v2:previous:confirmation:whole:06-05_00134_P0038051.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:20.597Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "4c583ebd-00ef-42e7-b49c-535143eac99a",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00224_P0030953.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:21.453Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "82cb01da-8e1b-48e7-9a84-f7f2862a53eb",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00262_P0030695.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:23.224Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "eb681317-306d-474c-9141-5c8da06b4c09",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00160_P0030953.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:24.336Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "692b1a68-fbf6-4016-bd0d-0761a5f81330",
+      "label": "instance-v2:previous:confirmation:whole:06-05_00220_P0038051.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:25.087Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "07772dca-12f2-44f5-bf74-1aebc37a0604",
+      "label": "instance-v2:previous:confirmation:whole:05-26_00137_P0034121.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:25.908Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "23c8f66b-daf3-4be6-881a-0d390ab9b3cc",
+      "label": "instance-v2:previous:confirmation:whole:05-15_00122_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:26.545Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "2ee3b6a0-1084-4fb2-87d8-36b1b3534fa9",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00164_P0030953.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:27.495Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "905875f4-4f4e-4b4a-947b-e6869780f0ae",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00164_P0030953.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:29.325Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "82e95ff4-7d3a-4ff3-b448-da4f9d735048",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00164_P0030953.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:30.947Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "836efafd-f8da-413b-ba14-c871de6cf6e6",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00164_P0030953.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:32.706Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e517a170-8558-4cae-9534-1de45ff55117",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00182_P0030686.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:33.556Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "0aff33a2-3f6d-4a05-b306-b31935402553",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00182_P0030686.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:36.382Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e1bfbf6d-3079-4c60-9d86-2135c96c445d",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00182_P0030686.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:38.119Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "edaa1af8-0fa1-4e76-9890-e985cf40296a",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00182_P0030686.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:40.184Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "14962bc3-81b3-4520-b681-af25603a8ed1",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00269_P0030695.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:41.197Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "b2ea1a98-6e83-46f9-8a17-d983d42f6db3",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00269_P0030695.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:42.486Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "bd69b647-252a-43e5-b261-8140b4691ba0",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00269_P0030695.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:44.730Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "45ff4bef-374b-463e-b337-ae11b2f77746",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00269_P0030695.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:45.397Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a880b1d6-6a84-49d3-b1e5-7a64c04cfe96",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00136_P0030943.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:46.805Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "ac2fc11b-f741-4341-8f9e-b46b13d4c5cf",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00136_P0030943.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:53.172Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "c99910a0-6e32-480e-8b71-4f37ca996710",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00136_P0030943.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:54.015Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "5175705b-8c9f-4a79-8009-b429e4b693dd",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00136_P0030943.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:56.045Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "8967af02-68a0-4d4d-b323-6527b91b0f2b",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00174_P0034121.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:57.203Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "69774101-318d-4cb4-bcd4-57d3cc5cf7e1",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00174_P0034121.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T09:59:58.555Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "1d573ad4-cad9-470d-9829-b92bcf630043",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00174_P0034121.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:00.121Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "3fabf839-be83-4f1b-95aa-3ae6bdddb96f",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00174_P0034121.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:01.818Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "9c5e95b3-19f8-4f3f-bf1c-7274efeb0494",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00141_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:03.594Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "1e225d62-65f9-4e86-a068-008f40681532",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00141_P0030859.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:05.215Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "3de6de2a-f654-4094-9b2a-c11d431bad76",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00141_P0030859.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:06.991Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "53a610d1-0a6a-4bee-b4dc-3de1e43444f3",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00141_P0030859.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:09.406Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "59f23a1c-7145-4f82-a5f1-41b9c1d3909d",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00159_P0034121.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:11.251Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "1f4ba08d-093e-4dc6-964f-adc61b31329c",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00159_P0034121.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:12.818Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "ff663855-94f6-4334-9171-5f8e0b8318f8",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00159_P0034121.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:14.239Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "bf47391a-135f-4bb2-8ca6-e7df1aea577b",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00159_P0034121.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:15.395Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "5d1e9521-4ca1-4277-ad90-3278900f2bbe",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00154_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:16.201Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "c1c59d28-3bc8-45ec-8504-1873385b9d2a",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00154_P0030859.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:17.356Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "58652c70-b939-48eb-ac3f-4a13c7c81c47",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00154_P0030859.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:18.351Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "edf50f2d-d42d-4ce2-bdd8-f495ced82f16",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00154_P0030859.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:19.378Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "4944e7cc-5e24-4e9a-b1ae-3eb86a9894fa",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00094_P0030943.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:22.756Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "75da25a0-40aa-4b54-bc89-30467da9dfff",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00094_P0030943.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:24.029Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "4be7664b-0003-4f4a-8aae-0649fce3aa1e",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00094_P0030943.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:24.934Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "771187ac-f55c-41ae-a7a6-65b96ea2b8a0",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00094_P0030943.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:26.339Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "aa6ec453-9d21-45b7-9ba6-37bb7d759ade",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00184_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:27.707Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "700e5753-5eff-4cd4-81b6-1fa42b724a3b",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00184_P0030859.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:28.642Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a454324c-37e7-482e-9986-d57f243ad021",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00184_P0030859.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:29.646Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "6d9add3e-9832-4e40-a940-2c22db5a98e3",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00184_P0030859.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:30.408Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "086235bf-a175-4270-bfc5-3660da2641bb",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00197_P0034121.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:32.576Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "1d256b15-f686-4872-87af-52af877eccc9",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00197_P0034121.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:34.254Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "2972f35a-5f6a-47ad-856a-e3c6d903dc91",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00197_P0034121.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:35.052Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "4af385dc-cd52-48f8-9ef8-5df759980778",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00197_P0034121.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:37.418Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "c6cdc2eb-416e-4803-ae26-e4c97d18857d",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00158_P0030953.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:38.893Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "023c1fea-4b20-4373-ba5a-81df6933eb29",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00158_P0030953.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:40.119Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e03e6ddc-398c-476e-a28e-f9c7e833b6fb",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00158_P0030953.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:41.120Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "10ede750-ce99-429c-8a81-37c23c8170e1",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00158_P0030953.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:42.156Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "705f82f1-4d55-46ad-a2b0-4af9672027a0",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00257_P0030686.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:43.113Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "c3af63d2-afa9-46bb-8ee2-ab59fed66bcd",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00257_P0030686.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:44.078Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "868616b5-ec20-4f5b-b6e1-4dbeaf9f18d4",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00257_P0030686.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:46.777Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a42a8af2-4860-453f-ab36-4d1d43e12808",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00257_P0030686.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:47.813Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "2dc2a4b4-6424-4e7b-b784-092a095b143b",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00180_P0030695.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:48.772Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d038f99f-6670-4aae-8ce2-f4ae2c3b1863",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00180_P0030695.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:49.776Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d5ef289b-1aec-4362-8f63-dd466ba30511",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00180_P0030695.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:52.129Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "5fd36810-30d7-4e45-828d-48fde1f01d13",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00180_P0030695.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:52.933Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d86026ca-e1cf-46e3-9b62-9e33cdea2cac",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00179_P0030953.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:54.018Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "9cbf7352-1e7f-4c42-889c-35c670345362",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00179_P0030953.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:54.959Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "b28b6424-6282-40da-820f-253c98cedd54",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00179_P0030953.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:56.226Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "07bf5d83-0976-4147-a20d-977570e5e0a0",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00179_P0030953.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:56.961Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "41be9bf4-d1fe-421b-8772-74e31f773087",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00121_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:58.499Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "257143ad-2d44-4f81-a9c0-33c99812f8ce",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00121_P0030859.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:00:59.424Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "28248a59-dc8a-4d82-86bd-398207638baa",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00121_P0030859.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:01.331Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "f63a807f-9368-462e-9d6f-d525298657b0",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00121_P0030859.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:02.315Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "9acb1d83-2fac-4e42-8a6c-fb5cf895da02",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00161_P0037991.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:03.564Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e8134f91-c219-4bef-8285-9a060b1aae15",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00161_P0037991.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:04.395Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e6aed22c-f4fc-4f1f-be9f-c29b40d2e87b",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00161_P0037991.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:06.525Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "42892948-d83d-44e3-a47e-13b00eb96943",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00161_P0037991.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:07.275Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "5a521e80-a00e-4922-8b8e-471f9897d7e1",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00079_P0034282.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:08.239Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "b252735f-c1f4-4aee-8b39-71f4f42225d8",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00079_P0034282.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:09.245Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "3c66379f-7c8e-4eaf-a422-44d71c6ceec4",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00079_P0034282.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:09.955Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e11b383e-78d1-4db9-af10-d461a6db4355",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00079_P0034282.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:11.432Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "f0075efc-f282-44f5-aad4-ce77a7179feb",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00100_P0034282.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:15.425Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "5a9583ab-aad2-4b70-bfcb-8b02e7420d90",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00100_P0034282.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:16.266Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "f45f6aab-958e-40e2-9fee-b115573cfaea",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00100_P0034282.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:16.982Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d620dcbc-0cf1-41f1-b8ea-75b211354684",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00100_P0034282.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:18.290Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d3813a69-9bff-45f4-87b3-d71405aefe4e",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00113_P0037822.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:19.224Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "bdc09869-3d74-4b8e-b311-672794ae65aa",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00113_P0037822.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:20.321Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "4c0c8a6e-edbe-4897-ac43-c3bd08549489",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00113_P0037822.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:21.300Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "52601b96-3470-451b-935f-cd48a6fec934",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00113_P0037822.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:22.256Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "563574cf-ca75-4b37-b39a-6b764db8293a",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00164_P0037991.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:23.126Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "bf76fc02-94f4-4d3e-9e3e-f4a4a2ca9733",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00164_P0037991.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:24.322Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e973689f-9585-4d4c-913c-17eb3a11b1d2",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00164_P0037991.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:25.680Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "054b676d-cb0f-452b-8f64-3228d2c97761",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00164_P0037991.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:26.435Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "7bb37468-3392-4a42-97ee-4161ad6cbd14",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00137_P0037822.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:26.943Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "9633f5c8-b3f1-45ce-b906-a0d8637b6262",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00137_P0037822.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:27.694Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a96f5d65-dae7-4858-8d82-4e23b18f5620",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00137_P0037822.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:28.307Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "ccf3da28-9546-4b82-b737-f1a9710d3611",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00137_P0037822.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:29.044Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "ab3dcda7-0e99-4c29-913c-8ff79ad88d98",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00077_P0037991.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:29.707Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "ad4099f8-f753-4ff9-aa22-b96b6382c6ad",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00077_P0037991.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:31.242Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "411ec210-f957-4e1b-bf9f-5385b4e50e6e",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00077_P0037991.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:31.991Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "9eec8835-307c-4596-b16a-164222abf2c5",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00077_P0037991.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:33.242Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "1242aa4d-2c5b-4877-89e7-b74c9d79b64d",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00177_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:34.330Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "6b313e3c-0d20-410b-b3f2-623c2421b6b9",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00177_P0030859.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:35.241Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "b6edc45f-756d-461d-b539-4619756c615f",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00177_P0030859.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:37.051Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "f1290e32-4518-4931-b056-176a8be76af6",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00177_P0030859.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:38.277Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "5c6365b2-3483-4988-9c38-656e97b8c0ed",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00095_P0037991.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:40.072Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "6d05679b-b072-48d6-9035-5f08998567c6",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00095_P0037991.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:41.338Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "566e0825-8fa9-4b1f-900b-f3031545c7b7",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00095_P0037991.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:43.894Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "f5c46b1e-2ea3-4fc2-b722-5ea18dfa0989",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00095_P0037991.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:45.612Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "472e9e08-35fe-42b9-873a-5bbacb98ab5e",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00117_P0037822.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:46.858Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "97ba9992-359d-4d0d-8690-c0eb8d0050cf",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00117_P0037822.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:48.669Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d7f30abc-f248-498c-8c0c-77129c2d254c",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00117_P0037822.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:49.533Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "b2efd1fb-0d16-47e4-96e8-64d13b011513",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00117_P0037822.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:51.082Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a26f7aad-a873-49f5-983c-4dda42be3311",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00206_P0034016.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:51.931Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "ada83602-6470-488c-adca-6c15a367d260",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00206_P0034016.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:53.151Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "75ee5dca-9e05-4f58-8be6-4ccd55a8ad44",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00206_P0034016.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:53.979Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "c4254f04-1c31-40bf-9461-20af76cb02b0",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00206_P0034016.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:54.912Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "ca52a543-cfab-4884-b210-bffb17dbf4e9",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00223_P0038051.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:55.799Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "f87928ac-9dcf-4f63-b733-9c47c897aad8",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00223_P0038051.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:57.058Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "50445258-e8e7-4457-90a6-ee9c202231cf",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00223_P0038051.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:57.724Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "072a6a9d-4670-43b1-8a43-6bf8a1adf31f",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00223_P0038051.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:58.544Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "54663e55-8c4a-455e-9eb2-4addd99573ff",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00054_P0034282.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:01:59.314Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "0627e7ae-2824-4614-9f2e-5e8179a613a4",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00054_P0034282.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:00.154Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "52ea0c39-4c9f-48f9-bd53-e20ebb89b175",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00054_P0034282.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:02.076Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "16ed9b7a-f5b0-41f9-b99e-b5efe32796d9",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00054_P0034282.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:03.490Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "8b337368-8eb8-4c98-b4da-a8c369d94e7a",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00181_P0038051.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:05.386Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "aeca5df4-0345-4bbe-a2df-3c1fb16999e0",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00181_P0038051.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:06.673Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "34d4554a-020d-40b2-b2f6-78dac6b40919",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00181_P0038051.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:08.093Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "1f5a8ced-80a9-4b59-902e-9ecfd3f3f79f",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00181_P0038051.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:09.407Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "db61ecf6-d742-4a3f-ad4b-f9a524b81e54",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00240_P0030695.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:10.207Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "b6994942-f417-4a8d-a6d8-620bc8f6c3af",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00240_P0030695.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:14.215Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "16e77e77-de34-4dc6-978f-27546d1a91e7",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00240_P0030695.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:16.226Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d299079c-095e-4500-9e17-c954b2d65e34",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00240_P0030695.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:17.015Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "12763c6e-dff3-41c7-ac15-93c5bb73b4d9",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00112_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:18.375Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a75ceb78-eb2a-4b6c-8e2e-0c9f845803e2",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00112_P0030859.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:20.138Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "b9d03c54-6b1c-4699-b037-c3622f53cd56",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00112_P0030859.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:21.234Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d6cb33b9-1730-4873-8a3f-517513c3db8d",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00112_P0030859.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:21.992Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "95e8efa5-891e-4f16-afd3-f406b90133b4",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00248_P0030686.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:23.110Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d8b586c9-d2e6-4a73-a462-9ee4869aa8c7",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00248_P0030686.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:24.863Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "e0d7a330-f543-4ee6-a47d-2f317963f8d0",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00248_P0030686.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:26.929Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "6dfbf685-c342-49b9-800b-1c607a0d9c49",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00248_P0030686.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:27.662Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "33529d7d-ab34-4dc0-b1b2-ec49a5d9c591",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00134_P0038051.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:29.132Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d5392b4e-8b92-4afa-85a8-d30edb020541",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00134_P0038051.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:30.267Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d09cbe0d-f496-460e-971f-403f89e7883e",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00134_P0038051.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:31.273Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "66d687c8-1bbc-4a93-b7ec-b9db111ae54f",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00134_P0038051.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:32.165Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "5c842085-8cd7-4870-8ac3-d078be4c890f",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00224_P0030953.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:32.993Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d872f7bd-27b0-41d1-ae6c-7e2f95b766f1",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00224_P0030953.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:33.811Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "0b773c75-1123-494b-948b-8131b3215be6",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00224_P0030953.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:35.218Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "7132a026-0213-4492-939f-1204f90fef0f",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00224_P0030953.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:36.492Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "44a8db4b-d019-4eb3-adea-b46a9471170d",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00262_P0030695.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:37.769Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "ed9552ea-6a9b-4383-90c4-75df35ff3a64",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00262_P0030695.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:39.107Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "26461275-22e7-4a6d-b8b2-c37586d6f597",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00262_P0030695.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:39.832Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "d4c19d82-7c2d-4be5-bfc9-6f2d52a6a2c8",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00262_P0030695.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:40.645Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "784960e2-9c2c-44e7-9f08-2e82c035c022",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00160_P0030953.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:41.472Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "72a51ee7-02fd-4d4f-8f2c-e033cd18cba8",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00160_P0030953.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:42.834Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a98cd6a5-972c-4494-94b8-0a835b5be7f6",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00160_P0030953.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:43.699Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a98c63b2-6c16-4e1e-bc2f-409571e448d4",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00160_P0030953.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:44.534Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "ca6c9c0e-1036-44b6-9445-fcf701bf196f",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00220_P0038051.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:45.385Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "4955a4c6-12ed-4038-952a-4bf218a5994f",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00220_P0038051.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:46.099Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "94857428-1060-4a82-a189-9522733f5cc3",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00220_P0038051.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:49.494Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "010b2be5-4c06-4a14-bfcb-eca57fa455c0",
+      "label": "instance-v2:previous:confirmation:tiles640:06-05_00220_P0038051.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:50.510Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "fc8081ab-f3d1-48bd-af7d-b70cc974da62",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00137_P0034121.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:51.195Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "643b57e5-3a42-4ef0-baea-df425bfcc00b",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00137_P0034121.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:54.510Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a57bfa2d-a929-4fcd-b937-1fa8aadcb795",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00137_P0034121.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:02:55.933Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "f9fbdb42-d950-4dc6-9dce-33559eaacead",
+      "label": "instance-v2:previous:confirmation:tiles640:05-26_00137_P0034121.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:03:00.596Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "03461366-7ede-44e2-b0eb-4c79a90b15f5",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00122_P0030859.png:0-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:03:02.024Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "581cd13e-f25b-49cf-9ce0-e3253f567615",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00122_P0030859.png:384-0",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:03:02.929Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "770ee96f-0f48-4d56-8556-8aae8d4ea8ab",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00122_P0030859.png:0-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:03:03.749Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    },
+    {
+      "id": "a04d2b34-7c03-4268-a913-13633248f57e",
+      "label": "instance-v2:previous:confirmation:tiles640:05-15_00122_P0030859.png:384-384",
+      "reserved_usd": 0.0025,
+      "created_at": "2026-11-03T10:03:05.853Z",
+      "actual_usd": 0.0025,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      }
+    }
+  ]
+}

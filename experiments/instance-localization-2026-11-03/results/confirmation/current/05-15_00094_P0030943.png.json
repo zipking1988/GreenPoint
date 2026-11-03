@@ -1,0 +1,251 @@
+{
+  "image_id": "05-15_00094_P0030943.png",
+  "plants": [
+    {
+      "box": [
+        0.7529296875,
+        0.79296875,
+        0.15625,
+        0.189453125
+      ],
+      "detectionConfidence": 0.949367105960846,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!$+I5-`Iw4Y-9f[:h(EF$!f4DM('6Y@dmI*/AYfL:eMb#Y72=lE)hf73/v#STJ33yMVJfpSn0?XzaCM+Jm-pU6Y8D8i==ZYjzLDx3'OqUMUz9Wg`50o&V(nWT)&Ps{+mxUQj0[MVlGgP^=axSLks1Rgte(Ki[GCsv)4e.y9F%?a!lSH8Z`9_B2WI(p1bpa2eod*rmE`gM/bR[jNDV_03@i=$L(v8!Dk?swv",
+        "width": 160,
+        "height": 194,
+        "bounds": {
+          "left": 771,
+          "top": 812,
+          "right": 931,
+          "bottom": 1006
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-001",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.82,
+      "reasoning": "Young rosette with broad glossy green leaves matches sugar beet."
+    },
+    {
+      "box": [
+        0.8046875,
+        0.2099609375,
+        0.02734375,
+        0.044921875
+      ],
+      "detectionConfidence": 0.6246334314346313,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!AF0&A1I^71DV/HHT&a%VcvjYu^5c]$FX`4_",
+        "width": 28,
+        "height": 46,
+        "bounds": {
+          "left": 824,
+          "top": 215,
+          "right": 852,
+          "bottom": 261
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.2,
+      "reasoning": "Image is too small and blurred to see leaf details."
+    },
+    {
+      "box": [
+        0.791015625,
+        0,
+        0.03125,
+        0.0185546875
+      ],
+      "detectionConfidence": 0.5936508178710938,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!8GO[CJ+5sg$dgI052n_fQ`637$!!",
+        "width": 32,
+        "height": 19,
+        "bounds": {
+          "left": 810,
+          "top": 0,
+          "right": 842,
+          "bottom": 19
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-003",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.2,
+      "reasoning": "Image is too dark and indistinct to assess leaf shape."
+    },
+    {
+      "box": [
+        0.21875,
+        0.4482421875,
+        0.1455078125,
+        0.1298828125
+      ],
+      "detectionConfidence": 0.9452055096626282,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#`Dg$Zss=RMqkH#2[w.Hiwv+m8X+ObUbx97Z*3ict{*l:`=W{TNgYME'1X]loGLl%IUK67D@CUxpALAYvdLCn1^*AaS2Z7Uf_VYbmFf5Zmu]-Ail-p)9^gA8-f#WP7fQG='oP`xMx+tx6-q1$-A+4pZ`=D3TJv[%5_XVp'4&TG2q$eMlA!!!",
+        "width": 149,
+        "height": 133,
+        "bounds": {
+          "left": 224,
+          "top": 459,
+          "right": 373,
+          "bottom": 592
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-004",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.8,
+      "reasoning": "Compact rosette of rounded glossy leaves is consistent with sugar beet."
+    },
+    {
+      "box": [
+        0.8310546875,
+        0.98828125,
+        0.0322265625,
+        0.01171875
+      ],
+      "detectionConfidence": 0.597484290599823,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!3Gb*oIj6T-LfK[dx0^?YH",
+        "width": 33,
+        "height": 12,
+        "bounds": {
+          "left": 851,
+          "top": 1012,
+          "right": 884,
+          "bottom": 1024
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-005",
+      "label": "uncertain",
+      "originalLabel": null
+    },
+    {
+      "box": [
+        0.8310546875,
+        0.13671875,
+        0.017578125,
+        0.017578125
+      ],
+      "detectionConfidence": 0.5038759708404541,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!6H2xu(^0-ItPKq7:h*^*Mwn#q",
+        "width": 18,
+        "height": 18,
+        "bounds": {
+          "left": 851,
+          "top": 140,
+          "right": 869,
+          "bottom": 158
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-006",
+      "label": "uncertain",
+      "originalLabel": null
+    },
+    {
+      "box": [
+        0.189453125,
+        0.0341796875,
+        0.181640625,
+        0.1611328125
+      ],
+      "detectionConfidence": 0.949367105960846,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#rF9YleQbF*l'CD:SdI4YM8g)2[?_IZy.6U/uq#_y7?%ew(Jp1{n.jD8%@-O2Db{ef%d=Ep@#RKt`#)YUx%`O#`93`!`m9s_31ZaC/?sPS#p]y2JCLuDFmH6fdN=y7:nNrXs@msVX#kfm[uN?C:wvkQd1M.dfPcz@Mb5Zp*u?s.+VbljT)CLftP2Ej_%1&6MZJRlP`&Ku8",
+        "width": 186,
+        "height": 165,
+        "bounds": {
+          "left": 194,
+          "top": 35,
+          "right": 380,
+          "bottom": 200
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-007",
+      "label": "uncertain",
+      "originalLabel": null
+    },
+    {
+      "box": [
+        0.212890625,
+        0.2255859375,
+        0.115234375,
+        0.1484375
+      ],
+      "detectionConfidence": 0.9139785170555115,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#MEP!]nt+?.pN?ebm9IYK{ooa(6lzxPtPxxFv]G=-/*$9'98f1E[C!R2d5i&*pX6Xp['k'P(bjDvZQ)dBXFZ0lj^ofjp&IN/T+8k5$Ba4p*.AA+i[g2N(:t9):0)LU)$bsfH9g_qMe4)OBDj5wx2Nm1UF4!I+",
+        "width": 118,
+        "height": 152,
+        "bounds": {
+          "left": 218,
+          "top": 231,
+          "right": 336,
+          "bottom": 383
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-008",
+      "label": "uncertain",
+      "originalLabel": null
+    },
+    {
+      "box": [
+        0.2822265625,
+        0.9580078125,
+        0.0341796875,
+        0.0419921875
+      ],
+      "detectionConfidence": 0.8241757750511169,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!@NSZh0t%0:Pm?GMO7_-Ib$#LKvL/R*((/9",
+        "width": 35,
+        "height": 43,
+        "bounds": {
+          "left": 289,
+          "top": 981,
+          "right": 324,
+          "bottom": 1024
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-009",
+      "label": "uncertain",
+      "originalLabel": null
+    }
+  ],
+  "errors": [
+    "provider_error"
+  ],
+  "limited": true
+}

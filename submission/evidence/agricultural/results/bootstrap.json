@@ -1,0 +1,26 @@
+{
+  "previous_hybrid": {
+    "recall_image_bootstrap_95": [
+      0.5194154642493161,
+      0.6782188979767543
+    ],
+    "precision_image_bootstrap_95": [
+      0.7205882352941176,
+      0.8083832335329342
+    ],
+    "resamples": 5000,
+    "scope": "same public domain, image-level resampling only; not farm-independent"
+  },
+  "selected": {
+    "recall_image_bootstrap_95": [
+      0.5087693945847277,
+      0.6940704073697432
+    ],
+    "precision_image_bootstrap_95": [
+      0.9333333333333333,
+      0.9927007299270073
+    ],
+    "resamples": 5000,
+    "scope": "same public domain, image-level resampling only; not farm-independent"
+  }
+}

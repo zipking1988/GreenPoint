@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-001",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.75,
+      "reasoning": "Broad dark green rosette leaves on bare soil match sugar beet seedling."
+    },
+    {
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.15,
+      "reasoning": "Image is too tiny and blurred to discern leaf shape."
+    },
+    {
+      "id": "GP-003",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.88,
+      "reasoning": "Small rosette of broad ovate glossy leaves typical of sugar beet."
+    },
+    {
+      "id": "GP-004",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.9,
+      "reasoning": "Rosette of broad wavy glossy leaves on soil typical of sugar beet."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 429,
+    "outputTokens": 1594,
+    "cachedTokens": 0,
+    "estimatedUsd": 0.00731075
+  },
+  "elapsed_ms": 13860
+}

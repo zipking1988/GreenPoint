@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-001",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.9,
+      "reasoning": "Broad wavy rosette leaves with pale midribs on bare soil match sugar beet."
+    },
+    {
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.2,
+      "reasoning": "Image is too tiny and indistinct to verify leaf shape."
+    },
+    {
+      "id": "GP-003",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.45,
+      "reasoning": "Blurry broad pale leaves in shadow prevent confident crop confirmation."
+    },
+    {
+      "id": "GP-004",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.2,
+      "reasoning": "Image is too tiny and indistinct to verify leaf shape."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 342,
+    "outputTokens": 1509,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.00671645
+  },
+  "elapsed_ms": 15438
+}

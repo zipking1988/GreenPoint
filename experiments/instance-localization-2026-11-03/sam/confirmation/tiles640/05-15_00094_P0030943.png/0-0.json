@@ -1,0 +1,80 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.3505859375,
+        0.7138671875,
+        0.232421875,
+        0.2109375
+      ],
+      "detectionConfidence": 0.9609756469726562,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!$cCT8d&5voO9s+(f('4J0D%YA!SdKFKNX-dCud&%_uRn{7xLY2IZNg^u/HoQdtrTnnD]B+=m1l[c2o_zx&lJesR+pfO^[xF.&/5$6?B9Y2u*Yr2gYOi[&mHAOQ!8K_Y$v{V7%)bG4J1x&]MNEp$0(Jj!IqTS/%pFrQTJNU)vz`?8'XAxYh)doZG8zW/hGYjfgoWx9G!dmi)0U't(MH86`0#Usn0^VvszWJS#mWHAg'A+PdUwOoKBco2wTHquijkH]f*z]%5AWsTuCJoF=TzC=i8gzc2rw$V!!!",
+        "width": 238,
+        "height": 216,
+        "bounds": {
+          "left": 359,
+          "top": 731,
+          "right": 597,
+          "bottom": 947
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.33984375,
+        0.3623046875,
+        0.1865234375,
+        0.2373046875
+      ],
+      "detectionConfidence": 0.949367105960846,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!$CD8^orC$Nxf$dQ`D%X7l31Xi0?1ntc7ht:hoM[ixl5r'n.l(HBiMawlS=(vB?[9&rB0X)oOA@B3{kNT(a=L9hP7j#NXU4RW@0LUBCoEMsD7/0h!v_m68BbFR&uf4MV]U5-d5ie[iFNYyZCG45^+@D:CVY%A&N&EI2/H=@`kL+c@HxwVIM.ysrllba5YFd()PnOzhRQ)@$My^^emWx$bVU%4oMlda6jmp$tkXv&lSHMC-Q)EiWR.-{Mcscw",
+        "width": 191,
+        "height": 243,
+        "bounds": {
+          "left": 348,
+          "top": 371,
+          "right": 539,
+          "bottom": 614
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.3046875,
+        0.0546875,
+        0.2900390625,
+        0.2587890625
+      ],
+      "detectionConfidence": 0.9649122953414917,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!%6E3L9puxKX?fpqK1phr]e&MFOYVf!=117lbIG)Y=Fh3w4jv-LcW5MK6F_eI3d:2)V?nLNaO.:X3X](?+wuA@y(`[MUX``6(S@wq`4%V=TQtI03rj:-rY`-fciHg/!DrYOGr4zYZmb9V`W0tU+?E?F&!_MF*7$F`_xCr2ftqXeY[OPL?71kM#U-G8]nx6Bzxc&7_hk&D-`3muW(wNTSgoL=e.*Q3CEXLkdP2.h+KFUVWt=%a?[8B^y==zKhga1W8(u?8F:j`Z02JQLr]go:eUx`x&2IsDf%3ERzyva#{zg34#`0:=d-N5z3ZA7F:GLS%1`g+Uk9H8'Q+*OY96L9K8baP%",
+        "width": 297,
+        "height": 265,
+        "bounds": {
+          "left": 312,
+          "top": 56,
+          "right": 609,
+          "bottom": 321
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 1252
+}

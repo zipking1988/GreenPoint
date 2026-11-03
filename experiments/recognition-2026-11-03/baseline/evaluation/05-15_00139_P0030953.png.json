@@ -1,0 +1,77 @@
+{
+  "image_id": "05-15_00139_P0030953.png",
+  "config": "baseline",
+  "limited": false,
+  "errors": [],
+  "plants": [
+    {
+      "id": "GP-001",
+      "box": [
+        0.025390625,
+        0.4365234375,
+        0.1767578125,
+        0.2392578125
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!$@BCD`9A(4/Hd6O.!Vhj04u4C_*sa7@xwBjH974ott/*F8EmCfU5njRm*hP#Sq@2p7Pw@)e&-xCq28F9%]jICU5BABZ`.TC?x]i=.`57P:a.llX^Ih:.?Vyd=kG'+AWd_KCxHc+a-PO*m=t(E8-iYk4-aixg`*o8/1tNRTxG9KAG4$KE)I!5*#+iIevOxm5jZG*wP?)2UN+B41XxbmgDj^D(fHAWg&A%BZ?6yQF5*Oqp{tn=8VTXVVo",
+        "width": 181,
+        "height": 245,
+        "bounds": {
+          "left": 26,
+          "top": 447,
+          "right": 207,
+          "bottom": 692
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.93,
+      "reasoning": "Dense rosette of broad glossy wavy-margined leaves matches sugar beet growth."
+    },
+    {
+      "id": "GP-002",
+      "box": [
+        0,
+        0.048828125,
+        0.1689453125,
+        0.16015625
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#iC`qZ]kd?Wsfo+M(X:[f[ny_(9J%G!{mu*3l(89r_@lmdi:ot5.7+.%oMu.O9%GYXy+wDQf3S!WfFHu$z'(dMkw9NkgMcx?mu0`9%tiN*r:!6v#Xzg?]XTv3yT{nS^BFvhbV:u!(/L{QoII7eKUo2$OwMsK48iXlBl2f2ub?Y5`JJI_gkkdpM]`CGwnB=_",
+        "width": 173,
+        "height": 164,
+        "bounds": {
+          "left": 0,
+          "top": 50,
+          "right": 173,
+          "bottom": 214
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.8,
+      "reasoning": "Small rosette of glossy upright veined leaves is consistent with young sugar beet."
+    }
+  ],
+  "usages": [
+    {
+      "model": "sam-3.1",
+      "images": 1,
+      "estimatedUsd": 0.0025
+    },
+    {
+      "model": "muse-spark-1.3",
+      "inputTokens": 399,
+      "outputTokens": 1940,
+      "cachedTokens": 0,
+      "estimatedUsd": 0.00874375
+    }
+  ],
+  "reference_id": null
+}

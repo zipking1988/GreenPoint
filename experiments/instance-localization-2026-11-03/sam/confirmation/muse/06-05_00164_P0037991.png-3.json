@@ -1,0 +1,26 @@
+{
+  "plants": [
+    {
+      "id": "GP-013",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.2,
+      "reasoning": "Image is too tiny and indistinct to verify leaf shape or crop traits."
+    },
+    {
+      "id": "GP-014",
+      "label": "weed",
+      "originalLabel": "weed",
+      "confidence": 0.8,
+      "reasoning": "Low spreading cluster of small pointed leaves does not match sugar beet seedling morphology."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 291,
+    "outputTokens": 1360,
+    "cachedTokens": 0,
+    "estimatedUsd": 0.00614375
+  },
+  "elapsed_ms": 10371
+}

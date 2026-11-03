@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-001",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.85,
+      "reasoning": "Broad glossy rounded leaves in a low rosette match young sugar beet."
+    },
+    {
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "View is blurred and cropped showing only part of one leaf."
+    },
+    {
+      "id": "GP-003",
+      "label": "uncertain",
+      "originalLabel": "weed",
+      "confidence": 0.68,
+      "reasoning": "Narrow upright elongated leaves differ from broad beet rosette."
+    },
+    {
+      "id": "GP-004",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.88,
+      "reasoning": "Broad wavy glossy leaves forming a rosette match young sugar beet."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 338,
+    "outputTokens": 1778,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.0078547
+  },
+  "elapsed_ms": 16005
+}

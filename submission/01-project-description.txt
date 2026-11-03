@@ -1,0 +1,14 @@
+GreenPoint makes plant judgments inspectable: source pixels, model suggestions, human decisions, and software-agent requests stay connected to evidence.
+
+Designed for growers and field-service teams reviewing scattered plots, the online workspace uses SAM 3.1 for plant regions and Muse Spark 1.3 for structured visual suggestions. Select a candidate, inspect a crop from that same source image, keep it for review, and export a CSV preserving the original label, human status, source, and run identity. A separate actual Muse-to-MCP trace demonstrates capability discovery, authenticated frame perception, and a human_review response citing evidence IDs.
+
+During the Hackathon, we also built a working local agricultural recognition prototype using published PhenoBench detector weights. We selected settings on 20 calibration images, froze them, and evaluated 40 additional images containing 196 annotated weeds. Against our previous experimental SAM/ERFNet hybrid on those same images, precision rose from 76.1% to 96.7%, recall stayed near 61%, and unmatched weed flags fell from 37 to 4. The agricultural branch runs locally and is not deployed into the online Meta flow. The smallest targets remain difficult: the selected detector recovered 19 of 70 weeds at 32 pixels or smaller.
+
+The online demo opens clearly labeled recordings of real Meta inference on public data; review interactions work without a model key. Fresh Meta inference requires authorization. These are public sugar-beet-domain results, not independent-farm validation. Positions are source-image coordinates; motion tracking, farmer outcomes, GPS, and physical treatment remain unvalidated or unconnected.
+
+Track: Indie Developer. Theme: Build for Your World.
+Product: https://greenpoint-vert.vercel.app/dashboard
+Published Meta baseline: https://greenpoint-vert.vercel.app/validation.html
+New agricultural experiment: https://greenpoint-vert.vercel.app/agricultural-research.html
+Three-minute demo: https://greenpoint-vert.vercel.app/demo.html
+Source: https://github.com/zipking1988/GreenPoint

@@ -1,0 +1,259 @@
+{
+  "image_id": "05-15_00182_P0030686.png",
+  "plants": [
+    {
+      "box": [
+        0.662109375,
+        0.4990234375,
+        0.12890625,
+        0.09375
+      ],
+      "detectionConfidence": 0.9259259104728699,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#AEhtsh#IsH[3cxq)e]a7EXD/NBoZ5LDc03/D//YMsk.CRoIKd9*gjNF]XxLT4:RdB/r/BamqN*A*nj![yKydZt:4lV&s:&*i%uVaIoJ1C%C)S9:iiKw3s/)0x%N8&wV[2)Tva66787^XD",
+        "width": 132,
+        "height": 96,
+        "bounds": {
+          "left": 678,
+          "top": 511,
+          "right": 810,
+          "bottom": 607
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-001",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.4,
+      "reasoning": "Insufficient clear leaf detail visible to confirm sugar beet traits."
+    },
+    {
+      "box": [
+        0.6318359375,
+        0.26171875,
+        0.12890625,
+        0.16015625
+      ],
+      "detectionConfidence": 0.9298245906829834,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#ZBdGzC0?xO^6@`r=E{uikl!jE@F)(A/7z[dwD`PW)J22U%[7Bl`d.=^9?k!$zswl{OBV^_{Jj.ixPXEp:eevuS.H'1iQG8u:418EZeyK`w1P.J6FfOCuPK`RNltEiGTYt$Ss4YE!c/8IPqpvp^SFeto1sq'eRau9{5fH%f&px0t!!",
+        "width": 132,
+        "height": 164,
+        "bounds": {
+          "left": 647,
+          "top": 268,
+          "right": 779,
+          "bottom": 432
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.4,
+      "reasoning": "Insufficient clear leaf detail visible to confirm sugar beet traits."
+    },
+    {
+      "box": [
+        0.650390625,
+        0.6708984375,
+        0.1474609375,
+        0.16796875
+      ],
+      "detectionConfidence": 0.9452055096626282,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#qCM1J{tFlyrsMc&6-n/k?W(+MLPdQs*1c/@8)Ct)_?#'8?=Xh'eladYo0#!QjORPeDlFf]Gqhr$t73Un0^/KM!1qxjz.4S_r.nafkOJuh(52iB3dKjxSD^tXvM`(KH6Ev?-AKb9?FC5p/x-S8'Tuw8Er=5A3:pJiq'LHkl^w[YQFqr!L^sXk=@ue!#1WVDnV-#nh&oLD",
+        "width": 151,
+        "height": 172,
+        "bounds": {
+          "left": 666,
+          "top": 687,
+          "right": 817,
+          "bottom": 859
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-003",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.4,
+      "reasoning": "Insufficient clear leaf detail visible to confirm sugar beet traits."
+    },
+    {
+      "box": [
+        0.134765625,
+        0.2265625,
+        0.021484375,
+        0.03515625
+      ],
+      "detectionConfidence": 0.518796980381012,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!@IV^Hp)&zc@@$z1z58BG2kiPQ9)OH@0e`2",
+        "width": 22,
+        "height": 36,
+        "bounds": {
+          "left": 138,
+          "top": 232,
+          "right": 160,
+          "bottom": 268
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-004",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is indistinct with no assessable leaf structure."
+    },
+    {
+      "box": [
+        0.1943359375,
+        0.853515625,
+        0.0263671875,
+        0.03515625
+      ],
+      "detectionConfidence": 0.7037037014961243,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!?IB.g((yB$XEbd+5=C./5m-8_Rxo%7Q%S",
+        "width": 27,
+        "height": 36,
+        "bounds": {
+          "left": 199,
+          "top": 874,
+          "right": 226,
+          "bottom": 910
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-005",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is too small and blurred to confirm sugar beet leaf traits."
+    },
+    {
+      "box": [
+        0.099609375,
+        0.630859375,
+        0.0224609375,
+        0.029296875
+      ],
+      "detectionConfidence": 0.8202247023582458,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!BH-U{HsdWEF85u$_8hXDve^)mh/WxzF[RU=V",
+        "width": 23,
+        "height": 30,
+        "bounds": {
+          "left": 102,
+          "top": 646,
+          "right": 125,
+          "bottom": 676
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-006",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is too indistinct to verify crop versus weed morphology."
+    },
+    {
+      "box": [
+        0.0791015625,
+        0.3076171875,
+        0.052734375,
+        0.1357421875
+      ],
+      "detectionConfidence": 0.7770034670829773,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!pDo`p@jd`&JV7b_yONXd$m{01A`O8@IFdyRzbV[$Fv%WE13a'y-k)ju.mlse+d2SsrA{9c=ucQM1SkTLseICPF[7bw`Yf",
+        "width": 54,
+        "height": 139,
+        "bounds": {
+          "left": 81,
+          "top": 315,
+          "right": 135,
+          "bottom": 454
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-007",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.4,
+      "reasoning": "Seedling is thin and poorly resolved so sugar beet traits cannot be confirmed."
+    },
+    {
+      "box": [
+        0.2373046875,
+        0.3525390625,
+        0.0322265625,
+        0.0751953125
+      ],
+      "detectionConfidence": 0.7697842121124268,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!OHddISVsGB[DF3=6YuadcwynV'#Hgv)hD2GzKGT#R-r)3s^eJP/!!",
+        "width": 33,
+        "height": 77,
+        "bounds": {
+          "left": 243,
+          "top": 361,
+          "right": 276,
+          "bottom": 438
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-008",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Small green patch lacks clear leaves to confirm as crop."
+    },
+    {
+      "box": [
+        0.642578125,
+        0.0439453125,
+        0.072265625,
+        0.12890625
+      ],
+      "detectionConfidence": 0.921951174736023,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#-GNX:+T?qrcD^i`ga$:kx=!'$xpC4u*CojUB7ItVs:=7)8H6]ZD(4%sN&*Au8OgjCK5`uMI@@Q:hSXsc5u+m7ZG=ErH^avrh3Db2+_P^Hzn*axY*d2h6cS7)",
+        "width": 74,
+        "height": 132,
+        "bounds": {
+          "left": 658,
+          "top": 45,
+          "right": 732,
+          "bottom": 177
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-009",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.4,
+      "reasoning": "Small blurry seedling with narrow indistinct leaves lacks clear sugar beet shape."
+    }
+  ],
+  "errors": [],
+  "limited": false
+}

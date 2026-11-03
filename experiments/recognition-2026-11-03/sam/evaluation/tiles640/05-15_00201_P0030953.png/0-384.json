@@ -1,0 +1,103 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.9619140625,
+        0.861328125,
+        0.0380859375,
+        0.12109375
+      ],
+      "detectionConfidence": 0.7928802371025085,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!NFQKo-y:Tl4K5mn^O9.iIo3#s1jS7.Nx[FRmEW$JHusY1X9FY:R",
+        "width": 39,
+        "height": 124,
+        "bounds": {
+          "left": 985,
+          "top": 882,
+          "right": 1024,
+          "bottom": 1006
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.154296875,
+        0.115234375,
+        0.013671875,
+        0.048828125
+      ],
+      "detectionConfidence": 0.507692277431488,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!?HlQ=Vd&)3JL8LtIG)jqhJjpsqG7!O!O.",
+        "width": 14,
+        "height": 50,
+        "bounds": {
+          "left": 158,
+          "top": 118,
+          "right": 172,
+          "bottom": 168
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.177734375,
+        0.8251953125,
+        0.03515625,
+        0.0537109375
+      ],
+      "detectionConfidence": 0.7344398498535156,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!IJ?/xbiDt1_uDo]8Lb8PbQ9m!PpuTiCoi?U!qU/Q(%K2^",
+        "width": 36,
+        "height": 55,
+        "bounds": {
+          "left": 182,
+          "top": 845,
+          "right": 218,
+          "bottom": 900
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.7685546875,
+        0,
+        0.2314453125,
+        0.4794921875
+      ],
+      "detectionConfidence": 0.7500000596046448,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!$JrEHk!K-o*i-gJp2OmD[&S.tHD[CT$_SWFPdYug[]O^H7jo?jSW7$]x_=Kr'x#iG[bsCOWBbqeQCL.vuyO.F:RGrET4T^b$*[THxZQV*02iIQM{:8*9!dNOWcBWIS-Qmvj_C&SM=*`-oHXQiK35`]L@%Q?K(g=nUoIR.F'/Ap$ch^{rdjxC/MlNzXd%pVn:Oq${w=19VuI(`GDXM]D]Cflg]T[9TRc1JoE5nwfz`_XentSBjsos)wFBh{at6Ob@*4DJ",
+        "width": 237,
+        "height": 491,
+        "bounds": {
+          "left": 787,
+          "top": 0,
+          "right": 1024,
+          "bottom": 491
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 994
+}

@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-001",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.5,
+      "reasoning": "Small seedling with narrow leaves lacks clear broad beet features."
+    },
+    {
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is heavily blurred and cropped so leaf shape cannot be confirmed."
+    },
+    {
+      "id": "GP-003",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.93,
+      "reasoning": "Broad glossy wrinkled rosette leaves with prominent veins match sugar beet."
+    },
+    {
+      "id": "GP-004",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.55,
+      "reasoning": "Tiny seedling with few small leaves is too indistinct to confirm as beet."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 360,
+    "outputTokens": 2427,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.010640450000000001
+  },
+  "elapsed_ms": 17184
+}

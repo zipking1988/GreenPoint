@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-001",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Seedling is tiny and blurred with no clear broad crop leaves visible."
+    },
+    {
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.2,
+      "reasoning": "Image shows only soil with no distinguishable seedling structures."
+    },
+    {
+      "id": "GP-003",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.2,
+      "reasoning": "Image is too dark and indistinct to confirm leaf shape or crop traits."
+    },
+    {
+      "id": "GP-004",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.88,
+      "reasoning": "Broad green rosette leaves are consistent with young sugar beet crop."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 296,
+    "outputTokens": 1352,
+    "cachedTokens": 0,
+    "estimatedUsd": 0.006116
+  },
+  "elapsed_ms": 27997
+}

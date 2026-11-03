@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-005",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.1,
+      "reasoning": "No usable image is available to assess leaf shape or row context."
+    },
+    {
+      "id": "GP-006",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.1,
+      "reasoning": "No usable image is available to assess leaf shape or row context."
+    },
+    {
+      "id": "GP-007",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.1,
+      "reasoning": "No usable image is available to assess leaf shape or row context."
+    },
+    {
+      "id": "GP-008",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.1,
+      "reasoning": "No usable image is available to assess leaf shape or row context."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 305,
+    "outputTokens": 1119,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.0050127
+  },
+  "elapsed_ms": 9924
+}

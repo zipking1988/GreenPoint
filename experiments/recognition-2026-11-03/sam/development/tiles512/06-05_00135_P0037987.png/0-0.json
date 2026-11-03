@@ -1,0 +1,34 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.03515625,
+        0,
+        0.96484375,
+        1
+      ],
+      "detectionConfidence": 0.9452055096626282,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!5.AgWDG-QoA0^?(J=BJn{lZlqJ4A1(=+xx!Dn]sOZZ-Tl$V[N&ND]*oQT3=#@RdbvFX)b-WCv9CxhNIs#s-NPn?BED(ndN6ca?0@M:_s#7p@[Pfts63`AeV&5V&=7i!-)GDL7Vx[?MEA*vRJ3$02LBEc$8*py#m.4@uX.'d^krrj8neeF@9d[#@Qv-JWGCdLku9BL3H[W4b[[_je/jIY/wSi'`RTsitMX%:v%*0+a8ONU%7wQun]FiU2U`/NljB@e-9_t+4^zAJh/6#2A?1`Il6eO5oKyP1EaBn-WM+HWJdc8A26P&.ml{ZBb4`fE$UznH9]Bb{[6[IfuJ*uvCk2AsCgj__xMfP_akw%KW67(6TvtH-_#]!yIP)`C/Yse/:w4WH#kBT.cP5Q8c-yZ.RakUeU/zl($S/{(+*8#@KmIe@`bQ!r`&('UnDglFs`0zm=nNuRo`q:*q3]9b)jwhP?#&F8W?7&Lu{8wqcxiB#xk`]uWe2:!P]1a&&L8fG@!OLXM^TwWF):ce?u%T6RFnp4ijGe#[7wxtxx(&rhHl+3wf2J)q{K%nd=3Vj7FofYN/o_90YlWOnNQC5AO`S8GwV:m#g(Y)UsqZ2a^bd^a5Wca]bS4cK)pGggLWRlo@(jga8*Aj=[An9cziueke_R$Y9DDf%n]]Jb8?r!gQ%b5PQNq[LfPxj&P+C)I1sK'Q&MEHZ{Wo9xh9!.uI&`mW/zr#d$2dENg1#]r8L3#Dfd9AK&Xb2Bj0t?euoDFJ3=atn9E$3xa9RsP+!=DAO/=$?syHEux56:8&xZ:e9'T[3dquj-g?kLd&X:lr3BLL(XJ2s@295:g6ia3rh)'C776XtTtrx)2Tg*+8e]n0&4a9$]oXdy@njLe]a=vTDH`0!`{{?XxmJ`!*@''Nc=8rWu3I4nKMy!dcpb/(eCllq:vOW_TGTEARJ1rrfX`:b^_u3`ESb(Yj44PfAIo@.M=gG!XXIW4L0BLr*wfEbMnpSCqGdvycy98:FN.z3OY8q?q1WEVH8wMfPn+pkv-e3]h+5Kj9nM+:wqRwc*GUzu=uExapvyImVL6MI`h!bVcYuED!Y.plZ@66Db={OLA4=s-6-@mO`kPv-I0d0Jd_A2g0NyR4cFTV3USSNL^dh.9-gcF$Pma^EqmeiOihPo+jqsFg0i^(-JrL2DMp'*:-ieVG##Q!2(W%[Yw{Uri^aB0K=!p`m8cr=Vws)auXZnUdWxg#FC9?_2WQEwQCjhjT[7h97CjK-k$=wRxG'M67It4Kx$(VNe/oS1:`[jx?i&)gy=KH-0s(2xtafl-]7=o{c7v@*h&A{.N.INRwMqG9+_6R1.nrH5]`b-OvCg_xLDj$YdD*HJsuch'[mfK@Z?IFeWA[c{vDzN:&_p)&DcCzv3vu'`Dou5wSw_[uHO2dKJ5=Oq-_'MXuOYVgFy7Dh&hrXa9vWqlHMRU?gER9AuJqfV^93UXI#]{4g#czMB.(iV#^0sXh*Wt(xKhEaI4Yq6s-h27V5Do0t-3uO1MF{)ET6!y]SRCeVk'VJmZUK4{_)6_GUxF[zPkt2[2Fw^[ec6ubh7XX!FZ'g3%D+&{!^!+*xD8sm-L6J.iH0X(0Kd0I=S(2N/_6aTtNafE*t@*()^f?HWMhpJ:raw].(i4%(?.{*SWa0quX#J.(uE(ocp&tt2xRqq='884VX/Ay]5_^JSR1&5YF*)w-[-HrMMTKW4vzct/oG3chim@itmN.8Wyq.tbB)^VA`pS6_9^Htr{JVTly0zY.0pm3PSaSjse-BD1Yxsw]xHp9fGWz%`qNT7O]t0qI8Pk:Df*UiMASJzg&GBn]s/o$]G$8X9i6&{uZ?NGl$NSj(rLtPp&EY2hHP&Nc{or#=R6N62w8h#D]b$SOW7$-J.M]`sNXA^A$clDo.'V`hIkPb8SD6v33APl:_k%/5q[^un$",
+        "width": 988,
+        "height": 1024,
+        "bounds": {
+          "left": 36,
+          "top": 0,
+          "right": 1024,
+          "bottom": 1024
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 757
+}

@@ -1,0 +1,308 @@
+{
+  "image_id": "05-26_00174_P0034121.png",
+  "plants": [
+    {
+      "id": "faster-whole-0-0-0",
+      "box": [
+        0.0005100441048853099,
+        0.09025989472866058,
+        0.22583072661655024,
+        0.3259202390909195
+      ],
+      "label": "crop",
+      "score": 1.0,
+      "provenance": {
+        "model": "official PhenoBench Faster R-CNN",
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "touches_internal_tile_edge": false
+      },
+      "human_review_required": true,
+      "confidence_calibrated": false,
+      "expert_weed_fraction": 0.00010802894394146279,
+      "expert_foreground_pixels": 27620
+    },
+    {
+      "id": "faster-whole-0-0-1",
+      "box": [
+        0.3867676854133606,
+        0.0005958842812106013,
+        0.2919360399246216,
+        0.16862404171843082
+      ],
+      "label": "crop",
+      "score": 0.9999998807907104,
+      "provenance": {
+        "model": "official PhenoBench Faster R-CNN",
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "touches_internal_tile_edge": false
+      },
+      "human_review_required": true,
+      "confidence_calibrated": false,
+      "expert_weed_fraction": 9.465558832744136e-05,
+      "expert_foreground_pixels": 27251
+    },
+    {
+      "id": "faster-whole-0-0-2",
+      "box": [
+        0.49487215280532837,
+        0.9149211645126343,
+        0.25295817852020264,
+        0.08507883548736572
+      ],
+      "label": "crop",
+      "score": 0.9999997615814209,
+      "provenance": {
+        "model": "official PhenoBench Faster R-CNN",
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "touches_internal_tile_edge": false
+      },
+      "human_review_required": true,
+      "confidence_calibrated": false,
+      "expert_weed_fraction": 7.790541712893173e-05,
+      "expert_foreground_pixels": 10992
+    },
+    {
+      "id": "faster-whole-0-0-3",
+      "box": [
+        0.4852609932422638,
+        0.5128421187400818,
+        0.2709672749042511,
+        0.24209058284759521
+      ],
+      "label": "crop",
+      "score": 0.9999997615814209,
+      "provenance": {
+        "model": "official PhenoBench Faster R-CNN",
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "touches_internal_tile_edge": false
+      },
+      "human_review_required": true,
+      "confidence_calibrated": false,
+      "expert_weed_fraction": 0.00016036392480600625,
+      "expert_foreground_pixels": 25772
+    },
+    {
+      "id": "faster-whole-0-0-4",
+      "box": [
+        0.04574286937713623,
+        0.8912820219993591,
+        0.0781310498714447,
+        0.08642685413360596
+      ],
+      "label": "crop",
+      "score": 0.9999994039535522,
+      "provenance": {
+        "model": "official PhenoBench Faster R-CNN",
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "touches_internal_tile_edge": false
+      },
+      "human_review_required": true,
+      "confidence_calibrated": false,
+      "expert_weed_fraction": 0.0001388860255246982,
+      "expert_foreground_pixels": 2648
+    },
+    {
+      "id": "faster-whole-0-0-6",
+      "box": [
+        0.4827300012111664,
+        0.3263009190559387,
+        0.19737932085990906,
+        0.17556464672088623
+      ],
+      "label": "crop",
+      "score": 0.9999988079071045,
+      "provenance": {
+        "model": "official PhenoBench Faster R-CNN",
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "touches_internal_tile_edge": false
+      },
+      "human_review_required": true,
+      "confidence_calibrated": false,
+      "expert_weed_fraction": 0.00015413372602779418,
+      "expert_foreground_pixels": 17244
+    },
+    {
+      "id": "faster-whole-0-0-7",
+      "box": [
+        0.021339580416679382,
+        0.4405926465988159,
+        0.06270471960306168,
+        0.06919199228286743
+      ],
+      "label": "crop",
+      "score": 0.9999963045120239,
+      "provenance": {
+        "model": "official PhenoBench Faster R-CNN",
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "touches_internal_tile_edge": false
+      },
+      "human_review_required": true,
+      "confidence_calibrated": false,
+      "expert_weed_fraction": 0.0003680385125335306,
+      "expert_foreground_pixels": 1455
+    },
+    {
+      "id": "faster-whole-0-0-8",
+      "box": [
+        0.001359140849672258,
+        0.00239657168276608,
+        0.03845290618482977,
+        0.06288473005406559
+      ],
+      "label": "crop",
+      "score": 0.999993085861206,
+      "provenance": {
+        "model": "official PhenoBench Faster R-CNN",
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "touches_internal_tile_edge": false
+      },
+      "human_review_required": true,
+      "confidence_calibrated": false,
+      "expert_weed_fraction": 0.0005252203554846346,
+      "expert_foreground_pixels": 1331
+    },
+    {
+      "id": "faster-whole-0-0-9",
+      "box": [
+        0.043242111802101135,
+        0.6504553556442261,
+        0.05575452744960785,
+        0.07332825660705566
+      ],
+      "label": "crop",
+      "score": 0.9999921321868896,
+      "provenance": {
+        "model": "official PhenoBench Faster R-CNN",
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "touches_internal_tile_edge": false
+      },
+      "human_review_required": true,
+      "confidence_calibrated": false,
+      "expert_weed_fraction": 0.00010235650552203879,
+      "expert_foreground_pixels": 2215
+    },
+    {
+      "id": "faster-whole-0-0-15",
+      "box": [
+        0.26927225291728973,
+        0.7494376003742218,
+        0.008312970399856567,
+        0.016444236040115356
+      ],
+      "label": "weed",
+      "score": 0.9999628067016602,
+      "provenance": {
+        "model": "official PhenoBench Faster R-CNN",
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "touches_internal_tile_edge": false
+      },
+      "human_review_required": true,
+      "confidence_calibrated": false,
+      "expert_weed_fraction": 0.9982184171676636,
+      "expert_foreground_pixels": 90,
+      "semantic_component_id": 3,
+      "semantic_component_box": [
+        0.2705078125,
+        0.75,
+        0.0078125,
+        0.0166015625
+      ],
+      "original_box": [
+        0.26803669333457947,
+        0.7488752007484436,
+        0.008813440799713135,
+        0.016286909580230713
+      ]
+    },
+    {
+      "id": "faster-whole-0-0-19",
+      "box": [
+        0.7443690001964569,
+        0.05889149568974972,
+        0.018282920122146606,
+        0.014495206996798515
+      ],
+      "label": "weed",
+      "score": 0.9990335702896118,
+      "provenance": {
+        "model": "official PhenoBench Faster R-CNN",
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "touches_internal_tile_edge": false
+      },
+      "human_review_required": true,
+      "confidence_calibrated": false,
+      "expert_weed_fraction": 0.9988921880722046,
+      "expert_foreground_pixels": 177,
+      "semantic_component_id": 1,
+      "semantic_component_box": [
+        0.7451171875,
+        0.05859375,
+        0.01953125,
+        0.0166015625
+      ],
+      "original_box": [
+        0.7436208128929138,
+        0.059189241379499435,
+        0.017034590244293213,
+        0.01238885149359703
+      ]
+    }
+  ],
+  "limited": false,
+  "errors": []
+}

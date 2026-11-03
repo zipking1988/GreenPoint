@@ -1,0 +1,295 @@
+{
+  "model": "muse-spark-1.3",
+  "frame_id": "scout-1793652274236",
+  "decision": "human_review",
+  "reasoning": "Single frame completed with 7 candidates including possible weed cluster GP-001 and indistinct seedling GP-007; confidence uncalibrated, all require human review, weed-free cannot be inferred.",
+  "evidence_ids": [
+    "GP-001",
+    "GP-007"
+  ],
+  "requires_human_review": true,
+  "treatment_authorized": false,
+  "identity_scope": "this_response_only",
+  "trace": [
+    {
+      "type": "tool",
+      "name": "greenpoint_capabilities",
+      "arguments": {},
+      "result": {
+        "name": "GreenPoint",
+        "version": "1.0.0",
+        "transport": "streamable-http",
+        "stateless": true,
+        "tools": [
+          "greenpoint_capabilities",
+          "greenpoint_sample_inventory",
+          "greenpoint_analyze_frame"
+        ],
+        "public_tools": [
+          "greenpoint_capabilities",
+          "greenpoint_sample_inventory"
+        ],
+        "live_analysis_configured": true,
+        "analysis_authentication": "Authorization: Bearer <MCP_ACCESS_TOKEN>",
+        "authentication_mode": "owner_managed_token; no OAuth discovery",
+        "limits": {
+          "jpeg_bytes": 750000,
+          "crop_reference_bytes": 100000,
+          "frame_long_edge": 1280,
+          "plants_per_frame": 16,
+          "request_deadline_seconds": 110
+        },
+        "coordinate_system": "normalized_image_xywh",
+        "identity_scope": "one_frame_response",
+        "confidence_calibrated": false,
+        "requires_human_review": true,
+        "treatment_authorized": false,
+        "data_retention": "No images, results, or device sessions are persisted by this service.",
+        "model_processing": "Authorized live calls send the frame, same-source plant/context crops and any supplied crop reference to Meta.",
+        "unsupported": [
+          "flight_control",
+          "navigation",
+          "real_time_obstacle_avoidance",
+          "actuation",
+          "GPS_projection",
+          "cross_frame_tracking",
+          "browser_session_sync"
+        ]
+      }
+    },
+    {
+      "type": "tool",
+      "name": "greenpoint_analyze_frame",
+      "arguments": {
+        "frame_id": "scout-1793652274236"
+      },
+      "result": {
+        "schema_version": "1.1",
+        "mode": "live",
+        "status": "completed",
+        "frame_id": "scout-1793652274236",
+        "device_id": "muse-scouter-demo",
+        "captured_at": null,
+        "image": {
+          "width": 1024,
+          "height": 1024,
+          "coordinate_system": "normalized_image_xywh",
+          "origin": "top_left"
+        },
+        "coverage": "single_frame",
+        "identity_scope": "this_response_only",
+        "limited": false,
+        "candidate_count": 7,
+        "confidence_calibrated": false,
+        "requires_human_review": true,
+        "treatment_authorized": false,
+        "models": [
+          "sam-3.1",
+          "muse-spark-1.3"
+        ],
+        "plants": [
+          {
+            "id": "GP-001",
+            "box": [
+              0.09765625,
+              0.1484375,
+              0.109375,
+              0.1298828125
+            ],
+            "detection_confidence": 0.827957034111023,
+            "label": "uncertain",
+            "original_label": "weed",
+            "confidence": 0.72,
+            "reviewed": false,
+            "requires_human_review": true,
+            "reasoning": "Dense cluster of small toothed leaves differs from broad entire sugar beet leaves."
+          },
+          {
+            "id": "GP-002",
+            "box": [
+              0.576171875,
+              0.880859375,
+              0.384765625,
+              0.119140625
+            ],
+            "detection_confidence": 0.921951174736023,
+            "label": "crop",
+            "original_label": "crop",
+            "confidence": 0.88,
+            "reviewed": false,
+            "requires_human_review": true,
+            "reasoning": "Large broad wavy glossy leaves form a rosette typical of sugar beet."
+          },
+          {
+            "id": "GP-003",
+            "box": [
+              0.1669921875,
+              0.064453125,
+              0.14453125,
+              0.115234375
+            ],
+            "detection_confidence": 0.6878048777580261,
+            "label": "crop",
+            "original_label": "crop",
+            "confidence": 0.85,
+            "reviewed": false,
+            "requires_human_review": true,
+            "reasoning": "Rosette of broad petioled wavy leaves is consistent with young sugar beet."
+          },
+          {
+            "id": "GP-004",
+            "box": [
+              0.1943359375,
+              0.2939453125,
+              0.109375,
+              0.115234375
+            ],
+            "detection_confidence": 0.9336099624633789,
+            "label": "crop",
+            "original_label": "crop",
+            "confidence": 0.8,
+            "reviewed": false,
+            "requires_human_review": true,
+            "reasoning": "Small rosette of smooth oval entire leaves is consistent with young sugar beet."
+          },
+          {
+            "id": "GP-005",
+            "box": [
+              0.017578125,
+              0.3505859375,
+              0.3896484375,
+              0.6337890625
+            ],
+            "detection_confidence": 0.9532163739204407,
+            "label": "crop",
+            "original_label": "crop",
+            "confidence": 0.95,
+            "reviewed": false,
+            "requires_human_review": true,
+            "reasoning": "Large rosette of broad wavy crinkled leaves with pale midveins matches sugar beet."
+          },
+          {
+            "id": "GP-006",
+            "box": [
+              0.560546875,
+              0,
+              0.431640625,
+              0.4033203125
+            ],
+            "detection_confidence": 0.96875,
+            "label": "crop",
+            "original_label": "crop",
+            "confidence": 0.93,
+            "reviewed": false,
+            "requires_human_review": true,
+            "reasoning": "Dense rosette of broad blistered wavy-margined leaves is consistent with sugar beet."
+          },
+          {
+            "id": "GP-007",
+            "box": [
+              0.0859375,
+              0,
+              0.3193359375,
+              0.1171875
+            ],
+            "detection_confidence": 0.8083832263946533,
+            "label": "uncertain",
+            "original_label": "uncertain",
+            "confidence": 0.4,
+            "reviewed": false,
+            "requires_human_review": true,
+            "reasoning": "Blurred partial view of small lobed seedling beside large leaf is too indistinct to confirm."
+          }
+        ],
+        "crop_reference_used": false,
+        "classification_strategy": "baseline",
+        "usage": {
+          "estimatedUsd": 0.017379,
+          "requests": [
+            {
+              "model": "sam-3.1",
+              "images": 1,
+              "estimatedUsd": 0.0025
+            },
+            {
+              "model": "muse-spark-1.3",
+              "inputTokens": 387,
+              "outputTokens": 2053,
+              "cachedTokens": 0,
+              "estimatedUsd": 0.009209
+            },
+            {
+              "model": "muse-spark-1.3",
+              "inputTokens": 558,
+              "outputTokens": 1170,
+              "cachedTokens": 0,
+              "estimatedUsd": 0.00567
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "model_turns": [
+    {
+      "turn": 1,
+      "finish_reason": "tool_calls",
+      "requested_tools": [
+        "greenpoint_capabilities"
+      ],
+      "usage": {
+        "completion_tokens": 203,
+        "prompt_tokens": 675,
+        "total_tokens": 878,
+        "completion_tokens_details": {
+          "reasoning_tokens": 144
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "finish_reason": "tool_calls",
+      "requested_tools": [
+        "greenpoint_analyze_frame"
+      ],
+      "usage": {
+        "completion_tokens": 313,
+        "prompt_tokens": 1020,
+        "total_tokens": 1333,
+        "completion_tokens_details": {
+          "reasoning_tokens": 233
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "finish_reason": "stop",
+      "requested_tools": [],
+      "usage": {
+        "completion_tokens": 1034,
+        "prompt_tokens": 1561,
+        "total_tokens": 2595,
+        "completion_tokens_details": {
+          "reasoning_tokens": 965
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    }
+  ],
+  "recorded_at": "2026-11-02T20:45:01.029Z",
+  "endpoint": "https://greenpoint-vert.vercel.app/api/mcp",
+  "source_image": {
+    "width": 1024,
+    "height": 1024,
+    "prepared_image_sha256": "486df29e1fe0629d6ea6222a140282d7b90b13ed804c9aff6948d84f5cc70238"
+  },
+  "integration_scope": "Recorded real Muse→MCP run against production API commit b53ff1d; ordered tool availability and structured final answer; no physical device connected."
+}

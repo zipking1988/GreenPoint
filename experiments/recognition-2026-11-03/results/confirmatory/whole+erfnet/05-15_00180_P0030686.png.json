@@ -1,0 +1,181 @@
+{
+  "image_id": "05-15_00180_P0030686.png",
+  "source_sha256": "f8aedfc7f813032cdfa3ec2dd5d01bb2f5283236159bafce6f58572ca61acdab",
+  "geometry": "whole",
+  "plants": [
+    {
+      "id": "whole-0-0",
+      "box": [
+        0.609375,
+        0.8564453125,
+        0.140625,
+        0.1435546875
+      ],
+      "detectionConfidence": 0.9336099624633789,
+      "provenance": {
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "model_box": [
+          0.609375,
+          0.8564453125,
+          0.140625,
+          0.1435546875
+        ]
+      },
+      "mask_file": "masks/confirmatory/05-15_00180_P0030686.png/whole-0-0.png",
+      "mask_bounds": [
+        624,
+        877,
+        768,
+        1024
+      ],
+      "erfnet_means": [
+        0.09786196053028107,
+        0.7748340964317322,
+        0.12732067704200745
+      ],
+      "vegetation_probability": 0.902154803276062,
+      "class_purity": 0.8588704466819763,
+      "proposed_label": "crop",
+      "pooling": "official_sam_mask",
+      "label": "uncertain",
+      "confidence_calibrated": false,
+      "human_review_required": true
+    },
+    {
+      "id": "whole-0-1",
+      "box": [
+        0.083984375,
+        0.447265625,
+        0.0205078125,
+        0.0341796875
+      ],
+      "detectionConfidence": 0.5114504098892212,
+      "provenance": {
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "model_box": [
+          0.083984375,
+          0.447265625,
+          0.0205078125,
+          0.0341796875
+        ]
+      },
+      "mask_file": "masks/confirmatory/05-15_00180_P0030686.png/whole-0-1.png",
+      "mask_bounds": [
+        86,
+        458,
+        107,
+        493
+      ],
+      "erfnet_means": [
+        0.5240761041641235,
+        0.47542187571525574,
+        0.000505564734339714
+      ],
+      "vegetation_probability": 0.4759274423122406,
+      "class_purity": 0.998937726020813,
+      "proposed_label": "crop",
+      "pooling": "official_sam_mask",
+      "label": "uncertain",
+      "confidence_calibrated": false,
+      "human_review_required": true
+    },
+    {
+      "id": "whole-0-2",
+      "box": [
+        0.509765625,
+        0.443359375,
+        0.23046875,
+        0.1806640625
+      ],
+      "detectionConfidence": 0.9375000596046448,
+      "provenance": {
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "model_box": [
+          0.509765625,
+          0.443359375,
+          0.23046875,
+          0.1806640625
+        ]
+      },
+      "mask_file": "masks/confirmatory/05-15_00180_P0030686.png/whole-0-2.png",
+      "mask_bounds": [
+        522,
+        454,
+        758,
+        639
+      ],
+      "erfnet_means": [
+        0.05685076862573624,
+        0.941317081451416,
+        0.001865051337517798
+      ],
+      "vegetation_probability": 0.943182110786438,
+      "class_purity": 0.9980226159095764,
+      "proposed_label": "crop",
+      "pooling": "official_sam_mask",
+      "label": "crop",
+      "confidence_calibrated": false,
+      "human_review_required": true
+    },
+    {
+      "id": "whole-0-3",
+      "box": [
+        0.4921875,
+        0.220703125,
+        0.1708984375,
+        0.15234375
+      ],
+      "detectionConfidence": 0.941605806350708,
+      "provenance": {
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "model_box": [
+          0.4921875,
+          0.220703125,
+          0.1708984375,
+          0.15234375
+        ]
+      },
+      "mask_file": "masks/confirmatory/05-15_00180_P0030686.png/whole-0-3.png",
+      "mask_bounds": [
+        504,
+        226,
+        679,
+        382
+      ],
+      "erfnet_means": [
+        0.10574360191822052,
+        0.8941787481307983,
+        0.00010067553375847638
+      ],
+      "vegetation_probability": 0.894279420375824,
+      "class_purity": 0.9998874068260193,
+      "proposed_label": "crop",
+      "pooling": "official_sam_mask",
+      "label": "crop",
+      "confidence_calibrated": false,
+      "human_review_required": true
+    }
+  ],
+  "limited": false,
+  "errors": []
+}

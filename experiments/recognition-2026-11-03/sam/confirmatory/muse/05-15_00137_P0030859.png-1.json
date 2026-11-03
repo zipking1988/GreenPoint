@@ -1,0 +1,19 @@
+{
+  "plants": [
+    {
+      "id": "GP-005",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.45,
+      "reasoning": "Close-up shows only a partial broad green leaf without clear shape or row context."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 230,
+    "outputTokens": 1332,
+    "cachedTokens": 0,
+    "estimatedUsd": 0.0059485
+  },
+  "elapsed_ms": 12655
+}

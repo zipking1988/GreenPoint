@@ -1,0 +1,24 @@
+{
+  "before_confirmation_scores": true,
+  "registered_at_utc": "2026-11-03T10:01:23.136150+00:00",
+  "primary_selection_unchanged_sha256": "8325c20a6d9bc436c3ac4ccf06e7ca0d0d039d4950d12c76c41b24fca3ed1350",
+  "tiles_nms_only": {
+    "model": "yolo",
+    "geometry": "multiscale",
+    "weed_threshold": 0.83,
+    "nms_iou": 0.5,
+    "dedup": "none",
+    "expert_min_weed_fraction": 0.0,
+    "box_refinement": "none"
+  },
+  "tiles_containment": {
+    "model": "yolo",
+    "geometry": "multiscale",
+    "weed_threshold": 0.83,
+    "nms_iou": 0.5,
+    "dedup": "containment",
+    "expert_min_weed_fraction": 0.0,
+    "box_refinement": "none"
+  },
+  "purpose": "Report fixed geometric ablations; do not choose a new winner using confirmation scores."
+}

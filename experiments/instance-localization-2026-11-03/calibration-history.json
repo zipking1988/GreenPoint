@@ -1,0 +1,8 @@
+{
+  "confirmation_candidate_model_inference_started": false,
+  "confirmation_labels_scored": false,
+  "stage1": "Default/lower-threshold YOLO tests failed gates; preserved calibration-stage1-*.json.",
+  "stage2": "Confidence and semantic refinement tests: best high-precision config 58/99 TP, 58.6% recall, 92.1% precision; no confirmation inference/scoring before refinement.",
+  "stage3": "YOLO fine confidence calibration: 60/99 TP, 92.3% precision; waiting for independent Faster R-CNN calibration before final selection.",
+  "original_stage2_selection_file": "selection.json is an interim calibration artifact and will be archived before final model selection, with all history preserved."
+}

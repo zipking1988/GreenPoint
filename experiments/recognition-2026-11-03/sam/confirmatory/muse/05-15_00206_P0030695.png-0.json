@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-001",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is heavily blurred with no clear leaf detail visible."
+    },
+    {
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.55,
+      "reasoning": "Small rosette with narrow leaves is indistinct at this resolution."
+    },
+    {
+      "id": "GP-003",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.55,
+      "reasoning": "Broad green leaves are partly shadowed and indistinct for firm identification."
+    },
+    {
+      "id": "GP-004",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.85,
+      "reasoning": "Broad glossy wavy-margined leaves in rosette match young sugar beet."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 323,
+    "outputTokens": 1763,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.0077722
+  },
+  "elapsed_ms": 19058
+}

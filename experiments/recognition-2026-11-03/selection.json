@@ -1,0 +1,542 @@
+{
+  "geometry": "tiles640",
+  "purity": 0.9,
+  "cc_min_area": 64,
+  "foreground_probability_min": 0.5,
+  "nms_iou": 0.5,
+  "selected_on": "5 original development images only; model training overlap possible",
+  "frozen_before_evaluation": true,
+  "candidate_grid": [
+    {
+      "geometry": "tiles640",
+      "purity": 0.6,
+      "images": 5,
+      "gt_plants": 56,
+      "gt_weed": 16,
+      "gt_crop": 40,
+      "candidates": 61,
+      "candidate_matches": 41,
+      "weed_candidate_matches": 11,
+      "weed_predictions": 13,
+      "weed_tp": 11,
+      "crop_as_weed": 0,
+      "uncertain": 2,
+      "limited_images": 1,
+      "failed_images": 1,
+      "gt_weed_<=32": 7,
+      "matched_weed_<=32": 4,
+      "tp_weed_<=32": 4,
+      "gt_weed_33-64": 8,
+      "matched_weed_33-64": 6,
+      "tp_weed_33-64": 6,
+      "gt_weed_65-128": 1,
+      "matched_weed_65-128": 1,
+      "tp_weed_65-128": 1,
+      "gt_weed_>128": 0,
+      "matched_weed_>128": 0,
+      "tp_weed_>128": 0,
+      "weed_precision": 0.8461538461538461,
+      "weed_recall": 0.6875,
+      "weed_candidate_recall": 0.6875,
+      "detection_recall_iou50": 0.7321428571428571,
+      "crop_as_weed_rate": 0.0,
+      "uncertain_rate": 0.03278688524590164,
+      "weed_f1": 0.7586206896551724,
+      "target_gates_passed": false,
+      "small_target_bins": {
+        "<=32": {
+          "gt_weed": 7,
+          "candidate_matches": 4,
+          "weed_tp": 4
+        },
+        "33-64": {
+          "gt_weed": 8,
+          "candidate_matches": 6,
+          "weed_tp": 6
+        },
+        "65-128": {
+          "gt_weed": 1,
+          "candidate_matches": 1,
+          "weed_tp": 1
+        },
+        ">128": {
+          "gt_weed": 0,
+          "candidate_matches": 0,
+          "weed_tp": 0
+        }
+      }
+    },
+    {
+      "geometry": "tiles640",
+      "purity": 0.75,
+      "images": 5,
+      "gt_plants": 56,
+      "gt_weed": 16,
+      "gt_crop": 40,
+      "candidates": 61,
+      "candidate_matches": 41,
+      "weed_candidate_matches": 11,
+      "weed_predictions": 12,
+      "weed_tp": 11,
+      "crop_as_weed": 0,
+      "uncertain": 3,
+      "limited_images": 1,
+      "failed_images": 1,
+      "gt_weed_<=32": 7,
+      "matched_weed_<=32": 4,
+      "tp_weed_<=32": 4,
+      "gt_weed_33-64": 8,
+      "matched_weed_33-64": 6,
+      "tp_weed_33-64": 6,
+      "gt_weed_65-128": 1,
+      "matched_weed_65-128": 1,
+      "tp_weed_65-128": 1,
+      "gt_weed_>128": 0,
+      "matched_weed_>128": 0,
+      "tp_weed_>128": 0,
+      "weed_precision": 0.9166666666666666,
+      "weed_recall": 0.6875,
+      "weed_candidate_recall": 0.6875,
+      "detection_recall_iou50": 0.7321428571428571,
+      "crop_as_weed_rate": 0.0,
+      "uncertain_rate": 0.04918032786885246,
+      "weed_f1": 0.7857142857142857,
+      "target_gates_passed": true,
+      "small_target_bins": {
+        "<=32": {
+          "gt_weed": 7,
+          "candidate_matches": 4,
+          "weed_tp": 4
+        },
+        "33-64": {
+          "gt_weed": 8,
+          "candidate_matches": 6,
+          "weed_tp": 6
+        },
+        "65-128": {
+          "gt_weed": 1,
+          "candidate_matches": 1,
+          "weed_tp": 1
+        },
+        ">128": {
+          "gt_weed": 0,
+          "candidate_matches": 0,
+          "weed_tp": 0
+        }
+      }
+    },
+    {
+      "geometry": "tiles640",
+      "purity": 0.9,
+      "images": 5,
+      "gt_plants": 56,
+      "gt_weed": 16,
+      "gt_crop": 40,
+      "candidates": 61,
+      "candidate_matches": 41,
+      "weed_candidate_matches": 11,
+      "weed_predictions": 12,
+      "weed_tp": 11,
+      "crop_as_weed": 0,
+      "uncertain": 3,
+      "limited_images": 1,
+      "failed_images": 1,
+      "gt_weed_<=32": 7,
+      "matched_weed_<=32": 4,
+      "tp_weed_<=32": 4,
+      "gt_weed_33-64": 8,
+      "matched_weed_33-64": 6,
+      "tp_weed_33-64": 6,
+      "gt_weed_65-128": 1,
+      "matched_weed_65-128": 1,
+      "tp_weed_65-128": 1,
+      "gt_weed_>128": 0,
+      "matched_weed_>128": 0,
+      "tp_weed_>128": 0,
+      "weed_precision": 0.9166666666666666,
+      "weed_recall": 0.6875,
+      "weed_candidate_recall": 0.6875,
+      "detection_recall_iou50": 0.7321428571428571,
+      "crop_as_weed_rate": 0.0,
+      "uncertain_rate": 0.04918032786885246,
+      "weed_f1": 0.7857142857142857,
+      "target_gates_passed": true,
+      "small_target_bins": {
+        "<=32": {
+          "gt_weed": 7,
+          "candidate_matches": 4,
+          "weed_tp": 4
+        },
+        "33-64": {
+          "gt_weed": 8,
+          "candidate_matches": 6,
+          "weed_tp": 6
+        },
+        "65-128": {
+          "gt_weed": 1,
+          "candidate_matches": 1,
+          "weed_tp": 1
+        },
+        ">128": {
+          "gt_weed": 0,
+          "candidate_matches": 0,
+          "weed_tp": 0
+        }
+      }
+    },
+    {
+      "geometry": "tiles512",
+      "purity": 0.6,
+      "images": 5,
+      "gt_plants": 56,
+      "gt_weed": 16,
+      "gt_crop": 40,
+      "candidates": 71,
+      "candidate_matches": 42,
+      "weed_candidate_matches": 9,
+      "weed_predictions": 15,
+      "weed_tp": 9,
+      "crop_as_weed": 0,
+      "uncertain": 2,
+      "limited_images": 0,
+      "failed_images": 0,
+      "gt_weed_<=32": 7,
+      "matched_weed_<=32": 4,
+      "tp_weed_<=32": 4,
+      "gt_weed_33-64": 8,
+      "matched_weed_33-64": 4,
+      "tp_weed_33-64": 4,
+      "gt_weed_65-128": 1,
+      "matched_weed_65-128": 1,
+      "tp_weed_65-128": 1,
+      "gt_weed_>128": 0,
+      "matched_weed_>128": 0,
+      "tp_weed_>128": 0,
+      "weed_precision": 0.6,
+      "weed_recall": 0.5625,
+      "weed_candidate_recall": 0.5625,
+      "detection_recall_iou50": 0.75,
+      "crop_as_weed_rate": 0.0,
+      "uncertain_rate": 0.028169014084507043,
+      "weed_f1": 0.5806451612903225,
+      "target_gates_passed": false,
+      "small_target_bins": {
+        "<=32": {
+          "gt_weed": 7,
+          "candidate_matches": 4,
+          "weed_tp": 4
+        },
+        "33-64": {
+          "gt_weed": 8,
+          "candidate_matches": 4,
+          "weed_tp": 4
+        },
+        "65-128": {
+          "gt_weed": 1,
+          "candidate_matches": 1,
+          "weed_tp": 1
+        },
+        ">128": {
+          "gt_weed": 0,
+          "candidate_matches": 0,
+          "weed_tp": 0
+        }
+      }
+    },
+    {
+      "geometry": "tiles512",
+      "purity": 0.75,
+      "images": 5,
+      "gt_plants": 56,
+      "gt_weed": 16,
+      "gt_crop": 40,
+      "candidates": 71,
+      "candidate_matches": 42,
+      "weed_candidate_matches": 9,
+      "weed_predictions": 14,
+      "weed_tp": 9,
+      "crop_as_weed": 0,
+      "uncertain": 3,
+      "limited_images": 0,
+      "failed_images": 0,
+      "gt_weed_<=32": 7,
+      "matched_weed_<=32": 4,
+      "tp_weed_<=32": 4,
+      "gt_weed_33-64": 8,
+      "matched_weed_33-64": 4,
+      "tp_weed_33-64": 4,
+      "gt_weed_65-128": 1,
+      "matched_weed_65-128": 1,
+      "tp_weed_65-128": 1,
+      "gt_weed_>128": 0,
+      "matched_weed_>128": 0,
+      "tp_weed_>128": 0,
+      "weed_precision": 0.6428571428571429,
+      "weed_recall": 0.5625,
+      "weed_candidate_recall": 0.5625,
+      "detection_recall_iou50": 0.75,
+      "crop_as_weed_rate": 0.0,
+      "uncertain_rate": 0.04225352112676056,
+      "weed_f1": 0.6000000000000001,
+      "target_gates_passed": false,
+      "small_target_bins": {
+        "<=32": {
+          "gt_weed": 7,
+          "candidate_matches": 4,
+          "weed_tp": 4
+        },
+        "33-64": {
+          "gt_weed": 8,
+          "candidate_matches": 4,
+          "weed_tp": 4
+        },
+        "65-128": {
+          "gt_weed": 1,
+          "candidate_matches": 1,
+          "weed_tp": 1
+        },
+        ">128": {
+          "gt_weed": 0,
+          "candidate_matches": 0,
+          "weed_tp": 0
+        }
+      }
+    },
+    {
+      "geometry": "tiles512",
+      "purity": 0.9,
+      "images": 5,
+      "gt_plants": 56,
+      "gt_weed": 16,
+      "gt_crop": 40,
+      "candidates": 71,
+      "candidate_matches": 42,
+      "weed_candidate_matches": 9,
+      "weed_predictions": 14,
+      "weed_tp": 9,
+      "crop_as_weed": 0,
+      "uncertain": 3,
+      "limited_images": 0,
+      "failed_images": 0,
+      "gt_weed_<=32": 7,
+      "matched_weed_<=32": 4,
+      "tp_weed_<=32": 4,
+      "gt_weed_33-64": 8,
+      "matched_weed_33-64": 4,
+      "tp_weed_33-64": 4,
+      "gt_weed_65-128": 1,
+      "matched_weed_65-128": 1,
+      "tp_weed_65-128": 1,
+      "gt_weed_>128": 0,
+      "matched_weed_>128": 0,
+      "tp_weed_>128": 0,
+      "weed_precision": 0.6428571428571429,
+      "weed_recall": 0.5625,
+      "weed_candidate_recall": 0.5625,
+      "detection_recall_iou50": 0.75,
+      "crop_as_weed_rate": 0.0,
+      "uncertain_rate": 0.04225352112676056,
+      "weed_f1": 0.6000000000000001,
+      "target_gates_passed": false,
+      "small_target_bins": {
+        "<=32": {
+          "gt_weed": 7,
+          "candidate_matches": 4,
+          "weed_tp": 4
+        },
+        "33-64": {
+          "gt_weed": 8,
+          "candidate_matches": 4,
+          "weed_tp": 4
+        },
+        "65-128": {
+          "gt_weed": 1,
+          "candidate_matches": 1,
+          "weed_tp": 1
+        },
+        ">128": {
+          "gt_weed": 0,
+          "candidate_matches": 0,
+          "weed_tp": 0
+        }
+      }
+    }
+  ],
+  "cc_grid": [
+    {
+      "min_area": 4,
+      "images": 5,
+      "gt_plants": 56,
+      "gt_weed": 16,
+      "gt_crop": 40,
+      "candidates": 70,
+      "candidate_matches": 43,
+      "weed_candidate_matches": 13,
+      "weed_predictions": 33,
+      "weed_tp": 13,
+      "crop_as_weed": 1,
+      "uncertain": 0,
+      "limited_images": 0,
+      "failed_images": 0,
+      "gt_weed_<=32": 7,
+      "matched_weed_<=32": 5,
+      "tp_weed_<=32": 5,
+      "gt_weed_33-64": 8,
+      "matched_weed_33-64": 7,
+      "tp_weed_33-64": 7,
+      "gt_weed_65-128": 1,
+      "matched_weed_65-128": 1,
+      "tp_weed_65-128": 1,
+      "gt_weed_>128": 0,
+      "matched_weed_>128": 0,
+      "tp_weed_>128": 0,
+      "weed_precision": 0.3939393939393939,
+      "weed_recall": 0.8125,
+      "weed_candidate_recall": 0.8125,
+      "detection_recall_iou50": 0.7678571428571429,
+      "crop_as_weed_rate": 0.025,
+      "uncertain_rate": 0.0,
+      "weed_f1": 0.5306122448979591,
+      "target_gates_passed": false,
+      "small_target_bins": {
+        "<=32": {
+          "gt_weed": 7,
+          "candidate_matches": 5,
+          "weed_tp": 5
+        },
+        "33-64": {
+          "gt_weed": 8,
+          "candidate_matches": 7,
+          "weed_tp": 7
+        },
+        "65-128": {
+          "gt_weed": 1,
+          "candidate_matches": 1,
+          "weed_tp": 1
+        },
+        ">128": {
+          "gt_weed": 0,
+          "candidate_matches": 0,
+          "weed_tp": 0
+        }
+      }
+    },
+    {
+      "min_area": 16,
+      "images": 5,
+      "gt_plants": 56,
+      "gt_weed": 16,
+      "gt_crop": 40,
+      "candidates": 64,
+      "candidate_matches": 43,
+      "weed_candidate_matches": 13,
+      "weed_predictions": 30,
+      "weed_tp": 13,
+      "crop_as_weed": 1,
+      "uncertain": 0,
+      "limited_images": 0,
+      "failed_images": 0,
+      "gt_weed_<=32": 7,
+      "matched_weed_<=32": 5,
+      "tp_weed_<=32": 5,
+      "gt_weed_33-64": 8,
+      "matched_weed_33-64": 7,
+      "tp_weed_33-64": 7,
+      "gt_weed_65-128": 1,
+      "matched_weed_65-128": 1,
+      "tp_weed_65-128": 1,
+      "gt_weed_>128": 0,
+      "matched_weed_>128": 0,
+      "tp_weed_>128": 0,
+      "weed_precision": 0.43333333333333335,
+      "weed_recall": 0.8125,
+      "weed_candidate_recall": 0.8125,
+      "detection_recall_iou50": 0.7678571428571429,
+      "crop_as_weed_rate": 0.025,
+      "uncertain_rate": 0.0,
+      "weed_f1": 0.5652173913043479,
+      "target_gates_passed": false,
+      "small_target_bins": {
+        "<=32": {
+          "gt_weed": 7,
+          "candidate_matches": 5,
+          "weed_tp": 5
+        },
+        "33-64": {
+          "gt_weed": 8,
+          "candidate_matches": 7,
+          "weed_tp": 7
+        },
+        "65-128": {
+          "gt_weed": 1,
+          "candidate_matches": 1,
+          "weed_tp": 1
+        },
+        ">128": {
+          "gt_weed": 0,
+          "candidate_matches": 0,
+          "weed_tp": 0
+        }
+      }
+    },
+    {
+      "min_area": 64,
+      "images": 5,
+      "gt_plants": 56,
+      "gt_weed": 16,
+      "gt_crop": 40,
+      "candidates": 52,
+      "candidate_matches": 40,
+      "weed_candidate_matches": 12,
+      "weed_predictions": 20,
+      "weed_tp": 12,
+      "crop_as_weed": 0,
+      "uncertain": 0,
+      "limited_images": 0,
+      "failed_images": 0,
+      "gt_weed_<=32": 7,
+      "matched_weed_<=32": 4,
+      "tp_weed_<=32": 4,
+      "gt_weed_33-64": 8,
+      "matched_weed_33-64": 7,
+      "tp_weed_33-64": 7,
+      "gt_weed_65-128": 1,
+      "matched_weed_65-128": 1,
+      "tp_weed_65-128": 1,
+      "gt_weed_>128": 0,
+      "matched_weed_>128": 0,
+      "tp_weed_>128": 0,
+      "weed_precision": 0.6,
+      "weed_recall": 0.75,
+      "weed_candidate_recall": 0.75,
+      "detection_recall_iou50": 0.7142857142857143,
+      "crop_as_weed_rate": 0.0,
+      "uncertain_rate": 0.0,
+      "weed_f1": 0.6666666666666665,
+      "target_gates_passed": false,
+      "small_target_bins": {
+        "<=32": {
+          "gt_weed": 7,
+          "candidate_matches": 4,
+          "weed_tp": 4
+        },
+        "33-64": {
+          "gt_weed": 8,
+          "candidate_matches": 7,
+          "weed_tp": 7
+        },
+        "65-128": {
+          "gt_weed": 1,
+          "candidate_matches": 1,
+          "weed_tp": 1
+        },
+        ">128": {
+          "gt_weed": 0,
+          "candidate_matches": 0,
+          "weed_tp": 0
+        }
+      }
+    }
+  ],
+  "selection_rule": "Highest weed F1 among development precision >=.9 and crop-as-weed <=.05 if any; else highest F1. Fewer tiles breaks geometry ties."
+}

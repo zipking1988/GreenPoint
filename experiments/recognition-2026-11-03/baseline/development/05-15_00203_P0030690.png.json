@@ -1,0 +1,245 @@
+{
+  "image_id": "05-15_00203_P0030690.png",
+  "config": "baseline",
+  "limited": false,
+  "plants": [
+    {
+      "id": "GP-001",
+      "box": [
+        0.6337890625,
+        0.490234375,
+        0.01953125,
+        0.02734375
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!AI5/-o.-Vrp!-8-bv(c`UMdgMIDda/W)5UD",
+        "width": 20,
+        "height": 28,
+        "bounds": {
+          "left": 649,
+          "top": 502,
+          "right": 669,
+          "bottom": 530
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.25,
+      "reasoning": "Thumbnail is too dark and indistinct to verify sugar beet leaf traits."
+    },
+    {
+      "id": "GP-002",
+      "box": [
+        0.734375,
+        0.8330078125,
+        0.09375,
+        0.103515625
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!yCnucmju6q&QCn#D:-_{&M/`YZ!kd!4&&4)Ej@cU5K8ccQ3Jepjj2B&Yc[Y[L:RQ**osjgXsE6V$?vf4{O!u]DoCgXmbsR%hlI#&dE1v",
+        "width": 96,
+        "height": 106,
+        "bounds": {
+          "left": 752,
+          "top": 853,
+          "right": 848,
+          "bottom": 959
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Small green seedling is visible but resolution is too low to confirm crop."
+    },
+    {
+      "id": "GP-003",
+      "box": [
+        0.197265625,
+        0.599609375,
+        0.0234375,
+        0.048828125
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!CNS]4wn_07Jqk9KGsuixAN7-%S1Wl@lI.`q%!!",
+        "width": 24,
+        "height": 50,
+        "bounds": {
+          "left": 202,
+          "top": 614,
+          "right": 226,
+          "bottom": 664
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.2,
+      "reasoning": "Image is too small and blurred to assess leaf shape."
+    },
+    {
+      "id": "GP-004",
+      "box": [
+        0.1474609375,
+        0.16015625,
+        0.033203125,
+        0.01953125
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!8JLIyv*'QC%KWFd8dTcwy2lifb_r",
+        "width": 34,
+        "height": 20,
+        "bounds": {
+          "left": 151,
+          "top": 164,
+          "right": 185,
+          "bottom": 184
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.2,
+      "reasoning": "View shows only soil texture without clear seedling detail."
+    },
+    {
+      "id": "GP-005",
+      "box": [
+        0.6845703125,
+        0,
+        0.021484375,
+        0.0390625
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!=G+a=s'{7i`DM=y(13E+FZO%:p0kA]D",
+        "width": 22,
+        "height": 40,
+        "bounds": {
+          "left": 701,
+          "top": 0,
+          "right": 723,
+          "bottom": 40
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Seedling is too small and blurred to confirm broad sugar beet leaves."
+    },
+    {
+      "id": "GP-006",
+      "box": [
+        0.6640625,
+        0.7177734375,
+        0.0302734375,
+        0.06640625
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!NEa@prJ4XwOnPyJjeyJ'bXUbMbqnwd!g3{i.e5+86S):NOveG(J",
+        "width": 31,
+        "height": 68,
+        "bounds": {
+          "left": 680,
+          "top": 735,
+          "right": 711,
+          "bottom": 803
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.4,
+      "reasoning": "Foliage is indistinct and blurred so crop leaf shape cannot be confirmed."
+    },
+    {
+      "id": "GP-007",
+      "box": [
+        0.4638671875,
+        0.677734375,
+        0.0283203125,
+        0.0400390625
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!DGaC3q=2dpy7ykMhW'_!/3eM6t@{[k.v0wlatLo",
+        "width": 29,
+        "height": 41,
+        "bounds": {
+          "left": 475,
+          "top": 694,
+          "right": 504,
+          "bottom": 735
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image shows mostly soil with no clear seedling leaves visible."
+    },
+    {
+      "id": "GP-008",
+      "box": [
+        0.2099609375,
+        0.822265625,
+        0.015625,
+        0.03515625
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!:K)aEqYJdYM=^zj#G#9n+s3b6^N6Jb",
+        "width": 16,
+        "height": 36,
+        "bounds": {
+          "left": 215,
+          "top": 842,
+          "right": 231,
+          "bottom": 878
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Plant is heavily occluded and blurred preventing leaf assessment."
+    }
+  ],
+  "usages": [
+    {
+      "model": "sam-3.1",
+      "images": 1,
+      "estimatedUsd": 0.0025
+    },
+    {
+      "model": "muse-spark-1.3",
+      "inputTokens": 260,
+      "outputTokens": 1378,
+      "cachedTokens": 0,
+      "estimatedUsd": 0.0061815
+    },
+    {
+      "model": "muse-spark-1.3",
+      "inputTokens": 252,
+      "outputTokens": 1067,
+      "cachedTokens": 0,
+      "estimatedUsd": 0.00484975
+    }
+  ],
+  "reference_id": null
+}

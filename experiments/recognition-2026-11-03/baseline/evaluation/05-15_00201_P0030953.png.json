@@ -1,0 +1,131 @@
+{
+  "image_id": "05-15_00201_P0030953.png",
+  "config": "baseline",
+  "limited": false,
+  "errors": [],
+  "plants": [
+    {
+      "id": "GP-001",
+      "box": [
+        0.5576171875,
+        0.48046875,
+        0.1787109375,
+        0.2158203125
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!$KA{GG_+gbToZC$N?ZW:m(3Ba0JEX/F:H]tKVc10ld/TjSr6sW?vCe(o[=Y:&a%aRV37u%DT'd(3PS6tb/:=%blIuUhwvGsvi=fs.tVB9SaV5u]Vd1=aG%Os+:/$JvzKy./t0'pD&/jZhX)'an_Fx=khSIX63CIvgh8Q6GgC=(*KlM!N-UudK#8ItS^%Bzo2=WNu_^sE!(a1c+dd5%w@dOn&qeL5zR6R#b:jAiclx6no]mNm_nhxpgD'yU8I&]l=To1&K",
+        "width": 183,
+        "height": 221,
+        "bounds": {
+          "left": 571,
+          "top": 492,
+          "right": 754,
+          "bottom": 713
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.9,
+      "reasoning": "Broad glossy ovate leaves forming a rosette match young sugar beet."
+    },
+    {
+      "id": "GP-002",
+      "box": [
+        0.6005859375,
+        0.9140625,
+        0.162109375,
+        0.0859375
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!xGuuI++d5JJEenfhfMzIGur[c2q!se0]v)f{U=Jw2EIc::d8h5]]sC@Tfl4I'LnK&6e0JLwsg%=J+PhU']'Cx+Y:^=60+llK_&G*y]]",
+        "width": 166,
+        "height": 88,
+        "bounds": {
+          "left": 615,
+          "top": 936,
+          "right": 781,
+          "bottom": 1024
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.4,
+      "reasoning": "Heavily cropped partial view prevents clear assessment of leaf shape."
+    },
+    {
+      "id": "GP-003",
+      "box": [
+        0.40234375,
+        0.2734375,
+        0.01953125,
+        0.0244140625
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!:J=N^1ODg@.Uch!`2a-vsY{oo:5Iun",
+        "width": 20,
+        "height": 25,
+        "bounds": {
+          "left": 412,
+          "top": 280,
+          "right": 432,
+          "bottom": 305
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is too tiny and blurred to assess leaf morphology."
+    },
+    {
+      "id": "GP-004",
+      "box": [
+        0.48046875,
+        0.228515625,
+        0.236328125,
+        0.232421875
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!$HA)el:L9#m{hJoa&#=XZ8%H9(:o7{5=(EO7O-I&j1ug/&ee!e0:)?d^@8$fD`R^+:.ken?UAVR/i?g(x92^f9@kw(YZ5wu6^CNFA4JVm7k&_(@kj%(atu/=*XN3@Xmd25PEO-BY1oEK6r$?v%Mjlqp38q=lZ)J/46Jp$*YPDm8_2(68P0HkYSKV%q+%KD+iC/[iWL8JsyvR^ztL9QHlAY_'n+jckCS9K.R6u@(:'1`OD+9rfnEKptBgcEySis#Np",
+        "width": 242,
+        "height": 238,
+        "bounds": {
+          "left": 492,
+          "top": 234,
+          "right": 734,
+          "bottom": 472
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.88,
+      "reasoning": "Rosette of broad wavy-margined green leaves is consistent with sugar beet."
+    }
+  ],
+  "usages": [
+    {
+      "model": "sam-3.1",
+      "images": 1,
+      "estimatedUsd": 0.0025
+    },
+    {
+      "model": "muse-spark-1.3",
+      "inputTokens": 515,
+      "outputTokens": 1275,
+      "cachedTokens": 113,
+      "estimatedUsd": 0.0059382
+    }
+  ],
+  "reference_id": null
+}

@@ -1,0 +1,21 @@
+This tiny plant was labeled crop. The annotation says weed. GreenPoint makes that disagreement inspectable.
+
+For growers reviewing scattered fields, a label alone isn't enough. Our online flow uses Sam three point one for plant regions, and Muse Spark for structured visual suggestions.
+
+Select a candidate. Its box connects to pixels from that exact source image. Zoom and pan: the evidence stays with the plant. Here, the model suggests weed. I keep it for review and save. The original suggestion and my decision remain separate.
+
+Switch to the video inventory, then export. The same review follows the session. The CSV preserves the original label, human status, source, and run identity.
+
+Muse can request evidence too. In this separate recorded run, it discovers our M C P tools and requests authenticated frame perception. Seven candidates come back. Muse cites evidence IDs and chooses human review.
+
+We then tested a local agricultural expert, using published PhenoBench weights. This is real CPU inference on the same RGB frame, with no annotations sent to the model. It is a research prototype, separate from the online Meta flow.
+
+On this selected example, the previous pipeline missed a fifty-one-pixel weed. The agricultural detector recovers its box. Both views show the same source pixels, checked against the public annotation.
+
+We chose settings on twenty calibration images, then evaluated forty different images. On that same comparison, weed precision rose from seventy-six point one to ninety-six point seven percent. Recall stayed near sixty-one percent. False weed flags fell from thirty-seven to four.
+
+Tiles add fragments. Containment cleanup raised tile precision from eighty-seven point two to ninety-two point five percent, with sixty-three point three percent recall.
+
+The smallest weeds remain difficult: nineteen of seventy targets at thirty-two pixels or less were recovered. Human review stays essential. This is public-data validation; movement tracking and independent farm trials remain unvalidated.
+
+Inspectable Meta evidence. Traceable human decisions. A tested local recognition prototype. Next: cloud integration and farmer trials. GreenPoint. Every judgment has a frame.

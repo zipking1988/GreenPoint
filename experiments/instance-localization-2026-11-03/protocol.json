@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "objective": "Improve small-plant localization and fragment deduplication, run real agricultural instance detection, and seek weed precision >= .90, recall >= .60, crop-as-weed <= .05 before resuming any video work.",
+  "previous_experiment": "../recognition-2026-11-03",
+  "previous_confirmation": "20 previously inspected val images, 78 weeds: original 2 TP, whole SAM + ERFNet 25 TP/26 predictions, tiled hybrid 31 TP/39 predictions. Diagnostic comparisons only.",
+  "agricultural_instance_model": "Official PhenoBench YOLOv7 plant detection, pretrained by authors; no GreenPoint training. Faster R-CNN optional second official baseline if useful.",
+  "data_selection": {
+    "seed": "instance-localization-v2-20261103",
+    "source": "https://www.phenobench.org/data/PhenoBench-v110.zip",
+    "development": "20 new official val images for threshold and postprocessing calibration; exclude all previous 45 and smoke image.",
+    "confirmation": "Next 40 new official val images in SHA256(seed:filename) order, image-disjoint from calibration and every prior image; frozen before inference.",
+    "scope": "Same public sugar-beet domain. Author checkpoint may have used official val for model selection. Neither independent-farm validation nor Japanese phone-camera validation."
+  },
+  "comparisons": ["frozen_previous_whole_SAM_ERFNet", "frozen_previous_tiled_SAM_ERFNet", "official_YOLOv7_whole", "YOLOv7_multiscale", "fragment_deduplication_ablation", "agricultural_instance_candidates_with_ERFNet_verification"],
+  "optimization": "Use calibration images only. Freeze complete score thresholds, tile geometry, merging and expert-verification rule before confirmation scoring. No repeated tuning on final images. Do not drop failures, partial plants or small annotations.",
+  "metrics": "Same class-agnostic one-to-one greedy box IoU >= .5 as prior experiment. Weed precision/recall, crop-as-weed, small-target bins <=32/33-64/65-128/>128 source pixels. Pixel IoU separate.",
+  "budget": {"shared_ledger": "/Users/zip/.codex/worktrees/color-refinement/GreenPoint/reviews/hackathon-sprint-2026-11-03/budget.json", "initial_estimated_or_held_usd": 2.570849, "new_experiments_stop_usd": 8, "total_usd": 10, "regression_reserve_usd": 2, "no_automatic_paid_retries": true},
+  "guardrails": ["Video remains paused.", "RGB alone enters inference; annotations are scoring-only.", "Model weights from official sources; inspect checkpoint globals and use restricted weight loading.", "Do not claim original pretrained weights or training as ours.", "Do not claim a passed target unless the frozen method passes on the complete new confirmation cohort."]
+}

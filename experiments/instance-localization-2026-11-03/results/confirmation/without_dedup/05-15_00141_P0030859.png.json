@@ -1,0 +1,193 @@
+{
+  "image_id": "05-15_00141_P0030859.png",
+  "plants": [
+    {
+      "id": "whole-0-0-126",
+      "box": [
+        0.8405695557594299,
+        0.12769144773483276,
+        0.15241563320159912,
+        0.21744990348815918
+      ],
+      "label": "crop",
+      "score": 0.9797229170799255,
+      "provenance": {
+        "model": "official PhenoBench YOLOv7",
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "local_box": [
+          0.8405695557594299,
+          0.12769144773483276,
+          0.15241563320159912,
+          0.21744990348815918
+        ],
+        "touches_internal_tile_edge": false
+      },
+      "human_review_required": true,
+      "confidence_calibrated": false,
+      "expert_weed_fraction": 9.509806841379032e-05,
+      "expert_foreground_pixels": 12151
+    },
+    {
+      "id": "whole-0-0-91",
+      "box": [
+        0.9024897813796997,
+        0.42384061217308044,
+        0.027762413024902344,
+        0.04213511943817139
+      ],
+      "label": "crop",
+      "score": 0.9297345876693726,
+      "provenance": {
+        "model": "official PhenoBench YOLOv7",
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "local_box": [
+          0.9024897813796997,
+          0.42384061217308044,
+          0.027762413024902344,
+          0.04213511943817139
+        ],
+        "touches_internal_tile_edge": false
+      },
+      "human_review_required": true,
+      "confidence_calibrated": false,
+      "expert_weed_fraction": 0.0008129518828354776,
+      "expert_foreground_pixels": 369
+    },
+    {
+      "id": "whole-0-0-25",
+      "box": [
+        0.9260458946228027,
+        0.6428768634796143,
+        0.013666391372680664,
+        0.030387401580810547
+      ],
+      "label": "crop",
+      "score": 0.8966291546821594,
+      "provenance": {
+        "model": "official PhenoBench YOLOv7",
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "local_box": [
+          0.9260458946228027,
+          0.6428768634796143,
+          0.013666391372680664,
+          0.030387401580810547
+        ],
+        "touches_internal_tile_edge": false
+      },
+      "human_review_required": true,
+      "confidence_calibrated": false,
+      "expert_weed_fraction": 0.00045577369746752083,
+      "expert_foreground_pixels": 236
+    },
+    {
+      "id": "whole-0-0-42",
+      "box": [
+        0.3382625877857208,
+        0.10197053849697113,
+        0.012928962707519531,
+        0.0323672741651535
+      ],
+      "label": "crop",
+      "score": 0.8519911170005798,
+      "provenance": {
+        "model": "official PhenoBench YOLOv7",
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "local_box": [
+          0.3382625877857208,
+          0.10197053849697113,
+          0.012928962707519531,
+          0.0323672741651535
+        ],
+        "touches_internal_tile_edge": false
+      },
+      "human_review_required": true,
+      "confidence_calibrated": false,
+      "expert_weed_fraction": 0.0008150647045113146,
+      "expert_foreground_pixels": 213
+    },
+    {
+      "id": "whole-0-0-76",
+      "box": [
+        0.9112351536750793,
+        0.8673100471496582,
+        0.049015164375305176,
+        0.009562492370605469
+      ],
+      "label": "crop",
+      "score": 0.7311516404151917,
+      "provenance": {
+        "model": "official PhenoBench YOLOv7",
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "local_box": [
+          0.9112351536750793,
+          0.8673100471496582,
+          0.049015164375305176,
+          0.009562492370605469
+        ],
+        "touches_internal_tile_edge": false
+      },
+      "human_review_required": true,
+      "confidence_calibrated": false,
+      "expert_weed_fraction": 0.00043473413097672164,
+      "expert_foreground_pixels": 346
+    },
+    {
+      "id": "whole-0-0-87",
+      "box": [
+        0.35228127241134644,
+        0.3260783553123474,
+        0.031004369258880615,
+        0.03608971834182739
+      ],
+      "label": "crop",
+      "score": 0.5781807899475098,
+      "provenance": {
+        "model": "official PhenoBench YOLOv7",
+        "geometry": "whole",
+        "tile": [
+          0,
+          0,
+          1024
+        ],
+        "local_box": [
+          0.35228127241134644,
+          0.3260783553123474,
+          0.031004369258880615,
+          0.03608971834182739
+        ],
+        "touches_internal_tile_edge": false
+      },
+      "human_review_required": true,
+      "confidence_calibrated": false,
+      "expert_weed_fraction": 0.17236457765102386,
+      "expert_foreground_pixels": 349
+    }
+  ],
+  "limited": false,
+  "errors": []
+}

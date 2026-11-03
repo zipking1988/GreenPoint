@@ -1,0 +1,57 @@
+{
+  "selected": "baseline",
+  "criterion": "development weed F1 minus 2*crop-as-weed rate; ties precision, then simpler strategy; frozen before evaluation",
+  "aggregates": {
+    "baseline": {
+      "images": 5,
+      "ground_truth_plants": 56,
+      "ground_truth_weed": 16,
+      "ground_truth_crop": 40,
+      "detected_candidates": 37,
+      "weed_predictions": 0,
+      "weed_true_positives": 0,
+      "weed_precision": 0,
+      "weed_recall": 0,
+      "weed_f1": 0,
+      "crop_as_weed_rate": 0,
+      "uncertain_rate": 0.7837837837837838,
+      "detection_recall_iou50": 0.625,
+      "partial_images": 0,
+      "target_gates_passed": false
+    },
+    "context": {
+      "images": 5,
+      "ground_truth_plants": 56,
+      "ground_truth_weed": 16,
+      "ground_truth_crop": 40,
+      "detected_candidates": 37,
+      "weed_predictions": 0,
+      "weed_true_positives": 0,
+      "weed_precision": 0,
+      "weed_recall": 0,
+      "weed_f1": 0,
+      "crop_as_weed_rate": 0,
+      "uncertain_rate": 0.7027027027027027,
+      "detection_recall_iou50": 0.625,
+      "partial_images": 0,
+      "target_gates_passed": false
+    },
+    "reference": {
+      "images": 5,
+      "ground_truth_plants": 56,
+      "ground_truth_weed": 16,
+      "ground_truth_crop": 40,
+      "detected_candidates": 37,
+      "weed_predictions": 6,
+      "weed_true_positives": 2,
+      "weed_precision": 0.3333333333333333,
+      "weed_recall": 0.125,
+      "weed_f1": 0.18181818181818182,
+      "crop_as_weed_rate": 0.1,
+      "uncertain_rate": 0.5945945945945946,
+      "detection_recall_iou50": 0.625,
+      "partial_images": 1,
+      "target_gates_passed": false
+    }
+  }
+}

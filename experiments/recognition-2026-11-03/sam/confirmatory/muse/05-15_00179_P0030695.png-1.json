@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-005",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.88,
+      "reasoning": "Rosette of broad glossy rounded leaves matches sugar beet seedling."
+    },
+    {
+      "id": "GP-006",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.15,
+      "reasoning": "Image is too tiny and blurred to discern leaf morphology."
+    },
+    {
+      "id": "GP-007",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.15,
+      "reasoning": "Only a partial leaf edge is visible preventing reliable identification."
+    },
+    {
+      "id": "GP-008",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.87,
+      "reasoning": "Rosette of broad glossy rounded leaves matches sugar beet seedling."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 436,
+    "outputTokens": 1070,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.0049682
+  },
+  "elapsed_ms": 12009
+}

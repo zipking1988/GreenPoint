@@ -1,0 +1,80 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.7685546875,
+        0.384765625,
+        0.2314453125,
+        0.5859375
+      ],
+      "detectionConfidence": 0.827957034111023,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!%9A&wqInh9M)i839P8rqfGi:dqkx@9At^m1M4mfU4?@TqwbhVvw/^oZ5q[ciJLbTRAZK$KGRe735!)!iF.!`vHd:F3Bbw)Wv.B:3X^x*OH=kd3ZGs%U)W?Ca'r_J%bgiN_fh[EI{!9NI+YQR?&v=zxdRihL#aJj#+(jJ(*mDgERZ&_mHlIZn_F4wSRP/^:O:xn1'htJCzxI.Ud#u(98y=9vdn5pB-'SQajc#6:nFxE!ihL@Jfja{$/V:uJEkw:b5FwsuL:(6oU6@fJf(2kJn?)o=e{m!lt#.dWC*w@LOoP7bp&Si&nYKnwS/mfBk=[qe8o'^MlRD@2vy=ROq:6/DeZeRV2+!!",
+        "width": 237,
+        "height": 600,
+        "bounds": {
+          "left": 787,
+          "top": 394,
+          "right": 1024,
+          "bottom": 994
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.6474609375,
+        0.4404296875,
+        0.0283203125,
+        0.03515625
+      ],
+      "detectionConfidence": 0.7229437232017517,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!DJpKFoBaG3Ychn=zP_RG1)epC?4HJ+sx2(7Y!!!",
+        "width": 29,
+        "height": 36,
+        "bounds": {
+          "left": 663,
+          "top": 451,
+          "right": 692,
+          "bottom": 487
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.1220703125,
+        0,
+        0.02734375,
+        0.0673828125
+      ],
+      "detectionConfidence": 0.5816993117332458,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!LFQzI=P$vz1GM6F_dmzXu#P=q^$VUEj:]dRe1Q985Cm2M^(UE",
+        "width": 28,
+        "height": 69,
+        "bounds": {
+          "left": 125,
+          "top": 0,
+          "right": 153,
+          "bottom": 69
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 783
+}

@@ -1,0 +1,11 @@
+.venv/
+weights/
+data/
+probabilities/
+private/
+.env*
+!*.example
+__pycache__/
+node_modules/
+*.zip
+vendor/erfnet.py

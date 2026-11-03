@@ -1,0 +1,100 @@
+{
+  "selected": {
+    "model": "yolo",
+    "geometry": "whole",
+    "weed_threshold": 0.83,
+    "nms_iou": 0.5,
+    "dedup": "none",
+    "expert_min_weed_fraction": 0.0,
+    "box_refinement": "none"
+  },
+  "calibration_metrics": {
+    "weed_tp": 60,
+    "weed_predictions": 65,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.9230769230769231,
+    "weed_recall": 0.6060606060606061,
+    "weed_f1": 0.7317073170731707,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": true
+  },
+  "models": {
+    "yolo": {
+      "selected": {
+        "config": {
+          "model": "yolo",
+          "geometry": "whole",
+          "weed_threshold": 0.83,
+          "nms_iou": 0.5,
+          "dedup": "none",
+          "expert_min_weed_fraction": 0.0,
+          "box_refinement": "none"
+        },
+        "weed_tp": 60,
+        "weed_predictions": 65,
+        "gt_weed": 99,
+        "crop_as_weed": 1,
+        "gt_crop": 164,
+        "weed_precision": 0.9230769230769231,
+        "weed_recall": 0.6060606060606061,
+        "weed_f1": 0.7317073170731707,
+        "crop_as_weed_rate": 0.006097560975609756,
+        "target_gates_passed": true
+      },
+      "baseline": {
+        "model": "yolo",
+        "geometry": "whole",
+        "weed_threshold": 0.25,
+        "nms_iou": 0.65,
+        "dedup": "none",
+        "expert_min_weed_fraction": 0.0,
+        "box_refinement": "none"
+      },
+      "grid_variants": 768,
+      "cohort": "20 new official val calibration only",
+      "confirmation_scores_seen": false
+    },
+    "faster": {
+      "selected": {
+        "config": {
+          "model": "faster",
+          "geometry": "whole",
+          "weed_threshold": 0.99,
+          "nms_iou": 0.5,
+          "dedup": "containment",
+          "expert_min_weed_fraction": 0.5,
+          "box_refinement": "semantic_blend"
+        },
+        "weed_tp": 69,
+        "weed_predictions": 84,
+        "gt_weed": 99,
+        "crop_as_weed": 1,
+        "gt_crop": 164,
+        "weed_precision": 0.8214285714285714,
+        "weed_recall": 0.696969696969697,
+        "weed_f1": 0.7540983606557378,
+        "crop_as_weed_rate": 0.006097560975609756,
+        "target_gates_passed": false
+      },
+      "baseline": {
+        "model": "faster",
+        "geometry": "whole",
+        "weed_threshold": 0.6,
+        "nms_iou": 0.5,
+        "dedup": "none",
+        "expert_min_weed_fraction": 0.0,
+        "box_refinement": "none"
+      },
+      "grid_variants": 768,
+      "cohort": "20 new official val calibration only",
+      "confirmation_scores_seen": false
+    }
+  },
+  "frozen_at_utc": "2026-11-03T09:59:18.668979+00:00",
+  "confirmation_candidate_predictions_seen": false,
+  "confirmation_scores_seen": false,
+  "rule": "Prefer calibration precision>=.95 and recall>=.65, crop-as-weed<=.05; else 90/60/5 pass; else precision>=.90 safety; maximize recall, then precision; if none safe maximize F1.",
+  "notes": "Earlier failed calibration stages preserved. No confirmation labels informed any selection. Existing previous-model baseline recordings may run before this candidate freeze."
+}

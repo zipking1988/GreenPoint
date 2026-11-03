@@ -1,0 +1,175 @@
+{
+  "image_id": "05-15_00136_P0030943.png",
+  "plants": [
+    {
+      "box": [
+        0.853515625,
+        0.4970703125,
+        0.0126953125,
+        0.044921875
+      ],
+      "detectionConfidence": 0.5586206912994385,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!@IVN(fGjg!0'PmB+m5HID5xZEDLirSV!!!",
+        "width": 13,
+        "height": 46,
+        "bounds": {
+          "left": 874,
+          "top": 509,
+          "right": 887,
+          "bottom": 555
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-001",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is too tiny and blurred to confirm leaf shape."
+    },
+    {
+      "box": [
+        0.234375,
+        0.490234375,
+        0.1826171875,
+        0.2197265625
+      ],
+      "detectionConfidence": 0.9139785170555115,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!$$C!{*vis/RHq'cK&2d+:vNN@[vRdiGvl82tBgRZ1gtE*YdH2Lk#dqGY4ApwYd[]&N./(t&4WP8?yByJ?1nP!x-V!JOHdri)MJ7TlD#XSsO6@IQsuof4[X#t)ZhAk.tL!CbrE1t8+Hgi*Nc#LT.StpXz6JOgmLx$97cLO-I)7H?2QpzC%/Lr!7wjc*4J%gk?wyb5RPwU82RFZ#UFY4@?]Z1J6",
+        "width": 187,
+        "height": 225,
+        "bounds": {
+          "left": 240,
+          "top": 502,
+          "right": 427,
+          "bottom": 727
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-002",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.88,
+      "reasoning": "Rosette of broad glossy ovate leaves matches sugar beet."
+    },
+    {
+      "box": [
+        0.2119140625,
+        0.3369140625,
+        0.177734375,
+        0.1396484375
+      ],
+      "detectionConfidence": 0.8987342119216919,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#gCM4vi:/X!5G&[[iBXfmsF-xgeV29(pI%ZWTp[R1znN#B+RMy`i+.B).]L3e2=_`AI*8_3eh'S#[^[xXLR#^x*b4JXf:3O(*lZU]/7ZkuNw933W`3HD!SQr_94XD_Z(4-khkN52)QQrr=:GZqtlT2i&j$x8FC]z&C4{nC3=$2@iP{q^RmWog8Nj{R#!!",
+        "width": 182,
+        "height": 143,
+        "bounds": {
+          "left": 217,
+          "top": 345,
+          "right": 399,
+          "bottom": 488
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-003",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.86,
+      "reasoning": "Broad wavy glossy rosette leaves are consistent with sugar beet."
+    },
+    {
+      "box": [
+        0.76953125,
+        0,
+        0.1806640625,
+        0.2197265625
+      ],
+      "detectionConfidence": 0.9452055096626282,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!$(CfdhG(Ie&B:42N_Hc4Z65J0%5toVf1WE29Cb#(M!e6kQaazCci?=Ao&EUysDP5OZtg`qHG2]mi9(:xz2iTr0Y4@.FeDpmeAMoSFB[X)q$bPRp&J!J)rm@g5]I9O`YSiYNF26JAGE{9.)FX[im/b)nqF*:'=MNrJzI5KcgdXc+bnb5'zKx&[6q$aX#+R/P10cl&&VhB^(=m{1SlVwti-Z=k]oI:1/",
+        "width": 185,
+        "height": 225,
+        "bounds": {
+          "left": 788,
+          "top": 0,
+          "right": 973,
+          "bottom": 225
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-004",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.25,
+      "reasoning": "No usable image detail is visible for assessment."
+    },
+    {
+      "box": [
+        0.3857421875,
+        0.2099609375,
+        0.0302734375,
+        0.0361328125
+      ],
+      "detectionConfidence": 0.7229437232017517,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!EHOM=7Dmi7ho:]Phwxiam5X@6S'(O)X82]0YGsXk",
+        "width": 31,
+        "height": 37,
+        "bounds": {
+          "left": 395,
+          "top": 215,
+          "right": 426,
+          "bottom": 252
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-005",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is too blurred and small to confirm sugar beet leaf features."
+    },
+    {
+      "box": [
+        0.8447265625,
+        0.3046875,
+        0.015625,
+        0.044921875
+      ],
+      "detectionConfidence": 0.5114504098892212,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!@He94yoix&RR).7.4U&U@7)o/nbB+'#]]5",
+        "width": 16,
+        "height": 46,
+        "bounds": {
+          "left": 865,
+          "top": 312,
+          "right": 881,
+          "bottom": 358
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-006",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is too blurred and small to confirm sugar beet leaf features."
+    }
+  ],
+  "errors": [],
+  "limited": false
+}

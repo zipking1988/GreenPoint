@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-005",
+      "label": "weed",
+      "originalLabel": "weed",
+      "confidence": 0.75,
+      "reasoning": "Narrow pointed toothed leaves differ from broad rounded sugar beet leaves."
+    },
+    {
+      "id": "GP-006",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.92,
+      "reasoning": "Broad wavy ovate leaves with pale midveins form a basal rosette typical of sugar beet."
+    },
+    {
+      "id": "GP-007",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Plant is largely out of frame with only partial leaves visible."
+    },
+    {
+      "id": "GP-008",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.25,
+      "reasoning": "Image is tiny and blurred with indistinct leaf shape."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 380,
+    "outputTokens": 1637,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.00730795
+  },
+  "elapsed_ms": 13942
+}

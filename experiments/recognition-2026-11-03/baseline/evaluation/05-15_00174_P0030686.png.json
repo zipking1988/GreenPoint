@@ -1,0 +1,165 @@
+{
+  "image_id": "05-15_00174_P0030686.png",
+  "config": "baseline",
+  "limited": false,
+  "errors": [],
+  "plants": [
+    {
+      "id": "GP-001",
+      "box": [
+        0.8896484375,
+        0.02734375,
+        0.0439453125,
+        0.060546875
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!![F/jEMOH?WAKkDN8(J9T$l(%$UTt1`v2r[H'[9@D1$8`ZQ8?rYVb9h9hHhD7HUG]kOhV",
+        "width": 45,
+        "height": 62,
+        "bounds": {
+          "left": 911,
+          "top": 28,
+          "right": 956,
+          "bottom": 90
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Seedling is tiny and blurred with no clear leaf shape visible."
+    },
+    {
+      "id": "GP-002",
+      "box": [
+        0.341796875,
+        0.7001953125,
+        0.1201171875,
+        0.123046875
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#FB^%!hTH*EM_m]%iL5[82$la]!mnn&Yy$:a{U4bGO.oqX1/{jB1wz$HaqS&{.8$Q=]b2r2A$c#{J58g/E4pgPMt:wT3j^i2@Bn$qW9g'ticHQedTCQ6!ev6^LkRu^(*UDn.=:?Xj*D8Tz:7Agt!!",
+        "width": 123,
+        "height": 126,
+        "bounds": {
+          "left": 350,
+          "top": 717,
+          "right": 473,
+          "bottom": 843
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.88,
+      "reasoning": "Broad ovate wavy green leaves in rosette match young sugar beet."
+    },
+    {
+      "id": "GP-003",
+      "box": [
+        0.9267578125,
+        0.6748046875,
+        0.0263671875,
+        0.041015625
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!BL9_OY1elRy4'[rQ.sW4!MyZxqc6L+#I75Q!",
+        "width": 27,
+        "height": 42,
+        "bounds": {
+          "left": 949,
+          "top": 691,
+          "right": 976,
+          "bottom": 733
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.25,
+      "reasoning": "Image shows mostly soil with indistinct seedling detail."
+    },
+    {
+      "id": "GP-004",
+      "box": [
+        0.2890625,
+        0.0380859375,
+        0.0908203125,
+        0.1142578125
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#7FQR5QTn6hqf--'KW/P0IdLPBy]vq2hp/E?CfUKv-Js[]Mikkd{X2bFvblh^^prBj*JlIEe^r&^M8@bQos)rKHQlFGO4]Vw1W].wli]tgw/J)ea[+fgw[E{YtL$sp_(WP2N!!",
+        "width": 93,
+        "height": 117,
+        "bounds": {
+          "left": 296,
+          "top": 39,
+          "right": 389,
+          "bottom": 156
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "crop",
+      "confidence": 0.7,
+      "reasoning": "Small rosette of smooth oval leaves is consistent with young sugar beet."
+    },
+    {
+      "id": "GP-005",
+      "box": [
+        0.3193359375,
+        0.291015625,
+        0.08203125,
+        0.083984375
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!bDa6Bqu:G8@JW#n46@=gEGPG'$7]ZSN$'V'w/0Zwqw1NEHll!pKi4tx*()*2U0s=Ogedt_D_LmB",
+        "width": 84,
+        "height": 86,
+        "bounds": {
+          "left": 327,
+          "top": 298,
+          "right": 411,
+          "bottom": 384
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.5,
+      "reasoning": "Low-resolution seedling with broad green leaves lacks clear detail to confirm sugar beet."
+    }
+  ],
+  "usages": [
+    {
+      "model": "sam-3.1",
+      "images": 1,
+      "estimatedUsd": 0.0025
+    },
+    {
+      "model": "muse-spark-1.3",
+      "inputTokens": 303,
+      "outputTokens": 1527,
+      "cachedTokens": 0,
+      "estimatedUsd": 0.0068685
+    },
+    {
+      "model": "muse-spark-1.3",
+      "inputTokens": 237,
+      "outputTokens": 1338,
+      "cachedTokens": 0,
+      "estimatedUsd": 0.00598275
+    }
+  ],
+  "reference_id": null
+}

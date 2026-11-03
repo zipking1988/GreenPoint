@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-001",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is too small and indistinct to verify sugar beet leaf traits."
+    },
+    {
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is too small and indistinct to verify sugar beet leaf traits."
+    },
+    {
+      "id": "GP-003",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Visible green leaves lack clear shape detail to confirm crop."
+    },
+    {
+      "id": "GP-004",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Small seedling appears blurred and ambiguous for crop confirmation."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 307,
+    "outputTokens": 1490,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.00659195
+  },
+  "elapsed_ms": 12918
+}

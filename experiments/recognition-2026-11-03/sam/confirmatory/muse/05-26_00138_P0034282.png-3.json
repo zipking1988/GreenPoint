@@ -1,0 +1,26 @@
+{
+  "plants": [
+    {
+      "id": "GP-013",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Blurry single narrow green leaf on soil lacks distinct sugar beet shape."
+    },
+    {
+      "id": "GP-014",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Very small dark blurry patch on soil shows no clear leaves."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 234,
+    "outputTokens": 1295,
+    "cachedTokens": 0,
+    "estimatedUsd": 0.00579625
+  },
+  "elapsed_ms": 11241
+}

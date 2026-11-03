@@ -1,0 +1,246 @@
+{
+  "image_id": "05-15_00178_P0030686.png",
+  "config": "baseline",
+  "limited": false,
+  "errors": [],
+  "plants": [
+    {
+      "id": "GP-001",
+      "box": [
+        0.72265625,
+        0.927734375,
+        0.02734375,
+        0.0244140625
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!AJ:q?Z:A=yFS{FyI)u`MCW0UBXL=AbZT(@X",
+        "width": 28,
+        "height": 25,
+        "bounds": {
+          "left": 740,
+          "top": 950,
+          "right": 768,
+          "bottom": 975
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.2,
+      "reasoning": "No distinct leaves are visible due to blur and low resolution."
+    },
+    {
+      "id": "GP-002",
+      "box": [
+        0.5908203125,
+        0.951171875,
+        0.0185546875,
+        0.03515625
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!8JqQQRd?Way6ZshiH6pPI_GSaQk.",
+        "width": 19,
+        "height": 36,
+        "bounds": {
+          "left": 605,
+          "top": 974,
+          "right": 624,
+          "bottom": 1010
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.2,
+      "reasoning": "Image is too small and indistinct to confirm leaf shape."
+    },
+    {
+      "id": "GP-003",
+      "box": [
+        0,
+        0.2138671875,
+        0.0908203125,
+        0.08984375
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!epAfN[._^841.wSy_Z9%`IDkII1+3Q)6'=W4x%QL@m-?x.JWOsCn0a(m(UZts`V(ACL&yt&*LkKY+xr",
+        "width": 93,
+        "height": 92,
+        "bounds": {
+          "left": 0,
+          "top": 219,
+          "right": 93,
+          "bottom": 311
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.45,
+      "reasoning": "Tiny seedling shows rounded green leaves but detail is insufficient for confident crop confirmation."
+    },
+    {
+      "id": "GP-004",
+      "box": [
+        0,
+        0.61328125,
+        0.091796875,
+        0.1279296875
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#%EA6=ut6v`Yj]qvba9X{FIlSahd@KjTk`C?hW_sznie(p1FxW3K&vJe[?:&+w]UCC*t=L#dZ+6kT/-_m+0%T7x]PImXcGFYP($I3t:%dU32:G$z",
+        "width": 94,
+        "height": 131,
+        "bounds": {
+          "left": 0,
+          "top": 628,
+          "right": 94,
+          "bottom": 759
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.75,
+      "reasoning": "Young rosette of broad glossy leaves matches expected sugar beet morphology."
+    },
+    {
+      "id": "GP-005",
+      "box": [
+        0.50390625,
+        0.685546875,
+        0.162109375,
+        0.1806640625
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#yE&zNuHFNfH`afcPn-Da5[Mda?$Dg:U$Xo2`^xQ!moQy2vR0S?iy&JoZnck`s[!yoS%tliK%]%c!D^49.k!f&tu5-%7POll`iI[c__xliokXC[c=^[5A@oN{sUbdAjoz]sTLo9DMPB)(tq3@TmbZg8@r5%:6u9xqZVnS#W+2Yk=7]fAUcZED9$#k=729(8cvvz^3oWka].zFY.%2R=",
+        "width": 166,
+        "height": 185,
+        "bounds": {
+          "left": 516,
+          "top": 702,
+          "right": 682,
+          "bottom": 887
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.92,
+      "reasoning": "Central rosette of broad glossy wavy-margined leaves matches sugar beet."
+    },
+    {
+      "id": "GP-006",
+      "box": [
+        0,
+        0,
+        0.0361328125,
+        0.125
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!![q1piZgwqR_.ml8$A2_IOSc&S'wffLeRJ2y59I7zS%lxS{]q03S7#X@yfCPKms@+x[+A",
+        "width": 37,
+        "height": 128,
+        "bounds": {
+          "left": 0,
+          "top": 0,
+          "right": 37,
+          "bottom": 128
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Image is severely cropped and blurred with only an indistinct leaf fragment visible."
+    },
+    {
+      "id": "GP-007",
+      "box": [
+        0,
+        0.3828125,
+        0.0869140625,
+        0.1689453125
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#-D1Dk#ehSj(a-+udZzVV5C!+X*Oy6Ds^kmJ'x]v'Uy#QiU1PzE*(3)=p[^E7oGJ%$'/obh:7rDoQ9PDTo%QepNBET!L8S(i-Bh)c#v9H_uwUxNN1f%%4hrEe",
+        "width": 89,
+        "height": 173,
+        "bounds": {
+          "left": 0,
+          "top": 392,
+          "right": 89,
+          "bottom": 565
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.84,
+      "reasoning": "Broad glossy upright leaves with beet-like shape and texture are visible."
+    },
+    {
+      "id": "GP-008",
+      "box": [
+        0,
+        0.8505859375,
+        0.1298828125,
+        0.1494140625
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#ODm?^C&sV@E[EhlH[3zImc[Iq_0_@dXr%ETwP?R+-b)tG2=s9XgSmPfd:Byw%640zk_glUTbHOle=h{lo07*d:hXB)F17z[=8CJN21LYf/c_OL&3!6b]^r+2.j@DDjWmF9oI'=frS@d2!0Mch=EBc%Sg0{STk$!",
+        "width": 133,
+        "height": 153,
+        "bounds": {
+          "left": 0,
+          "top": 871,
+          "right": 133,
+          "bottom": 1024
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.87,
+      "reasoning": "Rosette of broad glossy green leaves consistent with young sugar beet."
+    }
+  ],
+  "usages": [
+    {
+      "model": "sam-3.1",
+      "images": 1,
+      "estimatedUsd": 0.0025
+    },
+    {
+      "model": "muse-spark-1.3",
+      "inputTokens": 293,
+      "outputTokens": 1515,
+      "cachedTokens": 0,
+      "estimatedUsd": 0.006805
+    },
+    {
+      "model": "muse-spark-1.3",
+      "inputTokens": 411,
+      "outputTokens": 1071,
+      "cachedTokens": 113,
+      "estimatedUsd": 0.0049412
+    }
+  ],
+  "reference_id": null
+}

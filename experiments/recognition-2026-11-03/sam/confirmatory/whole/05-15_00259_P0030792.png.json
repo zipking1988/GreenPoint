@@ -1,0 +1,67 @@
+{
+  "image_id": "05-15_00259_P0030792.png",
+  "geometry": "whole",
+  "views": [
+    {
+      "x": 0,
+      "y": 0,
+      "tileSize": 1024,
+      "modelSize": 1024,
+      "detections": [
+        {
+          "box": [
+            0.0810546875,
+            0.5576171875,
+            0.166015625,
+            0.37890625
+          ],
+          "detectionConfidence": 0.827957034111023,
+          "mask": {
+            "encoding": "one_bit",
+            "payload": "!!!!%VC2/tF(qTChJkT]{FC2h&b?_{2gg^sG?n[t^)nbokx%lATwlDfDl!!B$[GB.BBwgs+_x_OXY=lN6l2[=xaD(mUJAU7lmDX0Shx.$a`J%-$_{9.*5+%5_WygIRe(.jIy*`L*/E*&+bNxh(?8Y$.PB6u+4+EMdg`RTbPQte_5g8Cj'9EVtv=Y8zaD-wMdVD.5mIg&xXE/w1mUE$=loOHn/ZiYjCr(lY)H[W'@88x/k+XhV4=04=OIZ6Krqg&/Pp(tr'jo:KU9(%:njVh.g%l-&D6oU4^-8!yRC8CGP@!'OeI]++JDhc.3vr@2Xx2/##ziAR+#b/pC#Cun`qywpl{NsO8**=cgEHDkoyGo-Pt{$0?10]-1Qn%eI{_baBg=G",
+            "width": 170,
+            "height": 388,
+            "bounds": {
+              "left": 83,
+              "top": 571,
+              "right": 253,
+              "bottom": 959
+            },
+            "sourceWidth": 1024,
+            "sourceHeight": 1024
+          }
+        },
+        {
+          "box": [
+            0.025390625,
+            0,
+            0.1494140625,
+            0.0732421875
+          ],
+          "detectionConfidence": 0.9139785170555115,
+          "mask": {
+            "encoding": "one_bit",
+            "payload": "!!!!#.FjerJPRam@-[Y*9pJRzvN'!a{UpgExI:.Cp3%4!Vp7#Qu/Ete!F'Q($#wb-G!q.Q#`.X]Z6sH`).q)l0Od{oxs2'dadqL'14X8*[E1{R_4[n:n4b_*yf$8bW",
+            "width": 153,
+            "height": 75,
+            "bounds": {
+              "left": 26,
+              "top": 0,
+              "right": 179,
+              "bottom": 75
+            },
+            "sourceWidth": 1024,
+            "sourceHeight": 1024
+          }
+        }
+      ],
+      "limited": false,
+      "usage": {
+        "model": "sam-3.1",
+        "images": 1,
+        "estimatedUsd": 0.0025
+      },
+      "elapsed_ms": 767
+    }
+  ]
+}

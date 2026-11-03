@@ -1,0 +1,22 @@
+{
+  "selected": {
+    "geometry": "whole",
+    "weed_threshold": 0.85,
+    "nms_iou": 0.5,
+    "dedup": "none",
+    "expert_min_weed_fraction": 0.0,
+    "box_refinement": "none"
+  },
+  "baseline": {
+    "geometry": "whole",
+    "weed_threshold": 0.25,
+    "nms_iou": 0.65,
+    "dedup": "none",
+    "expert_min_weed_fraction": 0.0,
+    "box_refinement": "none"
+  },
+  "selected_on": "20 new official-val calibration images only",
+  "grid_variants": 480,
+  "rule": "Prefer precision >=95% and recall >=65%, crop-as-weed <=5%; else passing 90/60/5; else precision >=90% safety set; maximize recall, then precision, then fewer views and simpler postprocessing.",
+  "frozen_at_utc": "2026-11-03T09:50:21.060613+00:00"
+}

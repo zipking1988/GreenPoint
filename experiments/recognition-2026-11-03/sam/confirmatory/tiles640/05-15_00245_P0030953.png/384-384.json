@@ -1,0 +1,103 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.5595703125,
+        0.3271484375,
+        0.0546875,
+        0.0400390625
+      ],
+      "detectionConfidence": 0.7500000596046448,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!IDg0-)a$[me[4b+kw6xJa_EG7w(Rm$9H3]qEgw&udpf]l",
+        "width": 56,
+        "height": 41,
+        "bounds": {
+          "left": 573,
+          "top": 335,
+          "right": 629,
+          "bottom": 376
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.5322265625,
+        0.9580078125,
+        0.1435546875,
+        0.0419921875
+      ],
+      "detectionConfidence": 0.8048780560493469,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!YB1VT5qp)`m5io?MXBcJyTv'5kvr0UO?fKr.D&mmDM]T4doeb7@@TSaG7DH/cwcFP",
+        "width": 147,
+        "height": 43,
+        "bounds": {
+          "left": 545,
+          "top": 981,
+          "right": 692,
+          "bottom": 1024
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.4833984375,
+        0,
+        0.236328125,
+        0.169921875
+      ],
+      "detectionConfidence": 0.9452055096626282,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#`CHBq26[oHaRx&Wf]'OZDWWG^xgF_ycaFedf1=A[vu{Vb!I6!*+`8LRRW2HFBYV#6VhV#{^G:8514Ph3ZS2P:y@f]5Eh{P(i0N-=PGHpUf(#Th(9FHQ-k4/?B_mYme(BwP`8zJKH$EiP'vz.7r@W#ERt8+i6[+b8_YvyG)`3kX9=M9ro_d{",
+        "width": 242,
+        "height": 174,
+        "bounds": {
+          "left": 495,
+          "top": 0,
+          "right": 737,
+          "bottom": 174
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.7861328125,
+        0.55859375,
+        0.0556640625,
+        0.0703125
+      ],
+      "detectionConfidence": 0.518796980381012,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!![Dpo!^eS#mxZ_Yux6GmG7$QrOFp-9c1j!lw%xk1x1/h44HlV*RapWlpM7ZK%w&01NP!!",
+        "width": 57,
+        "height": 72,
+        "bounds": {
+          "left": 805,
+          "top": 572,
+          "right": 862,
+          "bottom": 644
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 1891
+}

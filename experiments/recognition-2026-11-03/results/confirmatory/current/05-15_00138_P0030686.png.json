@@ -1,0 +1,91 @@
+{
+  "image_id": "05-15_00138_P0030686.png",
+  "plants": [
+    {
+      "box": [
+        0.9404296875,
+        0.1474609375,
+        0.0595703125,
+        0.0439453125
+      ],
+      "detectionConfidence": 0.859649121761322,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!MHm+eAAg!$.vJ8s()D/%/29xHDRsJ]dsix-*.)nI3%C)!4D(iP",
+        "width": 61,
+        "height": 45,
+        "bounds": {
+          "left": 963,
+          "top": 151,
+          "right": 1024,
+          "bottom": 196
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-001",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.4,
+      "reasoning": "Single leaf is blurred and cropped with insufficient shape detail."
+    },
+    {
+      "box": [
+        0.84375,
+        0.0869140625,
+        0.0419921875,
+        0.0361328125
+      ],
+      "detectionConfidence": 0.6878048777580261,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!MDpyPYU=vtzHYaF?@RNMdTrm)7f$nb@TN][PI9vS*)qRWf!!!!",
+        "width": 43,
+        "height": 37,
+        "bounds": {
+          "left": 864,
+          "top": 89,
+          "right": 907,
+          "bottom": 126
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Tiny seedling is dark and indistinct with unclear leaf shape."
+    },
+    {
+      "box": [
+        0.451171875,
+        0,
+        0.0908203125,
+        0.0634765625
+      ],
+      "detectionConfidence": 0.9259259104728699,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!hGvM#4IgJ.o+Us2^4Bz#1/`57J?+/2DNJ?h/U0x5uKDmhiEVd0YAVZ79%55ZeuCR-Pj:BKF-&%*%%GDSa!!",
+        "width": 93,
+        "height": 65,
+        "bounds": {
+          "left": 462,
+          "top": 0,
+          "right": 555,
+          "bottom": 65
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-003",
+      "label": "uncertain",
+      "originalLabel": "crop",
+      "confidence": 0.72,
+      "reasoning": "Broad rounded green leaves are visible consistent with young sugar beet."
+    }
+  ],
+  "errors": [],
+  "limited": false
+}

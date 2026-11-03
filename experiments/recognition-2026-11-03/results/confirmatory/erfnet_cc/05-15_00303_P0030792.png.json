@@ -1,0 +1,111 @@
+{
+  "image_id": "05-15_00303_P0030792.png",
+  "plants": [
+    {
+      "id": "erf-1-1",
+      "box": [
+        0.873046875,
+        0.1435546875,
+        0.0244140625,
+        0.0380859375
+      ],
+      "label": "crop",
+      "pixels": 332,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-1-2",
+      "box": [
+        0.884765625,
+        0.341796875,
+        0.01171875,
+        0.009765625
+      ],
+      "label": "crop",
+      "pixels": 75,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-1-4",
+      "box": [
+        0.345703125,
+        0.3974609375,
+        0.0078125,
+        0.0126953125
+      ],
+      "label": "crop",
+      "pixels": 74,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-1-5",
+      "box": [
+        0.369140625,
+        0.6123046875,
+        0.009765625,
+        0.03125
+      ],
+      "label": "crop",
+      "pixels": 185,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-1-6",
+      "box": [
+        0.93359375,
+        0.7587890625,
+        0.0166015625,
+        0.04296875
+      ],
+      "label": "crop",
+      "pixels": 291,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-2-1",
+      "box": [
+        0.927734375,
+        0.0,
+        0.072265625,
+        0.03515625
+      ],
+      "label": "weed",
+      "pixels": 762,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-2-2",
+      "box": [
+        0.9794921875,
+        0.03125,
+        0.009765625,
+        0.0205078125
+      ],
+      "label": "weed",
+      "pixels": 110,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    },
+    {
+      "id": "erf-2-3",
+      "box": [
+        0.9609375,
+        0.685546875,
+        0.009765625,
+        0.0107421875
+      ],
+      "label": "weed",
+      "pixels": 84,
+      "provenance": "ERFNet hard-label 8-connected component; not an instance model",
+      "human_review_required": true
+    }
+  ],
+  "limited": false,
+  "errors": []
+}

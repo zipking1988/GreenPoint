@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-005",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.78,
+      "reasoning": "Top-down rosette of broad crinkled green leaves matches young sugar beet growth."
+    },
+    {
+      "id": "GP-006",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Tiny blurry seedling lacks clear leaf detail for reliable identification."
+    },
+    {
+      "id": "GP-007",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.2,
+      "reasoning": "Image shows only a blurred partial leaf edge with no diagnostic shape."
+    },
+    {
+      "id": "GP-008",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.85,
+      "reasoning": "Large veined leaf with wavy margin is consistent with sugar beet foliage."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 332,
+    "outputTokens": 1247,
+    "cachedTokens": 0,
+    "estimatedUsd": 0.00571475
+  },
+  "elapsed_ms": 12210
+}

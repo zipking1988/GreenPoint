@@ -1,0 +1,28 @@
+{
+  "common.py": {
+    "upstream_sha256": "4dc75e9faecb6f480f837d894a013d257f66a3749e5f68a6f1f7b9b8e1ac7360",
+    "adapter_sha256": "8f36308edeb574d32d8f45589d60b05c0a1e3cbdd606fd7e13fc85ef2aa4afab",
+    "definitions": [
+      "Concat",
+      "Conv",
+      "ImplicitA",
+      "ImplicitM",
+      "MP",
+      "RepConv",
+      "SP",
+      "SPPCSPC",
+      "autopad"
+    ],
+    "model_methods": "unchanged selected definitions"
+  },
+  "yolo.py": {
+    "upstream_sha256": "ed531d00ed88698652d4ede95f6a97a504304919c57904fd66a779c570c60e09",
+    "adapter_sha256": "e7f7d04e44d8d1d5a2d2cfaa37607bface0ddfbf57f6eb201ff3d04491a1bb11",
+    "definitions": [
+      "Detect",
+      "IDetect",
+      "Model"
+    ],
+    "model_methods": "only unchanged forward and forward_once; constructor/training/export paths omitted"
+  }
+}

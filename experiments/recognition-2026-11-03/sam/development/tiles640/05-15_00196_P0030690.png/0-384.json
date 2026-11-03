@@ -1,0 +1,103 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.9384765625,
+        0.193359375,
+        0.0361328125,
+        0.0458984375
+      ],
+      "detectionConfidence": 0.7387754917144775,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!LEm(4_/O?!f'$H&+myL#nSt.cc8@KUbv#JZOiortwo{^%NTfH",
+        "width": 37,
+        "height": 47,
+        "bounds": {
+          "left": 961,
+          "top": 198,
+          "right": 998,
+          "bottom": 245
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.7236328125,
+        0.7236328125,
+        0.0537109375,
+        0.126953125
+      ],
+      "detectionConfidence": 0.8128654956817627,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!rF/u'pLmE1vM%S3P=_Q=nNr{2o?vd#8d!h!u=97KI_fDLpqn^J5AxP]1#Sr5bOb:jl@FTPxf(zA)$$%ez3e]@?jZUowYO{u",
+        "width": 55,
+        "height": 130,
+        "bounds": {
+          "left": 741,
+          "top": 741,
+          "right": 796,
+          "bottom": 871
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.041015625,
+        0.919921875,
+        0.0830078125,
+        0.078125
+      ],
+      "detectionConfidence": 0.6995305418968201,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!kNSYD*IZcrwrx'Y:iB5JGEDZZ7@=h&n0tEeoXyiLI@iUoSu*K$+jae[g.BoXiYpmvrK[J=bX-IPeHr?Q[SVeF'",
+        "width": 85,
+        "height": 80,
+        "bounds": {
+          "left": 42,
+          "top": 942,
+          "right": 127,
+          "bottom": 1022
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.630859375,
+        0.138671875,
+        0.0615234375,
+        0.0205078125
+      ],
+      "detectionConfidence": 0.7620818018913269,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!KDOVV]6xcZM`?dh($*n6`._XVaMq1tot06KR1.D[wFfe/7!!",
+        "width": 63,
+        "height": 21,
+        "bounds": {
+          "left": 646,
+          "top": 142,
+          "right": 709,
+          "bottom": 163
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 926
+}

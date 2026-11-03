@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-001",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.89,
+      "reasoning": "Rosette of broad wavy glossy leaves matches sugar beet."
+    },
+    {
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Seedling is tiny and blurred with indistinct leaf shape."
+    },
+    {
+      "id": "GP-003",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Seedling is tiny and blurred with indistinct leaf detail."
+    },
+    {
+      "id": "GP-004",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.86,
+      "reasoning": "Broad crinkled glossy leaves consistent with sugar beet."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 518,
+    "outputTokens": 1124,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.0053002
+  },
+  "elapsed_ms": 9249
+}

@@ -1,0 +1,26 @@
+{
+  "plants": [
+    {
+      "id": "GP-005",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is too blurred and indistinct to confirm sugar beet leaf traits."
+    },
+    {
+      "id": "GP-006",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.25,
+      "reasoning": "Image shows indistinct ground with no clear seedling leaves visible."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 234,
+    "outputTokens": 1128,
+    "cachedTokens": 0,
+    "estimatedUsd": 0.0050865
+  },
+  "elapsed_ms": 8653
+}

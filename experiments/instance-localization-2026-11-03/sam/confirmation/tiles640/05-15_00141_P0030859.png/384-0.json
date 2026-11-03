@@ -1,0 +1,80 @@
+{
+  "detections": [
+    {
+      "box": [
+        0,
+        0.537109375,
+        0.0185546875,
+        0.0185546875
+      ],
+      "detectionConfidence": 0.5897435545921326,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!7GaE9EF`qim:7+X?e.i[_@]Exc",
+        "width": 19,
+        "height": 19,
+        "bounds": {
+          "left": 0,
+          "top": 550,
+          "right": 19,
+          "bottom": 569
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.748046875,
+        0.2080078125,
+        0.2392578125,
+        0.345703125
+      ],
+      "detectionConfidence": 0.9649122953414917,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!%VBw*K#1=S!L:r18K9s#w&#IvPZM'@5J7XX^a'Oc[Sw#T78qo=/'H-Y02ZWvw44N=5']im4/OzGCKf?7DHP`Jk6pyMSTP`o-{*)UxYVORl9T9d3?N)4Efx5f-pjxnaiwkWyfN$Cy^IXi%:2loqd?y8l9cujOcV?+iEMpM^%O+6(zJi9mCi!(l[PFwDQ*FJn9kbHk^_Bb51GoRjovZ`rm:iC.uuo*uXq[]AqJp913qJGr?]A{T7f-A.0%y!A`S?Z&FE7bQy0Nt!!e^*{Ac`]ZJ#@:mTG#e8VSlPqtAF7g)=XWnCEUQXT7ys[ScJiMK8+OX-2RaB]DBSRJ]6Qqn/40D*Ocm=Ty#[)jV3&C2EvwjZs+ka*m?a'yO4vNTwCdP",
+        "width": 245,
+        "height": 354,
+        "bounds": {
+          "left": 766,
+          "top": 213,
+          "right": 1011,
+          "bottom": 567
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.84375,
+        0.677734375,
+        0.044921875,
+        0.068359375
+      ],
+      "detectionConfidence": 0.604938268661499,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!LIa#k+EkbWnrZ7Renm2q3cQ+v4e:V:*nXVsrrC5IbG^5GT%v^",
+        "width": 46,
+        "height": 70,
+        "bounds": {
+          "left": 864,
+          "top": 694,
+          "right": 910,
+          "bottom": 764
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 1741
+}

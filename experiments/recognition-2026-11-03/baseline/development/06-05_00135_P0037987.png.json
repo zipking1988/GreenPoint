@@ -1,0 +1,191 @@
+{
+  "image_id": "06-05_00135_P0037987.png",
+  "config": "baseline",
+  "limited": false,
+  "plants": [
+    {
+      "id": "GP-001",
+      "box": [
+        0.578125,
+        0.373046875,
+        0.421875,
+        0.626953125
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!):=A/3^1:uSPvK^^5EnXI._A/H1HWS2:SQWjut=h#@L#d?kai)4BxYR0mF^)Mx=cu^Mj^fDT]S?#:#6on#%]V(mJ?a2r-%!cpoJZH6nQ/[!bPmqfxCBfP5Waqg=j!%_@^W#_TBX/))ovC%OI]furN'Kk`Ev2]Fpxx1Y{2%a`wp+7V?^kUn'[PeZOuB)JiI24F8Yn6AI8tD8&!`v'.h6p%lF7s+1dU[$'`]zpKhoPYt7DLKSKlBdden:-ue]V']]`S43o#PKtP@XFD-O[^1WAYd=^x77)iD7Bj(RPB`6QF`Lm6?uhDaMX7]Kmqh]2@KF3c%NK$50]txvSJr-/`_Wa{+&8+{Ry#q`'M5W]VpI0H8X*?G(IwNqPtnSLHHpB3.#PnXq)%0$m?+MXGPZV'Wi!q09a7X`_H@?_FDPrfC#9Diexv(KFTV6F!bx[4Gs.IT=sz)xV-X`{K:axt`]]md_'GB?hQ&0L5M_Z.P3Yw6SYL@+zl!W_+oh5?t%w)@dKiTB7i9E5+/U`S]Q=61PgH]y_[s`dVfbU'{*@Pz?3@UT0m7'(Xe)^WzEX1nYdP7xlGKt$=IGZc8TSD(j'vq3hCj/s!:):?5t81GEwynh3V&o?!Sk0'I01)bInb2Z?0wzs`a.3wlMvIyvhVwbU=7+'2RewRfYm'Jys.zKij_Js)[&vLqPf%*PFq%gYK253l*KRvx5RO7jt`dF3'bslbm#a)5Cfid2E)eL/-(S9T's9v?W.yykxef4AcNkLo0v/wy1fml'5WKk:()r",
+        "width": 432,
+        "height": 642,
+        "bounds": {
+          "left": 592,
+          "top": 382,
+          "right": 1024,
+          "bottom": 1024
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.9,
+      "reasoning": "Broad crinkled rosette leaves with wavy margins consistent with sugar beet."
+    },
+    {
+      "id": "GP-002",
+      "box": [
+        0.583984375,
+        0.5263671875,
+        0.04296875,
+        0.087890625
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!![Fw.A1n2'4jAToj[@Bq_l:pH*x`V2UV^kI+p@5TShQrQl^*406vUQB+d3w51N1ArcUX.",
+        "width": 44,
+        "height": 90,
+        "bounds": {
+          "left": 598,
+          "top": 539,
+          "right": 642,
+          "bottom": 629
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is too small and blurred to confirm leaf morphology."
+    },
+    {
+      "id": "GP-003",
+      "box": [
+        0.0791015625,
+        0.6025390625,
+        0.4443359375,
+        0.3974609375
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!'^A3^EK7fI3$Z0$o!r=:v^S=P#42wt9XV^_*&J)52&&epo#C[(uw+B5@o2?N:WJI[08B#y4durQN{afXHX*?M(SMPvTV:4=I/r7zj{99azYL/y1j69k6]UhuzX/MlGuPDhyLRbU%7NC!:kkC'U^*h)yTSKS#$G_7bldhx!M9Y6Zqct#gebWYRowH'm26i$7HpljnxP:(E!1gwl3%3L*]_j1$^p__uH3tYa+stN0B$gm]tLlirr?XkF49SX@Jj=fDTG1dw4tgWYY9VVUse+rC&U1YQXPj:l_u[JVOo@KUmN%V#Oj=N{F3^kr#0RyCze@6%84+Rep^K&tEdHz*sFC*G:mHo6VKa$-{HbT&URV&#%6tF.nIpQ]Rx.PIuP0j%{.o^c8)$jLosu@o{YJ'bViM]pIn==BfMEazFQJw)$qWUr'6ih&u!x3%542+k.^HO&XcOFELtzOAbk'GEU[#snlbXVCG9Sj]SmR[j)O_*5v_gi+s.yY.hB.a#cHO(LExAFenbK!JMt/CdUOk.-j==1Os/==Q/y.]m^lsA?xXB^QYw6@EkUUF8.`#$a/r'Vq0Ttr!6)s#^=s=Kine0=b)4Nl#dVmQQ0",
+        "width": 455,
+        "height": 407,
+        "bounds": {
+          "left": 81,
+          "top": 617,
+          "right": 536,
+          "bottom": 1024
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.88,
+      "reasoning": "Large undulate basal leaves forming a rosette typical of sugar beet."
+    },
+    {
+      "id": "GP-004",
+      "box": [
+        0.0185546875,
+        0,
+        0.568359375,
+        0.5087890625
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!)EC76'VvjhQuUzsK#rvwYC_sEuV+m/deFai:[ZW_)+78rlh^F*PoA{U.0!33zX+M+tRTYUv/kgm&4wG%^qkDHapw?0TU)[^x&K6IzZPvtl*sN0rDgJ::0BYbwEhk/8h0&k^7]xi1q2b=pC'pa$75cleYjapD+7+[C_g+^OZU*`g#%.v*-/I9-po!x5yvL5LD:HELvUr4NxSkj.FUoh]Jx0'Q_XUJ*z#wMQFTjC1CU6I.DAxQd9&mT59?NodHo$3Hbx0[+$MDoUiA^t@gd!J^x77TQEq.Cq&OW_whi4Ds7:osac-H!mm8xV[5LvDgZqCu-f`Iyy70'm9HZi{00:I4V0d-`2{T'hVv!IYu8G1tUS?YXJAPED0lXy+MVWSs*@_8ml0srq44ijs%O+UopJWmjrdi+K?AGV5B(s)q*Rp2Tk3rC^K_FwQ^_O0!C2_f.Y*E=8k{T9qgcd8cBO^ap&mahl&CHU2#ylqp9QmCQD^FdzDnlN84EcQ^eZNP&fLX3TxT$BNdSm=[^o#e)eg$/YKA6834%kAVqTXFW:Rp6Xs7_Qj/?igDvu?OrI^]Kc+1sM']GU9%[ISK{kt_A%7OIi=kTW6{^XAH$-Q%&=^Xh-@p^e_1G@N{zBrG!XQrZmsRof:QRN@-[wi(sFZv/eT2/o96Vr!wc(j=V?+yLQx+w_Yip.CO#Jr*1zP$9rW=e09=s#ijJ'Uv?F5*kkpP*L7X*at[5eo^D_z%H.xC]Woh4`Mnlb`O#vR!'aszHckeF2bER:X]U%MIQB%oM0cdl)J^x",
+        "width": 582,
+        "height": 521,
+        "bounds": {
+          "left": 19,
+          "top": 0,
+          "right": 601,
+          "bottom": 521
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.89,
+      "reasoning": "Broad wavy-margined leaves in a basal rosette matching sugar beet."
+    },
+    {
+      "id": "GP-005",
+      "box": [
+        0.60546875,
+        0,
+        0.39453125,
+        0.314453125
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!%DGOkPw](GRR/X^`xRZ_GyI:'f.cqUqey5ix^QzW!zx&7:_ax!.aGS]/KbsAk[^0H+Y2lTS-dwy4ZLsT5ZI)?'.S^@WVG`W8POupnsZ!CWh'sJvuT[!'wasjd/ce=UEbl^4KK):&3ur_hD*l/k9ZHW?vX]A2%iyfAJ-P)Hd1Vm*i(U9&.OH#4A-4gRS5oWu-wR-!B&e3obq9KiN%?BG{igqD4a(Qb41rhuKa%Xx_Oseqb-W]l)v6MM1_OkM(eA.@TLhxoCE%RTFbH1n#akW0W[^/`#q-YNxkjaN-L!/@kiZ6QRI=eV`$-Ex_Ux?w&VaU''jmtr@#4b:*dJy5SRr#aih:&wKM$b?l`OC8KEl",
+        "width": 404,
+        "height": 322,
+        "bounds": {
+          "left": 620,
+          "top": 0,
+          "right": 1024,
+          "bottom": 322
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.92,
+      "reasoning": "Large rosette of broad wavy crinkled green leaves matches sugar beet."
+    },
+    {
+      "id": "GP-006",
+      "box": [
+        0.7431640625,
+        0.2890625,
+        0.16796875,
+        0.185546875
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#fB9&'O#m?G76#LppF(Ak7Yyits-/gQkw$1fgb.#?wOJrG6^RzYU1M^hykdqj?2crIQlIiWAua+YigyX]cCSVp-e]6KgcyoX.jqhXx.SzyF:jY)abog3'_N6).%&awyhox7ksi#[t!S'!Hy)-3{iw:fsBPBJAZY]Pb!zJQsjdt$Mf/{0[13?rr9+fh8",
+        "width": 172,
+        "height": 190,
+        "bounds": {
+          "left": 761,
+          "top": 296,
+          "right": 933,
+          "bottom": 486
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.78,
+      "reasoning": "Small central rosette of broad rounded leaves consistent with young sugar beet."
+    }
+  ],
+  "usages": [
+    {
+      "model": "sam-3.1",
+      "images": 1,
+      "estimatedUsd": 0.0025
+    },
+    {
+      "model": "muse-spark-1.3",
+      "inputTokens": 607,
+      "outputTokens": 1202,
+      "cachedTokens": 113,
+      "estimatedUsd": 0.00574295
+    },
+    {
+      "model": "muse-spark-1.3",
+      "inputTokens": 429,
+      "outputTokens": 1350,
+      "cachedTokens": 0,
+      "estimatedUsd": 0.00627375
+    }
+  ],
+  "reference_id": null
+}

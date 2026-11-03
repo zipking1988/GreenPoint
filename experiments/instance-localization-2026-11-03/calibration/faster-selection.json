@@ -1,0 +1,35 @@
+{
+  "selected": {
+    "config": {
+      "model": "faster",
+      "geometry": "whole",
+      "weed_threshold": 0.99,
+      "nms_iou": 0.5,
+      "dedup": "containment",
+      "expert_min_weed_fraction": 0.5,
+      "box_refinement": "semantic_blend"
+    },
+    "weed_tp": 69,
+    "weed_predictions": 84,
+    "gt_weed": 99,
+    "crop_as_weed": 1,
+    "gt_crop": 164,
+    "weed_precision": 0.8214285714285714,
+    "weed_recall": 0.696969696969697,
+    "weed_f1": 0.7540983606557378,
+    "crop_as_weed_rate": 0.006097560975609756,
+    "target_gates_passed": false
+  },
+  "baseline": {
+    "model": "faster",
+    "geometry": "whole",
+    "weed_threshold": 0.6,
+    "nms_iou": 0.5,
+    "dedup": "none",
+    "expert_min_weed_fraction": 0.0,
+    "box_refinement": "none"
+  },
+  "grid_variants": 768,
+  "cohort": "20 new official val calibration only",
+  "confirmation_scores_seen": false
+}

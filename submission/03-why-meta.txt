@@ -1,0 +1,7 @@
+GreenPoint needs localized visual evidence, structured interpretation, and an agent that can request perception. Meta's stack provides those capabilities in the working online review flow.
+
+SAM 3.1 supplies plant regions and masks tied to source pixels. Muse Spark interprets those crops and returns structured suggestions. The reviewer can inspect the exact source and retain an independent decision. Muse also discovers and calls our MCP tools, turning frame perception into evidence that another software agent can request and cite.
+
+These are two concrete paths through the same perception service: a person inspects a candidate in the workspace, or a Muse agent requests frame evidence and returns a bounded human_review step. The published real tool trace demonstrates capability discovery, perception, evidence IDs, and the final structured response.
+
+Our agricultural experiments address the recognition gaps we measured. The domain-specific pretrained detector is a separate local prototype; its results do not change the published Meta baseline or imply that Meta trained the agricultural weights. Meta remains central to the deployed perception, interpretation, and agent-evidence interface, while the research branch tests how a specialized expert could strengthen it.

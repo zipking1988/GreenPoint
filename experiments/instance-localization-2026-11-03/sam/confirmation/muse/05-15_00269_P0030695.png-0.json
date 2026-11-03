@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-001",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.84,
+      "reasoning": "Young rosette with broad wavy green leaves and pale midvein consistent with sugar beet."
+    },
+    {
+      "id": "GP-002",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.86,
+      "reasoning": "Basal rosette of broad glossy crinkled leaves consistent with sugar beet seedling."
+    },
+    {
+      "id": "GP-003",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.82,
+      "reasoning": "Upright young plant with broad ovate leaves and prominent pale midribs consistent with sugar beet."
+    },
+    {
+      "id": "GP-004",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.85,
+      "reasoning": "Compact rosette of rounded glossy wavy leaves consistent with sugar beet growth."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 519,
+    "outputTokens": 1638,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.00748595
+  },
+  "elapsed_ms": 15410
+}

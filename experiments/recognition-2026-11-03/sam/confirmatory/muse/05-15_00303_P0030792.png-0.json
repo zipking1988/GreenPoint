@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-001",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Tiny blurred seedling on soil lacks clear sugar beet leaf shape."
+    },
+    {
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Very small indistinct seedling cannot be confirmed as sugar beet."
+    },
+    {
+      "id": "GP-003",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.25,
+      "reasoning": "Dark blurred thumbnail shows no distinguishable crop leaf morphology."
+    },
+    {
+      "id": "GP-004",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Blurry small seedling is too indistinct to confirm as crop or weed."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 254,
+    "outputTokens": 1341,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.00589245
+  },
+  "elapsed_ms": 13605
+}

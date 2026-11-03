@@ -1,0 +1,19 @@
+{
+  "plants": [
+    {
+      "id": "GP-005",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.4,
+      "reasoning": "Seedling is tiny and blurred with indistinct leaves on bare soil."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 227,
+    "outputTokens": 669,
+    "cachedTokens": 0,
+    "estimatedUsd": 0.003127
+  },
+  "elapsed_ms": 6186
+}

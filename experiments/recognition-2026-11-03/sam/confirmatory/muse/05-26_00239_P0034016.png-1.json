@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-005",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.4,
+      "reasoning": "Tiny blurry seedling lacks clear leaf shape for confident crop identification."
+    },
+    {
+      "id": "GP-006",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.9,
+      "reasoning": "Rosette of broad wavy green leaves with pale midribs matches sugar beet growth."
+    },
+    {
+      "id": "GP-007",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Very small indistinct seedling with insufficient leaf detail for reliable identification."
+    },
+    {
+      "id": "GP-008",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.92,
+      "reasoning": "Rosette of broad glossy leaves with prominent pale veins matches sugar beet growth."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 523,
+    "outputTokens": 1258,
+    "cachedTokens": 0,
+    "estimatedUsd": 0.00600025
+  },
+  "elapsed_ms": 10811
+}

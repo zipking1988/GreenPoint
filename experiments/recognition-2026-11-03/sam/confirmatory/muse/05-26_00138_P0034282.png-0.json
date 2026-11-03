@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-001",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.5,
+      "reasoning": "Small blurry seedling shows broad leaves but lacks clear sugar beet traits."
+    },
+    {
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "View shows only a cut-off leaf edge on bare soil and is heavily occluded."
+    },
+    {
+      "id": "GP-003",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.4,
+      "reasoning": "Plant at frame edge is blurry with indistinct leaf shape and no row context."
+    },
+    {
+      "id": "GP-004",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Very small indistinct seedlings in soil lack clear crop leaf morphology."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 283,
+    "outputTokens": 1557,
+    "cachedTokens": 0,
+    "estimatedUsd": 0.006971
+  },
+  "elapsed_ms": 15887
+}

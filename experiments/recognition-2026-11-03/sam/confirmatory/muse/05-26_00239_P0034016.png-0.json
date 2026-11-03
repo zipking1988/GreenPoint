@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-001",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is too blurred and indistinct to verify leaf shape."
+    },
+    {
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.5,
+      "reasoning": "Small seedling shows green leaves but detail is insufficient for confident identification."
+    },
+    {
+      "id": "GP-003",
+      "label": "uncertain",
+      "originalLabel": "crop",
+      "confidence": 0.72,
+      "reasoning": "Clustered broad rounded leaves form a rosette consistent with sugar beet."
+    },
+    {
+      "id": "GP-004",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.45,
+      "reasoning": "Very small seedling lacks clear leaf detail for reliable classification."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 295,
+    "outputTokens": 1791,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.0078562
+  },
+  "elapsed_ms": 16535
+}

@@ -1,0 +1,147 @@
+{
+  "image_id": "05-15_00206_P0030695.png",
+  "plants": [
+    {
+      "box": [
+        0.6494140625,
+        0.12890625,
+        0.02734375,
+        0.0322265625
+      ],
+      "detectionConfidence": 0.5038759708404541,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!BGNd@]alx+S=HQZ9M]_w`:[&hjl=u#*P^@g#",
+        "width": 28,
+        "height": 33,
+        "bounds": {
+          "left": 665,
+          "top": 132,
+          "right": 693,
+          "bottom": 165
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-001",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Image is heavily blurred with no clear leaf detail visible."
+    },
+    {
+      "box": [
+        0,
+        0.697265625,
+        0.0869140625,
+        0.099609375
+      ],
+      "detectionConfidence": 0.9298245906829834,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#*o]'xZ@vF3BQqjy.9k[e2f=WtowU^y)&{9lM'(qp9Z!2E56*H*m5y4=8sI&SjY]?uSS.wwaQOQ?'S'jL'EllJD^X?!X%E$2NlT@.GT9R1PgHx+y26B22vF",
+        "width": 89,
+        "height": 102,
+        "bounds": {
+          "left": 0,
+          "top": 714,
+          "right": 89,
+          "bottom": 816
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.55,
+      "reasoning": "Small rosette with narrow leaves is indistinct at this resolution."
+    },
+    {
+      "box": [
+        0,
+        0.28515625,
+        0.0869140625,
+        0.154296875
+      ],
+      "detectionConfidence": 0.9259259104728699,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#0C2^BMb?V5.78&`uAOE1c$z[wKmQxledp:.LCt!7ET=]+P-80:xBtNrO_LXiFn5JE`Ctzt`q{gv4uq3*apJzi8LxAcel'sUtH:Fyi]AMGB+k9mdeLLj*rR-%UUc/",
+        "width": 89,
+        "height": 158,
+        "bounds": {
+          "left": 0,
+          "top": 292,
+          "right": 89,
+          "bottom": 450
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-003",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.55,
+      "reasoning": "Broad green leaves are partly shadowed and indistinct for firm identification."
+    },
+    {
+      "box": [
+        0,
+        0.4794921875,
+        0.1015625,
+        0.140625
+      ],
+      "detectionConfidence": 0.941605806350708,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#$EW37_g%$Bg$CYmH!oR[!hd^Eb50`s8lZ8*&Nf#UI?74cycX]PO+Lif^Ru0NfV77)VNeAhvgVG2ILgigeL40'KE.%i05!un^^=3E!tiNec]w(/",
+        "width": 104,
+        "height": 144,
+        "bounds": {
+          "left": 0,
+          "top": 491,
+          "right": 104,
+          "bottom": 635
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-004",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.85,
+      "reasoning": "Broad glossy wavy-margined leaves in rosette match young sugar beet."
+    },
+    {
+      "box": [
+        0,
+        0.8798828125,
+        0.14453125,
+        0.1201171875
+      ],
+      "detectionConfidence": 0.9452055096626282,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#+GuuJ0tMhGLJk#RuE]NM$uP!1iI%27IX`K)9T(HNP=f/sZCGo:c[ec6jekyBh38(Y]6S7{X.(?GnhNb!s+$t%f2D/qx9*x4$VZ-b783Wr5Pa@F0et't6OB8",
+        "width": 148,
+        "height": 123,
+        "bounds": {
+          "left": 0,
+          "top": 901,
+          "right": 148,
+          "bottom": 1024
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "id": "GP-005",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.4,
+      "reasoning": "Low-resolution blurry rosette with indistinct leaf margins prevents reliable sugar beet confirmation."
+    }
+  ],
+  "errors": [],
+  "limited": false
+}

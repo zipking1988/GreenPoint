@@ -1,0 +1,40 @@
+{
+  "plants": [
+    {
+      "id": "GP-001",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Image is very small and blurred with no clear leaf shape visible."
+    },
+    {
+      "id": "GP-002",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Only brown soil texture is visible with no identifiable leaves."
+    },
+    {
+      "id": "GP-003",
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.85,
+      "reasoning": "Rosette of broad glossy green leaves on bare soil matches sugar beet."
+    },
+    {
+      "id": "GP-004",
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Only brown soil texture is visible with no identifiable leaves."
+    }
+  ],
+  "usage": {
+    "model": "muse-spark-1.3",
+    "inputTokens": 321,
+    "outputTokens": 1678,
+    "cachedTokens": 113,
+    "estimatedUsd": 0.00740845
+  },
+  "elapsed_ms": 14605
+}

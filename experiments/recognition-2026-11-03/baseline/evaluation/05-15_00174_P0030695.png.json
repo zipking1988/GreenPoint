@@ -1,0 +1,334 @@
+{
+  "image_id": "05-15_00174_P0030695.png",
+  "config": "baseline",
+  "limited": false,
+  "errors": [],
+  "plants": [
+    {
+      "id": "GP-001",
+      "box": [
+        0.318359375,
+        0.1064453125,
+        0.0380859375,
+        0.0390625
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!LGuR^T)@p:eC!t8.DeAwBd9K8j_/aHw7vU0IU=&j0JMQr.!!!",
+        "width": 39,
+        "height": 40,
+        "bounds": {
+          "left": 326,
+          "top": 109,
+          "right": 365,
+          "bottom": 149
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.2,
+      "reasoning": "Image is too indistinct to confirm leaf shape or row position."
+    },
+    {
+      "id": "GP-002",
+      "box": [
+        0.6884765625,
+        0.634765625,
+        0.033203125,
+        0.0341796875
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!BIly+.5b.[JJuUcJ6jz4=Q%&bHrk21HFHL:'",
+        "width": 34,
+        "height": 35,
+        "bounds": {
+          "left": 705,
+          "top": 650,
+          "right": 739,
+          "bottom": 685
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.2,
+      "reasoning": "Image is too indistinct to confirm leaf shape or row position."
+    },
+    {
+      "id": "GP-003",
+      "box": [
+        0.822265625,
+        0.89453125,
+        0.0302734375,
+        0.044921875
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!MF2UvrxT_[1nFp]-]5@1`0:^xFU!Lo{[n%[SP:Z[fG)b:O1`/F",
+        "width": 31,
+        "height": 46,
+        "bounds": {
+          "left": 842,
+          "top": 916,
+          "right": 873,
+          "bottom": 962
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.2,
+      "reasoning": "Image is too indistinct to confirm leaf shape or row position."
+    },
+    {
+      "id": "GP-004",
+      "box": [
+        0.654296875,
+        0.330078125,
+        0.0400390625,
+        0.0283203125
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!HK)aMC5-C#0tgoPp5R)uF!jG)@:&a@8gyhu`*0'hB!!!",
+        "width": 41,
+        "height": 29,
+        "bounds": {
+          "left": 670,
+          "top": 338,
+          "right": 711,
+          "bottom": 367
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.2,
+      "reasoning": "Image is too indistinct to confirm leaf shape or row position."
+    },
+    {
+      "id": "GP-005",
+      "box": [
+        0.0966796875,
+        0.603515625,
+        0.11328125,
+        0.1181640625
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#QI6%CIH8j32QN8Bp.Drf5j5Q-jMB[F^Fev&u&XBA56_Qn!iCZ[ZX[8N[3WVtEfx/&Y8QNFT9FVLBRr'@..^6Z*-K=d!xf{H_h!URp%I%4Es4k8XI6_62(B5+43X]nmtJzaMadum?1nErimB/E1/ml`UD*ZS``ie6J",
+        "width": 116,
+        "height": 121,
+        "bounds": {
+          "left": 99,
+          "top": 618,
+          "right": 215,
+          "bottom": 739
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.86,
+      "reasoning": "Broad wrinkled green rosette leaves match sugar beet morphology."
+    },
+    {
+      "id": "GP-006",
+      "box": [
+        0.0302734375,
+        0,
+        0.11328125,
+        0.064453125
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!sqzBS:8&j]Hf2ph'0#lCI+Snx)w:M+-*bQustsj1JE9[E#U7sz9$hm6ypou[Sc:?Dx4C0t63lw=yiIysE1-9hae)?UNE1PkI",
+        "width": 116,
+        "height": 66,
+        "bounds": {
+          "left": 31,
+          "top": 0,
+          "right": 147,
+          "bottom": 66
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.4,
+      "reasoning": "Small seedling is blurred and overexposed, preventing clear leaf assessment."
+    },
+    {
+      "id": "GP-007",
+      "box": [
+        0.24609375,
+        0.0087890625,
+        0.05859375,
+        0.041015625
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!VD4+ZqTjv=ZE!Q!T1i_G*Q075yJlhM1P{Ao^-VXuMSwBFu7ewMRa$/ROUg71M",
+        "width": 60,
+        "height": 42,
+        "bounds": {
+          "left": 252,
+          "top": 9,
+          "right": 312,
+          "bottom": 51
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.3,
+      "reasoning": "Seedling is heavily shadowed and indistinct among soil residue."
+    },
+    {
+      "id": "GP-008",
+      "box": [
+        0.529296875,
+        0.5361328125,
+        0.0458984375,
+        0.060546875
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!PEn_[H#Pf@/-plLBInIfyiqw+yTn*C5&IViy/9a1f29n&$)hZpKBYF",
+        "width": 47,
+        "height": 62,
+        "bounds": {
+          "left": 542,
+          "top": 549,
+          "right": 589,
+          "bottom": 611
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "weed",
+      "confidence": 0.62,
+      "reasoning": "Tiny narrow upright leaves differ from broad beet leaves."
+    },
+    {
+      "id": "GP-009",
+      "box": [
+        0.6416015625,
+        0.5322265625,
+        0.01953125,
+        0.01953125
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!9GK.)$b49TO5[SJr13BmT:uf87!!!",
+        "width": 20,
+        "height": 20,
+        "bounds": {
+          "left": 657,
+          "top": 545,
+          "right": 677,
+          "bottom": 565
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "uncertain",
+      "originalLabel": "uncertain",
+      "confidence": 0.35,
+      "reasoning": "Image is too small and indistinct to confirm leaf shape."
+    },
+    {
+      "id": "GP-010",
+      "box": [
+        0.029296875,
+        0.3779296875,
+        0.1953125,
+        0.1513671875
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#yBG=L]96Ooa%]M[t:V0a2.ZF'NSeNd-ed05.avq(*cE.3LU`]XLZsrPnC/?cv]kyG&NtxU.A90nGrSW'200k0$v'BPtj{=)#o24]s=Cc2u7fZX(If4h.G[$b30JM8EdLTBM3@V#JZhr8U]CAl#FOOr$i#4^X&UOv:y89L@o?2K.J6Q#Vy-RVem[`f_jffZ4X/7lq2*2!gFCU*0G=xX",
+        "width": 200,
+        "height": 155,
+        "bounds": {
+          "left": 30,
+          "top": 387,
+          "right": 230,
+          "bottom": 542
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.88,
+      "reasoning": "Broad glossy wavy leaves in rosette match sugar beet."
+    },
+    {
+      "id": "GP-011",
+      "box": [
+        0.103515625,
+        0.7978515625,
+        0.125,
+        0.13671875
+      ],
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#FDfx`Csbx#v+21jjfNK78F'JW@Ev(:FQ-#^cKI.Y[?q.Yi?tjcEy3H8O6oT!U6pIGn*vI].OhI7VwwYm6g8F05aC&BED-MepT'8P_=Il'AtujiKKXTO2%'t/]ZJ`c*lSW5z.?T8WniG.j!xxA%!!",
+        "width": 128,
+        "height": 140,
+        "bounds": {
+          "left": 106,
+          "top": 817,
+          "right": 234,
+          "bottom": 957
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      },
+      "label": "crop",
+      "originalLabel": "crop",
+      "confidence": 0.86,
+      "reasoning": "Broad glossy ovate leaves in rosette match sugar beet."
+    }
+  ],
+  "usages": [
+    {
+      "model": "sam-3.1",
+      "images": 1,
+      "estimatedUsd": 0.0025
+    },
+    {
+      "model": "muse-spark-1.3",
+      "inputTokens": 249,
+      "outputTokens": 967,
+      "cachedTokens": 113,
+      "estimatedUsd": 0.0042967
+    },
+    {
+      "model": "muse-spark-1.3",
+      "inputTokens": 302,
+      "outputTokens": 1939,
+      "cachedTokens": 113,
+      "estimatedUsd": 0.00849395
+    },
+    {
+      "model": "muse-spark-1.3",
+      "inputTokens": 339,
+      "outputTokens": 1335,
+      "cachedTokens": 0,
+      "estimatedUsd": 0.0060975
+    }
+  ],
+  "reference_id": null
+}

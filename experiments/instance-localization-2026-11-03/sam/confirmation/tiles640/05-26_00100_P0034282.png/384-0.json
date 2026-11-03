@@ -1,0 +1,103 @@
+{
+  "detections": [
+    {
+      "box": [
+        0.353515625,
+        0.4736328125,
+        0.0537109375,
+        0.0361328125
+      ],
+      "detectionConfidence": 0.7968254089355469,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!MEVxi.Xh.KGwsT[680$&[:W+L)U=I'_4&fQG$OOynof.Y#/.=P",
+        "width": 55,
+        "height": 37,
+        "bounds": {
+          "left": 362,
+          "top": 485,
+          "right": 417,
+          "bottom": 522
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.1982421875,
+        0,
+        0.048828125,
+        0.037109375
+      ],
+      "detectionConfidence": 0.8400000333786011,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!!IIca5C')T$FTd=`0Xxz)Pc%tk=EJsG$OFDQXugdYCU]Xv",
+        "width": 50,
+        "height": 38,
+        "bounds": {
+          "left": 203,
+          "top": 0,
+          "right": 253,
+          "bottom": 38
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.232421875,
+        0.615234375,
+        0.1181640625,
+        0.13671875
+      ],
+      "detectionConfidence": 0.941605806350708,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#?K=.m=5mhtir36VrIVM'!7isLBB_!3FZMtOmPQe&3fB5g4[u7c70ia/XTm[qdM2!hz[JPkwDE087qqqtu''=hZZFJMFa@se@Tw5'tVuu*?Eg&w2[f:Oz-=KLnc05WKSrQ0GsgY6UjTC",
+        "width": 121,
+        "height": 140,
+        "bounds": {
+          "left": 238,
+          "top": 630,
+          "right": 359,
+          "bottom": 770
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    },
+    {
+      "box": [
+        0.2138671875,
+        0.294921875,
+        0.125,
+        0.15625
+      ],
+      "detectionConfidence": 0.9259259104728699,
+      "mask": {
+        "encoding": "one_bit",
+        "payload": "!!!!#TC##*2CiL_.Q-uV:9-=`^D@b9tl^nI%d&soNj`+v*cpclZP]n0Y_Br+b#]Yr=4&{STj*vb%rxw*vtM7=QI9wzREsFjtjkJjMQ)&`S.4^*y(k$4?o_u4K5iasz7bNYu0_'{WuhgNF7{vaSm/rdv$?]N-(-w[2@XleU8::M",
+        "width": 128,
+        "height": 160,
+        "bounds": {
+          "left": 219,
+          "top": 302,
+          "right": 347,
+          "bottom": 462
+        },
+        "sourceWidth": 1024,
+        "sourceHeight": 1024
+      }
+    }
+  ],
+  "limited": false,
+  "usage": {
+    "model": "sam-3.1",
+    "images": 1,
+    "estimatedUsd": 0.0025
+  },
+  "elapsed_ms": 690
+}
